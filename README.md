@@ -18,4 +18,8 @@ Destinado a todo aquel apasionado por la aventura :cowboy_hat_face::heavy_heart_
 
 <sup>¿Cómo ajustaremos nuestra oferta a ese público?</sup>
 
+falta:
 
+Una breve descripción de los integrantes del equipo.
+agregar un listado de al menos 5 sitios de referencia
+indicando brevemente por qué fueron elegidos.
