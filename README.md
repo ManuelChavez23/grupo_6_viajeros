@@ -23,23 +23,25 @@ Le damos principal importancia a su salud y su dieta, en nuestros menús encontr
 Y Si desea disfrutar de ésta maravillosa experiencia en compañia podrá acceder a paquetes exclusivos, con descuentos preferenciales. 
 
 <sup>Integrantes del grupo</sup>
--**Valentina Vallejos Podio**:
 
--**Manuel Chávez**:
+**Valentina Vallejos Podio**:
 
--**Franco Ambort**:
+**Manuel Chávez**:
 
--**Pamela Abeldaño**:
+**Franco Ambort**:
+
+**Pamela Abeldaño**:
 
 <sup>Inspiración de referentes del mercado</sup>
--[Turismo de Bienestar](https://turismodebienestar.com/)
 
--[Viaje Oasis](https://viajesoasis.com/)
+[Turismo de Bienestar](https://turismodebienestar.com/)
 
--[Setil Viajes](https://www.setilviajes.com/)
+[Viaje Oasis](https://viajesoasis.com/)
 
--[Pangea](https://www.pangea.tur.ar/)
+[Setil Viajes](https://www.setilviajes.com/)
 
--[Marcelo Gimenez](https://marcelogimenez.tur.ar/)
+[Pangea](https://www.pangea.tur.ar/)
+
+[Marcelo Gimenez](https://marcelogimenez.tur.ar/)
 
 
