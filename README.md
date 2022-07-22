@@ -23,7 +23,7 @@ Le damos principal importancia a su salud y su dieta, en nuestros menús encontr
 Y Si desea disfrutar de ésta maravillosa experiencia en compañia podrá acceder a paquetes exclusivos, con descuentos preferenciales. 
 
 <sup>Integrantes del grupo</sup>
--**Valentina Vallejos Podio**
+1.**Valentina Vallejos Podio**
 -**Manuel Chávez**
 -**Franco Ambort**
 -**Pamela Abeldaño**
