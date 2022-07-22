@@ -12,7 +12,7 @@ Nos especializamos en SALIDAS GRUPALES ACOMPAÑADAS tanto a destinos nacionales 
 :white_check_mark: Muchas veces el turista no está del todo familiarizado con el destino que visita, por lo tanto se vuelve imprescindible contar con información referente a los traslados dentro de él. Es por esto que incluimos los traslados dentro de la ciudad como por ejemplo entre el hotel y el aeropuerto.
 
 
-<sup>¿Quién será nuestra audiencia objetivo?`#ffffff`</sup>
+<sup>¿Quién será nuestra audiencia objetivo?</sup>
 
 Destinado a todo aquel que quiera tomarse su tiempo, aliviar el estrés, estar en armonía con el medio ambiente y tener un estilo de vida saludable, incluso cuando está lejos de casa. Con el turismo de bienestar, olvídate de los recorridos en autobús, las visitas a pie, las comidas en restaurantes de comida rápida, los lugares abarrotados y las discotecas y clubes nocturnos.
 
@@ -23,16 +23,16 @@ Le damos principal importancia a su salud y su dieta, en nuestros menús encontr
 Y Si desea disfrutar de ésta maravillosa experiencia en compañia podrá acceder a paquetes exclusivos, con descuentos preferenciales. 
 
 <sup>Integrantes del grupo</sup>
-**Valentina Vallejos Podio**
-**Manuel Chávez**
-**Franco Ambort**
-**Pamela Abeldaño**
+-**Valentina Vallejos Podio**
+-**Manuel Chávez**
+-**Franco Ambort**
+-**Pamela Abeldaño**
 
 <sup>Inspiración de referentes del mercado</sup>
-[Turismo de Bienestar](https://turismodebienestar.com/)
-[Viaje Oasis](https://viajesoasis.com/)
-[Setil Viajes](https://www.setilviajes.com/)
-[Pangea](https://www.pangea.tur.ar/)
-[Marcelo Gimenez](https://marcelogimenez.tur.ar/)
+-[Turismo de Bienestar](https://turismodebienestar.com/)
+-[Viaje Oasis](https://viajesoasis.com/)
+-[Setil Viajes](https://www.setilviajes.com/)
+-[Pangea](https://www.pangea.tur.ar/)
+-[Marcelo Gimenez](https://marcelogimenez.tur.ar/)
 
 
