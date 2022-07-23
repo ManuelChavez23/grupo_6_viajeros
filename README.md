@@ -14,12 +14,34 @@ Nos especializamos en SALIDAS GRUPALES ACOMPAÑADAS tanto a destinos nacionales 
 
 <sup>¿Quién será nuestra audiencia objetivo?</sup>
 
-Destinado a todo aquel apasionado por la aventura :cowboy_hat_face::heavy_heart_exclamation: que quiera conocer lugares nuevos, espectaculares y este dispuesto a disfrutar al 100% cada viaje 
+Destinado a todo aquel que quiera tomarse su tiempo, aliviar el estrés, estar en armonía con el medio ambiente y tener un estilo de vida saludable, incluso cuando está lejos de casa. Con el turismo de bienestar, olvídate de los recorridos en autobús, las visitas a pie, las comidas en restaurantes de comida rápida, los lugares abarrotados y las discotecas y clubes nocturnos.
 
 <sup>¿Cómo ajustaremos nuestra oferta a ese público?</sup>
 
-falta:
+Nuestras actividades tienen como objetivo desconectar con el estrés diario y las obligaciones, estaremos en contacto con el medio ambiente, disfrutando de la naturaleza, en armonía con nuestro cuerpo y lo que nos rodea gracias a las actividades de meditación, yoga y tai-chi. :lotus_position:
+Le damos principal importancia a su salud y su dieta, en nuestros menús encontrará, comidas orgánicas, batidos o platos vegetarianos. 
+Y Si desea disfrutar de ésta maravillosa experiencia en compañia podrá acceder a paquetes exclusivos, con descuentos preferenciales. 
 
-Una breve descripción de los integrantes del equipo.
-agregar un listado de al menos 5 sitios de referencia
-indicando brevemente por qué fueron elegidos.
+<sup>Integrantes del grupo</sup>
+
+**Valentina Vallejos Podio**:
+
+**Manuel Chávez**:
+
+**Franco Ambort**:
+
+**Pamela Abeldaño**:
+
+<sup>Inspiración de referentes del mercado</sup>
+
+[Turismo de Bienestar](https://turismodebienestar.com/)-->Posee una paleta de colores que  permite la legibilidad de los textos y el disfrute de cada sección. Usa tipografías apropiadas. Posee un aparto "Blog" donde el usuario puede leer experiencias ,lo que hace que sea más atractivo el sitio.
+
+[Viaje Oasis](https://viajesoasis.com/)
+
+[Setil Viajes](https://www.setilviajes.com/)-->portafolio visual llamativo las imágenes capturan la atención del usuario, incluye  fotografías y videos en el inicio de su sitio web. El uso de logotipos u otro tipo de branding es más llamativo para el usuario.                                                                                                                                                                           
+
+[Pangea](https://www.pangea.tur.ar/)
+
+[Marcelo Gimenez](https://marcelogimenez.tur.ar/)-->En términos de experiencia del usuario, tiene un diseño súper intuitivo que permite que el usuario interactúe fácilmente. 
+
+
