@@ -25,13 +25,13 @@ Y Si desea disfrutar de ésta maravillosa experiencia en compañia podrá accede
 <sup>Integrantes del grupo</sup>
 ```
 
-**Valentina Vallejos Podio**:
+Valentina Vallejos Podio:
 
-**Manuel Chávez**:
+Manuel Chávez:
 
-**Franco Ambort**:
+Franco Ambort:
 
-**Pamela Abeldaño**:
+Pamela Abeldaño:
 
 ```
 <sup>Inspiración de referentes del mercado</sup>
