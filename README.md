@@ -36,14 +36,14 @@ Pamela Abeldaño:
 ```
 <sup>Inspiración de referentes del mercado</sup>
 
-[Turismo de Bienestar](https://turismodebienestar.com/)-->Posee una paleta de colores que  permite la legibilidad de los textos y el disfrute de cada sección. Usa tipografías apropiadas. Posee un aparto "Blog" donde el usuario puede leer experiencias ,lo que hace que sea más atractivo el sitio.
+[**Turismo de Bienestar**](https://turismodebienestar.com/)-->Posee una paleta de colores que  permite la legibilidad de los textos y el disfrute de cada sección. Usa tipografías apropiadas. Posee un aparto "Blog" donde el usuario puede leer experiencias ,lo que hace que sea más atractivo el sitio.
 
-[Viaje Oasis](https://viajesoasis.com/)
+[**Viaje Oasis**](https://viajesoasis.com/)
 
-[Setil Viajes](https://www.setilviajes.com/)-->portafolio visual llamativo las imágenes capturan la atención del usuario, incluye  fotografías y videos en el inicio de su sitio web. El uso de logotipos u otro tipo de branding es más llamativo para el usuario.                                                                                                                                                                           
+[**Setil Viajes**](https://www.setilviajes.com/)-->portafolio visual llamativo las imágenes capturan la atención del usuario, incluye  fotografías y videos en el inicio de su sitio web. El uso de logotipos u otro tipo de branding es más llamativo para el usuario.                                                                                                                                                                           
 
-[Pangea](https://www.pangea.tur.ar/)
+[**Pangea**](https://www.pangea.tur.ar/)
 
-[Marcelo Gimenez](https://marcelogimenez.tur.ar/)-->En términos de experiencia del usuario, tiene un diseño súper intuitivo que permite que el usuario interactúe fácilmente. 
+[**Marcelo Gimenez**](https://marcelogimenez.tur.ar/)-->En términos de experiencia del usuario, tiene un diseño súper intuitivo que permite que el usuario interactúe fácilmente. 
 
 
