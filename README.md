@@ -21,7 +21,7 @@ Destinado a todo aquel que quiera tomarse su tiempo, aliviar el estrés, estar e
 Nuestras actividades tienen como objetivo desconectar con el estrés diario y las obligaciones, estaremos en contacto con el medio ambiente, disfrutando de la naturaleza, en armonía con nuestro cuerpo y lo que nos rodea gracias a las actividades de meditación, yoga y tai-chi. :lotus_position:
 Le damos principal importancia a su salud y su dieta, en nuestros menús encontrará, comidas orgánicas, batidos o platos vegetarianos. 
 Y Si desea disfrutar de ésta maravillosa experiencia en compañia podrá acceder a paquetes exclusivos, con descuentos preferenciales. 
-
+``
 <sup>Integrantes del grupo</sup>
 
 **Valentina Vallejos Podio**:
@@ -31,7 +31,7 @@ Y Si desea disfrutar de ésta maravillosa experiencia en compañia podrá accede
 **Franco Ambort**:
 
 **Pamela Abeldaño**:
-
+``
 <sup>Inspiración de referentes del mercado</sup>
 
 [Turismo de Bienestar](https://turismodebienestar.com/)-->Posee una paleta de colores que  permite la legibilidad de los textos y el disfrute de cada sección. Usa tipografías apropiadas. Posee un aparto "Blog" donde el usuario puede leer experiencias ,lo que hace que sea más atractivo el sitio.
