@@ -25,10 +25,8 @@ Y Si desea disfrutar de ésta maravillosa experiencia en compañia podrá accede
 <sup>Integrantes del grupo</sup>
 ```
 
-Valentina Vallejos Podio
-Manuel Chávez
-Franco Ambort
-Pamela Abeldaño
+Valentina Vallejos Podio - Manuel Chávez - Franco Ambort - Pamela Abeldaño
+
 Somos parte del Departamento de desarrollo web de la agencia, nuestras funciones:
 - Solucionar problemas del sitio web
 - Mantener y actualizar el sitio web
