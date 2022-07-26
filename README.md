@@ -30,12 +30,12 @@ Manuel Chávez
 Franco Ambort
 Pamela Abeldaño
 Somos parte del Departamento de desarrollo web de la agencia, nuestras funciones:
-:black_small_square: Solucionar problemas del sitio web
-:black_small_square: Mantener y actualizar el sitio web
-:black_small_square: Monitorear el tráfico del sitio web
-:black_small_square: Hacer prototipos del sitio web
-:black_small_square: Presentar especificaciones de diseño
-:black_small_square: Trabajar con diseñadores web
+- Solucionar problemas del sitio web
+- Mantener y actualizar el sitio web
+- Monitorear el tráfico del sitio web
+- Hacer prototipos del sitio web
+- Presentar especificaciones de diseño
+- Trabajar con diseñadores web
 
 ```
 <sup>Inspiración de referentes del mercado</sup>
