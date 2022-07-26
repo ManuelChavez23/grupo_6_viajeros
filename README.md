@@ -25,13 +25,17 @@ Y Si desea disfrutar de ésta maravillosa experiencia en compañia podrá accede
 <sup>Integrantes del grupo</sup>
 ```
 
-Valentina Vallejos Podio:
-
-Manuel Chávez:
-
-Franco Ambort:
-
-Pamela Abeldaño:
+Valentina Vallejos Podio
+Manuel Chávez
+Franco Ambort
+Pamela Abeldaño
+Somos parte del Departamento de desarrollo web de la agencia, nuestras funciones:
+:black_small_square: Solucionar problemas del sitio web
+:black_small_square: Mantener y actualizar el sitio web
+:black_small_square: Monitorear el tráfico del sitio web
+:black_small_square: Hacer prototipos del sitio web
+:black_small_square: Presentar especificaciones de diseño
+:black_small_square: Trabajar con diseñadores web
 
 ```
 <sup>Inspiración de referentes del mercado</sup>
