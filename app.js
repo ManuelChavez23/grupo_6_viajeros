@@ -10,6 +10,6 @@ app.listen(3000, () =>{
     console.log('Estamos en el puerto 3000')
 });
 
-app.get('/', (req, res) =>{
+app.get('/index', (req, res) =>{
     res.sendFile(path.join(__dirname,'/views/index.html'))
 });
