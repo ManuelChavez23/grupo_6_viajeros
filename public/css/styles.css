@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+h1,
+h2,
+p,
+li {
+    font-family: 'Dosis', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* HEADER  */
+
+
+.header {
+    background-color: #c7c2c2;
+}
+
+.header-logo {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.header-nav {
+    display: none;
+}
+
+.header-contenedor-bars {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.header-bars {
+    font-size: 2rem;
+    background-color: rgb(53, 103, 196);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.header-titulo {
+    text-align: center;
+    font-weight: bold;
+    padding: 0 1rem 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.header-parrafo {
+    padding: 0 1rem 1rem 1rem;
+}
+
+
+
+
+
+/* SECTION HOME */
+
+.buscador {
+    padding: 1rem;
+    background-color: burlywood;
+}
+
+.contenedor-buscador {
+    text-align: center;
+}
+
+.input-buscador {
+    padding: 0.5rem;
+    width: 90%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: 'Dosis', sans-serif;
+}
+
+
+
+
+
+/* BANNER PUBLICITARIO*/
+
+.banner {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* .banner-titulo {
+}
+ */
+
+
+
+
+/* MAIN - DESTINOS */
+.main-home {
+    padding: 1rem;
+    background-color: bisque;
+}
+
+.main-home-titulo {
+    margin-bottom: 1rem;
+
+    text-decoration: underline;
+}
+
+.main-home-section {
+    padding: 2rem;
+}
+
+.article {
+    border-radius: 5px;
+}
+
+/* .article-card-top {} */
+
+.article-img {
+    width: 100%;
+}
+
+.article-card-body {
+    padding: 1rem;
+    background-color: #c7c2c2;
+}
+
+.article-titulo {
+    margin-bottom: 1rem;
+}
+
+.article-parrafo {
+    margin-bottom: 1rem;
+}
+
+.article-precio {
+    margin-bottom: 1rem;
+}
+
+.contenedor-btn {
+    text-align: center;
+}
+
+.article-btn {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    color: #6481bb;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #6481bb;
+    font-family: 'Dosis', sans-serif;
+}
+
+
+
+
+
+
+/* SECTION - NOSOTROS */
+
+.nosotros {
+    background-color: grey;
+}
+
+.nosotros-titulo {
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+.nosotros-parrafo {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.nosotros-contenedor-btn {
+    text-align: end;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.nosotros-btn {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    color: blue;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid blue;
+    font-family: 'Dosis', sans-serif;
+}
+
+/* .nosotros-contenedor-img {
+    
+} */
+
+.nosotros-img {
+    width: 100%;
+}
+
+
+
+
+
+/* SECTION - MARCAS */
+
+.marcas {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* .marcas-titulo {
+
+}
+
+ */
+
+
+
+/* FOOTER */
+
+.footer {
+    padding: 2rem 0;
+    background-color: #414141;
+    text-align: center;
+}
+
+/* FOOTER ACCESOS */
+
+/* .footer-accesos {
+
+}
+ */
+.footer-titulo {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.footer-ul {
+    margin-bottom: 2rem;
+}
+
+.footer-li {
+    margin-bottom: 0.5rem;
+}
+
+/* FOOTER REDES */
+
+/* .footer-redes {
+
+} */
+
+.footer-redes-titulo {
+    margin-bottom: 1rem;
+}
+
+.footer-contenedor-icono {
+    margin-bottom: 2rem;
+}
+
+.footer-icono {
+    font-size: 2rem;
+    padding: 0.5rem;
+    color: #a7bb39;
+}
+
+
+/* FOOTER INFORMACION */
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-info-titulo {
+    margin-bottom: 1rem;
+}
+
+.footer-info-parrafo {
+    padding: 0 1rem;
+}
+
+
+@media (min-width: 1260px) {
+
+    /* HEADER */
+
+    .header ul {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .header li {
+        list-style: none;
+        display: inline-block;
+        padding: 1rem;
+        transition: 0.5s;
+    }
+    .header li:hover {
+        transform: translateY(-5px);
+        transition: 0.5s;
+    }
+    .header li a {
+        color: black;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: 0.5s;
+    }
+
+    .header li a:hover {
+        color: #6481bb;
+        transition: 0.5s;
+    }
+
+    .header {
+        display: flex;
+        padding: 2rem;
+        background-color: #ffffff;
+    }
+
+    .header-logo {
+        margin-bottom: 0;
+        width: 25%;
+    }
+
+    /* .header-rigth {} */
+
+    .header-nav {
+        display: flex;
+    }
+
+    .header-contenedor-bars {
+        display: none;
+    }
+
+    .buscador {
+        background-color: #7ed957;
+    }
+    /* MAIN */
+
+    .main-home {
+        background-color: #ddce4c;
+        padding: 1rem 5rem;
+    } 
+
+
+    .article {
+        display: inline-block;
+        padding: 0;
+        width: 20%;
+        transition: 0.5s;
+    }
+
+    .article:hover {
+        transform: translateY(-5px);
+        box-shadow: -9px 10px 8px 0 #00000045;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .article-card-body {
+        background-color: #ffffff;
+    }
+
+    .article-btn {
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+
+    .article-btn:hover {
+        background-color: #6481bb;
+        color: white;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+
+    /* NOSOTROS */
+
+    .nosotros {
+        display: flex;
+        background-color: #6481bb;
+    }
+
+    .nosotros-parrafo {
+        padding: 0 4rem;
+    }
+    /* .nosotros-contenedor-btn {
+
+    } */
+    .nosotros-btn {
+        border: 1px solid #414141;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+    .nosotros-btn:hover{
+        background-color: #414141;
+        color: #ffffff;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+
+
+    /* FOOTER */
+
+    .footer {
+        display: flex;
+    }
+    .footer-accesos {
+        width: 30%;
+        color: #ffffff;  
+        transition: 0.5s;
+    }
+    .footer-li a {
+        transition: 0.5s;
+    }
+    .footer-li a:hover{
+        color: #ddce4c;
+        transition: 0.5s;
+    }
+    .footer-redes {
+        width: 33%;
+        color: #ffffff;
+    }
+    .footer-icono {
+        color: #ffffff;
+        transition: 0.5s;
+    }
+    .footer-icono:hover {
+        color: #ddce4c;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .footer-info {
+        width: 33%;
+        color: #ffffff;
+    }
+}
