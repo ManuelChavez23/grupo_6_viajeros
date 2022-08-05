@@ -564,3 +564,105 @@ a {
     margin: auto;
     width: 70%;
 }
+
+/*CARRITO.HTML--------------------------------------------------------------*/
+
+.carrito-paquete {
+    background-color: #a7bb39;
+    color: #ffffff;
+    text-align: center;
+    border: solid 1px white;
+    
+}
+main.carrito {
+    margin: auto;
+    width: 90%;
+}
+.carrito-main {
+    display: flex;
+    flex-direction: row;  
+    margin-top: 5%; 
+    font-size:x-large;
+    font-weight: 300;
+}
+.carrito-opcion-actual {
+    width: 80%;
+}
+.carrito-precio {
+    width: 10%;
+}
+.carrito-total {
+    width: 80%;
+}
+.carrito-tarjetas {
+    width: 80%;
+    text-align: center;
+    margin: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.fa-cc-mastercard {
+    color: #a7bb39;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+.fa-cc-visa {
+    color: #a7bb39;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+.carrito-boton {
+    background-color: #a7bb39;
+    width: 100%;
+    border: none;
+    font-size: 3rem;
+    color: #ffffff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10%;
+}
+.carrito-derechos {
+    font-size:xx-large;
+    text-align: center;
+    text-decoration: underline;
+}
+.carrito-p {
+    font-size: large;
+}
+.carrito-botones {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.carrito-boton-seguir-comprando {
+    background-color: #a7bb39;
+    border: none;
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.carrito-boton-cancelar {
+    background-color: #a7bb39;
+    border: none;
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
