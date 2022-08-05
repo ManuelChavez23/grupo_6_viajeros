@@ -445,3 +445,122 @@ a {
         color: #ffffff;
     }
 }
+
+.main-login-titulo {
+    text-align: center;
+    padding: 15px;
+    background-color: honeydew;
+    font-weight: 800;
+}
+
+.main-login-section {
+    text-align: center;
+}
+
+.main-login-section p {
+    text-align: left;
+}
+
+.login-panel {
+    padding: 10px;
+    text-align: center;
+}
+
+.login-label {
+    text-align: left;
+    display: block;
+    color: #414141;
+    padding: 10px;
+    padding-left: 20%;
+    position: relative;
+    font-family: "Dosis";
+    font-weight: 550;
+}
+
+.login-panel input {
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    margin: auto;
+    max-width: 500px;
+    width: 70%;
+    border-radius: 5px;
+    height: 2rem;
+    border: #6481bb 0.5px solid;
+}
+
+.login-panel input:focus {
+    text-align: left;
+    border: 5px solid cornsilk;
+}
+
+
+
+.login-panel button {
+    padding: 5px;
+    margin: 15px auto 5px;
+    display: block;
+    box-sizing: border-box;
+    height: max-content;
+    width: 20%;
+    max-width: 120px;
+    width: max-content;
+    border-radius: 3px;
+    border: 1px solid powderblue;
+    background-color: thistle;
+}
+
+.login-panel button:active {
+    background-color: lightskyblue;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.remember-label {
+    display: inline-block;
+    text-align: left;
+    font-family: "Dosis";
+    padding-right: 10px;
+    
+}
+
+#remember {
+    display: inline-block;
+    width: 20px;
+    margin-top: 15px;
+}
+
+.forgot {
+    display: block;
+    font-style: oblique;
+    text-align: center;
+    margin: 0;
+    color: gray;
+    padding: 5px;
+}
+
+.add {
+    background-color: gainsboro;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.add h2 {
+    margin-bottom: 15px;
+}
+
+.add h3 {
+    font-family: "Dosis";
+    margin: 10px 0;
+}
+
+.add-img {
+    width: 80%;
+}
+
+.add p {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
