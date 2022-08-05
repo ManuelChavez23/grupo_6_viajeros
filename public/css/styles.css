@@ -666,3 +666,191 @@ main.carrito {
     margin-top: 10%;
     margin-bottom: 10%;
 }
+
+
+.burger-menu {
+    font-size: 1rem;
+    background-color: rgb(53, 103, 196);
+    border-radius: 5px;
+    padding: 0.3rem;
+    flex-grow: 1;
+    margin-bottom: 90px;
+
+}
+
+
+.container-search {
+    flex-grow: 1;
+}
+
+#cabecera {
+
+    background: white;
+    border: 2px solid white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo2 {
+    width: 30%;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: underline;
+}
+
+header.headerproduct {
+    background-color: #c7c2c2;
+}
+
+.headerproduct-logo {
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+img.imgproduct {
+    width: 50%;
+    float: left;
+    border: 1px solid #000;
+}
+
+h1.commercial-banner {
+    padding: 1rem;
+    text-align: center;
+    background-color: #c7c2c2;
+}
+
+.destiny-description {
+    text-align: center;
+}
+
+img.otros {
+    width: 50%;
+
+}
+
+.container-others {
+    width: 40%;
+
+}
+
+.producto-descripcion {
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+
+.mapa {
+    text-align: center;
+}
+p.producto-descrip{
+    margin-top: 30px;
+    text-align: justify;
+}
+.producto .producto-info {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.main-product {
+    padding: 1rem;
+    background-color: bisque;
+}
+
+.destiny-title {
+    text-align: center;
+}
+
+.detail {
+    text-align: center;
+}
+
+.producto-info li {
+    list-style-type: none;
+
+}
+
+.tarjetas li {
+    list-style-type: none;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+}
+.container-other1234 {
+    margin: auto;
+    background-color: #c7c2c2;
+    width: 800px;
+    padding: 30px;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider {
+    position: relative;
+    width: 800px;
+    height: 300px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background: #c7c2c2;
+    ;
+}
+
+ul.slider li img {
+
+    height: 300px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+    /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1;
+    /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu {
+    text-align: justify;
+    margin: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+}
