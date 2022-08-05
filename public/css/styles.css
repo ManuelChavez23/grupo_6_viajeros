@@ -290,23 +290,25 @@ a {
 @media (min-width: 1260px) {
 
     /* HEADER */
-
+   
     .header ul {
         width: 100%;
         text-align: center;
         margin-bottom: 2rem;
     }
-
+    
     .header li {
         list-style: none;
         display: inline-block;
         padding: 1rem;
         transition: 0.5s;
     }
+
     .header li:hover {
         transform: translateY(-5px);
         transition: 0.5s;
     }
+
     .header li a {
         color: black;
         font-weight: bold;
@@ -340,15 +342,17 @@ a {
         display: none;
     }
 
+
     .buscador {
         background-color: #7ed957;
     }
+
     /* MAIN */
 
     .main-home {
         background-color: #ddce4c;
         padding: 1rem 5rem;
-    } 
+    }
 
 
     .article {
@@ -364,6 +368,7 @@ a {
         transition: 0.5s;
         cursor: pointer;
     }
+
     .article-card-body {
         background-color: #ffffff;
     }
@@ -392,6 +397,7 @@ a {
     .nosotros-parrafo {
         padding: 0 4rem;
     }
+
     /* .nosotros-contenedor-btn {
 
     } */
@@ -401,7 +407,8 @@ a {
         font-weight: bold;
         transition: 0.5s;
     }
-    .nosotros-btn:hover{
+
+    .nosotros-btn:hover {
         background-color: #414141;
         color: #ffffff;
         transition: 0.5s;
@@ -415,33 +422,231 @@ a {
     .footer {
         display: flex;
     }
+
     .footer-accesos {
         width: 30%;
-        color: #ffffff;  
+        color: #ffffff;
         transition: 0.5s;
     }
+
     .footer-li a {
         transition: 0.5s;
     }
-    .footer-li a:hover{
+
+    .footer-li a:hover {
         color: #ddce4c;
         transition: 0.5s;
     }
+
     .footer-redes {
         width: 33%;
         color: #ffffff;
     }
+
     .footer-icono {
         color: #ffffff;
         transition: 0.5s;
     }
+
     .footer-icono:hover {
         color: #ddce4c;
         transition: 0.5s;
         cursor: pointer;
     }
+
     .footer-info {
         width: 33%;
         color: #ffffff;
+        
     }
+
+}
+
+/*PRODUCT*/
+
+.burger-menu {
+    font-size: 1rem;
+    background-color: rgb(53, 103, 196);
+    border-radius: 5px;
+    padding: 0.3rem;
+    flex-grow: 1;
+    margin-bottom: 90px;
+
+}
+
+
+.container-search {
+    flex-grow: 1;
+}
+
+#cabecera {
+
+    background: white;
+    border: 2px solid white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo2 {
+    width: 30%;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: underline;
+}
+
+header.headerproduct {
+    background-color: #c7c2c2;
+}
+
+.headerproduct-logo {
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+img.imgproduct {
+    width: 50%;
+    float: left;
+    border: 1px solid #000;
+}
+
+h1.commercial-banner {
+    padding: 1rem;
+    text-align: center;
+    background-color: #c7c2c2;
+}
+
+.destiny-description {
+    text-align: center;
+}
+
+img.otros {
+    width: 50%;
+
+}
+
+.container-others {
+    width: 40%;
+
+}
+
+.producto-descripcion {
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+
+.mapa {
+    text-align: center;
+}
+p.producto-descrip{
+    margin-top: 30px;
+    text-align: justify;
+}
+.producto .producto-info {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.main-product {
+    padding: 1rem;
+    background-color: bisque;
+}
+
+.destiny-title {
+    text-align: center;
+}
+
+.detail {
+    text-align: center;
+}
+
+.producto-info li {
+    list-style-type: none;
+
+}
+
+.tarjetas li {
+    list-style-type: none;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+}
+.container-other1234 {
+    margin: auto;
+    background-color: #c7c2c2;
+    width: 800px;
+    padding: 30px;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider {
+    position: relative;
+    width: 800px;
+    height: 300px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background: #c7c2c2;
+    ;
+}
+
+ul.slider li img {
+
+    height: 300px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+    /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1;
+    /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu {
+    text-align: justify;
+    margin: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
 }
