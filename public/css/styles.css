@@ -290,7 +290,7 @@ a {
 
 /*LOGIN.HTML--------------------------------------------------------------*/
 
-.main-login-titulo {
+.main-login-title {
     text-align: center;
     padding: 15px;
     background-color: honeydew;
@@ -338,18 +338,17 @@ a {
     border: 5px solid cornsilk;
 }
 
-
-
 .login-panel button {
-    padding: 5px;
+    font-size: 17px;
+    padding: 15px;
     margin: 10px auto;
     display: block;
     box-sizing: border-box;
     height: max-content;
     width: 20%;
-    max-width: 120px;
+    max-width: 200px;
     width: max-content;
-    border-radius: 3px;
+    border-radius: 15px;
     border: 1px solid powderblue;
     background-color: thistle;
 }
@@ -399,6 +398,7 @@ a {
     background-color: gainsboro;
     box-sizing: border-box;
     padding: 20px 0;
+    margin: auto;
 }
 
 .add h2 {
@@ -714,24 +714,136 @@ ul.slider li:target {
     border-radius: 100%;
 }
 
-@media (min-width: 768px) {
+/* REGISTER.HTML------------------------------------------------------------------------------- */
+
+.main-register-section {
+    text-align: center;
+}
+
+.main-register-title {
+    text-align: center;
+    padding: 15px;
+    background-color: honeydew;
+    font-weight: 800;
+}
+
+.register-panel {
+    padding: 10px;
+    text-align: center;
+   /*  width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+    margin: auto; */
+}
+
+.main-register-section {
+    text-align: center;
+}
+
+.main-register-section p {
+    text-align: left;
+}
+
+.register-label {
+    text-align: left;
+    display: block;
+    color: #414141;
+    padding: 10px;
+    padding-left: 20%;
+    position: relative;
+    font-family: "Dosis";
+    font-weight: 550;
+}
+
+.register-panel input {
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    margin: auto;
+    max-width: 500px;
+    width: 70%;
+    border-radius: 5px;
+    height: 2rem;
+    border: #6481bb 0.5px solid;
+}
+
+.register-panel input:focus {
+    text-align: left;
+    border: 5px solid cornsilk;
+}
+
+.register-panel input:focus::placeholder {
+    color: transparent;
+}
+
+.register-panel button {
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    box-sizing: border-box;
+    height: max-content;
+    width: 20%;
+    max-width: 120px;
+    width: max-content;
+    border-radius: 15px;
+    border: 1px solid powderblue;
+    background-color: thistle;
+}
+
+.register-panel button:active {
+    background-color: lightskyblue;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.agree-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    flex-wrap: wrap;
+}
+
+.agree-div label{
+    display: inline-block;
+    text-align: left;
+    font-family: "Dosis";
+    padding-right: 10px;
+}
+
+#ad-agree, #terms-agree {
+    width: 20px;
+    align-self: center;
+    margin: 0;
+    display: block;
+}
+
+@media (min-width: 460px) {
+
+    /* LOGIN---------------------------------------------------------------------- */
+
     .main-login-section {
         display: flex;
         justify-content: space-between;
         background-color: rgba(222, 220, 197, 0.27);
     }
 
-    .add {
-        max-width: 360px;
-    }
+    /* .add {
+        min-width: 360px;
+    } */
 
     .add-wideview {
-        max-width: 360px;
+        /* min-width: 360px; */
         order: -1;
     }
 
     .login-panel {
-        width: 360px;
+        min-width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -750,9 +862,45 @@ ul.slider li:target {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
+    /* REGISTER----------------------------------------------------------------------------------- */
+
+    .main-register-section {
+        display: flex;
+    }
+
+    .register-panel {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .add {
+        margin: 0;
+    }
+
+    #ad {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .agree-div label {
+        font-size: 15px;
+        padding: 10px 3px 0 0;
+        max-width: 180px;
+    }
+    
+    #ad-agree, #terms-agree {
+        width: 15px;
+    }
+
 }
 
-@media (min-width: 1260px) {
+@media (min-width: 768px) {
 
     /* HEADER */
 
@@ -911,6 +1059,7 @@ ul.slider li:target {
     }
 
     /* LOGIN---------------------------------------------------- */
+
     .login-panel {
         width: 500px;
         font-size: 19px;
@@ -925,15 +1074,13 @@ ul.slider li:target {
         max-width: 150px;
         font-size: 17px;
     }
-
-    .add-wideview {
-        display: block;
-    }
-
+    
     .add-wideview {
         background-color: gainsboro;
         box-sizing: border-box;
         padding: 20px 0;
+        display: block;
+        width: 100%;
     }
     
     .add-wideview h2 {
@@ -954,4 +1101,53 @@ ul.slider li:target {
         margin: auto;
         width: 70%;
     }
+
+    .add {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* REGISTER---------------------------------------------------- */
+
+    .register-panel {
+        width: 50%;
+    }
+
+    .publicidad {
+        display: flex;
+    }
+
+    #ad {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .main-register-section {
+        display: flex;
+    }
+
+    .register-panel input {
+        margin: 8px auto;
+    }
+
+    .agree-div {
+        flex-wrap: wrap;
+    }
+
+    .agree-div label {
+        padding: 0 10px 4px;
+        max-width: none;
+    }
+
+    .register-panel button {
+        font-size: 18px;
+        align-self: flex-end;
+        margin-top: 50px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
 }
