@@ -72,7 +72,7 @@ a {
 
 .buscador {
     padding: 1rem;
-    background-color: burlywood;
+    background-color: #cec1dc;
 }
 
 .contenedor-buscador {
@@ -427,7 +427,7 @@ a {
 /*CARRITO.HTML--------------------------------------------------------------*/
 
 .carrito-paquete {
-    background-color: #a7bb39;
+    background-color: #8dc2d9;
     color: #ffffff;
     text-align: center;
     border: solid 1px white;
@@ -462,7 +462,7 @@ main.carrito {
     justify-content: center;
 }
 .fa-cc-mastercard {
-    color: #a7bb39;
+    color: #8dc2d9;
     font-size: 3rem;
     display: flex;
     justify-content: center;
@@ -470,7 +470,7 @@ main.carrito {
     padding: 1%;
 }
 .fa-cc-visa {
-    color: #a7bb39;
+    color: #8dc2d9;
     font-size: 3rem;
     display: flex;
     justify-content: center;
@@ -478,7 +478,7 @@ main.carrito {
     padding: 1%;
 }
 .carrito-boton {
-    background-color: #a7bb39;
+    background-color: #8dc2d9;
     width: 100%;
     border: none;
     font-size: 3rem;
@@ -504,7 +504,7 @@ main.carrito {
     align-items: center;
 }
 .carrito-boton-seguir-comprando {
-    background-color: #a7bb39;
+    background-color: #8dc2d9;
     border: none;
     font-size: 1rem;
     color: #ffffff;
@@ -515,7 +515,7 @@ main.carrito {
     margin-bottom: 10%;
 }
 .carrito-boton-cancelar {
-    background-color: #a7bb39;
+    background-color: #8dc2d9;
     border: none;
     font-size: 1rem;
     color: #ffffff;
@@ -525,7 +525,44 @@ main.carrito {
     margin-top: 10%;
     margin-bottom: 10%;
 }
+.carrito-destinos {
+    margin: 2%;
+}
 
+#carrito-buscados {
+    background-color: #cec1dc;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+}
+.carrito-h2 {
+    text-align: center;
+}
+.img-carrito {
+    margin: 2%;
+    text-align: center;
+}
+.carrito-img {
+    width: 60%;
+}
+.img-carrito2, .img-carrito3  {
+    display: none;
+}
+
+@media (min-width: 768px) {
+.img-carrito, .img-carrito2, .img-carrito3  {
+        display: block;
+        width: 100%;
+}
+.carrito-destinos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+}
 /*product*/
 
 .burger-menu {
@@ -824,7 +861,8 @@ ul.slider li:target {
     display: block;
 }
 
-@media (min-width: 460px) {
+
+
 
     /* LOGIN---------------------------------------------------------------------- */
 
