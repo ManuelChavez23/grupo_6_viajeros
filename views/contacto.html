@@ -47,76 +47,68 @@
         <img class="imgpbanner" src="img/banner viajeros.jpeg" alt="">
     </section>
 
-    <main class="main-product">
-        <section class="main-product-section">
-            <article class="destiny">
-                <div class="destiny-card-top">
-                    <img class="imgproduct" src="img/product.jpg" alt="">
-                </div>
-                <div class="product-card-body">
-                    <h1 class="destiny-title">ESTANCIA LA ERNESTINA ECOTURISMO.</h1>
-                    <p class="destiny-description">Programa de salidas propias en bus para conocer ESTANCIA LA
-                        Ernestina Ecoturismo. Salidas
-                        en SEPTIEMBRE 2022.
-                    </p>
-                    <div class="col-xs-12 col-sm-6 col-md-5 col-print">
-                        <div class="producto-descripcion">
-                            <p class="producto-descrip">La estancia cuenta con ocho cabañas con DISEÑOS ÚNICOS,
-                                totalmente
-                                construidas con madera y
-                                piedras del lugar, con todas las comodidades para que puedan alojarse de 2 a 14
-                                personas.
+    <main class="maincontact">
+        <div class="contact_form">
 
-                                Estancia La Ernestina es un deleite para los sentidos, porque además del confort y la
-                                belleza de
-                                nuestras cabañas y el entorno, podrás disfrutar los mejores sabores y aromas en Buena
-                                Yunta,
-                                nuestro exclusivo restaurante, donde combinamos sabiamente los recursos que nos brinda
-                                la
-                                naturaleza con la experiencia y las recetas únicas de nuestro chef.
+            <div class="formulario">      
+              <h1 class="formulario">Formulario de contacto</h1>
+                <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+        
+        
+                  <form action="submeter-formulario.php" method="post">       
+        
+                    
+                        <p>
+                          <label for="nombre" class="colocar_nombre">Nombre
+                            <span class="obligatorio">*</span>
+                          </label>
+                            <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                        </p>
+                      
+                        <p>
+                          <label for="email" class="colocar_email">Email
+                            <span class="obligatorio">*</span>
+                          </label>
+                            <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                        </p>
+                    
+                        <p>
+                          <label for="telefone" class="colocar_telefono">Teléfono
+                          </label>
+                            <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                        </p>    
+                      
+                        <p>
+                          <label for="website" class="colocar_website">Sitio web
+                          </label>
+                            <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
+                        </p>    
+                      
+                        <p>
+                          <label for="asunto" class="colocar_asunto">Asunto
+                            <span class="obligatorio">*</span>
+                          </label>
+                            <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                        </p>    
+                      
+                        <p>
+                          <label for="mensaje" class="colocar_mensaje">Mensaje
+                            <span class="obligatorio">*</span>
+                          </label>                     
+                                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                        </p>                    
+                      
+                        <button type="submit" name="enviar_formulario" id="enviar"><p class="enviar">Enviar</p></button>
+        
+                        <p class="aviso">
+                          <span class="obligatorio"> * </span>los campos son obligatorios.
+                        </p>          
+                    
+                  </form>
+            </div>  
+          </div>
+        
 
-                                La experiencia natural de La Ernestina, comienza aún antes de llegar. Desviandose sólo
-                                unos
-                                metros de la ruta S271 camino a San Clemente (Valle de Paravachasca, Córdoba) comenzará
-                                a
-                                vislumbrar la gran variedad de árboles que hacen de nuestro entorno un paisaje de
-                                ensueño.</p>
-                            <p>.</p>
-                            <div class="mapa">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.371741925588!2d-64.66368368514716!3d-31.7603454201504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d497a14a378bb%3A0xfb3f1d0d7d735ab7!2sEstancia%20La%20Ernestina!5e0!3m2!1ses!2sar!4v1659678839917!5m2!1ses!2sar"
-                                    width="300" height="300" style="text-align: center;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                            <h1 class="detail">DETALLES</h1>
-                        </div>
-                        <ul class="producto-info">
-                            <li><i class="fas fa-bus">Bus de turismo Mix (opcional butaca cama $3.000).</i></li>
-                            <li><i class="fas fa-calendar">03 Noches.</i></li>
-                            <li><i class="fas fa-bed">Alojamiento.</i></li>
-                            <li><i class="fa fa-utensils">Régimen de Comidas: ALL INCLUSIVE.</i></li>
-                            <li><i class="fa fa-walking">Excursiones Incluidas: Trekking, Rappel, Cabalgatas.Terapias
-                                    Naturales y Retiro.</i></li>
-                            <li><i class="fa fa-user">Coordinador Permanente.</i></li>
-                            <li><i class="fa fa-users">Guías Locales.</i></li>
-                            <li><i class="fas fa-shield-virus">Seguro COVID-19.</i></li>
-                        </ul>
-                    </div>
-                    <div class="metodo-pago">
-                        <div class="efectivo">
-                            <p class="price"> EFECTIVO $55.000</p>
-                        </div>
-                        <div class="tarjetas">
-                            <ul>
-                                <li class="tarjetas1"><i class="fab fa-cc-visa"></i></li>
-                                <li class="tarjetas1"><i class="fab fa-cc-mastercard"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="contenedor-btn">
-                        <button class="article-btn">Comprar</button>
-                    </div>
-                </div>
     </main>
     <section class="other destinations">
         <h1 class="destiny-other">

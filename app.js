@@ -28,6 +28,10 @@ app.get('/product', (req, res) =>{
     res.sendFile(path.join(__dirname,'/views/productDetail.html'))
 });
 
+app.get('/contact', (req, res) =>{
+    res.sendFile(path.join(__dirname,'/views/contacto.html'))
+});
+
 app.get('/register', (req, res) =>{
     res.sendFile(path.join(__dirname,'/views/register.html'))
 });
