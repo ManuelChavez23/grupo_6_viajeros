@@ -123,6 +123,8 @@ a {
 
 .article {
     border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color: white;
 }
 
 /* .article-card-top {} */
@@ -133,7 +135,7 @@ a {
 
 .article-card-body {
     padding: 1rem;
-    background-color: #c7c2c2;
+    background-color: white;
 }
 
 .article-titulo {
@@ -999,13 +1001,18 @@ p.producto-descrip{
         background-color: #ddce4c;
         padding: 1rem 5rem;
     } 
-
+    .main-home-section {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-around;
+    }
 
     .article {
         display: inline-block;
         padding: 0;
         width: 20%;
         transition: 0.5s;
+        background-color: white;
     }
 
     .article:hover {
