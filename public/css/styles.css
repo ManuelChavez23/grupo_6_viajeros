@@ -630,14 +630,6 @@ p.producto-descrip{
     width: 50%;
 }
 
-@media (min-width: 768px){
-    .w3-content{
-        padding-left: 300px;
-        padding-right: 300px;
-        }
-}
-
-
 /* REGISTER.HTML------------------------------------------------------------------------------- */
 
 .main-register-section {
@@ -1186,5 +1178,10 @@ p.producto-descrip{
         padding: 10px;
         border-radius: 20px;
     }
+    /*conacto----*/
+    .w3-content{
+        padding-left: 300px;
+        padding-right: 300px;
+        }
 
 }
