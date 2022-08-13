@@ -943,6 +943,19 @@ p.producto-descrip{
     outline:0;
     border: 1px solid #97d848;
   }
+  .marcas-img{
+    width: 70%;
+    height: 190px;
+}
+  .infomarcas{
+    background-color: #dbdfe0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+}
+ 
   
 
 
@@ -1214,11 +1227,18 @@ p.producto-descrip{
         padding: 10px;
         border-radius: 20px;
     }
-    /*conacto----*/
+    /*contacto----*/
     .w3-content{
         padding-left: 300px;
         padding-right: 300px;
         }
+    /*marcas----*/
+    .marcas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
 
 }
 
