@@ -32,9 +32,6 @@
                 </ul>
             </nav>
 
-            <div class="header-contenedor-bars">
-                <i class="fas fa-bars header-bars"></i>
-            </div>
 
             <h1 class="header-titulo">Titulo</h1>
             <p class="header-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -47,6 +44,9 @@
     <section class="buscador">
         <div class="contenedor-buscador">
             <input class="input-buscador" type="text" value="Busca tu destino">
+        </div>
+        <div class="header-contenedor-bars">
+            <i class="fas fa-bars header-bars"></i>
         </div>
     </section>
     <section class="commercial">
@@ -124,61 +124,17 @@
 
 
     </main>
-    <section class="other destinations">
-        <h1 class="destiny-other">
-            TAMBIEN INTERESA
-        </h1>
-
-        <div class="w3-container">
-            <div class="w3-content w3-display-container">
-
-                <div class="w3-display-container mySlides">
-                    <img src=" img/otrosdestinos1.jpg " style="width:100%">
-                    <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-                        Calafate
-                    </div>
-                </div>
-
-                <div class="w3-display-container mySlides">
-                    <img src=" img/otrosdestinos2.jpg " style="width:100%">
-                    <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-                        Brasil
-                    </div>
-                </div>
-
-                <div class="w3-display-container mySlides">
-                    <img src=" img/otrosdestinos3.jpg " style="width:100%">
-                    <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
-                        Machu Pichu
-                    </div>
-                </div>
-                <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
-
-            </div>
-
-
-            <script>
-                var slideIndex = 1;
-                showDivs(slideIndex);
-
-                function plusDivs(n) {
-                    showDivs(slideIndex += n);
-                }
-
-                function showDivs(n) {
-                    var i;
-                    var x = document.getElementsByClassName("mySlides");
-                    if (n > x.length) { slideIndex = 1 }
-                    if (n < 1) { slideIndex = x.length }
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none";
-                    }
-                    x[slideIndex - 1].style.display = "block";
-                }
-            </script>
-
+    <div id="carrito-buscados">
+        <div class="carrito-destinos">
+            <h2 class="carrito-h2">Destinos más buscados</h2>
+            <p class="img-carrito"><img class="carrito-img" src="img/otrosdestinos1.jpg" alt=""></p>
+            <p class="img-carrito2"><img class="carrito-img" src="img/otrosdestinos2.jpg" alt=""></p>
+            <p class="img-carrito3"><img class="carrito-img" src="img/otrosdestinos3.jpg" alt=""></p>
+            <p class="img-carrito2"><img class="carrito-img" src="img/otrosdestinos2.jpg" alt=""></p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto incidunt, delectus voluptates, illo
+                labore voluptatibus saepe odio iusto omnis</p>
         </div>
+    </div>
 
 
     </section>

@@ -39,12 +39,13 @@ a {
 .header {
   text-align: center;
   background-color: #3b2e50;
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
-  width: 50%;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  width: 45%;
+  padding: 10px;
 }
 
 .header-nav {
@@ -53,14 +54,14 @@ a {
 
 .header-contenedor-bars {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   padding: 0 1rem 0 1rem;
 }
 
 .header-bars {
   font-size: 2rem;
-  background-color: var(--blanco);
-  color: var(--violeta);
+  background-color: var(--gris);
+  color: var(--lila);
   border-radius: 5px;
   padding: 1rem;
   border: 1px solid var(--azul);
@@ -76,12 +77,13 @@ a {
 
 .header-parrafo {
   padding: 0 1rem 1rem 1rem;
+  color: var(--blanco);
 }
 
 /* SECTION HOME */
 
 .buscador {
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #3b2e50;
 }
 
@@ -297,6 +299,7 @@ a {
 
 .footer-info-parrafo {
   padding: 0 1rem;
+  color: var(--blanco);
 }
 
 /*LOGIN.HTML--------------------------------------------------------------*/
@@ -460,7 +463,7 @@ a {
   border-radius: 0.8%;
 }
 #product-cart:hover {
-    box-shadow: 5px 5px 15px var(--negro);
+  box-shadow: 5px 5px 15px var(--negro);
 }
 .carrito-paquete {
   background-color: #8dc2d9;
@@ -597,8 +600,12 @@ main.carrito p {
 .imgpbanner {
   width: 100%;
 }
-
-
+.destiny-other {
+  background-color: var(--blanco);
+}
+.w3-container {
+  background-color: var(--blanco);
+}
 /*h1.commercial-banner {
     padding: 1rem;
     text-align: center;
@@ -607,6 +614,9 @@ main.carrito p {
 .main-product {
   margin: auto;
   width: 90%;
+  background-color: var(--gris-claro);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 img.imgproduct {
   width: 50%;
@@ -658,6 +668,7 @@ p.producto-descrip {
   font-size: 18px;
   font-weight: bold;
   width: 50%;
+  color: var();
 }
 
 /* REGISTER.HTML------------------------------------------------------------------------------- */
@@ -805,38 +816,43 @@ p.producto-descrip {
 }
 
 /*contacto ------------*/
+
+.maincontact {
+  background-color: var(--celeste);
+}
 .contact_form {
   width: 460px;
   height: auto;
-  margin: 80px auto;
+  margin: auto;
   border-radius: 10px;
   padding-top: 30px;
   padding-bottom: 20px;
-  background-color: #fbfbfb;
+  background-color: var(--lila);
   padding-left: 30px;
+  margin-bottom: 10px;
 }
 
 input {
-  background-color: #fbfbfb;
+  background-color: var(--blanco);
   width: 408px;
   height: 40px;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: #ab4493;
+  border-color: var(--violeta);
   margin-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
 }
 
 textarea {
-  background-color: #fbfbfb;
+  background-color: var(--blanco);
   width: 405px;
   height: 150px;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: #ab4493;
+  border-color: var(--violeta);
   margin-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
@@ -853,36 +869,48 @@ label {
   border-radius: 10px;
   width: 420px;
   cursor: pointer;
-  color: #000;
+  color: var(--negro);
   font-weight: bold;
   text-align: center;
 }
 
 span {
-  color: #ab4493;
+  color: var(--blanco);
 }
 
 .aviso {
   font-size: 13px;
-  color: #0e0e0e;
+  color: var(--blanco);
 }
 
 .formulario {
   font-size: 39px;
   text-align: letf;
   padding-bottom: 20px;
-  color: #ab4493;
+  color: var(--violeta);
 }
 
 h3 {
   font-size: 16px;
   padding-bottom: 30px;
-  color: #0e0e0e;
+  color: var(--blanco);
+}
+.producto-info {
+  color: var(--negro);
+}
+.price {
+  color: var(--negro);
+}
+.detail {
+  color: var(--negro);
+}
+.producto-descrip {
+  color: var(--negro);
 }
 
 p {
   font-size: 14px;
-  color: #dbdfe0;
+  font-weight: bold;
 }
 
 ::-webkit-input-placeholder {
@@ -895,12 +923,16 @@ p {
 
 .formulario input:focus {
   outline: 0;
-  border: 1px solid #97d848;
+  border: 1px solid var(--azul);
+}
+.formulario:hover #enviar {
+  background-color: var(--azul);
+  color: var(--blanco);
 }
 
 .formulario textarea:focus {
   outline: 0;
-  border: 1px solid #97d848;
+  border: 1px solid var(--violeta);
 }
 
 .marcas-img {
@@ -1272,16 +1304,16 @@ p {
   }
   .carrito-boton:hover {
     background-color: var(--lila);
-  } 
+  }
   .fa-cc-mastercard:hover {
     color: var(--lila);
-  } 
+  }
   .fa-cc-visa:hover {
     color: var(--lila);
-  } 
+  }
   .carrito-boton-seguir-comprando:hover {
     background-color: var(--lila);
-  } 
+  }
   .carrito-boton-cancelar:hover {
     background-color: var(--lila);
   }
