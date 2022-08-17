@@ -591,10 +591,10 @@ main.carrito p {
   height: 300px;
 }
 .destiny-other{
-  background-color: var(--celeste);
+  background-color: var(--blanco);
 }
 .w3-container{
-  background-color: var(--celeste);
+  background-color: var(--blanco);
 }
 /*h1.commercial-banner {
     padding: 1rem;
@@ -655,6 +655,7 @@ p.producto-descrip {
   font-size: 18px;
   font-weight: bold;
   width: 50%;
+  color:var()
 }
 
 /* REGISTER.HTML------------------------------------------------------------------------------- */
@@ -880,10 +881,21 @@ h3 {
   padding-bottom: 30px;
   color:var(--blanco);;
 }
+.producto-info{
+  color:var(--negro)
+}
+.price{
+  color:var(--negro)
+}
+.detail{
+  color:var(--negro)
+}
+.producto-descrip{
+  color:var(--negro)
+}
 
 p {
   font-size: 14px;
-  color:var(--blanco);
   font-weight: bold;
 }
 
