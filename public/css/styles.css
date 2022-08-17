@@ -604,6 +604,7 @@ main.carrito p {
 .main-product {
   margin: auto;
   width: 90%;
+  background-color: var(--gris-claro);
 }
 img.imgproduct {
   width: 50%;
