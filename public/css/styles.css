@@ -293,77 +293,91 @@ a {
 
 /*LOGIN.HTML--------------------------------------------------------------*/
 
+.main-login-section {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--lila);
+}
+
+.add-wideview {
+  display: none;
+  order: -1;
+}
+
+.login-panel {
+  background-color: var(--lila);
+  min-width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-label {
+  text-align: left;
+  color: var(--blanco);
+  padding-left: 20%;
+  position: relative;
+  font-family: "Dosis";
+  font-weight: 600;
+  display: block;
+}
+
+.login-panel input {
+  box-sizing: border-box;
+  margin: 15px auto;
+  max-width: 500px;
+  width: 70%;
+  border-radius: 5px;
+  height: 2rem;
+  border: var(--violeta) 0.5px solid;
+  padding: 10px;
+  text-align: center;
+  color: var(--azul);
+}
+
 .main-login-title {
   text-align: center;
   padding: 15px;
-  background-color: honeydew;
+  background-color: var(--violeta);
+  color: var(--blanco);
   font-weight: 800;
-}
-
-.main-login-section {
-  text-align: center;
 }
 
 .main-login-section p {
   text-align: left;
 }
 
-.login-panel {
-  padding: 10px;
-  text-align: center;
-}
-
-.login-label {
-  text-align: left;
-  display: block;
-  color: #414141;
-  padding: 10px;
-  padding-left: 20%;
-  position: relative;
-  font-family: "Dosis";
-  font-weight: 550;
-}
-
-.login-panel input {
-  box-sizing: border-box;
-  text-align: center;
-  display: block;
-  margin: auto;
-  max-width: 500px;
-  width: 70%;
-  border-radius: 5px;
-  height: 2rem;
-  border: #6481bb 0.5px solid;
-}
-
 .login-panel input:focus {
   text-align: left;
-  border: 5px solid cornsilk;
+  border: 3px solid var(--celeste);
+  outline: none;
+  color: var(--azul);
 }
 
 .login-panel button {
   font-size: 17px;
-  padding: 15px;
+  padding: 10px;
   margin: 10px auto;
   display: block;
   box-sizing: border-box;
   height: max-content;
-  width: 20%;
   max-width: 200px;
   width: max-content;
   border-radius: 15px;
-  border: 1px solid powderblue;
-  background-color: thistle;
+  border: 1px solid var(--violeta);
+  background-color: var(--celeste);
+  color: var(--negro);
 }
 
 .login-panel button:active {
-  background-color: lightskyblue;
-  border: none;
-  font-size: 15px;
+  background-color: var(--azul);
   font-weight: 600;
+  color: var(--blanco);
 }
 
 .remember-div {
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -373,8 +387,10 @@ a {
 .remember-label {
   display: inline-block;
   text-align: left;
+  font-weight: 600;
   font-family: "Dosis";
   padding-right: 10px;
+  color: var(--blanco);
 }
 
 #remember {
@@ -388,7 +404,7 @@ a {
   font-style: oblique;
   text-align: center;
   margin: 0;
-  color: gray;
+  color: var(--blanco);
   padding: 5px;
   text-decoration: underline;
 }
@@ -398,10 +414,12 @@ a {
 }
 
 .add {
-  background-color: gainsboro;
   box-sizing: border-box;
   padding: 20px 0;
   margin: auto;
+  background-color: var(--celeste);
+  /* margin: 0; */
+  border-radius: 10px;
 }
 
 .add h2 {
@@ -421,10 +439,8 @@ a {
   text-align: center;
   margin: auto;
   width: 70%;
-}
-
-.add-wideview {
-  display: none;
+  color: #000;
+  font-weight: 600;
 }
 
 /*CARRITO.HTML--------------------------------------------------------------*/
@@ -641,13 +657,19 @@ p.producto-descrip {
 .main-register-title {
   text-align: center;
   padding: 15px;
-  background-color: honeydew;
+  background-color: var(--violeta);
   font-weight: 800;
+  color: var(--blanco);
 }
 
 .register-panel {
   padding: 10px;
   text-align: center;
+  background-color: var(--lila);
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /*  width: 360px;
     display: flex;
     flex-direction: column;
@@ -669,12 +691,12 @@ p.producto-descrip {
 .register-label {
   text-align: left;
   display: block;
-  color: #414141;
+  color: var(--blanco);
   padding: 10px;
-  padding-left: 20%;
+  padding-left: 15%;
   position: relative;
   font-family: "Dosis";
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .register-panel input {
@@ -686,12 +708,15 @@ p.producto-descrip {
   width: 70%;
   border-radius: 5px;
   height: 2rem;
-  border: #6481bb 0.5px solid;
+  border: var(--violeta) 0.5px solid;
+  color: var(--azul);
 }
 
 .register-panel input:focus {
   text-align: left;
-  border: 5px solid cornsilk;
+  border: 3px solid var(--celeste);
+  outline: none;
+  color: var(--azul);
 }
 
 .register-panel input:focus::placeholder {
@@ -708,15 +733,15 @@ p.producto-descrip {
   max-width: 120px;
   width: max-content;
   border-radius: 15px;
-  border: 1px solid powderblue;
-  background-color: thistle;
+  border: 1px solid var(--violeta);
+  background-color: var(--celeste);
+  color: var(--negro);
 }
 
 .register-panel button:active {
-  background-color: lightskyblue;
-  border: none;
-  font-size: 15px;
+  background-color: var(--azul);
   font-weight: 600;
+  color: var(--blanco);
 }
 
 .agree-div {
@@ -732,6 +757,7 @@ p.producto-descrip {
   text-align: left;
   font-family: "Dosis";
   padding-right: 10px;
+  color: var(--blanco);
 }
 
 #ad-agree,
@@ -742,59 +768,8 @@ p.producto-descrip {
   display: block;
 }
 
-/* LOGIN---------------------------------------------------------------------- */
-
-.main-login-section {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(222, 220, 197, 0.27);
-}
-
-/* .add {
-        min-width: 360px;
-    } */
-
-.add-wideview {
-  /* min-width: 360px; */
-  order: -1;
-}
-
-.login-panel {
-  min-width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.remember-div {
-  padding: 0;
-}
-
-.login-label {
-  padding: 0;
-  padding-left: 20%;
-}
-
-.login-panel input {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/* REGISTER----------------------------------------------------------------------------------- */
-
 .main-register-section {
   display: flex;
-}
-
-.register-panel {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.add {
-  margin: 0;
 }
 
 #ad {
@@ -803,6 +778,7 @@ p.producto-descrip {
   width: 50%;
   padding: 0;
   justify-content: center;
+  background-color: var(--lila);
 }
 
 .agree-div label {
@@ -1130,11 +1106,12 @@ p {
   }
 
   .add-wideview {
-    background-color: gainsboro;
+    background-color: var(--celeste);
     box-sizing: border-box;
     padding: 20px 0;
     display: block;
     width: 100%;
+    border-radius: 10px;
   }
 
   .add-wideview h2 {
@@ -1154,6 +1131,8 @@ p {
     text-align: center;
     margin: auto;
     width: 70%;
+    color: #000;
+    font-weight: 600;
   }
 
   .add {
