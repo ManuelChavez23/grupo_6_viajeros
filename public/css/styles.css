@@ -824,7 +824,7 @@ p.producto-descrip {
   border-radius: 10px;
   padding-top: 30px;
   padding-bottom: 20px;
-  background-color: #fbfbfb;
+  background-color: #8dc2d9;
   padding-left: 30px;
 }
 
@@ -835,7 +835,7 @@ input {
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: #ab4493;
+  border-color: #bdabd0;
   margin-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
@@ -848,7 +848,7 @@ textarea {
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: #ab4493;
+  border-color: #bdabd0;
   margin-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
@@ -865,25 +865,25 @@ label {
   border-radius: 10px;
   width: 420px;
   cursor: pointer;
-  color: #000;
+  color: #644076;
   font-weight: bold;
   text-align: center;
 }
 
 span {
-  color: #ab4493;
+  color: #644076;
 }
 
 .aviso {
   font-size: 13px;
-  color: #0e0e0e;
+  color: #644076;
 }
 
 .formulario {
   font-size: 39px;
   text-align: letf;
   padding-bottom: 20px;
-  color: #ab4493;
+  color: #644076;
 }
 
 h3 {
@@ -894,7 +894,8 @@ h3 {
 
 p {
   font-size: 14px;
-  color: #dbdfe0;
+  color: #644076;
+  font-weight: bold;
 }
 
 ::-webkit-input-placeholder {
@@ -907,12 +908,15 @@ p {
 
 .formulario input:focus {
   outline: 0;
-  border: 1px solid #97d848;
+  border: 1px solid #644076;
+}
+.formulario:hover #enviar{
+  background-color:#44719b
 }
 
 .formulario textarea:focus {
   outline: 0;
-  border: 1px solid #97d848;
+  border: 1px solid #644076;
 }
 .marcas-img {
   width: 70%;
