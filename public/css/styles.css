@@ -451,18 +451,21 @@ a {
   background-color: #dbdfe0;
   border-radius: 0.8%;
 }
+#product-cart:hover {
+    box-shadow: 5px 5px 15px var(--negro);
+}
 .carrito-paquete {
   background-color: #8dc2d9;
   color: #ffffff;
   text-align: center;
-  border: solid 1px white;
+  border-radius: 5px;
 }
 main.carrito {
   margin: auto;
   width: 90%;
 }
 main.carrito p {
-  color: #3b2e50;
+  color: #000000;
 }
 .carrito-main {
   display: flex;
@@ -1225,10 +1228,10 @@ p {
     align-items: center;
   }
   #product-cart {
-    width: 60%;
+    width: 50%;
     margin-top: 3%;
     margin-bottom: 3%;
-    background-color: #dbdfe0;
+    background-color: var(--gris-claro);
     border-radius: 0.8%;
   }
   .carrito-opcion-actual,
@@ -1237,5 +1240,23 @@ p {
     margin-left: 15%;
     font-size: 18px;
     font-weight: bold;
+  }
+  .carrito-paquete:hover {
+    background-color: var(--lila);
+  }
+  .carrito-boton:hover {
+    background-color: var(--lila);
+  } 
+  .fa-cc-mastercard:hover {
+    color: var(--lila);
+  } 
+  .fa-cc-visa:hover {
+    color: var(--lila);
+  } 
+  .carrito-boton-seguir-comprando:hover {
+    background-color: var(--lila);
+  } 
+  .carrito-boton-cancelar:hover {
+    background-color: var(--lila);
   }
 }
