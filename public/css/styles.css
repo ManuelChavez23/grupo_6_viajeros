@@ -37,6 +37,7 @@ a {
 /* HEADER  */
 
 .header {
+  text-align: center;
   background-color: #3b2e50;
   display: flex;
   align-items: center;
@@ -125,6 +126,7 @@ a {
 }
 
 .main-home-titulo {
+  margin-top: 2rem;
   margin-bottom: 1rem;
   border-bottom: 3px solid #3b2e50;
   border-left: 3px solid #3b2e50;
@@ -188,7 +190,7 @@ a {
 .nosotros {
   display: flex;
   flex-wrap: wrap;
-  background-color: #8fc2d7;
+  background-color: var(--celeste);
 }
 
 .nosotros-titulo {
@@ -231,7 +233,7 @@ a {
 
 .marcas {
   padding: 1rem;
-  text-align: center;
+  background-color: var(--lila);
 }
 
 /* .marcas-titulo {
@@ -255,6 +257,7 @@ a {
 }
  */
 .footer-titulo {
+  color: var(--celeste);
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
@@ -275,6 +278,7 @@ a {
 
 .footer-redes-titulo {
   margin-bottom: 1rem;
+  color: var(--celeste);
 }
 
 .footer-contenedor-icono {
@@ -284,7 +288,7 @@ a {
 .footer-icono {
   font-size: 2rem;
   padding: 0.5rem;
-  color: #8fc2d7;
+  color: var(--lila);
 }
 
 /* FOOTER INFORMACION */
@@ -295,10 +299,12 @@ a {
 
 .footer-info-titulo {
   margin-bottom: 1rem;
+  color: var(--celeste);
 }
 
 .footer-info-parrafo {
   padding: 0 1rem;
+  color: var(--blanco);
 }
 
 /*LOGIN.HTML--------------------------------------------------------------*/
@@ -935,28 +941,41 @@ p {
   outline: 0;
   border: 1px solid var(--violeta);
 }
+
 .marcas-img {
-  width: 70%;
-  height: 190px;
+  width: 50%;
 }
 .infomarcas {
-  background-color: #dbdfe0;
+  background-color: var(--lila);
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 0;
-  justify-content: center;
+  text-align: center;
+}
+.infomarcas-img {
+  padding: 2rem;
+}
+.marcaswork {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #3b2e50;
+  border-left: 3px solid #3b2e50;
+  padding-left: 0.5rem;
+  display: inline-block;
+  box-shadow: -6px 8px 10px 0px #877c95;
 }
 
 @media (min-width: 469px) {
+  /* MAIN HOME */
+  .main-home-section {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+  }
+
   .article {
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    background-color: white;
-    width: 50%;
-    /* display: inline-block; */
-    margin: auto;
-    margin-bottom: 1rem;
+    width: 45%;
   }
 }
 
@@ -1233,14 +1252,32 @@ p {
     padding-left: 300px;
     padding-right: 300px;
   }
+
+  /* BANNER HOME */
+  .imgpbanner {
+    height: 200px;
+  }
+
   /*marcas----*/
+
   .marcas {
-    display: flex;
+    padding: 1rem 5rem;
+    display: block;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
   }
-
+  .infomarcas {
+    display: block;
+  }
+  .infomarcas-img {
+    display: flex;
+    justify-content: space-between;
+  }
+  .marcas-img {
+    width: 20% !important;
+    object-fit: contain;
+  }
   /* CARRITO */
 
   .img-carrito,
