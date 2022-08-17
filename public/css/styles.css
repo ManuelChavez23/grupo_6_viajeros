@@ -608,6 +608,9 @@ main.carrito p {
 .main-product {
   margin: auto;
   width: 90%;
+  background-color: var(--gris-claro);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 img.imgproduct {
   width: 50%;
@@ -820,6 +823,7 @@ p.producto-descrip {
   padding-bottom: 20px;
   background-color: var(--lila);
   padding-left: 30px;
+  margin-bottom: 10px;
 }
 
 input {
