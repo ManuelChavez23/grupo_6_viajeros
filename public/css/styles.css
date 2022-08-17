@@ -63,6 +63,7 @@ a {
   color: var(--lila);
   border-radius: 5px;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .header-titulo {
@@ -81,12 +82,15 @@ a {
 /* SECTION HOME */
 
 .buscador {
-  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #3b2e50;
 }
 
 .contenedor-buscador {
   text-align: center;
+  width: 90%;
 }
 
 .input-buscador {
@@ -182,6 +186,8 @@ a {
 /* SECTION - NOSOTROS */
 
 .nosotros {
+  display: flex;
+  flex-wrap: wrap;
   background-color: #8fc2d7;
 }
 
@@ -431,6 +437,7 @@ a {
 }
 
 .add h3 {
+  color: #000;
   font-family: "Dosis";
   margin: 10px 0;
 }
@@ -592,7 +599,7 @@ main.carrito p {
 /*product*/
 .imgpbanner {
   width: 100%;
-  height: 300px;
+  max-height: 200px;
 }
 .destiny-other {
   background-color: var(--blanco);
@@ -1060,6 +1067,7 @@ p {
 
   .nosotros {
     display: flex;
+    flex-wrap: nowrap;
     background-color: #8fc2d7;
   }
 
