@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 
+
+:root {
+    --principal: #644076;
+    --secundario: #44719B;
+    --gris: #7A7C7D;
+}
+
+
+
 h1,
 h2,
 p,
@@ -1108,6 +1117,7 @@ p.producto-descrip{
 
     .footer {
         display: flex;
+        justify-content: space-between;
     }
     .footer-accesos {
         width: 30%;
