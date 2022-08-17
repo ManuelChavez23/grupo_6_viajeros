@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap");
 
 :root {
-  --principal: #644076;
-  --secundario: #44719b;
+  --violeta: #644076;
+  --azul: #44719b;
   --gris: #7a7c7d;
+
+  --celeste: #8dc2d9;
+  --lila: #bdabd0;
+  --gris-claro: #dbdfe0;
+  --blanco: #fff;
+  --negro: #414141;
 }
 
 h1,
