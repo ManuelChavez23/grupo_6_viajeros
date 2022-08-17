@@ -11,7 +11,7 @@ rel="stylesheet" />
 </head>
 <body>
     <header class="header">
-        <img class="header-logo" src="img/logoViajeros.png" alt="">
+        <img class="header-logo" src="img/logo.png" alt="">
 
         <div class="header-rigth">
             <nav class="header-nav">
@@ -54,67 +54,51 @@ rel="stylesheet" />
         <img class="imgpbanner" src="img/banner2.png" alt="">
     </section>
 
-    <main class="main-home">
-        <h1 class="main-home-titulo">Destinos</h1>
+    <main class="main-register">
+        <h1 class="main-register-title">Registre su cuenta</h1>
 
-        <section class="main-home-section">
-            <article class="article">
-                <div class="article-card-top">
-                    <img class="article-img" src="https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg" alt="">
+        <section class="main-register-section">
+            <div class="register-panel">
+                <label class="register-label" for="nombre">Nombre completo</label>
+                <input type="text" name="nombre" placeholder="Nombre completo">
+                <label class="register-label" for="apellido">Apellido</label>
+                <input type="text" name="apellido" placeholder="Apellido">
+                <label class="register-label" for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="date" name="fecha-nacimiento">
+                <label class="register-label" for="mail">Email</label>
+                <input type="email" name="email" placeholder="Email">
+                <label class="register-label" for="re-email">Repetir email</label>
+                <input type="email" name="re-email" placeholder="Repetir email">
+                <label class="register-label" for="password">Contraseña</label>
+                <input type="password" name="password" placeholder="Contraseña">
+                <label class="register-label" for="re-password">Repetir contraseña</label>
+                <input type="password" name="re-password" placeholder="Repetir contraseña">
+                <label class="register-label" for="tel">Telefono de contacto</label>
+                <input type="tel" name="tel" placeholder="Telefono de contacto">
+                <div class="agree-div">    
+                    <label class="ad-agree-label" for="ad-agree">Deseo recibir ofertas y más información</label>
+                    <input class="ad-agree-check" type="checkbox" name="ad-agree" id="ad-agree">
+                    <label class="terms-agree-label" for="terms-agree">Aceptor los terminos y condiciones</label>
+                    <input class="terms-agree-check" type="checkbox" name="terms-agree" id="terms-agree">
                 </div>
-                <div class="article-card-body">  
-                    <h1 class="article-titulo">Titulo</h1>
-                    <p class="article-parrafo">detalle</p>
-                    <p class="article-precio">$100</p>
-                    <div class="contenedor-btn">
-                        <button class="article-btn" onClick="redirect()">Comprar</button>
-                    </div>
+                <button>Cuenta cuenta</button>
+            </div>
+            <div id="ad">
+                <div class="add">
+                    <h2>Te puede interesar</h2>
+                    <h3>Pack destino</h3>
+                    <img class="add-img" src="https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto incidunt, delectus voluptates, illo labore voluptatibus saepe odio iusto omnis</p>  
                 </div>
-            </article>
-
-            <article class="article">
-                <div class="article-card-top">
-                    <img class="article-img" src="https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg" alt="">
+                <div class="add-wideview">
+                    <h2>Te puede interesar</h2>
+                    <h3>Pack destino</h3>
+                    <img class="add-img" src="https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto incidunt, delectus voluptates, illo labore voluptatibus saepe odio iusto omnis</p>  
                 </div>
-                <div class="article-card-body">  
-                    <h1 class="article-titulo">Titulo</h1>
-                    <p class="article-parrafo">detalle</p>
-                    <p class="article-precio">$100</p>
-                    <div class="contenedor-btn">
-                        <button class="article-btn">Comprar</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="article">
-                <div class="article-card-top">
-                    <img class="article-img" src="https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg" alt="">
-                </div>
-                <div class="article-card-body">  
-                    <h1 class="article-titulo">Titulo</h1>
-                    <p class="article-parrafo">detalle</p>
-                    <p class="article-precio">$100</p>
-                    <div class="contenedor-btn">
-                        <button class="article-btn">Comprar</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="article">
-                <div class="article-card-top">
-                    <img class="article-img" src="https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg" alt="">
-                </div>
-                <div class="article-card-body">  
-                    <h1 class="article-titulo">Titulo</h1>
-                    <p class="article-parrafo">detalle</p>
-                    <p class="article-precio">$100</p>
-                    <div class="contenedor-btn">
-                        <button class="article-btn">Comprar</button>
-                    </div>
-                </div>
-            </article>
+            </div>
         </section>
-            
+    
     </main>
 
     <section class="nosotros">
@@ -132,6 +116,7 @@ rel="stylesheet" />
             <img class="nosotros-img" src="https://www.xplora.eu/wp-content/uploads/como-escribir-web-sobre-nosotros.jpg" alt="">
         </div>
     </section>
+
     <section class="marcas">
         <div class="infomarcas">
             <div class="marcas">
@@ -171,12 +156,5 @@ rel="stylesheet" />
         </article>
 
     </footer>
-    <script type="text/javascript">
-        function redirect()
-        {
-       
-        window.location.href="/product";
-        }
-        </script>
 </body>
 </html>
