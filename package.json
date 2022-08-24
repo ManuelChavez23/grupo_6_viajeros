@@ -7,7 +7,6 @@
   "description": ":bangbang:[**Link de Tablero de trabajo en Trello**](https://trello.com/b/GkkZlPUq/viajeros):bangbang:",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "start": "node app",
     "dev": "npx nodemon app"
