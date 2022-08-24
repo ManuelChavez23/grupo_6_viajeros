@@ -1,12 +1,14 @@
 const express = require('express');
 
-const path = require('path');
+
 const dotenv = require('dotenv').config();
 const app = express();
 
 const mainRouter = require('./routes/mainRoutes');
-const userRouter = require('./routes/userRoutes');
+/* const userRouter = require('./routes/userRoutes'); */
+
 app.use(express.static('public'));
+
 app.use(mainRouter);
 /* app.use(userRouter); */
 
