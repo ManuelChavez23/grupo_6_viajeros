@@ -1,12 +1,13 @@
-const path = require('path');
-
 const controller = {
     index: (req, res) =>{
-        res.sendFile(path.join(__dirname,'../views/index.html'))
+        res.render('index');
     },
     contact: (req, res) =>{
-        res.sendFile(path.join(__dirname,'../views/contacto.html'))
-    }
+        res.render('contacto');
+    },
+    cart: (req, res) =>{
+        res.render('productCart');
+    },
 }
 
 
