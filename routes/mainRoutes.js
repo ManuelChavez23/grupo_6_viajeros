@@ -11,6 +11,6 @@ router.get('/', mainController.index);
 router.get('/contact', mainController.contact);
 
 router.get('/cart', mainController.cart);
-router.get('/administrador',  mainController.administrador);
+router.get('/administrador',  mainController.admin);
 
 module.exports = router;

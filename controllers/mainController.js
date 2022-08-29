@@ -3,13 +3,13 @@ const controller = {
         res.render('index');
     },
     contact: (req, res) =>{
-        res.render('contacto');
+        res.render('contact');
     },
     cart: (req, res) =>{
         res.render('productCart');
     },
-    administrador: (req, res) =>{
-        res.render("administrador");
+    admin: (req, res) =>{
+        res.render("admin");
     },
 }
 
