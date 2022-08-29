@@ -15,7 +15,7 @@
                     <h4 class="lugar"><b>Las Gaviotas</b></h4>
                     <div class="buttonIn">
                         <button id="clear3">Eliminar</button>
-                        <button id="edit3">Editar <i class="fas fa-edit"></i></button>
+                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                     <h4 class="lugar"><b>Termas de Fiambala</b></h4>
                     <div class="buttonIn">
                         <button id="clear3">Eliminar</button>
-                        <button id="edit3">Editar <i class="fas fa-edit"></i></button>
+                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     <h4 class="lugar"><b>Posada del Qentis</b></h4>
                     <div class="buttonIn">
                         <button id="clear3">Eliminar</button>
-                        <button id="edit3">Editar <i class="fas fa-edit"></i></button>
+                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <h4 class="lugar"><b>El Bolsón</b></h4>
                     <div class="buttonIn">
                         <button id="clear3">Eliminar</button>
-                        <button id="edit3">Editar <i class="fas fa-edit"></i></button>
+                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <h4 class="lugar"><b>Cafayate</b></h4>
                     <div class="buttonIn">
                         <button id="clear3">Eliminar</button>
-                        <button id="edit3">Editar <i class="fas fa-edit"></i></button>
+                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     <h4 class="lugar"><b>Las Gaviotas</b></h4>
                     <div class="buttonIn">
                         <button id="clear3">Eliminar</button>
-                        <button id="edit3">Editar <i class="fas fa-edit"></i></button>
+                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     <h4 class="lugar"><b>Puerto Vallarta</b></h4>
                     <div class="buttonIn">
                         <button id="clear3">Eliminar</button>
-                        <button id="edit3">Editar <i class="fas fa-edit"></i></button>
+                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     <h4 class="lugar"><b>Brasil</b></h4>
                     <div class="buttonIn">
                         <button id="clear3">Eliminar</button>
-                        <button id="edit3">Editar <i class="fas fa-edit"></i></button>
+                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                     <h4 class="lugar"><b>Machu Pichu</b></h4>
                     <div class="buttonIn">
                         <button id="clear3">Eliminar</button>
-                        <button id="edit3">Editar <i class="fas fa-edit"></i></button>
+                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
                     </div>
                 </div>
             </div>
@@ -111,6 +111,12 @@
         hamburger.addEventListener("click", function () {
             document.querySelector("body").classList.toggle("active");
         })</script>
+         <script type="text/javascript">
+            function redirect() {
+    
+                window.location.href = "/product/editar";
+            }
+        </script>
 </body>
 
 </html>

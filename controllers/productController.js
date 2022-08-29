@@ -12,6 +12,9 @@ const controller = {
     comentarios: (req, res) =>{
         res.render("comentarios");
     },
+    editar: (req, res) =>{
+        res.render("editar");
+    },
 }
 
 

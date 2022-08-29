@@ -996,6 +996,17 @@ p {
 .buttonIn:hover #clear3{
   cursor: pointer;
 }
+/*editar--------------------------------------------------------------------------------------*/
+.imgproduct2{
+  width: 30%;
+    margin-left: 300px;
+    margin-top: 20px;
+    float: left;
+}
+.product-card-body2{
+  margin-left: 300px;
+  margin-top: 20px;
+}
 /*listado--------------------------------------------------------------------------------------*/
 
 .contenedor {
