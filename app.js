@@ -6,7 +6,7 @@ const app = express();
 
 const mainRouter = require('./routes/mainRoutes');
 
-const userRouter = require('/routes/userRoutes');
+const userRouter = require('./routes/userRoutes');
 
 app.use(express.static('public'));
 
