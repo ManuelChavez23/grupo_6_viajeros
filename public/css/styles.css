@@ -1111,6 +1111,104 @@ ul {
     flex-direction: column;
     align-items: stretch;
 }
+
+/*comentarios--------------------------------------------------------------------*/
+.comments-container {
+  width: 1000px;
+  height: 700px;
+  margin: auto;
+  background-color: #fff;
+}
+#usuario {
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  border-right: 2px solid #1e88e5;
+}
+.comments-container ul {
+  list-style-type: none;
+}
+.comments-container .box-coments {
+  position: relative;
+  display: list-item;
+  width: 480px;
+  height: 140px;
+  background-color: #fff;
+  margin: auto;
+  list-style-type: none;
+  top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 6px -6px #777;
+	
+}
+
+.comments-container.box-coments .head-comments {
+  height: 40%;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+.usuarios-comments {
+  text-align: center;
+  font-weight: 600;
+  color: rgb(16,2,2);
+  margin-left: 80px;
+  position: relative;
+  top: 5px;
+  margin-bottom: 10px;
+}
+.comments-container.box-coments a {
+  text-align: center;
+  position: relative;
+  font-size: 9px;
+  color: #000;
+  font-weight: 100;
+  top: -12px;
+  margin-left: 180px;
+}
+.comments-container .article-comments {
+  position: relative;
+  margin: auto;
+  width: 70%;
+  height: 55%;
+  margin-left: 115px;
+  margin-top: -5px;
+}
+.comments-container .article-comments .commment {
+  font-size: 11px;
+  color: grey;
+}
+
+.comments-container ul .linea {
+  position: absolute;
+  display: flex;
+  width: 5px;
+  height: 20px;
+  left: 40px;
+  margin: auto;
+  top: -20px;
+  background-color: rgba(122,122,122,0.477);
+}
+/*administrador login-------------------------------------------*/
+.contenedor-loginadmi {
+  background: var(--gris-claro);
+  padding: 40px;
+  width: 450px;
+  margin: 40px auto;
+  border-radius:10px;
+  box-shadow: 0 4px 10px 4px rgba(#000);
+}
+.button-block {
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px 0;
+  font-size:18px;
+  background: #000;
+  color: white;
+  transition: all .5s ease;
+  appearance: none;
+}
 @media (min-width: 469px) {
   /* MAIN HOME */
   .main-home-section {

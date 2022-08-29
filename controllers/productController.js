@@ -9,6 +9,9 @@ const controller = {
     agregar: (req, res) =>{
         res.render("agregar");
     },
+    comentarios: (req, res) =>{
+        res.render("comentarios");
+    },
 }
 
 

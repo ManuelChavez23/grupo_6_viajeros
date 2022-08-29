@@ -8,6 +8,9 @@ const controller = {
     cart: (req, res) =>{
         res.render('productCart');
     },
+    administrador: (req, res) =>{
+        res.render("administrador");
+    },
 }
 
 
