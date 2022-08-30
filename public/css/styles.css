@@ -1203,26 +1203,46 @@ ul {
   background-color: rgba(122,122,122,0.477);
 }
 /*administrador login-------------------------------------------*/
-.contenedor-loginadmi {
+/*  .contenedor-loginadmi {
   background: var(--gris-claro);
   padding: 40px;
   width: 450px;
   margin: 40px auto;
   border-radius:10px;
   box-shadow: 0 4px 10px 4px rgba(#000);
-}
+} */
 .button-block {
+  max-width: 200px;
   border: 0;
   outline: none;
   border-radius: 5px;
-  cursor: pointer;
-  padding: 15px 0;
   font-size:18px;
   background: #000;
   color: white;
-  transition: all .5s ease;
-  appearance: none;
+} 
+
+.contenido-2 input {
+  width: 80%;
 }
+
+.contenido-2 {
+  text-align: center;
+  background-color: var(--gris-claro);
+}
+
+.contenido-2 label{
+  font-family: 'Dosis';
+  font-weight: bold;
+}
+
+.contenido-2 h1{
+  padding: 3%;
+}
+
+.contenido-2 p a{
+  color: var(--negro);
+}
+
 @media (min-width: 469px) {
   /* MAIN HOME */
   .main-home-section {
@@ -1819,20 +1839,19 @@ ul {
   background-color: rgba(122,122,122,0.477);
 }
 /*administrador login-------------------------------------------*/
-.contenedor-loginadmi {
+ .contenedor-loginadmi {
   background: var(--gris-claro);
   padding: 40px;
   width: 450px;
   margin: 40px auto;
   border-radius:10px;
-  box-shadow: 0 4px 10px 4px rgba(#000);
+  box-shadow: -8px 7px 11px 2px var(--gris);
 }
-.button-block {
+ .button-block {
   border: 0;
   outline: none;
   border-radius: 5px;
   cursor: pointer;
-  padding: 15px 0;
   font-size:18px;
   background: #000;
   color: white;

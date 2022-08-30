@@ -3,6 +3,7 @@
 
   <%- include("../partials/headProduct.ejs") %> 
   <body>
+    <%- include('../partials/headerProduct.ejs') %>
     <div class="contenedor-loginadmi">
         <!-- Links de los formularios -->
 
@@ -29,11 +30,17 @@
                     <input type="submit" class="button button-block" value="Iniciar Sesión"  onClick="redirect()">
                 </form>
             </div>
+        </div>
+    </div>
+
+            <%- include("../partials/footer.ejs")%>
+
+
             <script type="text/javascript">
                 function redirect() {
         
                     window.location.href = "/adminList";
                 }
-            </script>
+            </script> 
 </body>
 </html>
