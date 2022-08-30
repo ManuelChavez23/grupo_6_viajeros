@@ -1127,7 +1127,6 @@ ul {
 
 /*comentarios--------------------------------------------------------------------*/
 .comments-container {
-  width: 1000px;
   height: 700px;
   margin: auto;
   background-color: #fff;
@@ -1144,7 +1143,7 @@ ul {
 .comments-container .box-coments {
   position: relative;
   display: list-item;
-  width: 480px;
+  width: 90%;
   height: 140px;
   background-color: #fff;
   margin: auto;
@@ -1152,6 +1151,7 @@ ul {
   top: 20px;
   margin-bottom: 20px;
   box-shadow: 0 10px 6px -6px #777;
+  border: 1px solid var(--gris);
 }
 
 .comments-container.box-coments .head-comments {
@@ -1186,8 +1186,10 @@ ul {
   margin-top: -5px;
 }
 .comments-container .article-comments .commment {
-  font-size: 11px;
+  font-size: 13px;
   color: grey;
+  width: 90%;
+  padding: 10px;
 }
 
 .comments-container ul .linea {
@@ -1758,7 +1760,6 @@ ul {
 
   /*comentarios--------------------------------------------------------------------*/
   .comments-container {
-    width: 1000px;
     height: 700px;
     margin: auto;
     background-color: #fff;
@@ -1817,7 +1818,8 @@ ul {
     margin-top: -5px;
   }
   .comments-container .article-comments .commment {
-    font-size: 11px;
+    font-size: 15px;
+    padding: 10px;
     color: grey;
   }
 
