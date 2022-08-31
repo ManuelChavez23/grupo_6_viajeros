@@ -626,6 +626,10 @@ main.carrito p {
   display: none;
 }
 
+
+
+
+
 /*product*/
 .imgpbanner {
   width: 100%;
@@ -642,29 +646,26 @@ main.carrito p {
     text-align: center;
     background-color: #c7c2c2;
 }*/
-.main-product {
-  margin: auto;
-  width: 90%;
-  background-color: var(--gris-claro);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
+ .main-product {
+  padding: 1rem;
+} 
 img.imgproduct {
-  width: 50%;
-  float: left;
-  border: 1px solid #000;
+  width: 100%;
+}
+.product-card-body {
+  margin-top: 2rem;
 }
 .producto-descripcion {
-  font-size: 18px;
-  margin-bottom: 40px;
-  text-align: center;
+  margin-top: 1rem;
 }
 .destiny-description {
   text-align: center;
 }
 p.producto-descrip {
-  margin-top: 30px;
+  margin-top: 1rem;
   text-align: justify;
+  font-weight: bold;
+  padding-bottom: 1rem;
 }
 .producto .producto-info {
   padding-left: 0;
@@ -674,19 +675,27 @@ p.producto-descrip {
 }
 
 .destiny-title {
-  text-align: center;
-  margin-top: 20px;
+  margin-bottom: 1rem;
 }
 
-.detail {
-  text-align: center;
+.detail { 
+  color: var(--negro);
   margin-top: 30px;
 }
 
 .producto-info li {
   list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
-
+.producto-info li p {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.producto-info li i {
+  color: var(--violeta);
+}
 .mapa {
   text-align: center;
 }
@@ -695,12 +704,49 @@ p.producto-descrip {
   list-style-type: none;
 }
 
-.price {
-  font-size: 18px;
-  font-weight: bold;
-  width: 50%;
-  color: var();
+.product-card-body .price {
+  color: var(--azul);
 }
+.product-card-body .price-cuotas {
+  color: var(--negro);
+  font-weight: bold;
+}
+.product-card-body .producto-info {
+  color: var(--negro);
+  margin-top: 1rem;
+}
+
+.product-card-body .contenedor-btn .article-btn {
+  width: 100%;
+}
+.product-card-body .contenedor-btn .btn-comprar{
+  background-color: var(--violeta);
+  color: var(--gris-claro);
+  font-weight: bold;
+}
+.product-card-body .contenedor-btn .btn-agregar{
+  border: 1px solid var(--azul);
+  background-color: var(--gris-claro);
+  color: var(--azul);
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.product-card-body .contenedor-select {
+  margin-bottom: 1rem;
+}
+.product-card-body .contenedor-select label {
+  font-family: var(--fuente);
+  font-weight: bold;
+}
+.product-card-body .contenedor-select select {
+  border: 1px solid var(--azul);
+  width: 20%;
+  text-align: center;
+  margin-left: 1rem;
+  color: var(--negro);
+}
+
 
 /* REGISTER.HTML------------------------------------------------------------------------------- */
 
@@ -1305,13 +1351,13 @@ ul {
   color: var(--negro);
 }
 /* productEdit */
-article.destiny {
+/* article.destiny {
   background-color: var(--gris-claro);
   margin: 5%;
   padding: 2%;
   border-radius: 10px;
 }
-
+ */
 @media (min-width: 469px) {
   /* MAIN HOME */
   .main-home-section {
@@ -1323,6 +1369,16 @@ article.destiny {
   .article {
     width: 45%;
   }
+
+
+
+
+
+
+
+  /* PRODUCTO DETAIL */
+
+
 }
 
 @media (min-width: 768px) {
@@ -1977,9 +2033,24 @@ article.destiny {
   }
   article.destiny {
   background-color: white;
-  margin: 2%;
   padding: 0;
   border-radius: 0;
   }
   
+
+
+
+  /* Product Detail */
+
+  .main-product-contenedor {
+    display: flex;
+    padding: 0 10rem;
+  }
+  .main-product-contenedor .destiny-card-top {
+    width: 50%;
+    padding: 2rem;
+  }
+  .main-product-contenedor .product-card-body {
+    width: 50%;
+  }
 }
