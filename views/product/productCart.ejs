@@ -1,48 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viajeros</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    
+    <%- include("../partials/head.ejs") %> 
 
 <body>
-    <header class="header">
-        <img class="header-logo" src="img/logoViajeros.png" alt="">
+    <%- include("../partials/header.ejs") %> 
 
-        <div class="header-rigth">
-            <nav class="header-nav">
-                <ul>
-                    <li>
-                        <a href="/">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="contact">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="cart">Carrito</a>
-                    </li>
-                    <li>
-                        <a href="login">Login</a>
-                    </li>
-                    <li>
-                        <a href="register">Registrarse</a>
-                    </li>
-                </ul>
-            </nav>
-
-
-            <h1 class="header-titulo">Titulo</h1>
-            <p class="header-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt, ullam voluptatem molestiae voluptatibus ipsa,
-                autem quasi vel aperiam earum eaque fuga facere ipsam? Doloremque,
-                fugiat molestias consectetur provident minima itaque.</p>
-        </div>
-    </header>
     <section class="buscador">
         <div class="contenedor-buscador">
             <input class="input-buscador" type="text" value="Busca tu destino">
@@ -120,34 +83,7 @@
     <!-- footer -->
    
     </section>
-    <footer class="footer">
-        <article class="footer-accesos">
-            <h1 class="footer-titulo">Accesos</h1>
-            <ul class="footer-ul">
-                <li class="footer-li"><a href="">Inicio</a></li>
-                <li class="footer-li"><a href="">Contacto</a></li>
-                <li class="footer-li"><a href="">Nosotros</a></li>
-                <li class="footer-li"><a href="">Viajes</a></li>
-            </ul>
-        </article>
-
-        <article class="footer-redes">
-            <h1 class="footer-redes-titulo">Nuestras Redes</h1>
-            <div class="footer-contenedor-icono">
-                <i class="fab fa-facebook footer-icono"></i>
-                <i class="fab fa-instagram footer-icono"></i>
-                <i class="fab fa-linkedin-in footer-icono"></i>
-            </div>
-        </article>
-
-        <article class="footer-info">
-            <h1 class="footer-info-titulo">Informacion</h1>
-            <p class="footer-info-parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Saepe dolor beatae sapiente. Culpa porro totam, provident dolore eum nihil? Voluptates,
-                quasi fuga est repudiandae saepe a laborum nostrum. Dignissimos, optio!</p>
-        </article>
-
-    </footer>
+    <%- include("../partials/footer.ejs")%> 
 </body>
 
 </html>
