@@ -1032,12 +1032,12 @@ p {
 /*editar--------------------------------------------------------------------------------------*/
 .imgproduct2 {
   width: 30%;
-  margin-left: 300px;
+  
   margin-top: 20px;
   float: left;
 }
 .product-card-body2 {
-  margin-left: 300px;
+  
   margin-top: 20px;
 }
 /*listado--------------------------------------------------------------------------------------*/
@@ -1303,6 +1303,13 @@ ul {
 
 .contenido-2 p a {
   color: var(--negro);
+}
+/* productEdit */
+article.destiny {
+  background-color: var(--gris-claro);
+  margin: 5%;
+  padding: 2%;
+  border-radius: 10px;
 }
 
 @media (min-width: 469px) {
@@ -1963,4 +1970,16 @@ ul {
     transition: all 0.5s ease;
     appearance: none;
   }
+
+  /* productEdit */
+  .imgproduct2, .product-card-body2 {
+    margin-left: 300px;
+  }
+  article.destiny {
+  background-color: white;
+  margin: 2%;
+  padding: 0;
+  border-radius: 0;
+  }
+  
 }
