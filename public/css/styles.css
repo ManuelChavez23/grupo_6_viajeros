@@ -857,13 +857,23 @@ p.producto-descrip {
   border: 1px solid var(--violeta);
   background-color: var(--violeta);
   color: var(--blanco);
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: var(--fuente);
 }
 
-.register-panel button:active {
+.register-panel button:hover {
+  border: 1px solid var(--azul);
   background-color: var(--azul);
-  font-weight: 600;
-  color: var(--blanco);
+  
 }
+
+/* .register-panel button:active {
+  background-color: var(--azul);
+  border: 1px solid var(--azul);
+  font-weight: bold;
+  color: var(--blanco);
+} */
 
 .agree-div {
   display: flex;
