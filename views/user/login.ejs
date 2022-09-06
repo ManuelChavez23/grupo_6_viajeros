@@ -13,45 +13,48 @@
         <div class="header-contenedor-bars">
             <i class="fas fa-bars header-bars"></i>
         </div>
-        <img class="imgpbanner" src="img/banner2.png" alt="">
+        <!-- <img class="imgpbanner" src="img/banner2.png" alt=""> -->
     </section>
 
     <main class="main-login">
-        <h1 class="main-login-title">Ingrese a su cuenta</h1>
+        <div class="main-login-contenedor">
+            <h1 class="main-login-title">Ingrese a su cuenta</h1>
 
-        <section class="main-login-section">
-            <div class="login-panel">
-                <label class="login-label" for="user">Usuario</label>
-                <input type="text" name="user" placeholder="Email o usuario">
-                <label class="login-label" for="password">Contraseña</label>
-                <input type="password" name="password" placeholder="Contraseña">
-                <div class="remember-div">
-                    <label class="remember-label" for="remember">Recordarme para la proxima vez</label>
-                    <input class="check-remember" type="checkbox" name="remember" id="remember">
+            <section class="main-login-section">
+                <div class="login-panel">
+                    <label class="login-label" for="user">Usuario</label>
+                    <input type="text" name="user" placeholder="Email o usuario">
+                    <label class="login-label" for="password">Contraseña</label>
+                    <input type="password" name="password" placeholder="Contraseña">
+                    <div class="remember-div">
+                        <label class="remember-label" for="remember">Recordarme para la proxima vez</label>
+                        <input class="check-remember" type="checkbox" name="remember" id="remember">
+                    </div>
+                    <button>Ingresar</button>
+                    <a class="forgot" href="#">olvido su password?</a>
+                    <button>Crear nueva cuenta</button>
                 </div>
-                <button>Ingresar</button>
-                <a class="forgot" href="#">olvido su password?</a>
-                <button>Crear nueva cuenta</button>
-            </div>
-            <div class="add">
-                <h2>Te puede interesar</h2>
-                <h3>Pack destino</h3>
-                <img class="add-img" src="/img/otrosdestinos3.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto incidunt, delectus voluptates,
-                    illo labore voluptatibus saepe odio iusto omnis</p>
-            </div>
-            <div class="add-wideview">
-                <h2>Te puede interesar</h2>
-                <h3>Pack destino</h3>
-                <img class="add-img" src="/img/otrosdestinos1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto incidunt, delectus voluptates,
-                    illo labore voluptatibus saepe odio iusto omnis</p>
-            </div>
-        </section>
+                <!-- <div class="add">
+                    <h2>Te puede interesar</h2>
+                    <h3>Pack destino</h3>
+                    <img class="add-img" src="/img/otrosdestinos3.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto incidunt, delectus voluptates,
+                        illo labore voluptatibus saepe odio iusto omnis</p>
+                </div>
+                <div class="add-wideview">
+                    <h2>Te puede interesar</h2>
+                    <h3>Pack destino</h3>
+                    <img class="add-img" src="/img/otrosdestinos1.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto incidunt, delectus voluptates,
+                        illo labore voluptatibus saepe odio iusto omnis</p>
+                </div> -->
+            </section>
+        </div>
+        
 
     </main>
 
-    <section class="nosotros">
+<!--     <section class="nosotros">
         <div>
             <h1 class="nosotros-titulo">Titulo</h1>
             <p class="nosotros-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -66,7 +69,7 @@
             <img class="nosotros-img"
                 src="https://www.xplora.eu/wp-content/uploads/como-escribir-web-sobre-nosotros.jpg" alt="">
         </div>
-    </section>
+    </section> -->
 
     <%- include("../partials/footer.ejs")%> 
 </body>

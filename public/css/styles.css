@@ -335,9 +335,8 @@ a {
 
 .main-login-section {
   text-align: center;
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--lila);
+  background-color: var(--gris-claro);
+  padding: 1rem;
 }
 
 .add-wideview {
@@ -345,21 +344,20 @@ a {
   order: -1;
 }
 
-.login-panel {
-  background-color: var(--lila);
+/* .login-panel {
   min-width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
 .login-label {
   text-align: left;
-  color: var(--blanco);
+  color: var(--negro);
   padding-left: 20%;
   position: relative;
   font-family: "Dosis";
-  font-weight: 600;
+  font-weight: bold;
   display: block;
 }
 
@@ -374,6 +372,13 @@ a {
   padding: 10px;
   text-align: center;
   color: var(--azul);
+}
+
+.main-login {
+  padding: 1rem;
+}
+.main-login-contenedor {
+  box-shadow: -6px 8px 10px 0 #7c7b7b;
 }
 
 .main-login-title {
@@ -406,15 +411,23 @@ a {
   width: max-content;
   border-radius: 15px;
   border: 1px solid var(--violeta);
-  background-color: var(--celeste);
-  color: var(--negro);
+  background-color: var(--violeta);
+  color: var(--blanco);
+  font-family: 'Dosis';
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.login-panel button:active {
+.login-panel button:hover {
+  border: 1px solid var(--azul);
+  background-color: var(--azul);
+}
+
+/* .login-panel button:active {
   background-color: var(--azul);
   font-weight: 600;
   color: var(--blanco);
-}
+} */
 
 .remember-div {
   padding: 0;
@@ -427,10 +440,10 @@ a {
 .remember-label {
   display: inline-block;
   text-align: left;
-  font-weight: 600;
+  font-weight: bold;
   font-family: "Dosis";
   padding-right: 10px;
-  color: var(--blanco);
+  color: var(--negro);
 }
 
 #remember {
@@ -444,7 +457,7 @@ a {
   font-style: oblique;
   text-align: center;
   margin: 0;
-  color: var(--blanco);
+  color: var(--negro);
   padding: 5px;
   text-decoration: underline;
 }
@@ -750,6 +763,14 @@ p.producto-descrip {
 
 /* REGISTER.HTML------------------------------------------------------------------------------- */
 
+
+.main-register {
+  padding: 1rem;
+}
+
+.main-register-contenedor {
+  box-shadow: -6px 8px 10px 0 #7c7b7b;
+}
 .main-register-section {
   text-align: center;
 }
@@ -765,8 +786,8 @@ p.producto-descrip {
 .register-panel {
   padding: 10px;
   text-align: center;
-  background-color: var(--lila);
-  width: 70%;
+  background-color: var(--gris-claro);
+  /* width: 70%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -791,12 +812,12 @@ p.producto-descrip {
 .register-label {
   text-align: left;
   display: block;
-  color: var(--blanco);
+  color: var(--negro);
   padding: 10px;
   padding-left: 15%;
   position: relative;
   font-family: "Dosis";
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .register-panel input {
@@ -834,8 +855,8 @@ p.producto-descrip {
   width: max-content;
   border-radius: 15px;
   border: 1px solid var(--violeta);
-  background-color: var(--celeste);
-  color: var(--negro);
+  background-color: var(--violeta);
+  color: var(--blanco);
 }
 
 .register-panel button:active {
@@ -857,7 +878,8 @@ p.producto-descrip {
   text-align: left;
   font-family: "Dosis";
   padding-right: 10px;
-  color: var(--blanco);
+  color: var(--negro);
+  font-weight: bold;
 }
 
 #ad-agree,
@@ -868,9 +890,9 @@ p.producto-descrip {
   display: block;
 }
 
-.main-register-section {
+/* .main-register-section {
   display: flex;
-}
+} */
 
 #ad {
   display: flex;
@@ -1563,9 +1585,13 @@ ul {
   }
 
   /* LOGIN---------------------------------------------------- */
+  .main-login {
+    padding: 1rem 20rem;
+  }
+
 
   .login-panel {
-    width: 500px;
+    /* width: 500px; */
     font-size: 19px;
   }
 
@@ -1616,10 +1642,14 @@ ul {
 
   /* REGISTER---------------------------------------------------- */
 
-  .register-panel {
+ /*  .register-panel {
     width: 50%;
   }
+ */
 
+ .main-register {
+  padding: 1rem 20rem;
+ }
   .publicidad {
     display: flex;
   }
@@ -1632,9 +1662,9 @@ ul {
     align-items: flex-end;
   }
 
-  .main-register-section {
+/*   .main-register-section {
     display: flex;
-  }
+  } */
 
   .register-panel input {
     margin: 8px auto;
