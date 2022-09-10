@@ -23,6 +23,7 @@
                 <section class="main-home-section">
                     <% products.forEach(product=> { %>
 
+
                         <article class="article">
                             <div class="article-card-top">
                                 <img class="article-img" src="<%= product.img %>" alt="">
@@ -34,10 +35,10 @@
                                 <p class="article-parrafo">
                                     <%= product.detail %>
                                 </p>
-                                <p class="article-precio">$<%= product.price %>
+                                <p class="article-precio">$<%=product.price %>
                                 </p>
                                 <div class="contenedor-btn">
-                                    <a href="/product/detalle/<%= product.id %> "> <button
+                                    <a href="/product/detalle/<%=product.id %> "> <button
                                             class="article-btn">Comprar</button> </a>
                                 </div>
                             </div>

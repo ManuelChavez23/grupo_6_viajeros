@@ -1,43 +1,36 @@
-[
+ [
     {
         "id": 1,
-        "name": "brasil",
+        "name": "Estancia la Enestina",
         "detail": "buen viaje",
         "price": 100,
         "category": "x",
-        "img": "https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg"
+        "img": "/img/product.jpg"
     },
     {
         "id": 2,
-        "name": "formosa",
+        "name": "Termas de fiambala",
         "detail": "buen viaje",
         "price": 100,
         "category": "y",
-        "img": "https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg"
+        "img": "/img/termasFiambala.jpg"
     },
     {
         "id": 3,
-        "name": "brasil",
+        "name": "Posada del Qentis",
         "detail": "buen viaje",
         "price": 100,
         "category": "x",
-        "img": "https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg"
+        "img": "/img/Posada del Qenti.jpg"
     },
     {
         "id": 4,
-        "name": "brasil",
+        "name": "El Bolsón",
         "detail": "buen viaje",
         "price": 100,
         "category": "y",
-        "img": "https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg"
-    },
-    {
-        "id": 5,
-        "name": "colombia",
-        "detail": "buen viaje",
-        "price": 100,
-        "category": "y",
-        "img": "https://www.artmajeur.com/medias/standard/d/e/dennis-zaruma/artwork/7779961_fotografia-de-paisaje-natural-9.jpg"
+        "img": "/img/El Bolsón.jpg"
     }
+    
 
 ]

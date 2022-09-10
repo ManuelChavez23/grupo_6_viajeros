@@ -1382,6 +1382,9 @@ ul {
 .contenido-2 p a {
   color: var(--negro);
 }
+
+
+/*products--------------------------------------------------------------------------------*/
 /* productEdit */
 /* article.destiny {
   background-color: var(--gris-claro);
@@ -1487,7 +1490,7 @@ ul {
   .article {
     display: inline-block;
     padding: 0;
-    width: 20%;
+    width: 15vw;
     transition: 0.5s;
     background-color: white;
   }
