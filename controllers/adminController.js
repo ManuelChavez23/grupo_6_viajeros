@@ -25,16 +25,16 @@ const controller = {
             name: req.body.name,
             detail: req.body.detail,
             price: req.body.price,
-            img: req.body.img
+            img: req.file.filename
             /* category: req.body.category,
             status: req.body.status */
         }
 
         products.push(newProduct);
-
+        
         let productJson = JSON.stringify(products);
-
-        fs.appendFileSync(path.join(__dirname,'../data/productsBd.json'), productJson + '\n','utf-8');
+        
+        fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'), productJson + '\n','utf-8');
 
         res.redirect('/adminList');
     },
