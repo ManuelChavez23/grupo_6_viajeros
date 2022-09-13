@@ -10,16 +10,11 @@ const controller = {
     
     detail:  (req, res) =>{
         let idProduct = req.params.id;
-
-        products.forEach(productActual => {
-            if (productActual.id === idProduct) {
-                productActual.name = req.body.name,
-                productActual.price = req.body.price,
-                productActual.detail = req.body.detail,
-                productActual.img = req.body.img
-            }
-        })
+        
+        products.find( productActual => productActual.id == idProduct)
+       
         res.render('productDetail', {products, idProduct});
+
     },
     products:  (req, res) =>{
         res.render('products', {products});
