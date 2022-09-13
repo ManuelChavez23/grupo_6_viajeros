@@ -19,7 +19,7 @@ const controller = {
                 productActual.img = req.body.img
             }
         })
-        res.render('productDetail', {products});
+        res.render('productDetail', {products, idProduct});
     },
     products:  (req, res) =>{
         res.render('products', {products});
