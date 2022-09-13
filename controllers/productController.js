@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const path = require('path');
 
@@ -8,7 +9,17 @@ const products = JSON.parse(productsJson);
 const controller = {
     
     detail:  (req, res) =>{
-        res.render('productDetail');
+        let idProduct = req.params.id;
+
+        products.forEach(productActual => {
+            if (productActual.id === idProduct) {
+                productActual.name = req.body.name,
+                productActual.price = req.body.price,
+                productActual.detail = req.body.detail,
+                productActual.img = req.body.img
+            }
+        })
+        res.render('productDetail', {products});
     },
     products:  (req, res) =>{
         res.render('products', {products});

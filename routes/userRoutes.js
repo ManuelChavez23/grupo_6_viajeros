@@ -6,7 +6,7 @@ const userController = require('../controllers/userController');
 
 
 router.get('/login', userController.login);
-
+router.post('/login', (req,res) => { res.sendFile('fui por post')});
 
 router.get('/register', userController.register);
 

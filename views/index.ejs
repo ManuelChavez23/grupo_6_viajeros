@@ -18,10 +18,11 @@
 
 
             <main class="main-home">
-                <h1 class="main-home-titulo">Destinos</h1>
+                <h1 class="main-home-titulo">Destacado</h1>
 
                 <section class="main-home-section">
-                    <% products.forEach(product=> { %>
+                    <% let destacados = products.filter( product => product.status == 'destacado') %> 
+                    <% destacados.forEach(product=> { %>
 
 
                         <article class="article">
@@ -43,7 +44,8 @@
                                 </div>
                             </div>
                         </article>
-                        <% }) %>
+
+                    <% }) %>
 
 
                 </section>

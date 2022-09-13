@@ -17,166 +17,57 @@
 
             <main class="main-home">
                 <h2 class= "Category">NACIONALES</h2>
+                
                 <section class="main-home-section">
-                    
 
-                        <article class="article">
-                            <div class="article-card-top">
-                                <img class="article-img" src="/img/product.jpg" alt="">
-                            </div>
-                            <div class="article-card-body">
-                                <h1 class="article-titulo">
-                                    Estancia la Enestina
-                                </h1>
-                                <p class="article-parrafo">
-                                    
-                                </p>
-                                <p class="article-precio">$100
-                                </p>
-                                <div class="contenedor-btn">
-                                    <a href="/product/detalle/:id"> <button
-                                            class="article-btn">Comprar</button> </a>
+                    <% let nacional = products.filter(product => product.category == 'Nacional') %>
+                         <% nacional.forEach( product => { %> 
+                            <article class="article">
+                                <div class="article-card-top">
+                                    <img class="article-img" src="<%= product.img %>" alt="">
                                 </div>
-                            </div>
-                        </article>
-                        <article class="article">
-                            <div class="article-card-top">
-                                <img class="article-img" src="/img/termasFiambala.jpg" alt="">
-                            </div>
-                            <div class="article-card-body">
-                                <h1 class="article-titulo">
-                                    Termas de fiambala
-                                </h1>
-                                <p class="article-parrafo">
-                                    
-                                </p>
-                                <p class="article-precio">$100
-                                </p>
-                                <div class="contenedor-btn">
-                                    <a href="/product/detalle/:id"> <button
-                                            class="article-btn">Comprar</button> </a>
+                                <div class="article-card-body">
+                                    <h1 class="article-titulo">
+                                        <%= product.name %>
+                                    </h1>
+                                    <p class="article-parrafo">
+                                        <%= product.detail %>
+                                    </p>
+                                    <p class="article-precio"><%=product.price %></p>
+                                    <div class="contenedor-btn">
+                                        <a href="/product/detalle/<%=product.id %> "> <button
+                                                class="article-btn">Comprar</button> </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                        <article class="article">
-                            <div class="article-card-top">
-                                <img class="article-img" src="/img/Posada del Qenti.jpg" alt="">
-                            </div>
-                            <div class="article-card-body">
-                                <h1 class="article-titulo">
-                                    Posada del Qentis
-                                </h1>
-                                <p class="article-parrafo">
-                                    
-                                </p>
-                                <p class="article-precio">$100
-                                </p>
-                                <div class="contenedor-btn">
-                                    <a href="/product/detalle/:id"> <button
-                                            class="article-btn">Comprar</button> </a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="article">
-                            <div class="article-card-top">
-                                <img class="article-img" src="/img/Las-gaviotas.webp" alt="">
-                            </div>
-                            <div class="article-card-body">
-                                <h1 class="article-titulo">
-                                    Las Gaviotas
-                                </h1>
-                                <p class="article-parrafo">
-                                    
-                                </p>
-                                <p class="article-precio">$100
-                                </p>
-                                <div class="contenedor-btn">
-                                    <a href="/product/detalle/:id"> <button
-                                            class="article-btn">Comprar</button> </a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="article">
-                            <div class="article-card-top">
-                                <img class="article-img" src="/img/otrosdestinos1.jpg" alt="">
-                            </div>
-                            <div class="article-card-body">
-                                <h1 class="article-titulo">
-                                    Cafayate
-                                </h1>
-                                <p class="article-parrafo">
-                                    
-                                </p>
-                                <p class="article-precio">$100
-                                </p>
-                                <div class="contenedor-btn">
-                                    <a href="/product/detalle/:id"> <button
-                                            class="article-btn">Comprar</button> </a>
-                                </div>
-                            </div>
-                        </article>
-                </section>        
+                            </article>
+                        <% }) %> 
+                </section>       
+
                 <h2 class= "Category">INTERNACIONALES</h2>  
                 <section class="main-home-section">
-                    
+                    <% let internacional = products.filter(product => product.category == 'Internacional') %>
+                        <% internacional.forEach(product=> { %>
 
-                    <article class="article">
-                        <div class="article-card-top">
-                            <img class="article-img" src="/img/PuertoVallarta.jpg" alt="">
-                        </div>
-                        <div class="article-card-body">
-                            <h1 class="article-titulo">
-                                Puerto Vallarta
-                            </h1>
-                            <p class="article-parrafo">
-                                
-                            </p>
-                            <p class="article-precio">$100
-                            </p>
-                            <div class="contenedor-btn">
-                                <a href="/product/detalle/:id"> <button
-                                        class="article-btn">Comprar</button> </a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article">
-                        <div class="article-card-top">
-                            <img class="article-img" src="/img/otrosdestinos2.jpg" alt="">
-                        </div>
-                        <div class="article-card-body">
-                            <h1 class="article-titulo">
-                                Brasil
-                            </h1>
-                            <p class="article-parrafo">
-                                
-                            </p>
-                            <p class="article-precio">$100
-                            </p>
-                            <div class="contenedor-btn">
-                                <a href="/product/detalle/:id"> <button
-                                        class="article-btn">Comprar</button> </a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article">
-                        <div class="article-card-top">
-                            <img class="article-img" src="/img/otrosdestinos3.jpg" alt="">
-                        </div>
-                        <div class="article-card-body">
-                            <h1 class="article-titulo">
-                                Machu Pichu
-                            </h1>
-                            <p class="article-parrafo">
-                                
-                            </p>
-                            <p class="article-precio">$100
-                            </p>
-                            <div class="contenedor-btn">
-                                <a href="/product/detalle/:id"> <button
-                                        class="article-btn">Comprar</button> </a>
-                            </div>
-                        </div>
-                    </article>
+                            <article class="article">
+                                <div class="article-card-top">
+                                    <img class="article-img" src="<%= product.img %>" alt="">
+                                </div>
+                                <div class="article-card-body">
+                                    <h1 class="article-titulo">
+                                        <%= product.name %>
+                                    </h1>
+                                    <p class="article-parrafo">
+                                        <%= product.detail %>
+                                    </p>
+                                    <p class="article-precio"><%=product.price %></p>
+                                    <div class="contenedor-btn">
+                                        <a href="/product/detalle/<%=product.id %>"> <button
+                                                class="article-btn">Comprar</button> </a>
+                                    </div>
+                                </div>
+                            </article>
+                        <% }) %>
+                  
                </section>
 
             </main>
