@@ -23,5 +23,5 @@ router.get('/adminList', adminController.adminList);
 router.get('/create', adminController.add);
 router.post('/create', uploadFile.single('img') ,adminController.create);
 router.get('/comentarios', adminController.comments);
-router.get('/edit', adminController.productEdit);
+router.get('/edit/:id', adminController.productEdit);
 module.exports = router;
