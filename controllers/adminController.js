@@ -12,7 +12,7 @@ let products = JSON.parse(productsJson);
 const controller = {
     
     adminList: (req, res) =>{
-        res.render("adminList");
+        res.render("adminList", {products});
     },
     add: (req, res) =>{
         res.render("productAdd");
