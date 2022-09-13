@@ -13,13 +13,13 @@
                     <div class="formulario3">
                         <h1 class="formulario3">Agregar Destinos</h1>
 
-                        <form action="" method="post">
+                        <form action="/create" method="post" enctype="multipart/form-data">
 
 
                             <p>
                                 <label for="nombre" class="colocar_nombre">Nombre Destino
                                 </label>
-                                <input type="text" name="nombrecolocar" id="nombre1" required="obligatorio"
+                                <input type="text" name="name" id="nombre1" required="obligatorio"
                                     placeholder="">
 
                             </p>
@@ -45,7 +45,7 @@
 
                             <p>
                                 <label>Imagen producto</label>
-                                <input type="file" id="img" accep="jpg">
+                                <input type="file" id="img" accep="jpg" name="img">
 
                             </p>
                             <p>
@@ -78,15 +78,15 @@
                             </p>
 
                             <p>
-                                <label for="mensaje" class="colocarmensaje">Descripción
+                                <label for="detail class="colocarmensaje">Descripción
                                     <span class="obligatorio">*</span>
                                 </label>
-                                <textarea name="introducir_mensaje" class="textomensaje" id="mensaje1"
-                                    required="obligatorio" placeholder=""></textarea>
+                                <textarea class="textomensaje" id="detail"
+                                    required="obligatorio" placeholder="" name="detail"></textarea>
                             </p>
                             <p>
-                                <label for="currency-field">Precio</label>
-                                <input type="text" name="currency-field" id="price" value="" placeholder="$60.000">
+                                <label for="price">Precio</label>
+                                <input type="text"  id="price" name="price" value="" placeholder="$60.000">
                             </p>
 
 
