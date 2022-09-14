@@ -12,7 +12,7 @@ let products = JSON.parse(productsJson);
 const controller = {
     
     adminList: (req, res) =>{
-        res.render("adminList");
+        res.render("adminList", {products});
     },
     add: (req, res) =>{
         res.render("productAdd");
@@ -25,7 +25,7 @@ const controller = {
             name: req.body.name,
             detail: req.body.detail,
             price: req.body.price,
-            img: req.body.img
+            img: req.file.filename
             /* category: req.body.category,
             status: req.body.status */
         }
@@ -42,7 +42,8 @@ const controller = {
         res.render("comments");
     },
     productEdit: (req, res) =>{
-        res.render("productEdit");
+        let idProduct = req.params.id;
+        res.render("productEdit", {products, idProduct});
     },
 }
 

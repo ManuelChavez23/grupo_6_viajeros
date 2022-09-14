@@ -5,26 +5,26 @@
 
     <body>
         <%- include("../partials/headerProduct.ejs") %>
-        <section class="buscador">
-            <div class="contenedor-buscador">
-                <input class="input-buscador" type="text" value="Busca tu destino">
-            </div>
-            <div class="header-contenedor-bars">
-                <i class="fas fa-bars header-bars"></i>
-            </div>
-            <img class="imgpbanner" src="../img/PANO_20190401_155549.jpg" alt="">
-        </section>
+            <section class="buscador">
+                <div class="contenedor-buscador">
+                    <input class="input-buscador" type="text" value="Busca tu destino">
+                </div>
+                <div class="header-contenedor-bars">
+                    <i class="fas fa-bars header-bars"></i>
+                </div>
+                <img class="imgpbanner" src="../img/PANO_20190401_155549.jpg" alt="">
+            </section>
 
             <main class="main-home">
-                <h2 class= "Category">NACIONALES</h2>
-                
+                <h2 class="Category">NACIONALES</h2>
+
                 <section class="main-home-section">
 
-                    <% let nacional = products.filter(product => product.category == 'Nacional') %>
-                         <% nacional.forEach( product => { %> 
+                    <% let nacional=products.filter(product=> product.category == 'Nacional') %>
+                        <% nacional.forEach( product=> { %>
                             <article class="article">
                                 <div class="article-card-top">
-                                    <img class="article-img" src="<%= product.img %>" alt="">
+                                    <img class="article-img" src="/img/<%= product.img %>" alt="">
                                 </div>
                                 <div class="article-card-body">
                                     <h1 class="article-titulo">
@@ -33,24 +33,26 @@
                                     <p class="article-parrafo">
                                         <%= product.detail %>
                                     </p>
-                                    <p class="article-precio"><%=product.price %></p>
+                                    <p class="article-precio">
+                                        <%=product.price %>
+                                    </p>
                                     <div class="contenedor-btn">
                                         <a href="/product/detalle/<%=product.id %> "> <button
                                                 class="article-btn">Comprar</button> </a>
                                     </div>
                                 </div>
                             </article>
-                        <% }) %> 
-                </section>       
+                            <% }) %>
+                </section>
 
-                <h2 class= "Category">INTERNACIONALES</h2>  
+                <h2 class="Category">INTERNACIONALES</h2>
                 <section class="main-home-section">
-                    <% let internacional = products.filter(product => product.category == 'Internacional') %>
+                    <% let internacional=products.filter(product=> product.category == 'Internacional') %>
                         <% internacional.forEach(product=> { %>
 
                             <article class="article">
                                 <div class="article-card-top">
-                                    <img class="article-img" src="<%= product.img %>" alt="">
+                                    <img class="article-img" src="/img/<%= product.img %>" alt="">
                                 </div>
                                 <div class="article-card-body">
                                     <h1 class="article-titulo">
@@ -59,16 +61,18 @@
                                     <p class="article-parrafo">
                                         <%= product.detail %>
                                     </p>
-                                    <p class="article-precio"><%=product.price %></p>
+                                    <p class="article-precio">
+                                        <%=product.price %>
+                                    </p>
                                     <div class="contenedor-btn">
                                         <a href="/product/detalle/<%=product.id %>"> <button
                                                 class="article-btn">Comprar</button> </a>
                                     </div>
                                 </div>
                             </article>
-                        <% }) %>
-                  
-               </section>
+                            <% }) %>
+
+                </section>
 
             </main>
             <%- include("../partials/footer.ejs")%>
