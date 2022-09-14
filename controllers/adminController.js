@@ -44,7 +44,8 @@ const controller = {
         res.render("comments");
     },
     productEdit: (req, res) =>{
-        res.render("productEdit");
+        let idProduct = req.params.id;
+        res.render("productEdit", {products, idProduct});
     },
 }
 
