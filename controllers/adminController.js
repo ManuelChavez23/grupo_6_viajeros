@@ -32,10 +32,10 @@ const controller = {
 
         products.push(newProduct);
 
-        let productJson = JSON.stringify(products);
+        let productsJson = JSON.stringify(newProduct);
 
-        fs.appendFileSync(path.join(__dirname,'../data/productsBd.json'), productJson + '\n','utf-8');
-
+        fs.appendFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson   + '\n','utf-8');
+     
         res.redirect('/adminList');
     },
     comments: (req, res) =>{
