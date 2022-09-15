@@ -27,7 +27,7 @@ const controller = {
         res.render("productAdd");
     },
     create: (req, res) => {
-
+        
 
         let newProduct = {
             id: products.length + 1,
@@ -38,6 +38,8 @@ const controller = {
             /* category: req.body.category,
             status: req.body.status */
         }
+
+        
 
         products.push(newProduct);
 
