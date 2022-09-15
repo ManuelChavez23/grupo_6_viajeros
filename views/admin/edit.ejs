@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include("../partials/headProduct.ejs") %>
+
+    <body>
+        <%- include("../partials/headerAdmi.ejs") %>
+            <main>
+                <section class="formulario-editar">
+                    <form action="/edit/<%= idProduct %>?_method=PUT" method="post" enctype="multipart/form-data">
+                        <p>
+                            <label for="newName" class="colocar_nombre">Nombre Destino
+                            </label>
+                            <input type="text" name="newName" id="newName" required="obligatorio" placeholder="">
+
+                        </p>
+
+                        <p>
+                            <label>Nueva Fecha de Salida</label>
+                            <input type="date" id="newDate" name="fechacolocar">
+                        </p>
+                        <p>
+                            <label>Seguro COVID-19</label>
+                            <input type="checkbox" id="cbox1" value="first_checkbox">
+                        </p>
+                        <p>
+                            <label>Coordinador Permanente</label>
+                            <input type="checkbox" id="cbox1" value="second_checkbox">
+                        </p>
+                        <p>
+                            <label for="nombre" class="colocar_nombre">Excursiones Incluidas
+                            </label>
+                            <input type="text" name="Excursiones Incluidas" id="nombre1" required="obligatorio"
+                                placeholder="">
+                        </p>
+
+                        <p>
+                            <label>Nueva Imagen producto</label>
+                            <input type="file" id="newImg" accep="jpg" name="img">
+
+                        </p>
+                        <p>
+                            <label>Salida</label>
+                            <select>
+                                <option value="1">Grupal</option>
+                                <option value="2">Individual</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label>Viaje</label>
+                            <select>
+                                <option value="1">Exterior</option>
+                                <option value="2">Nacional</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label>Regimen Comidas</label>
+                            <select id="comidas1">
+                                <option value="1">All inclusive</option>
+                                <option value="2">Media Pensión</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label>Traslado</label>
+                            <select>
+                                <option value="1">Bus</option>
+                                <option value="2">Avión</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="detail class=" colocarmensaje">Descripción
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <textarea class="textomensaje" id="detail" required="obligatorio" placeholder=""
+                                name="newDetail"></textarea>
+                        </p>
+                        <p>
+                            <label for="newPrice">Precio</label>
+                            <input type="text" id="newPrice" name="newPrice" value="" placeholder="$60.000">
+                        </p>
+
+
+
+                        <button type="submit" name="enviarformulario" id="enviar1">
+                            <p class="enviar3">Subir</p>
+                        </button>
+
+                    </form>
+                </section>
+            </main>
+
+    </body>

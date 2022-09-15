@@ -1,11 +1,7 @@
 const express = require('express');
-
-
 const dotenv = require('dotenv').config();
 const app = express();
-
 const mainRouter = require('./routes/mainRoutes');
-
 const userRouter = require('./routes/userRoutes');
 const productRouter = require('./routes/productRoutes');
 const adminRouter = require('./routes/adminRoutes');
@@ -21,9 +17,10 @@ app.set('views', [
     path.join(__dirname, './views/product')
     
 ]);
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(mainRouter);

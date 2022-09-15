@@ -24,4 +24,5 @@ router.get('/create', adminController.add);
 router.post('/create', uploadFile.single('img') ,adminController.create);
 router.get('/comentarios', adminController.comments);
 router.get('/edit/:id', adminController.productEdit);
+router.put('/edit/:id', adminController.saveEdit);
 module.exports = router;
