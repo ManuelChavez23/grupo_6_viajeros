@@ -5,7 +5,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/product.jpg",
+        "img": "product.jpg",
         "status": "destacado"
     },
     {
@@ -14,7 +14,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/termasFiambala.jpg"
+        "img": "termasFiambala.jpg"
     },
     {
         "id": 3,
@@ -22,7 +22,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/Posada del Qenti.jpg",
+        "img": "Posada del Qenti.jpg",
         "status": "destacado"
     },
     {
@@ -31,7 +31,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/El Bolsón.jpg"
+        "img": "El Bolsón.jpg"
     },
     {
         "id": 5,
@@ -39,7 +39,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/El Bolsón.jpg",
+        "img": "El Bolsón.jpg",
         "status": "destacado"
     },
     {
@@ -48,7 +48,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/El Bolsón.jpg"
+        "img": "El Bolsón.jpg"
     },
     {
         "id": 7,
@@ -56,7 +56,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/El Bolsón.jpg",
+        "img": "El Bolsón.jpg",
         "status": "destacado"
     },
     {
@@ -65,7 +65,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/El Bolsón.jpg"
+        "img": "El Bolsón.jpg"
     },
     {
         "id": 9,
@@ -73,7 +73,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/El Bolsón.jpg",
+        "img": "El Bolsón.jpg",
         "status": "destacado"
     },
     {
@@ -82,7 +82,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Nacional",
-        "img": "/img/El Bolsón.jpg"
+        "img": "El Bolsón.jpg"
     },
     {
         "id": 11,
@@ -90,7 +90,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Internacional",
-        "img": "/img/El Bolsón.jpg"
+        "img": "El Bolsón.jpg"
     },
     {
         "id": 12,
@@ -98,7 +98,7 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Internacional",
-        "img": "/img/El Bolsón.jpg"
+        "img": "El Bolsón.jpg"
     },
     {
         "id": 13,
@@ -106,6 +106,46 @@
         "detail": "buen viaje",
         "price": 100,
         "category": "Internacional",
-        "img": "/img/El Bolsón.jpg"
+        "img": "El Bolsón.jpg"
+    },
+    {
+        "id": 14,
+        "name": "wqerqwer",
+        "detail": "wqer",
+        "price": "6161616",
+        "category": "Nacional",
+        "img": "1663102648986_img_.jpg"
+    },
+    {
+        "id": 15,
+        "name": "njtjht",
+        "detail": "ewrtwer",
+        "price": "78888",
+        "category": "Nacional",
+        "img": "1663102648986_img_.jpg"
+    },
+    {
+        "id": 16,
+        "name": "bdbcxv",
+        "detail": "wqerwfds",
+        "price": "156785",
+        "category": "Nacional",
+        "img": "1663102648986_img_.jpg"
+    },
+    {
+        "id": 17,
+        "name": "prueba",
+        "detail": "esto es una prueba",
+        "price": "123456",
+        "category": "Nacional",
+        "img": "1663102648986_img_.jpg"
+    },
+    {
+        "id": 18,
+        "name": "otra prueba",
+        "detail": "esto es otra pueba para no dejar de probar",
+        "price": "14141414",
+        "category": "Nacional",
+        "img": "1663103284143_img_.jpg"
     }
 ]

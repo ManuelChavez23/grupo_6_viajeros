@@ -822,7 +822,6 @@ p.producto-descrip {
 
 .register-panel input {
   box-sizing: border-box;
-  text-align: center;
   display: block;
   margin: auto;
   /* max-width: 500px;
@@ -830,7 +829,7 @@ p.producto-descrip {
   border-radius: 5px;
   height: 2rem;
   border: var(--violeta) 0.5px solid;
-  color: var(--azul);
+  color: var(--negro);
 }
 
 .register-panel input:focus {
@@ -2096,4 +2095,13 @@ ul {
   .main-product-contenedor .product-card-body {
     width: 50%;
   }
+}
+
+
+/* MENSAJE DE ERROR */
+
+.text-danger {
+  color: rgb(202, 37, 37);
+  font-family: var(--fuente);
+  font-weight: bold;
 }
