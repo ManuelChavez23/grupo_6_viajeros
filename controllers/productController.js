@@ -13,9 +13,7 @@ const controller = {
         
         products.find( productActual => productActual.id == idProduct)
        
-        res.render('productDetail', {products, idProduct});
-
-    },
+        res.render('productDetail', {products,idProduct }); },
     products:  (req, res) =>{
         res.render('products', {products});
     },
