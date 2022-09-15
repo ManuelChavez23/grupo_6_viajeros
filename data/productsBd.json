@@ -118,19 +118,24 @@
         "id": 15,
         "name": "njtjht",
         "detail": "ewrtwer",
-        "price": "78888"
+        "price": "78888",
+        "category": "Nacional",
+        "img": "1663102648986_img_.jpg"
     },
     {
         "id": 16,
         "name": "bdbcxv",
         "detail": "wqerwfds",
-        "price": "156785"
+        "price": "156785",
+        "category": "Nacional",
+        "img": "1663102648986_img_.jpg"
     },
     {
         "id": 17,
         "name": "prueba",
         "detail": "esto es una prueba",
         "price": "123456",
+        "category": "Nacional",
         "img": "1663102648986_img_.jpg"
     },
     {
