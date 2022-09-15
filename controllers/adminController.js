@@ -10,7 +10,16 @@ let products = JSON.parse(productsJson);
 
 
 const controller = {
-    
+    saveEdit: (req, res) => {
+        let idProduct = req.params.id;
+        console.log(req.body)
+        let productEdited = {
+            name: req.body.newName,
+            /* newImg: data.newImg */
+        }
+        res.send('se enviaron los datos')
+        console.log(productEdited);
+    },
     adminList: (req, res) =>{
         res.render("adminList", {products});
     },
@@ -45,7 +54,7 @@ const controller = {
     },
     productEdit: (req, res) =>{
         let idProduct = req.params.id;
-        res.render("productEdit", {products, idProduct});
+        res.render("edit", {products, idProduct});
     },
 }
 
