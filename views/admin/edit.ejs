@@ -8,14 +8,13 @@
         <%- include("../partials/headerAdmi.ejs") %>
             <main>
                 <section class="formulario-editar">
-                    <form action="/edit/<%= idProduct %>?_method=PUT" method="post" enctype="multipart/form-data">
+                    <form action="/edit/<%= idProduct %>/storage?_method=PUT" method="POST"
+                        enctype="multipart/form-data">
                         <p>
                             <label for="newName" class="colocar_nombre">Nombre Destino
                             </label>
                             <input type="text" name="newName" id="newName" required="obligatorio" placeholder="">
-
                         </p>
-
                         <p>
                             <label>Nueva Fecha de Salida</label>
                             <input type="date" id="newDate" name="fechacolocar">
@@ -34,24 +33,29 @@
                             <input type="text" name="Excursiones Incluidas" id="nombre1" required="obligatorio"
                                 placeholder="">
                         </p>
-
                         <p>
                             <label>Nueva Imagen producto</label>
                             <input type="file" id="newImg" accep="jpg" name="img">
-
+                        </p>
+                        <p>
+                            <label for="category">Categoria</label>
+                            <select name="category" id="category">
+                                <option value="Internacional">Internacional</option>
+                                <option value="Nacional">Nacional</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="status">Tipo de anuncio</label>
+                            <select name="status" id="status">
+                                <option value="destacado">Destacado</option>
+                                <option value="oferta">Oferta</option>
+                            </select>
                         </p>
                         <p>
                             <label>Salida</label>
                             <select>
                                 <option value="1">Grupal</option>
                                 <option value="2">Individual</option>
-                            </select>
-                        </p>
-                        <p>
-                            <label>Viaje</label>
-                            <select>
-                                <option value="1">Exterior</option>
-                                <option value="2">Nacional</option>
                             </select>
                         </p>
                         <p>
@@ -68,12 +72,11 @@
                                 <option value="2">Avión</option>
                             </select>
                         </p>
-
                         <p>
-                            <label for="detail class=" colocarmensaje">Descripción
+                            <label for="newDetail" class="colocarmensaje">Descripción
                                 <span class="obligatorio">*</span>
                             </label>
-                            <textarea class="textomensaje" id="detail" required="obligatorio" placeholder=""
+                            <textarea class="textomensaje" id="newDetail" required="obligatorio" placeholder=""
                                 name="newDetail"></textarea>
                         </p>
                         <p>
@@ -81,13 +84,12 @@
                             <input type="text" id="newPrice" name="newPrice" value="" placeholder="$60.000">
                         </p>
 
-
-
                         <button type="submit" name="enviarformulario" id="enviar1">
                             <p class="enviar3">Subir</p>
                         </button>
 
                     </form>
+
                 </section>
             </main>
 

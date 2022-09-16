@@ -11,14 +11,43 @@ let products = JSON.parse(productsJson);
 
 const controller = {
     saveEdit: (req, res) => {
-        let idProduct = req.params.id;
-        console.log(req.body)
-        let productEdited = {
+        
+        let editProduct = {
+            id: parseInt(req.params.id),
             name: req.body.newName,
-            /* newImg: data.newImg */
+            /* date: req.body.newDate,
+            insure: req.body.insure,
+            guide: req.body.guide,
+            activities: req.body.activities, */
+            price: req.body.newPrice,
+            category: req.body.category,
+            img: req.file.filename,
+            status: req.body.status
+            /* group: req.body.group,
+            meals: req.body.meals,
+            transport: req.body.transport,
+            detail: req.body.newDetail, */
         }
-        res.send('se enviaron los datos')
-        console.log(productEdited);
+
+        
+
+        let searchProduct = products.find(product => product.id == editProduct.id)
+        let index = products.indexOf(searchProduct);
+        console.log(index);
+        products[index] = editProduct;
+        //res.send(products);
+        let productsJson = JSON.stringify(products);
+        
+        fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson,);
+        /* searchProduct = editProduct
+        console.log(editProduct);
+        res.send(searchProduct);
+        console.log(searchProduct);
+        products.push(searchProduct) */
+        
+     
+        res.redirect('/adminList');
+
     },
     adminList: (req, res) =>{
         res.render("adminList", {products});

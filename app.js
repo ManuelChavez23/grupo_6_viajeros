@@ -1,8 +1,4 @@
 const express = require('express');
-<<<<<<< HEAD
-=======
-
->>>>>>> e3382f6828d8a5542f0bb19573e5cc1fca728564
 const dotenv = require('dotenv').config();
 const app = express();
 const mainRouter = require('./routes/mainRoutes');
