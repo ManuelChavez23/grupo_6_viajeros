@@ -11,7 +11,32 @@ let products = JSON.parse(productsJson);
 const controller = {
 
     saveUserEdit: (req, res) => {
-        res.send(req.body)
+        //creamos nuevamente el objeto para poder modificar el registro del usuario
+        let userEdited = {
+            id: parseInt(req.params.userId),
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            birth: req.body.birth,
+            email: req.body.email,
+            user: req.body.user,
+            password: req.body.password, //ver como guardar la contra
+            category: req.body.category,
+            img: req.file.filename,
+            phoneNumber: req.body.phoneNumber
+        }
+        
+        //buscamos el usuario en la lista de usuarios por la ID
+        let searchUser = users.find(user => user.id == userEdited.id)
+        //buscamos el indice del usuario en la lista
+        let index = users.indexOf(searchUser);
+        //actualizamos la informacion del usuario
+        users[index] = userEdited;
+        //convertimos el array de usuarios en JSON
+        let userJson = JSON.stringify(users, null, ' ');
+        //guardamos la informacion en formato JSON en la base de datos de usuarios - usersBd.json
+        fs.writeFileSync(path.join(__dirname,'../data/usersBd.json'),  userJson,);
+        //redirigimos el navegador a la lista de usuarios
+        res.redirect('/userList')
     },
 
     editUser: (req, res) => {

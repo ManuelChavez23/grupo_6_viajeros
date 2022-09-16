@@ -38,15 +38,20 @@
                             <p>
                                 <label>Imagen actual</label>
                                 <img width="40%" src="/img/<%= userSelected.img %>" alt="foto"><br>
-                                <label for="newImg">Nueva Imagen de Usuario</label>
-                                <input type="file" id="newImg" accep="jpg" name="img">
+                                <label for="img">Nueva Imagen de Usuario</label>
+                                <input type="file" id="img" accept="jpg" name="img">
+                            </p>
+                            <p>
+                                <label for="birth">Nueva Fecha de Salida</label>
+                                <input type="date" id="birth" name="birth"
+                                    value="<%= userSelected.birth ? userSelected.birth : ''; %>">
                             </p>
                             <p>
                                 <label for="category">Es administrador?</label>
                                 <select name="category" id="category">
                                     <option value="user" <%=userSelected.category=="user" ? 'selected' : '' ; %>>Usuario
                                     </option>
-                                    <option value="Administrador">Administrador</option>
+                                    <option value="admin">Administrador</option>
                                 </select>
                             </p>
                             <p>
