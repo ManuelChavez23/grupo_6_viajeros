@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const path = require('path');
 
-const productsJson = fs.readFileSync(path.join(__dirname, '../data/productsBd.json'), 'utf-8');
+const productsJson = fs.readFileSync(path.join(__dirname, '../data/productsBd.json'));
 
 
 let products = JSON.parse(productsJson);
@@ -72,9 +72,9 @@ const controller = {
 
         products.push(newProduct);
 
-        let productsJson = JSON.stringify(newProduct);
+        let productsJson = JSON.stringify(newProduct, null, ' ');
 
-        fs.appendFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson   + '\n','utf-8');
+        fs.appendFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson);
      
         res.redirect('/adminList');
     },
@@ -85,6 +85,20 @@ const controller = {
         let idProduct = req.params.id;
         res.render("edit", {products, idProduct});
     },
+    delete: (req, res) =>{
+        const productDelete = products.filter(product => product.id != req.params.id );
+
+        for(let i = 0; i < productDelete.length; i++){
+            productDelete[i].id = i +1;
+        }
+
+        let productsJson = JSON.stringify(productDelete, null, ' ');
+
+        fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson);
+     
+        res.redirect('/adminList');
+
+    }
 }
 
 
