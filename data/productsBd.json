@@ -35,20 +35,19 @@
   },
   {
     "id": 5,
-    "name": "El Bolsón",
-    "detail": "buen viaje",
-    "price": 100,
-    "category": "Nacional",
-    "img": "El Bolsón.jpg",
-    "status": "destacado"
+    "name": "esto es una prueba",
+    "detail": "jhnoj",
+    "price": "6888888",
+    "category": "Internacional",
+    "img": "img-1663277422181.jpg"
   },
   {
     "id": 6,
-    "name": "El Bolsón",
-    "detail": "buen viaje",
-    "price": 100,
-    "category": "Nacional",
-    "img": "El Bolsón.jpg"
+    "name": "uuuuuu",
+    "price": "666666",
+    "category": "Internacional",
+    "img": "img-1663283446247.png",
+    "status": "destacado"
   },
   {
     "id": 7,
@@ -61,28 +60,27 @@
   },
   {
     "id": 8,
-    "name": "El Bolsón",
-    "detail": "buen viaje",
-    "price": 100,
-    "category": "Nacional",
-    "img": "El Bolsón.jpg"
+    "name": "otro destino mejor",
+    "price": "1556557",
+    "category": "Internacional",
+    "img": "img-1663282667090.jpg",
+    "status": "oferta"
   },
   {
     "id": 9,
-    "name": "El Bolsón",
-    "detail": "buen viaje",
-    "price": 100,
+    "name": "dsafasdf",
+    "price": "167789999",
     "category": "Nacional",
-    "img": "El Bolsón.jpg",
-    "status": "destacado"
+    "img": "img-1663282667090.jpg",
+    "status": "featured"
   },
   {
     "id": 10,
-    "name": "El Bolsón",
-    "detail": "buen viaje",
-    "price": 100,
+    "name": "el ultimo es el vencido",
+    "price": "1555666",
     "category": "Nacional",
-    "img": "El Bolsón.jpg"
+    "img": "img-1663283149447.jpg",
+    "status": "destacado"
   },
   {
     "id": 11,
@@ -137,6 +135,7 @@
     "name": "prueba",
     "detail": "esto es una prueba",
     "price": "123456",
+    "category": "Internacional",
     "img": "1663102648986_img_.jpg"
   },
   {
