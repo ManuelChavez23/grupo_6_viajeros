@@ -23,7 +23,9 @@
                                         </h2>
                                     </div>
                                     <div class="buttonIn">
-                                        <button id="clear3">Eliminar</button>
+                                        <form method="post" action = '/delete/<%= product.id%>?_method=delete'>
+                                            <button id="clear3" type="submit">Eliminar</button>
+                                        </form>
                                         <a href="/edit/<%= product.id%>"><button id="edit3">Editar <i
                                                     class="fas fa-edit"></i></button></a>
                                     </div>
