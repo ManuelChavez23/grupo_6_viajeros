@@ -2,9 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
 
-const usersJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'), 'utf-8');
 
-const users = JSON.parse(usersJson);
 
 
 const userController = {
@@ -23,6 +21,30 @@ const userController = {
                 oldData: req.body
             });
         }
+    },
+    usersCheck: (req, res) => {
+        const usersJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'), 'utf-8');
+
+        const users = JSON.parse(usersJson);
+
+        let userCheck = {
+            user: req.body.user,
+            password: req.body.password
+        }
+
+        let check = users.find(elemento => elemento.user == userCheck.user);
+
+        if(check) {
+            if(userCheck.password == check.password) {
+                res.redirect('/');
+            } else {
+                res.redirect('login');
+            }
+        } else {
+            res.redirect('register');
+        }
+
+        
     }
 }
 
