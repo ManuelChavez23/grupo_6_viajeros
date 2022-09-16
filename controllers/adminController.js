@@ -1,15 +1,29 @@
 const fs = require('fs');
-
 const path = require('path');
 
 const productsJson = fs.readFileSync(path.join(__dirname, '../data/productsBd.json'));
+const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
 
-
+let users = JSON.parse(userJson);
 let products = JSON.parse(productsJson);
 
 
-
 const controller = {
+
+    saveUserEdit: (req, res) => {
+        res.send(req.body)
+    },
+
+    editUser: (req, res) => {
+        let userId = req.params.userId
+        
+        res.render('userEdit', { users, userId })
+    },
+
+    userList: (req, res) => {
+        res.render('userList', { users });
+    },
+
     saveEdit: (req, res) => {
         
         let editProduct = {

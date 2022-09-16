@@ -27,4 +27,10 @@ router.get('/comentarios', adminController.comments);
 router.get('/edit/:id', adminController.productEdit);
 router.put('/edit/:id/storage', uploadFile.single('img'), adminController.saveEdit);
 router.delete('/delete/:id', adminController.delete);
+router.get('/userList', adminController.userList);
+router.get('/userEdit/:userId', adminController.editUser);/* 
+router.put('/userEdit/:userId/storage', uploadFile.single('img'), adminController.saveUserEdit);
+router.delete('/userDelete/:userId', adminController.delete); */
+
+
 module.exports = router;

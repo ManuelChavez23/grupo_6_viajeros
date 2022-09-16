@@ -1,77 +1,83 @@
 [
- {
-  "id": 1,
-  "firstName": "Franco",
-  "lastName": "Ambort",
-  "user": "FrancoAmbort",
-  "email": "ambortfranco94",
-  "password": "abc",
-  "category": "user",
-  "img": 1,
-  "phoneNumber": 3492681472,
-  "dni": 37575676
- },
- {
-  "id": 2,
-  "firstName": "Valen",
-  "lastName": "Vallejos",
-  "user": "ValenVallejos",
-  "email": "valenvallejos",
-  "password": "abc",
-  "category": "admin",
-  "img": 1,
-  "phoneNumber": 3492555555,
-  "dni": 35456789
- },
- {
-  "id": 3,
-  "firstName": "Manu",
-  "lastName": "Chavez",
-  "user": "ManuChavez",
-  "email": "manuchavez",
-  "password": "abc",
-  "category": "admin",
-  "img": 1,
-  "phoneNumber": 3492555555,
-  "dni": 35456789
- },
- {
-  "id": 4,
-  "firstName": "Pame",
-  "lastName": "Abeldaño",
-  "email": "pameabeldaño",
-  "user": "PameAbeldaño",
-  "password": "abc",
-  "category": "user",
-  "img": 1,
-  "phoneNumber": 3492555555,
-  "dni": 35456789
- },
- {
-  "id": 5,
-  "firstName": "miguel",
-  "lastName": "perez",
-  "birth": "1990-05-25",
-  "email": "prueba@mail.com",
-  "password": "123456",
-  "phoneNumber": "123456789"
- },
- {
-  "id": 6,
-  "firstName": "bot",
-  "lastName": "test",
-  "birth": "1990-08-28",
-  "email": "prueba@email.com",
-  "password": "789456",
-  "phoneNumber": "123456789"
- },
- {
-  "id": 7,
-  "firstName": "noSoy",
-  "lastName": "unBot",
-  "birth": "1980-08-08",
-  "email": "bot@mail.com",
-  "password": "101010",
-  "phoneNumber": "10101010101"
- }
+  {
+    "id": 1,
+    "firstName": "Franco",
+    "lastName": "Ambort",
+    "user": "FrancoAmbort",
+    "email": "ambortfranco94",
+    "password": "abc",
+    "category": "user",
+    "img": "avatar1.jpg",
+    "phoneNumber": 3492681472,
+    "dni": 37575676
+  },
+  {
+    "id": 2,
+    "firstName": "Valen",
+    "lastName": "Vallejos",
+    "user": "ValenVallejos",
+    "email": "valenvallejos",
+    "password": "abc",
+    "category": "admin",
+    "img": "avatar2.jpg",
+    "phoneNumber": 3492555555,
+    "dni": 35456789
+  },
+  {
+    "id": 3,
+    "firstName": "Manu",
+    "lastName": "Chavez",
+    "user": "ManuChavez",
+    "email": "manuchavez",
+    "password": "abc",
+    "category": "admin",
+    "img": "avatar1.jpg",
+    "phoneNumber": 3492555555,
+    "dni": 35456789
+  },
+  {
+    "id": 4,
+    "firstName": "Pame",
+    "lastName": "Abeldaño",
+    "email": "pameabeldaño",
+    "user": "PameAbeldaño",
+    "password": "abc",
+    "category": "user",
+    "img": "avatar2.jpg",
+    "phoneNumber": 3492555555,
+    "dni": 35456789
+  },
+  {
+    "id": 5,
+    "firstName": "miguel",
+    "lastName": "perez",
+    "birth": "1990-05-25",
+    "email": "prueba@mail.com",
+    "password": "123456",
+    "category": "user",
+    "img": "avatar2.jpg",
+    "phoneNumber": "123456789"
+  },
+  {
+    "id": 6,
+    "firstName": "bot",
+    "lastName": "test",
+    "birth": "1990-08-28",
+    "email": "prueba@email.com",
+    "password": "789456",
+    "category": "user",
+    "img": "avatar1.jpg",
+    "phoneNumber": "123456789"
+  },
+  {
+    "id": 7,
+    "firstName": "noSoy",
+    "lastName": "unBot",
+    "birth": "1980-08-08",
+    "email": "bot@mail.com",
+    "password": "101010",
+    "category": "user",
+    "img": "avatar2.jpg",
+    "phoneNumber": "10101010101"
+  }
 ]
