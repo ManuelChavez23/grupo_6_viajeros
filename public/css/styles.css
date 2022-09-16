@@ -979,9 +979,6 @@ p.producto-descrip {
   background-position: center;
 }
 
-/* .contact_form {
-
-} */
 
 input {
   background-color: var(--blanco);
@@ -1170,8 +1167,22 @@ p {
 }
 
 .formulario-editar {
-  max-width: 50%;
-  margin: auto;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--gris-claro);
+    margin-bottom: 10px;
+}
+
+
+select#category, select#status, select#group, select#meals, select#transport {
+  margin-bottom: 3%;
+  margin-left: 5%;
+}
+
+label {
+  font-weight: bold;
 }
 
 #newImg {
@@ -1902,7 +1913,7 @@ ul {
   .contact_form3 {
     width: 460px;
     height: auto;
-    margin: auto;
+    margin-left: 30%;
     border-radius: 10px;
     padding-top: 30px;
     padding-bottom: 20px;
@@ -2215,6 +2226,31 @@ ul {
   .main-product-contenedor .product-card-body {
     width: 50%;
   }
+/* FORMULARIO EDITAR */
+  .formulario-editar {
+    max-width: 50%;
+    margin-left: 30%;
+    width: 460px;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: var(--gris-claro);
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 10px;
+  }
+  
+  select#category, select#status, select#group, select#meals, select#transport {
+    margin-bottom: 3%;
+    margin-left: 5%;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+/* FIN FORMULARIO EDITAR */
+  
 }
 
 
