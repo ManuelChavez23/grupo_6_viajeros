@@ -18,7 +18,7 @@
                             <div class="container">
                                 <div class="card-contendor-titulo">
                                     <h2 class="lugar">
-                                        <%= user.email %>
+                                        <%= user.user==undefined ? user.email : user.user %>
                                     </h2>
                                     <h4 class="lugar">
                                         <%= user.category %>

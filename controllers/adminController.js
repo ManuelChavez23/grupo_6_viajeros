@@ -10,6 +10,25 @@ let products = JSON.parse(productsJson);
 
 const controller = {
 
+    deleteUser: (req, res) => {
+        //creamos un nuevo array de productos sin el producto a eliminar
+        const userToDelete = users.filter(user => user.id != req.params.userId );
+        //redenominamos los id de cada elemento
+        for(let i = 0; i < userToDelete.length; i++){
+            userToDelete[i].id = i +1;
+        }
+        //convertimos el array de productos a formato JSON
+        let userJson = JSON.stringify(userToDelete, null, ' ');
+        //almacenamos la informacion en la base de datos
+        fs.writeFileSync(path.join(__dirname,'../data/usersBd.json'),  userJson);
+        //redireccionamos el navegador hacia adminLists
+        res.redirect('/userList');
+        /* res.redirect('back');
+        setTimeout(() => {
+    window.location.reload(true);
+  }, 100); */
+    },
+
     saveUserEdit: (req, res) => {
         //creamos nuevamente el objeto para poder modificar el registro del usuario
         let userEdited = {
@@ -132,16 +151,17 @@ const controller = {
         res.render("edit", {products, idProduct});
     },
     delete: (req, res) =>{
+        //creamos un nuevo array de productos sin el producto a eliminar
         const productDelete = products.filter(product => product.id != req.params.id );
-
+        //redenominamos los id de cada elemento
         for(let i = 0; i < productDelete.length; i++){
             productDelete[i].id = i +1;
         }
-
+        //convertimos el array de productos a formato JSON
         let productsJson = JSON.stringify(productDelete, null, ' ');
-
+        //almacenamos la informacion en la base de datos
         fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson);
-     
+        //redireccionamos el navegador hacia adminLists
         res.redirect('/adminList');
 
     }

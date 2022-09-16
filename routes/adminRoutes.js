@@ -30,7 +30,7 @@ router.delete('/delete/:id', adminController.delete);
 router.get('/userList', adminController.userList);
 router.get('/userEdit/:userId', adminController.editUser);
 router.put('/userEdit/:userId/storage', uploadFile.single('img'), adminController.saveUserEdit);
-/* router.delete('/userDelete/:userId', adminController.delete); */
+router.delete('/userDelete/:userId', adminController.deleteUser);
 
 
 module.exports = router;
