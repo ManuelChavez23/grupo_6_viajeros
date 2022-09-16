@@ -11,7 +11,8 @@
                 <div class="contact_form3">
 
                     <div class="formulario3">
-                        <h1 class="formulario3">Agregar Destinos</h1>
+                        <h1 class="formulario3">Agregar Destino</h1>
+
 
                         <form action="/create" method="post" enctype="multipart/form-data">
 
@@ -48,17 +49,24 @@
 
                             </p>
                             <p>
+                                <label for="category">Categoria</label>
+                                <select name="category" id="category">
+                                    <option value="Internacional">Internacional</option>
+                                    <option value="Nacional">Nacional</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="status">Tipo de anuncio</label>
+                                <select name="status" id="status">
+                                    <option value="destacado">Destacado</option>
+                                    <option value="oferta">Oferta</option>
+                                </select>
+                            </p>
+                            <p>
                                 <label>Salida</label>
                                 <select>
                                     <option value="1">Grupal</option>
                                     <option value="2">Individual</option>
-                                </select>
-                            </p>
-                            <p>
-                                <label>Viaje</label>
-                                <select>
-                                    <option value="1">Exterior</option>
-                                    <option value="2">Nacional</option>
                                 </select>
                             </p>
                             <p>
@@ -77,7 +85,7 @@
                             </p>
 
                             <p>
-                                <label for="detail class=" colocarmensaje">Descripción
+                                <label for="detail" class=" colocarmensaje">Descripción
                                     <span class="obligatorio">*</span>
                                 </label>
                                 <textarea class="textomensaje" id="detail" required="obligatorio" placeholder=""

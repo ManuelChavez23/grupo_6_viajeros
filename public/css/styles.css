@@ -1092,14 +1092,24 @@ p {
   font-weight: bold;
   text-align: center;
 }
-#enviar1 {
-  margin: 10px auto;
-  display: block;
-}
+
 .buttonIn:hover #clear3 {
   cursor: pointer;
 }
 /*editar--------------------------------------------------------------------------------------*/
+#enviar1 {
+  margin: 10px auto;
+  display: block;
+}
+.formulario-editar {
+  max-width: 50%;
+  margin: auto;
+}
+#newImg{
+  width: 60%;
+    height: 5%;
+
+}
 .imgproduct2 {
   width: 30%;
 
@@ -1113,10 +1123,7 @@ p {
 .inputEditImg {
   max-width: 250px;
 }
-.formulario-editar {
-  max-width: 50%;
-  margin: auto;
-}
+
 /*listado--------------------------------------------------------------------------------------*/
 
 .contenedor {
@@ -1799,7 +1806,8 @@ ul {
   #cbox1 {
     width: 20px;
   }
-  .enviar3 {
+  .enviar3 
+  #enviar1{
     text-transform: uppercase;
     border-radius: 10px;
     width: 300px;
@@ -1812,6 +1820,8 @@ ul {
     cursor: pointer;
   }
   /*editar--------------------------------------------------------------------------------------*/
+ 
+  
   .imgproduct2 {
     width: 30%;
     margin-left: 300px;
