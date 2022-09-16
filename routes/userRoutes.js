@@ -42,7 +42,7 @@ const validations = [
 ]
 
 router.get('/login', userController.login);
-router.post('/login', (req,res) => { res.sendFile('fui por post')});
+router.post('/login', userController.usersCheck);
 
 router.get('/register', userController.register);
 router.post('/register', uploadFile.single('imgUser'), validations,userController.processRegister);
