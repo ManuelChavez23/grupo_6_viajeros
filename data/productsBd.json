@@ -1,114 +1,59 @@
 [
  {
   "id": 1,
-  "name": "lkgfcb",
-  "price": "",
-  "category": "Internacional",
-  "img": "img-1663293748557.png",
-  "status": "destacado"
+  "firstName": "Franco",
+  "lastName": "Ambort",
+  "user": "FrancoAmbort",
+  "email": "ambortfranco94",
+  "password": "abc",
+  "category": "user",
+  "img": 1,
+  "phoneNumber": 3492681472,
+  "dni": 37575676
  },
  {
   "id": 2,
-  "name": "El Bolsón",
-  "detail": "buen viaje",
-  "price": 100,
-  "category": "Nacional",
-  "img": "El Bolsón.jpg"
+  "firstName": "Valen",
+  "lastName": "Vallejos",
+  "user": "ValenVallejos",
+  "email": "valenvallejos",
+  "password": "abc",
+  "category": "admin",
+  "img": 1,
+  "phoneNumber": 3492555555,
+  "dni": 35456789
  },
  {
   "id": 3,
-  "name": "esto es una prueba",
-  "detail": "jhnoj",
-  "price": "6888888",
-  "category": "Internacional",
-  "img": "img-1663277422181.jpg"
+  "firstName": "Manu",
+  "lastName": "Chavez",
+  "user": "ManuChavez",
+  "email": "manuchavez",
+  "password": "abc",
+  "category": "admin",
+  "img": 1,
+  "phoneNumber": 3492555555,
+  "dni": 35456789
  },
  {
   "id": 4,
-  "name": "uuuuuu",
-  "price": "666666",
-  "category": "Internacional",
-  "img": "img-1663283446247.png",
-  "status": "destacado"
+  "firstName": "Pame",
+  "lastName": "Abeldaño",
+  "email": "pameabeldaño",
+  "user": "PameAbeldaño",
+  "password": "abc",
+  "category": "user",
+  "img": 1,
+  "phoneNumber": 3492555555,
+  "dni": 35456789
  },
  {
   "id": 5,
-  "name": "otro destino mejor",
-  "price": "1556557",
-  "category": "Internacional",
-  "img": "img-1663282667090.jpg",
-  "status": "oferta"
- },
- {
-  "id": 6,
-  "name": "dsafasdf",
-  "price": "167789999",
-  "category": "Nacional",
-  "img": "img-1663282667090.jpg",
-  "status": "featured"
- },
- {
-  "id": 7,
-  "name": "el ultimo es el vencido",
-  "price": "1555666",
-  "category": "Nacional",
-  "img": "img-1663283149447.jpg",
-  "status": "destacado"
- },
- {
-  "id": 8,
-  "name": "Puerto Vallarta",
-  "detail": "buen viaje",
-  "price": 100,
-  "category": "Internacional",
-  "img": "El Bolsón.jpg"
- },
- {
-  "id": 9,
-  "name": "Brasil",
-  "detail": "buen viaje",
-  "price": 100,
-  "category": "Internacional",
-  "img": "El Bolsón.jpg"
- },
- {
-  "id": 10,
-  "name": "Machu Pichu",
-  "detail": "buen viaje",
-  "price": 100,
-  "category": "Internacional",
-  "img": "El Bolsón.jpg"
- },
- {
-  "id": 11,
-  "name": "wqerqwer",
-  "detail": "wqer",
-  "price": "6161616",
-  "category": "Internacional",
-  "img": "El Bolsón.jpg"
- },
- {
-  "id": 12,
-  "name": "njtjht",
-  "detail": "ewrtwer",
-  "price": "78888",
-  "category": "Internacional",
-  "img": "El Bolsón.jpg"
- },
- {
-  "id": 13,
-  "name": "bdbcxv",
-  "detail": "wqerwfds",
-  "price": "156785",
-  "category": "Internacional",
-  "img": "El Bolsón.jpg"
- },
- {
-  "id": 14,
-  "name": "prueba",
-  "detail": "esto es una prueba",
-  "price": "123456",
-  "category": "Internacional",
-  "img": "1663102648986_img_.jpg"
+  "firstName": "miguel",
+  "lastName": "perez",
+  "birth": "1990-05-25",
+  "email": "prueba@mail.com",
+  "password": "123456",
+  "phoneNumber": "123456789"
  }
 ]

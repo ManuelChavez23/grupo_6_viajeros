@@ -24,22 +24,22 @@
                             </p>
 
                             <p>
-                                <label>Fecha de Salida</label>
-                                <input type="date" id="date1" name="fechacolocar">
+                                <label for="date">Fecha de Salida</label>
+                                <input type="date" id="date" name="date">
                             </p>
                             <p>
-                                <label>Seguro COVID-19</label>
-                                <input type="checkbox" id="cbox1" value="first_checkbox">
+                                <label for="insure">Seguro COVID-19</label>
+                                <input type="checkbox" id="insure" name="insure" value="true">
                             </p>
                             <p>
-                                <label>Coordinador Permanente</label>
-                                <input type="checkbox" id="cbox1" value="second_checkbox">
+                                <label for="guide">Coordinador Permanente</label>
+                                <input type="checkbox" name="guide" id="guide" value="true">
                             </p>
                             <p>
-                                <label for="nombre" class="colocar_nombre">Excursiones Incluidas
+                                <label for="extras" class="colocar_nombre">Excursiones Incluidas
                                 </label>
-                                <input type="text" name="Excursiones Incluidas" id="nombre1" required="obligatorio"
-                                    placeholder="">
+                                <input type="text" name="extras" id="extras" required="obligatorio"
+                                    placeholder="Exrtras del paquete - de ser valido">
                             </p>
 
                             <p>
@@ -48,40 +48,47 @@
 
                             </p>
                             <p>
-                                <label>Salida</label>
-                                <select>
-                                    <option value="1">Grupal</option>
-                                    <option value="2">Individual</option>
+                                <label for="group">Salida</label>
+                                <select name="group" id="group">
+                                    <option value="grupo">Grupal</option>
+                                    <option value="individual">Individual</option>
                                 </select>
                             </p>
                             <p>
-                                <label>Viaje</label>
-                                <select>
-                                    <option value="1">Exterior</option>
-                                    <option value="2">Nacional</option>
+                                <label for="category">Viaje</label>
+                                <select name="category" id="category">
+                                    <option value="Internacional">Exterior</option>
+                                    <option value="Nacional">Nacional</option>
                                 </select>
                             </p>
                             <p>
-                                <label>Regimen Comidas</label>
-                                <select id="comidas1">
-                                    <option value="1">All inclusive</option>
-                                    <option value="2">Media Pensión</option>
+                                <label for="meals">Regimen Comidas</label>
+                                <select id="meals" name="meals">
+                                    <option value="all">All inclusive</option>
+                                    <option value="media">Media Pensión</option>
                                 </select>
                             </p>
                             <p>
-                                <label>Traslado</label>
-                                <select>
-                                    <option value="1">Bus</option>
-                                    <option value="2">Avión</option>
+                                <label>Tipo de anuncio</label>
+                                <select id="status" name="status">
+                                    <option value="destacado">destacado</option>
+                                    <option value="oferta">oferta</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="transport">Traslado</label>
+                                <select name="transport" id="transport">
+                                    <option value="bus">Bus</option>
+                                    <option value="avion">Avión</option>
                                 </select>
                             </p>
 
                             <p>
-                                <label for="detail class=" colocarmensaje">Descripción
+                                <label for="detail" class="colocarmensaje">Descripción
                                     <span class="obligatorio">*</span>
                                 </label>
-                                <textarea class="textomensaje" id="detail" required="obligatorio" placeholder=""
-                                    name="detail"></textarea>
+                                <textarea class="textomensaje" name="detail" id="detail"
+                                    required="obligatorio"></textarea>
                             </p>
                             <p>
                                 <label for="price">Precio</label>

@@ -15,18 +15,18 @@ const controller = {
         let editProduct = {
             id: parseInt(req.params.id),
             name: req.body.newName,
-            /* date: req.body.newDate,
+            date: req.body.newDate,
             insure: req.body.insure,
-            guide: req.body.guide,
-            activities: req.body.activities, */
             price: req.body.newPrice,
             category: req.body.category,
             img: req.file.filename,
-            status: req.body.status
-            /* group: req.body.group,
+            status: req.body.status,
+            detail: req.body.newDetail,
+            extras: req.body.newExtras,
+            guide: req.body.guide,
+            group: req.body.group,
             meals: req.body.meals,
-            transport: req.body.transport,
-            detail: req.body.newDetail, */
+            transport: req.body.transport
         }
 
         
@@ -36,7 +36,7 @@ const controller = {
         console.log(index);
         products[index] = editProduct;
         //res.send(products);
-        let productsJson = JSON.stringify(products);
+        let productsJson = JSON.stringify(products, null, ' ');
         
         fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson,);
         /* searchProduct = editProduct
@@ -61,20 +61,27 @@ const controller = {
         let newProduct = {
             id: products.length + 1,
             name: req.body.name,
+            date: req.body.date,
+            insure: req.body.insure,
             detail: req.body.detail,
             price: req.body.price,
-            img: req.file.filename
-            /* category: req.body.category,
-            status: req.body.status */
+            category: req.body.category,
+            img: req.file.filename,
+            status: req.body.status,
+            extras: req.body.extras,
+            guide: req.body.guide,
+            group: req.body.group,
+            meals: req.body.meals,
+            transport: req.body.transport
         }
 
         
 
         products.push(newProduct);
 
-        let productsJson = JSON.stringify(newProduct, null, ' ');
+        let productsJson = JSON.stringify(products, null, ' ');
 
-        fs.appendFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson);
+        fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson);
      
         res.redirect('/adminList');
     },
