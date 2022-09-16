@@ -92,6 +92,8 @@ a {
 .header-parrafo {
   padding: 0 1rem 1rem 1rem;
   color: var(--blanco);
+  font-size: 17px;
+
 }
 
 /* SECTION HOME */
