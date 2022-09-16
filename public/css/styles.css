@@ -2229,13 +2229,13 @@ ul {
 /* 
 ----------------------------------PAGE NOT FOUND - ERROR 404 -------------------------------------------------*/
 
-html,
-body {
+.pageNotFound1, 
+.pageNotFound {
   height: 100%;
   width: 100%;
   margin: 0px;
   background: linear-gradient(90deg, rgba(47,54,64,1) 23%, rgba(24,27,32,1) 100%);
-}
+} 
 
 .moon {
   background: linear-gradient(90deg, rgba(206,240,253) 48%, #8dc2d9 100%);
@@ -2620,7 +2620,8 @@ body {
     top: 50%;
     transform: translate(-50%, -50%) rotate(20deg) scale(1.2);
   }
-  html, body{
+  .pageNotFound1, 
+  .pageNotFound{
     background: var(--negro);
   }
 }
