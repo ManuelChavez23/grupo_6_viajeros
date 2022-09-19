@@ -1,15 +1,13 @@
 const express = require('express');
-
-
 const dotenv = require('dotenv').config();
 const app = express();
-
 const mainRouter = require('./routes/mainRoutes');
-
 const userRouter = require('./routes/userRoutes');
 const productRouter = require('./routes/productRoutes');
-const adminRouter = require('./routes/adminRoutes')
+const adminRouter = require('./routes/adminRoutes');
 const path = require('path');
+const methodOverride = require('method-override');
+
 
 app.set('view engine', 'ejs');
 app.set('views', [
@@ -20,8 +18,11 @@ app.set('views', [
     
 ]);
 
-app.use(express.static('public'));
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('public'));
+app.use(methodOverride('_method'));
 app.use(mainRouter);
 app.use(userRouter);
 app.use('/product', productRouter);
@@ -33,7 +34,9 @@ app.listen(process.env.PORT || 3000, () =>{
 });
 
 
-
+app.use((req, res, next) => {
+    res.status(404).render('404');
+})
 
 
 

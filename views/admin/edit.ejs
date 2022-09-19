@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include("../partials/headProduct.ejs") %>
+
+    <body>
+        <%- include("../partials/headerAdmi.ejs") %>
+            <main>
+                <section class="formulario-editar">
+                    <form action="/edit/<%= idProduct %>/storage?_method=PUT" method="POST"
+                        enctype="multipart/form-data">
+                        <% let productSelected=products.find(product=> product.id == idProduct) %>
+                            <p>
+                                <label for="newName" class="colocar_nombre">Nombre Destino
+                                </label>
+                                <input type="text" name="newName" id="newName" required="obligatorio"
+                                    value="<%= productSelected.name %>" placeholder="">
+                            </p>
+                            <p>
+                                <label for="newDate">Nueva Fecha de Salida</label>
+                                <input type="date" id="newDate" name="newDate"
+                                    value="<%= productSelected.date ? productSelected.date : ''; %>">
+                            </p>
+                            <p>
+                                <label for="insure">Seguro COVID-19</label>
+                                <input type="checkbox" id="insure" name="insure" <%=productSelected.insure ? 'checked'
+                                    : '' ; %>>
+                            </p>
+                            <p>
+                                <label for="guide">Coordinador Permanente</label>
+                                <input type="checkbox" name="guide" id="guide" <%=productSelected.guide ? 'checked' : ''
+                                    ; %>>
+                            </p>
+                            <p>
+                                <label for="newExtras" class="colocar_nombre">Excursiones Incluidas
+                                </label>
+                                <input type="text" name="newExtras" id="newExtras" required="obligatorio"
+                                    value="<%= productSelected.extras ? productSelected.extras : '' %>">
+                            </p>
+                            <p>
+                                <label>Imagen actual</label>
+                                <img width="30%" src="/img/<%= productSelected.img %>" alt="foto"><br>
+                                <label for="newImg">Nueva Imagen producto</label>
+                                <input type="file" id="newImg" accep="jpg" name="img"
+                                    value="/img/<%= productSelected.img %>">
+                            </p>
+                            <p>
+                                <label for="category">Categoria</label>
+                                <select name="category" id="category">
+                                    <option value="Internacional" <%=productSelected.category=="Internacional"
+                                        ? 'selected' : '' ; %>>Internacional</option>
+                                    <option value="Nacional" <%=productSelected.category=="Nacional" ? 'selected' : '' ;
+                                        %>>Nacional</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="status">Tipo de anuncio</label>
+                                <select name="status" id="status">
+                                    <option value="destacado" <%=productSelected.status=="destacado" ? 'selected' : '' ;
+                                        %>>Destacado</option>
+                                    <option value="oferta" <%=productSelected.status=="oferta" ? 'selected' : '' ; %>
+                                        >Oferta</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="group">Salida</label>
+                                <select name="group" id="group">
+                                    <option value="grupo" <%=productSelected.group=="grupo" ? 'selected' : '' ; %>
+                                        >Grupal</option>
+                                    <option value="individual" <%=productSelected.group=="individual" ? 'selected' : ''
+                                        ; %>>Individual</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="meals">Regimen Comidas</label>
+                                <select id="meals" name="meals">
+                                    <option value="all" <%=productSelected.meals=="all" ? 'selected' : '' ; %>>All
+                                        inclusive</option>
+                                    <option value="media" <%=productSelected.meals=="media" ? 'selected' : '' ; %>>Media
+                                        Pensión</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="transport">Traslado</label>
+                                <select name="transport" id="transport">
+                                    <option value="bus" <%=productSelected.transport=="bus" ? 'selected' : '' ; %>>Bus
+                                    </option>
+                                    <option value="avion" <%=productSelected.transport=="avion" ? 'selected' : '' ; %>
+                                        >Avión</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="newDetail" class="colocarmensaje">Descripción
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                <textarea class="textomensaje" id="newDetail" required="obligatorio" name="newDetail"
+                                    placeholder="<%= productSelected.detail ? productSelected.detail : '' %>"></textarea>
+                            </p>
+                            <p>
+                                <label for="newPrice">Precio</label>
+                                <input type="text" id="newPrice" name="newPrice" value="<%= productSelected.price %>"
+                                    placeholder="$60.000">
+                            </p>
+
+                            <button type="submit" name="enviarformulario" id="enviar1">
+                                <p class="enviar3">Subir</p>
+                            </button>
+
+                    </form>
+                    </div>
+                    </div>
+
+            </main>
+
+    </body>

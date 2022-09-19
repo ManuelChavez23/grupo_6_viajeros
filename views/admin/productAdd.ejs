@@ -11,55 +11,62 @@
                 <div class="contact_form3">
 
                     <div class="formulario3">
-                        <h1 class="formulario3">Agregar Destinos</h1>
+                        <h1 class="formulario3">Agregar Destino</h1>
 
-                        <form action="" method="post">
+
+                        <form action="/create" method="post" enctype="multipart/form-data">
 
 
                             <p>
-                                <label for="nombre" class="colocar_nombre">Nombre Destino
+                                <label for="name" class="colocar_nombre">Nombre Destino
                                 </label>
-                                <input type="text" name="nombrecolocar" id="nombre1" required="obligatorio"
-                                    placeholder="">
+                                <input type="text" name="name" id="nombre1" required="obligatorio" placeholder="">
 
                             </p>
 
                             <p>
-                                <label>Fecha de Salida</label>
-                                <input type="date" id="date1" name="fechacolocar">
+                                <label for="date">Fecha de Salida</label>
+                                <input type="date" id="date" name="date">
                             </p>
                             <p>
-                                <label>Seguro COVID-19</label>
-                                <input type="checkbox" id="cbox1" value="first_checkbox">
+                                <label for="insure">Seguro COVID-19</label>
+                                <input type="checkbox" id="insure" name="insure" value="true">
                             </p>
                             <p>
-                                <label>Coordinador Permanente</label>
-                                <input type="checkbox" id="cbox1" value="second_checkbox">
+                                <label for="guide">Coordinador Permanente</label>
+                                <input type="checkbox" name="guide" id="guide" value="true">
                             </p>
                             <p>
-                                <label for="nombre" class="colocar_nombre">Excursiones Incluidas
+                                <label for="extras" class="colocar_nombre">Excursiones Incluidas
                                 </label>
-                                <input type="text" name="Excursiones Incluidas" id="nombre1" required="obligatorio"
-                                    placeholder="">
+                                <input type="text" name="extras" id="extras" required="obligatorio"
+                                    placeholder="Exrtras del paquete - de ser valido">
                             </p>
 
                             <p>
-                                <label>Imagen producto</label>
-                                <input type="file" id="img" accep="jpg">
+                                <label for="img">Imagen producto</label>
+                                <input type="file" id="img" accept="jpg" name="img">
 
+                            </p>
+                            <p>
+                                <label for="category">Categoria</label>
+                                <select name="category" id="category">
+                                    <option value="Internacional">Internacional</option>
+                                    <option value="Nacional">Nacional</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="status">Tipo de anuncio</label>
+                                <select name="status" id="status">
+                                    <option value="destacado">Destacado</option>
+                                    <option value="oferta">Oferta</option>
+                                </select>
                             </p>
                             <p>
                                 <label>Salida</label>
                                 <select>
                                     <option value="1">Grupal</option>
                                     <option value="2">Individual</option>
-                                </select>
-                            </p>
-                            <p>
-                                <label>Viaje</label>
-                                <select>
-                                    <option value="1">Exterior</option>
-                                    <option value="2">Nacional</option>
                                 </select>
                             </p>
                             <p>
@@ -70,23 +77,30 @@
                                 </select>
                             </p>
                             <p>
-                                <label>Traslado</label>
-                                <select>
-                                    <option value="1">Bus</option>
-                                    <option value="2">Avión</option>
+                                <label>Tipo de anuncio</label>
+                                <select id="status" name="status">
+                                    <option value="destacado">destacado</option>
+                                    <option value="oferta">oferta</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="transport">Traslado</label>
+                                <select name="transport" id="transport">
+                                    <option value="bus">Bus</option>
+                                    <option value="avion">Avión</option>
                                 </select>
                             </p>
 
                             <p>
-                                <label for="mensaje" class="colocarmensaje">Descripción
+                                <label for="detail" class=" colocarmensaje">Descripción
                                     <span class="obligatorio">*</span>
                                 </label>
-                                <textarea name="introducir_mensaje" class="textomensaje" id="mensaje1"
-                                    required="obligatorio" placeholder=""></textarea>
+                                <textarea class="textomensaje" name="detail" id="detail"
+                                    required="obligatorio"></textarea>
                             </p>
                             <p>
-                                <label for="currency-field">Precio</label>
-                                <input type="text" name="currency-field" id="price" value="" placeholder="$60.000">
+                                <label for="price">Precio</label>
+                                <input type="text" id="price" name="price" value="" placeholder="$60.000">
                             </p>
 
 

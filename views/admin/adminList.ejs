@@ -1,158 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    
-  <%- include("../partials/headProduct.ejs") %> 
-  <body>
-    <%- include("../partials/headerAdmi.ejs") %> 
-    <main>
 
-        <h2 class= list>NACIONAL</h2>
-        <div class="contenedor">
-            <div class="card">
-                <div class="card-contenedor-img">
-                    <img src="../img/Las-gaviotas.webp" alt="Avatar">
-                </div>
-                <div class="container">
-                    <div class="card-contendor-titulo">
-                        <h2 class="lugar">Las Gaviotas</h2>
-                    </div> 
-                    <div class="buttonIn">
-                        <button id="clear3">Eliminar</button>
-                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                    </div>
-                </div>
-            </div>
+<%- include("../partials/headProduct.ejs") %>
 
-            <div class="card">
-                <div class="card-contenedor-img">
-                    <img src="../img/termasFiambala.jpg" alt="Avatar">
-                </div>
-                <div class="container">
-                    <div class="card-contendor-titulo">
-                        <h2 class="lugar">Termas de Fiambala</h2>
-                    </div> 
-                    <div class="buttonIn">
-                        <button id="clear3">Eliminar</button>
-                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-contenedor-img">
-                    <img src="../img/Posada del Qenti.jpg" alt="Avatar">
-                </div>
-                <div class="container">
-                    <div class="card-contendor-titulo">
-                        <h2 class="lugar">Posada del Qentis</h2>
-                    </div> 
-                    <div class="buttonIn">
-                        <button id="clear3">Eliminar</button>
-                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-contenedor-img">
-                    <img src="../img/El Bolsón.jpg" alt="Avatar" >
-                </div>
-                <div class="container">
-                    <div class="card-contendor-titulo">
-                        <h2 class="lugar">El Bolsón</h2>
-                    </div> 
-                    <div class="buttonIn">
-                        <button id="clear3">Eliminar</button>
-                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-contenedor-img">
-                    <img src="../img/otrosdestinos1.jpg" alt="Avatar">
-                </div>
-                <div class="container">
-                    <div class="card-contendor-titulo">
-                        <h2 class="lugar">Cafayate</h2>
-                    </div> 
-                    <div class="buttonIn">
-                        <button id="clear3">Eliminar</button>
-                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                    </div>
-                </div>
-            </div>
+    <body>
+        <%- include("../partials/headerAdmi.ejs") %>
+            <main>
 
-            <div class="card">
-                <div class="card-contenedor-img">
-                    <img src="../img/Las-gaviotas.webp" alt="Avatar">
-                </div>
-                <div class="container">
-                    <div class="card-contendor-titulo">
-                        <h2 class="lugar">Las Gaviotas</h2>
-                    </div>
-                    <div class="buttonIn">
-                        <button id="clear3">Eliminar</button>
-                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h2 class= list><b>INTERNACIONAL</b></h2>
-        <div class="contenedor">
-            <div class="card">
-                <div class="card-contenedor-img">
-                    <img src="../img/PuertoVallarta.jpg" alt="Avatar">
-                </div>
-                <div class="container">
-                    <div class="card-contendor-titulo">
-                        <h2 class="lugar">Puerto Vallarta</h2>
-                    </div> 
-                    <div class="buttonIn">
-                        <button id="clear3">Eliminar</button>
-                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                    </div>
-                </div>
-            </div>
+                <h2 class=list>NACIONAL</h2>
+                <div class="contenedor">
+                    <% let nationalProducts=products.filter(product=> product.category == 'Nacional')%>
+                        <% nationalProducts.forEach(product=> {%>
+                            <div class="card">
+                                <div class="card-contenedor-img">
+                                    <img src="/img/<%= product.img %>" alt="Avatar">
+                                </div>
+                                <div class="container">
+                                    <div class="card-contendor-titulo">
+                                        <h2 class="lugar">
+                                            <%= product.name %>
+                                        </h2>
+                                    </div>
+                                    <div class="buttonIn">
+                                        <form method="post" action='/delete/<%= product.id%>?_method=delete'>
+                                            <button id="clear3" type="submit">Eliminar</button>
+                                        </form>
+                                        <a href="/edit/<%= product.id%>"><button id="edit3">Editar <i
+                                                    class="fas fa-edit"></i></button></a>
 
-            <div class="card">
-                <div class="card-contenedor-img">
-                    <img src="../img/otrosdestinos2.jpg" alt="Avatar">
+                                    </div>
+                                </div>
+                            </div>
+                            <% }) %>
+
+                                <!-- <div class="card">
+                                <div class="card-contenedor-img">
+                                    <img src="../img/termasFiambala.jpg" alt="Avatar">
+                                </div>
+                                <div class="container">
+                                    <div class="card-contendor-titulo">
+                                        <h2 class="lugar">Termas de Fiambala</h2>
+                                    </div>
+                                    <div class="buttonIn">
+                                        <button id="clear3">Eliminar</button>
+                                        <button id="edit3" onClick="redirect()">Editar <i
+                                                class="fas fa-edit"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-contenedor-img">
+                                    <img src="../img/Posada del Qenti.jpg" alt="Avatar">
+                                </div>
+                                <div class="container">
+                                    <div class="card-contendor-titulo">
+                                        <h2 class="lugar">Posada del Qentis</h2>
+                                    </div>
+                                    <div class="buttonIn">
+                                        <button id="clear3">Eliminar</button>
+                                        <button id="edit3" onClick="redirect()">Editar <i
+                                                class="fas fa-edit"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-contenedor-img">
+                                    <img src="../img/El Bolsón.jpg" alt="Avatar">
+                                </div>
+                                <div class="container">
+                                    <div class="card-contendor-titulo">
+                                        <h2 class="lugar">El Bolsón</h2>
+                                    </div>
+                                    <div class="buttonIn">
+                                        <button id="clear3">Eliminar</button>
+                                        <button id="edit3" onClick="redirect()">Editar <i
+                                                class="fas fa-edit"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-contenedor-img">
+                                    <img src="../img/otrosdestinos1.jpg" alt="Avatar">
+                                </div>
+                                <div class="container">
+                                    <div class="card-contendor-titulo">
+                                        <h2 class="lugar">Cafayate</h2>
+                                    </div>
+                                    <div class="buttonIn">
+                                        <button id="clear3">Eliminar</button>
+                                        <button id="edit3" onClick="redirect()">Editar <i
+                                                class="fas fa-edit"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-contenedor-img">
+                                    <img src="../img/Las-gaviotas.webp" alt="Avatar">
+                                </div>
+                                <div class="container">
+                                    <div class="card-contendor-titulo">
+                                        <h2 class="lugar">Las Gaviotas</h2>
+                                    </div>
+                                    <div class="buttonIn">
+                                        <button id="clear3">Eliminar</button>
+                                        <button id="edit3" onClick="redirect()">Editar <i
+                                                class="fas fa-edit"></i></button>
+                                    </div>
+                                </div>
+                            </div> -->
                 </div>
-                <div class="container">
-                    <div class="card-contendor-titulo">
-                        <h2 class="lugar">Brasil</h2>
-                    </div> 
-                    <div class="buttonIn">
-                        <button id="clear3">Eliminar</button>
-                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
+                <h2 class=list><b>INTERNACIONAL</b></h2>
+                <div class="contenedor">
+                    <% let internationalProducts=products.filter(product=> product.category == 'Internacional')%>
+                        <% internationalProducts.forEach(product=> {%>
+                            <div class="card">
+                                <div class="card-contenedor-img">
+                                    <img src="/img/<%= product.img %>" alt="Avatar">
+                                </div>
+                                <div class="container">
+                                    <div class="card-contendor-titulo">
+                                        <h2 class="lugar">
+                                            <%= product.name %>
+                                        </h2>
+                                    </div>
+
+                                    <div class="buttonIn">
+                                        <form method="post" action='/delete/<%= product.id%>?_method=delete'>
+                                            <button id="clear3" type="submit">Eliminar</button>
+                                        </form>
+                                        <a href="/edit/<%= product.id%>"><button id="edit3">Editar <i
+                                                    class="fas fa-edit"></i></button></a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <% }) %>
+                                <!-- <div class="card">
+                        <div class="card-contenedor-img">
+                            <img src="../img/PuertoVallarta.jpg" alt="Avatar">
+                        </div>
+                        <div class="container">
+                            <div class="card-contendor-titulo">
+                                <h2 class="lugar">Puerto Vallarta</h2>
+                            </div>
+                            <div class="buttonIn">
+                                <button id="clear3">Eliminar</button>
+                                <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-contenedor-img">
-                    <img src="../img/otrosdestinos3.jpg" alt="Avatar">
-                </div>
-                <div class="container">
-                    <div class="card-contendor-titulo">
-                        <h2 class="lugar">Machu Pichu</h2>
-                    </div> 
-                    <div class="buttonIn">
-                        <button id="clear3">Eliminar</button>
-                        <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
+
+                    <div class="card">
+                        <div class="card-contenedor-img">
+                            <img src="../img/otrosdestinos2.jpg" alt="Avatar">
+                        </div>
+                        <div class="container">
+                            <div class="card-contendor-titulo">
+                                <h2 class="lugar">Brasil</h2>
+                            </div>
+                            <div class="buttonIn">
+                                <button id="clear3">Eliminar</button>
+                                <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
                     </div>
+                    <div class="card">
+                        <div class="card-contenedor-img">
+                            <img src="../img/otrosdestinos3.jpg" alt="Avatar">
+                        </div>
+                        <div class="container">
+                            <div class="card-contendor-titulo">
+                                <h2 class="lugar">Machu Pichu</h2>
+                            </div>
+                            <div class="buttonIn">
+                                <button id="clear3">Eliminar</button>
+                                <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
-            </div>
-        </div>
-    </main>
-    <script> hamburger = document.querySelector(".hamburger");
-        hamburger.addEventListener("click", function () {
-            document.querySelector("body").classList.toggle("active");
-        })</script>
-         <script type="text/javascript">
-            function redirect() {
-    
-                window.location.href = "/editar";
-            }
-        </script>
-</body>
+            </main>
+            <script> hamburger = document.querySelector(".hamburger");
+                hamburger.addEventListener("click", function () {
+                    document.querySelector("body").classList.toggle("active");
+                })</script>
+            <script type="text/javascript">
+                function redirect() {
+
+                    window.location.href = "/edit/"
+                }
+            </script>
+    </body>
 
 </html>
