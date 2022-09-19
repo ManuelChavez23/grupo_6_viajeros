@@ -1,5 +1,8 @@
 :bangbang:[**Link de Tablero de trabajo en Trello**](https://trello.com/b/GkkZlPUq/viajeros):bangbang:
 
+Usuario Administrador: ManuChavez
+Password: abc
+
 # **VIAJEROS** :airplane:
 
 Somos una empresa que opera en el mercado turístico hace más de 10 años. 
