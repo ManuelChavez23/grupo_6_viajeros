@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator');
 const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
-
+const bcrypt = require('bcryptjs');
 
 let users = JSON.parse(userJson);
 
@@ -23,7 +23,7 @@ const userController = {
             lastName: req.body.apellido,
             birth: req.body.fechaNacimiento,
             email: req.body.email,
-            password: req.body.password,
+            password: bcrypt.hashSync(req.body.password, 10),
             phoneNumber: req.body.tel
         }
         
@@ -36,7 +36,7 @@ const userController = {
             users.push(newUser);
             let usersJSON = JSON.stringify(users, null, ' ');
             fs.writeFileSync(path.join(__dirname,'../data/usersBd.json'), usersJSON);
-            res.send(users)
+            res.redirect('login')
         }
     },
     usersCheck: (req, res) => {
@@ -52,7 +52,7 @@ const userController = {
         let check = users.find(elemento => elemento.user == userCheck.user);
 
         if(check) {
-            if(userCheck.password == check.password) {
+            if(bcrypt.compareSync(userCheck.password, check.password)) {
                 res.redirect('/');
             } else {
                 res.redirect('login');
