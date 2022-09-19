@@ -1,6 +1,6 @@
 [
   {
-    "name": "esto es una prueba",
+    "name": "Puerto Vallarta",
     "detail": "jhnoj",
     "price": "6888888",
     "category": "Internacional",
@@ -13,7 +13,8 @@
     "price": "666666",
     "category": "Internacional",
     "img": "img-1663283446247.png",
-    "status": "destacado"
+    "status": "destacado",
+    "detail": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam vel unde quia consectetur id delectus error aut ullam, libero, obcaecati adipisci accusantium iste veritatis et cupiditate rem ab minus"
   },
   {
     "id": 3,
@@ -21,27 +22,29 @@
     "price": "1556557",
     "category": "Internacional",
     "img": "img-1663282667090.jpg",
-    "status": "oferta"
+    "status": "oferta",
+    "detail": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam vel unde quia consectetur id delectus error aut ullam, libero, obcaecati adipisci accusantium iste veritatis et cupiditate rem ab minus"
   },
   {
     "id": 4,
-    "name": "el ultimo es el vencido",
+    "name": "Bolson 2",
     "price": "1555666",
     "category": "Nacional",
     "img": "img-1663283149447.jpg",
-    "status": "destacado"
+    "status": "destacado",
+    "detail": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam vel unde quia consectetur id delectus error aut ullam, libero, obcaecati adipisci accusantium iste veritatis et cupiditate rem ab minus"
   },
   {
     "id": 5,
     "name": "Puerto Vallarta",
-    "detail": "buen viaje",
+    "detail": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam vel unde quia consectetur id delectus error aut ullam, libero, obcaecati adipisci accusantium iste veritatis et cupiditate rem ab minus",
     "price": 100,
     "category": "Internacional",
     "img": "El Bolsón.jpg"
   },
   {
     "id": 6,
-    "name": "Machu Pichu",
+    "name": "Bolson ",
     "detail": "buen viaje",
     "price": 100,
     "category": "Internacional",
@@ -49,7 +52,7 @@
   },
   {
     "id": 7,
-    "name": "wqerqwer",
+    "name": "Bolson 1",
     "detail": "wqer",
     "price": "6161616",
     "category": "Internacional",
@@ -57,7 +60,7 @@
   },
   {
     "id": 8,
-    "name": "njtjht",
+    "name": "Bolson 2",
     "detail": "ewrtwer",
     "price": "78888",
     "category": "Internacional",
@@ -66,14 +69,14 @@
   {
     "id": 9,
     "name": "bdbcxv",
-    "detail": "wqerwfds",
     "price": "156785",
     "category": "Internacional",
+    "detail": "esto es una prueba",
     "img": "El Bolsón.jpg"
   },
   {
     "id": 10,
-    "name": "prueba",
+    "name": "México",
     "detail": "esto es una prueba",
     "price": "123456",
     "category": "Internacional",
