@@ -27,7 +27,7 @@
                             <input type="text" name="nombre" placeholder="Nombre completo"
                                 class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
                                 value="<%= locals.oldData ? oldData.nombre : null %>">
-                            <% if (locals.errors && errors.nombre) { %>
+                                <% if (locals.errors && errors.nombre) { %>
                                 <div class="text-danger">
                                     <p>
                                         <%= errors.nombre.msg %>

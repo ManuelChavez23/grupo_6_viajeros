@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage});
 
-const validations = [
+const validationsRegister = [
     check('nombre')
         .notEmpty().withMessage('Debes ingresar un nombre'),
     check('apellido')
@@ -41,10 +41,17 @@ const validations = [
         .notEmpty().withMessage('Debes ingresar un número telefónico'),
 ]
 
+const validationsLogin = [
+    check('user')
+        .notEmpty().withMessage('El nombre de usuario es incorrecto').bail(),
+    check('password')
+        .notEmpty().withMessage('Debes ingresar una contraseña')
+]
+
 router.get('/login', userController.login);
-router.post('/login', userController.usersCheck);
+router.post('/login', validationsLogin, userController.processLogin);
 
 router.get('/register', userController.register);
-router.post('/register', uploadFile.single('imgUser'), validations,userController.processRegister);
+router.post('/register', uploadFile.single('imgUser'), validationsRegister,userController.processRegister);
 
 module.exports = router;
