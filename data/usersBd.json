@@ -86,7 +86,7 @@
     "lastName": "dePrueba",
     "birth": "2023-05-05",
     "email": "test@mail.com",
-    "password": "$2a$10$/LLeNld3Ay4HkiX03SCQbujng4e4ZN5opy07p5kxIBr1sZFkl9Yye",
+    "password": "$2a$10$/LLeNld3Ay4HkiX03SCQbujng4e4ZN5opy07p5kxIBr1sZFkl9Yye", 
     "user": "botDePrueba",
     "category": "user",
     "img": "img-1663343061997.jpg",
