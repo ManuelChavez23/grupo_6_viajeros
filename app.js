@@ -7,7 +7,8 @@ const productRouter = require('./routes/productRoutes');
 const adminRouter = require('./routes/adminRoutes');
 const path = require('path');
 const methodOverride = require('method-override');
-
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 app.set('view engine', 'ejs');
 app.set('views', [
@@ -19,6 +20,8 @@ app.set('views', [
 ]);
 
 
+app.use(cookieParser());
+app.use(session({secret: 'Es un secreto jeje'}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
