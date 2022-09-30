@@ -42,11 +42,12 @@ const userController = {
         const resultValidation = validationResult(req);
 
             let usuarioALoguearse;
-            console.log(req.body.user);
                 for (let i = 0; i < users.lenght; i++) {
                     if(users[i].user == req.body.user) {
                         if(bcrypt.compareSync(req.body.password, users[i].password)) {
                             usuarioALoguearse = users[i];
+                            console.log(users[i]);
+                            console.log(usuarioALoguearse);
                             break;
                             }
                         }
