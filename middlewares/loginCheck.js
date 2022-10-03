@@ -1,10 +1,10 @@
-/* const loginCheck = (req, res, next) => {
-    if(usuarioALoguearse == undefined) {
-        return res.render('/login', {error: []})
+let loginCheck = (req, res, next) => {
+    if(req.session.usuariologueado == undefined) {
+        next();
     } else {
-        res.redirect('/index')
+        res.send('pagina solo para invitados')
     }
 }
 
 
-module.exports = loginCheck; */
+module.exports = loginCheck;
