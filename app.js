@@ -21,7 +21,11 @@ app.set('views', [
 
 
 app.use(cookieParser());
-app.use(session({secret: 'Es un secreto jeje'}));
+app.use(session({
+    secret: 'Es un secreto jeje',
+    resave: false,
+    saveUninitialized: false
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
