@@ -41,15 +41,14 @@
                                         <div class="text-danger">
                                             <p>
                                                 <%= errors.password.msg %>
-                                                    <% console.log(errors) %>
                                             </p>
                                         </div>
                                         <% } %>
                                             <div class="remember-div">
-                                                <label class="remember-label" for="remember">Recordarme para la proxima
-                                                    vez</label>
-                                                <input class="check-remember" type="checkbox" name="remember"
-                                                    id="remember">
+                                                <label class="remember-label" for="remember">
+                                                    <input class="check-remember" type="checkbox" name="remember"
+                                                     id="remember"> Recordarme
+                                                </label>
                                             </div>
                                             <button>Ingresar</button>
                                             <a class="forgot" href="#">olvido su password?</a>

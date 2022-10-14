@@ -39,14 +39,15 @@ const userController = {
         }
     },
     processLogin: (req, res) => {
-        const resultValidation = validationResult(req);
+
+       const resultValidation = validationResult(req);
             //console.log(users);
             let usuarioALoguearse = {
                 user: req.body.user,
                 password: req.body.password
             };
                 for (let i = 0; i < users.lenght; i++) {
-                    console.log(users[i]);
+                    
                     if(users[i].user == req.body.user) {
                         if(bcrypt.compareSync(req.body.password, users[i].password)) {
                             usuarioALoguearse = users[i];
@@ -54,7 +55,6 @@ const userController = {
                         }
                     }
                 }
-                
                 //console.log(usuarioALoguearse);
                 if(resultValidation.errors.length > 0 ) {
                     return res.render('login', {
@@ -64,8 +64,40 @@ const userController = {
                 } else {
                     res.redirect('/')
                 }
+
+                /* let errors = validationResult(req);
+
+                if(errors.isEmpty()) {
+                    const usersJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'), 'utf-8');
+
+                    const users = JSON.parse(usersJson);
+
+                    for (let i = 0; i < users.lenght; i++) {
+                        if(users[i].user == req.body.user) {
+                            if(bcrypt.compareSync(req.body.password, users[i].password)) {
+                                usuarioALoguearse = users[i];
+                                break;
+                            }
+                        }
+                    }
+
+                    if(usuarioALoguearse == undefined) {
+                        return res.render('login', {errors: [
+                            {msg: 'Credenciales invalidas'}
+                        ]})
+                    }
+
+                    req.session.usuariologueado = usuarioALoguearse
+
+                } else {
+                    return res.render('login', {errors: errors.errors})
+                }
+ */
+
+
     },
     usersCheck: (req, res) => {
+
         const resultValidation = validationResult(req);
 
         const usersJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'), 'utf-8');
@@ -82,8 +114,14 @@ const userController = {
         if(check) {
             if(bcrypt.compareSync(userCheck.password, check.password)) {
                 req.session.usuariologueado = check;
-                console.log(req.session.usuariologueado);
-                res.redirect('/');
+                
+                if(req.body.remember) {
+                    res.cookie('user', req.body.user, {max: (1000 * 60) * 2 })
+                }
+
+                return res.redirect('/perfil');
+
+                
             } else {
                 res.render('login', {
                     errors: {password:
@@ -107,8 +145,9 @@ const userController = {
     },
 
     logout: (req, res) => {
+        res.clearCookie('user')
         req.session.destroy();
-        console.log(req.session);
+        /* console.log(req.session); */
         res.redirect('/')
     }
 }
