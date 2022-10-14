@@ -23,7 +23,7 @@
 
                     <section class="main-register-section">
                         <form class="register-panel" action="/register" method="POST" enctype="multipart/form-data">
-                            <label class="register-label" for="nombre">Nombre completo</label>
+                            <label class="register-label" for="nombre">Nombre</label>
                             <input type="text" name="nombre" placeholder="Nombre completo"
                                 class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
                                 value="<%= locals.oldData ? oldData.nombre : null %>">
@@ -46,6 +46,17 @@
                                             </p>
                                         </div>
                                         <% } %>
+                                        <label class="register-label" for="user">Nombre de Usuario</label>
+                                        <input type="text" name="user" placeholder="Nombre de Usuario"
+                                            class="form-control <%= locals.errors && errors.user ? 'is-invalid' : null %>"
+                                            value="<%= locals.oldData ? oldData.user : null %>">
+                                        <% if (locals.errors && errors.user) { %>
+                                            <div class="text-danger">
+                                                <p>
+                                                    <%= errors.user.msg %>
+                                                </p>
+                                            </div>
+                                            <% } %>
 
                                             <label class="register-label" for="fecha-nacimiento">Fecha de
                                                 nacimiento</label>
@@ -91,7 +102,7 @@
                             <input type="password" name="re-password" placeholder="Contraseña"> -->
                                                                     <label class="register-label" for="tel">Telefono de
                                                                         contacto</label>
-                                                                    <input type="tel" name="tel" placeholder="Telefono"
+                                                                    <input type="number" name="tel" placeholder="Telefono"
                                                                         class="form-control <%= locals.errors && errors.tel ? 'is-invalid' : null %>"
                                                                         value="<%= locals.oldData ? oldData.tel : null %>">
                                                                     <% if (locals.errors && errors.tel) { %>

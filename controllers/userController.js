@@ -20,6 +20,7 @@ const userController = {
             id: users.length + 1,
             firstName: req.body.nombre,
             lastName: req.body.apellido,
+            user: req.body.user,
             birth: req.body.fechaNacimiento,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
@@ -143,7 +144,11 @@ const userController = {
             user: req.session.usuariologueado
         });
     },
-
+    perfilEdit: (req, res) => {
+        let userId = req.params.userId
+        
+        res.render('perfilEdit', { users, userId })
+    },
     logout: (req, res) => {
         res.clearCookie('user')
         req.session.destroy();

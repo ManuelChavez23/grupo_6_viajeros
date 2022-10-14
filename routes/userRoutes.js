@@ -29,6 +29,8 @@ const validationsRegister = [
         .notEmpty().withMessage('Debes ingresar un nombre'),
     check('apellido')
         .notEmpty().withMessage('Debes ingresar un apellido'),
+    check('user')
+        .notEmpty().withMessage('Debes ingresar un usuario'),
     check('fechaNacimiento')
         .notEmpty().withMessage('Debes ingresar una fecha'),
     check('email')
@@ -37,7 +39,7 @@ const validationsRegister = [
     /* check('re-email').notEmpty().withMessage('Debes ingresar nuevamente el correo'), */
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
-        .isLength({min:5, max:8}),
+        .isLength({min:5, max:20}),
     /* check('re-password').notEmpty().withMessage('Debes ingresar nuevamente la contraseña'), */
     check('tel')
         .notEmpty().withMessage('Debes ingresar un número telefónico'),
@@ -59,5 +61,7 @@ router.post('/register', uploadFile.single('imgUser'), validationsRegister,userC
 
 router.get('/perfil', authMiddleware, userController.perfil);
 router.get('/logout', authMiddleware, userController.logout)
+
+router.get('/perfilEdit/:userId', authMiddleware, userController.perfilEdit)
 
 module.exports = router;
