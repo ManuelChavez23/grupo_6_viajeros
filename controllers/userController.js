@@ -98,6 +98,18 @@ const userController = {
                 oldData: req.body
             });
         }
+    },
+
+    perfil: (req, res) => {
+        res.render('perfil', {
+            user: req.session.usuariologueado
+        });
+    },
+
+    logout: (req, res) => {
+        req.session.destroy();
+        console.log(req.session);
+        res.redirect('/')
     }
 }
 
