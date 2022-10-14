@@ -10,8 +10,8 @@ const multer = require('multer');
 
 const { check } = require('express-validator');
 
-const loginCheck = require('../middlewares/loginCheck');
-
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, './public/imgUsers'); 
@@ -50,10 +50,13 @@ const validationsLogin = [
         .notEmpty().withMessage('Debes ingresar una contraseña')
 ]
 
-router.get('/login', loginCheck, userController.login);
+router.get('/login', guestMiddleware, userController.login);
 router.post('/login', validationsLogin, userController.usersCheck);
 
-router.get('/register', loginCheck, userController.register);
+router.get('/register', guestMiddleware, userController.register);
 router.post('/register', uploadFile.single('imgUser'), validationsRegister,userController.processRegister);
+
+router.get('/perfil', authMiddleware, userController.perfil);
+router.get('/logout', authMiddleware, userController.logout)
 
 module.exports = router;
