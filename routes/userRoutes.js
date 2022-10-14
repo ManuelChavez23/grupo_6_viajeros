@@ -45,7 +45,8 @@ const validationsRegister = [
 
 const validationsLogin = [
     check('user')
-        .notEmpty().withMessage('El nombre de usuario es incorrecto').bail(),
+        .notEmpty().withMessage('El campo es obligatorio').bail()
+        .withMessage('El nombre de usuario es incorrecto'), 
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña')
 ]
@@ -55,5 +56,6 @@ router.post('/login', validationsLogin, userController.usersCheck);
 
 router.get('/register', loginCheck, userController.register);
 router.post('/register', uploadFile.single('imgUser'), validationsRegister,userController.processRegister);
+
 
 module.exports = router;
