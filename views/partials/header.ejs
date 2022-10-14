@@ -1,5 +1,5 @@
 <header class="header">
-    <img class="header-logo" src="img/logoViajeros.png" alt="">
+    <img class="header-logo" src="/img/logoViajeros.png" alt="">
 
     <div class="header-rigth">
         <nav class="header-nav">
@@ -8,23 +8,34 @@
                     <a href="/">Inicio</a>
                 </li>
                 <li>
-                    <a href="contact">Contacto</a>
+                    <a href="/contact">Contacto</a>
                 </li>
                 <li>
-                    <a href="cart">Carrito</a>
-                </li>
-                <li>
-                    <a href="login">Login</a>
-                </li>
-                <li>
-                    <a href="register">Registrarse</a>
-                </li>
-                <li>
-                    <a href="/administrador">Administrador</a>
+                    <a href="/cart">Carrito</a>
                 </li>
                 <li>
                     <a href="/product/products">Destinos</a>
                 </li>
+                <% if (!locals.isLogged) { %>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                    <li>
+                        <a href="/register">Registrarse</a>
+                    </li>
+                    <li>
+                        <a href="/administrador">Administrador</a>
+                    </li>
+                    <% } else { %>
+                        <li>
+                            <a href="/perfil">
+                                <%= locals.usuariologueado.user %>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/logout">Cerrar sesion</a>
+                        </li>
+                        <% } %>
             </ul>
         </nav>
 

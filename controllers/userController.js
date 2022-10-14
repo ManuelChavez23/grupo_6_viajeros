@@ -39,6 +39,7 @@ const userController = {
         }
     },
     processLogin: (req, res) => {
+
        const resultValidation = validationResult(req);
             //console.log(users);
             let usuarioALoguearse = {
@@ -46,7 +47,7 @@ const userController = {
                 password: req.body.password
             };
                 for (let i = 0; i < users.lenght; i++) {
-                    console.log(users[i]);
+                    
                     if(users[i].user == req.body.user) {
                         if(bcrypt.compareSync(req.body.password, users[i].password)) {
                             usuarioALoguearse = users[i];
@@ -96,6 +97,7 @@ const userController = {
 
     },
     usersCheck: (req, res) => {
+
         const resultValidation = validationResult(req);
 
         const usersJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'), 'utf-8');
@@ -112,8 +114,14 @@ const userController = {
         if(check) {
             if(bcrypt.compareSync(userCheck.password, check.password)) {
                 req.session.usuariologueado = check;
-                console.log(req.session.usuariologueado);
-                res.redirect('/');
+                
+                if(req.body.remember) {
+                    res.cookie('user', req.body.user, {max: (1000 * 60) * 2 })
+                }
+
+                return res.redirect('/perfil');
+
+                
             } else {
                 res.render('login', {
                     errors: {password:
@@ -128,6 +136,19 @@ const userController = {
                 oldData: req.body
             });
         }
+    },
+
+    perfil: (req, res) => {
+        res.render('perfil', {
+            user: req.session.usuariologueado
+        });
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('user')
+        req.session.destroy();
+        /* console.log(req.session); */
+        res.redirect('/')
     }
 }
 

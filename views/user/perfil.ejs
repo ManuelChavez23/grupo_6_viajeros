@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+
+            <section class="buscador">
+                <div class="contenedor-buscador">
+                    <input class="input-buscador" type="text" value="Busca tu destino">
+                </div>
+                <div class="header-contenedor-bars">
+                    <i class="fas fa-bars header-bars"></i>
+                </div>
+                <!-- <img class="imgpbanner" src="img/banner2.png" alt=""> -->
+            </section>
+
+            <main class="main-perfil">
+                <div class="main-perfil-contenedor">
+
+                    <h1 class="main-perfil-title">Bienvenido <%= user.user %>
+                    </h1>
+
+                    <img src="/img/<%= user.img %> " alt="avatar">
+
+                    <h2>
+                        <%= user.email %>
+                    </h2>
+
+                    <form action="/logout" method="GET">
+                        <button type="submit">Cerrar Sesion</button>
+                    </form>
+
+                    <section class="main-perfil-section">
+
+                    </section>
+                </div>
+
+
+            </main>
+
+            <!-- <section class="nosotros">
+        <div>
+            <h1 class="nosotros-titulo">Titulo</h1>
+            <p class="nosotros-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cumque corporis qui, rem officia quo dolore nulla quae, doloremque explicabo eius deserunt
+                autem eligendi fugit officiis. Unde doloribus alias sed repellendus!</p>
+            <div class="nosotros-contenedor-btn">
+                <button class="nosotros-btn">Conocer más</button>
+            </div>
+        </div>
+
+        <div class="nosotros-contenedor-img">
+            <img class="nosotros-img"
+                src="https://www.xplora.eu/wp-content/uploads/como-escribir-web-sobre-nosotros.jpg" alt="">
+        </div>
+    </section>
+ -->
+
+
+            <%- include("../partials/footer.ejs")%>
+    </body>
+
+</html>
