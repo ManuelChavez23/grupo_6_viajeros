@@ -6,9 +6,8 @@
   "birth": "1994-02-07",
   "email": "ambortfranco94@gmail.com",
   "user": "FrancoAmbort",
-  "password": "$2a$10$IIuTmE5gcOe87aJmPfwdy.gdbLvrwJem3jB3fa/3No1M8xsOTYvTe",
-  "category": "user",
-  "img": "1666032497647_img.jpg",
+  "category": "admin",
+  "img": "img-1666047636454.jpg",
   "phoneNumber": "3492691472"
  },
  {
@@ -18,9 +17,8 @@
   "birth": "1993-02-17",
   "email": "pbeldanio@gmail.com",
   "user": "PameAbeldaño",
-  "password": "$2a$10$YDk0QmbvrIoI14dhiAh7tOtPZtIQ/zLP..yE1V4ttMtcfPWc4fVhW",
   "category": "admin",
-  "img": "1666033144395_img.png",
+  "img": "img-1666047646091.png",
   "phoneNumber": "1166406539"
  },
  {
@@ -42,9 +40,8 @@
   "birth": "1996-07-17",
   "email": "valentinavallejos2022@gmail.com",
   "user": "valentinavp",
-  "password": "$2a$10$fe00yXN3VygiPG0PW4Oc3.Mam3PPnr7V1o5ko8NVOXD5u.BCt86tm",
-  "category": "user",
-  "img": "1666046719406_img.jpg",
+  "category": "admin",
+  "img": "img-1666047657202.jpg",
   "phoneNumber": "3492228651"
  }
 ]
