@@ -3,45 +3,44 @@
   "id": 3,
   "firstName": "Franco",
   "lastName": "Ambort",
-  "birth": "1994-02-07",
   "email": "ambortfranco94@gmail.com",
   "user": "FrancoAmbort",
+  "password": "$2a$10$6nXny.DSPwx1azF1QvqpFeS6m3nkEuo4ao2kz1ExAkjS8ewWNukua",
   "category": "admin",
-  "img": "img-1666047636454.jpg",
+  "img": "img-1666048376631.jpg",
   "phoneNumber": "3492691472"
  },
  {
   "id": 5,
   "firstName": "Pamela Daiana ",
   "lastName": "Abeldaño",
-  "birth": "1993-02-17",
   "email": "pbeldanio@gmail.com",
   "user": "PameAbeldaño",
+  "password": "$2a$10$JoEZGQZSu6QBNmNNYPGo4uArOgogDAT.xnKdLVE3rSvuto3PFD7I6",
   "category": "admin",
-  "img": "img-1666047646091.png",
+  "img": "img-1666048387016.png",
   "phoneNumber": "1166406539"
  },
  {
   "id": 6,
   "firstName": "Manuel",
   "lastName": "Chavez",
-  "birth": "1989-11-23",
   "email": "test@mail.com",
   "user": "ManuChavez",
-  "password": "$2a$10$xP/QjaNXQC1a1RXFiKTEBupkhuOLDEMH7D94mXreDe9WqvbUgMCZW",
+  "password": "$2a$10$pFX067Ydj0H/SZi8/.lnDeMg2gZpEqesHmOzElu.DdwXAeI.tZoFK",
   "category": "admin",
-  "img": "1666045620225_img.jpg",
+  "img": "img-1666048303344.jpg",
   "phoneNumber": "1232131"
  },
  {
   "id": 4,
   "firstName": "valentina",
   "lastName": "vallejos podio",
-  "birth": "1996-07-17",
   "email": "valentinavallejos2022@gmail.com",
   "user": "valentinavp",
+  "password": "$2a$10$YxlzVTO69Q6Fi9QYbeGEWO223hJGMttXuzllwhWhtoS0F.Vw/r.lW",
   "category": "admin",
-  "img": "img-1666047657202.jpg",
+  "img": "img-1666048399762.jpg",
   "phoneNumber": "3492228651"
  }
 ]

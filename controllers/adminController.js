@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const bcrypt = require('bcryptjs');
 const productsJson = fs.readFileSync(path.join(__dirname, '../data/productsBd.json'));
 const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
 
@@ -38,7 +38,7 @@ const controller = {
             birth: req.body.birth,
             email: req.body.email,
             user: req.body.user,
-            password: req.body.password, //ver como guardar la contra
+            password: bcrypt.hashSync(req.body.password, 10), //ver como guardar la contra
             category: req.body.category,
             img: req.file.filename,
             phoneNumber: req.body.phoneNumber
