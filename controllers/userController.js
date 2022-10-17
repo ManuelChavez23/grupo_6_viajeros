@@ -149,6 +149,7 @@ const userController = {
         
         res.render('perfilEdit', { users, userId })
     },
+    
     logout: (req, res) => {
         res.clearCookie('user')
         req.session.destroy();

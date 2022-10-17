@@ -23,28 +23,6 @@
   "phoneNumber": "1166406539"
  },
  {
-  "id": 3,
-  "firstName": "valentina",
-  "lastName": "vallejos podio",
-  "birth": "1996-07-17",
-  "email": "valentinavallejos2022@gmail.com",
-  "user": "ValentinaPodio",
-  "category": "admin",
-  "img": "img-1666024319770.jpg",
-  "phoneNumber": "3492228651"
- },
- {
-  "id": 4,
-  "firstName": "valentina",
-  "lastName": "Vallejos Pitton",
-  "birth": "1996-07-17",
-  "email": "valentinavallejos2022@gmail.com",
-  "user": "valentinavp",
-  "category": "user",
-  "img": "img-1666027349389.jpg",
-  "phoneNumber": "3492228651"
- },
- {
   "id": 5,
   "firstName": "Franco",
   "lastName": "Ambort",
