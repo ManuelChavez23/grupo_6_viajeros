@@ -10,6 +10,8 @@ const multer = require('multer');
 
 const { check } = require('express-validator');
 
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, './public/imgUsers'); 
@@ -22,11 +24,13 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage});
 
-const validations = [
+const validationsRegister = [
     check('nombre')
         .notEmpty().withMessage('Debes ingresar un nombre'),
     check('apellido')
         .notEmpty().withMessage('Debes ingresar un apellido'),
+    check('user')
+        .notEmpty().withMessage('Debes ingresar un usuario'),
     check('fechaNacimiento')
         .notEmpty().withMessage('Debes ingresar una fecha'),
     check('email')
@@ -35,16 +39,30 @@ const validations = [
     /* check('re-email').notEmpty().withMessage('Debes ingresar nuevamente el correo'), */
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
-        .isLength({min:5, max:8}),
+        .isLength({min:5, max:20}),
     /* check('re-password').notEmpty().withMessage('Debes ingresar nuevamente la contraseña'), */
     check('tel')
         .notEmpty().withMessage('Debes ingresar un número telefónico'),
 ]
 
-router.get('/login', userController.login);
-router.post('/login', userController.usersCheck);
+const validationsLogin = [
+    check('user')
+        .notEmpty().withMessage('El campo es obligatorio').bail()
+        .withMessage('El nombre de usuario es incorrecto'), 
+    check('password')
+        .notEmpty().withMessage('Debes ingresar una contraseña')
+]
 
-router.get('/register', userController.register);
-router.post('/register', uploadFile.single('imgUser'), validations,userController.processRegister);
+router.get('/login', guestMiddleware, userController.login);
+router.post('/login', validationsLogin, userController.usersCheck);
+
+router.get('/register', guestMiddleware, userController.register);
+router.post('/register', uploadFile.single('imgUser'), validationsRegister,userController.processRegister);
+
+router.get('/perfil', authMiddleware, userController.perfil);
+router.get('/logout', authMiddleware, userController.logout)
+
+router.get('/perfilEdit/:userId', authMiddleware, userController.perfilEdit)
+router.put('/perfilEdit/:userId/storage', uploadFile.single('img'), userController.savePerfilEdit);
 
 module.exports = router;

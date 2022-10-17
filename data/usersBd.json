@@ -1,95 +1,60 @@
 [
-  {
-    "id": 1,
-    "firstName": "Franco",
-    "lastName": "Ambort",
-    "user": "FrancoAmbort",
-    "email": "ambortfranco94",
-    "password": "abc",
-    "category": "user",
-    "img": "avatar1.jpg",
-    "phoneNumber": 3492681472,
-    "dni": 37575676
-  },
-  {
-    "id": 2,
-    "firstName": "Valen",
-    "lastName": "Vallejos",
-    "user": "ValenVallejos",
-    "email": "valenvallejos",
-    "password": "abc",
-    "category": "admin",
-    "img": "avatar2.jpg",
-    "phoneNumber": 3492555555,
-    "dni": 35456789
-  },
-  {
-    "id": 3,
-    "firstName": "Manu",
-    "lastName": "Chavez",
-    "user": "ManuChavez",
-    "email": "manuchavez",
-    "password": "abc",
-    "category": "admin",
-    "img": "avatar1.jpg",
-    "phoneNumber": 3492555555,
-    "dni": 35456789
-  },
-  {
-    "id": 4,
-    "firstName": "Pame",
-    "lastName": "Abeldaño",
-    "email": "pameabeldaño",
-    "user": "PameAbeldaño",
-    "password": "abc",
-    "category": "user",
-    "img": "avatar2.jpg",
-    "phoneNumber": 3492555555,
-    "dni": 35456789
-  },
-  {
-    "id": 5,
-    "firstName": "miguel",
-    "lastName": "perez",
-    "birth": "1990-05-25",
-    "email": "prueba@mail.com",
-    "password": "123456",
-    "category": "user",
-    "img": "avatar2.jpg",
-    "phoneNumber": "123456789"
-  },
-  {
-    "id": 6,
-    "firstName": "bot",
-    "lastName": "test",
-    "birth": "1990-08-28",
-    "email": "prueba@email.com",
-    "password": "789456",
-    "category": "user",
-    "img": "avatar1.jpg",
-    "phoneNumber": "123456789"
-  },
-  {
-    "id": 7,
-    "firstName": "Tester",
-    "lastName": "noQuieroSerUnBot",
-    "birth": "1980-08-08",
-    "email": "bot@mail.com",
-    "user": "BOT0110",
-    "category": "user",
-    "img": "img-1663343061997.jpg",
-    "phoneNumber": "100110101"
-  },
-  {
-    "id": 8,
-    "firstName": "bot",
-    "lastName": "dePrueba",
-    "birth": "2023-05-05",
-    "email": "test@mail.com",
-    "password": "$2a$10$/LLeNld3Ay4HkiX03SCQbujng4e4ZN5opy07p5kxIBr1sZFkl9Yye",
-    "user": "botDePrueba",
-    "category": "user",
-    "img": "img-1663343061997.jpg",
-    "phoneNumber": "123456789"
-  }
+ {
+  "id": 1,
+  "firstName": "Manu",
+  "lastName": "Chavez",
+  "user": "ManuChavez",
+  "email": "manuchavez",
+  "password": "abc",
+  "category": "admin",
+  "img": "avatar1.jpg",
+  "phoneNumber": 3492555555,
+  "dni": 35456789
+ },
+ {
+  "id": 2,
+  "firstName": "valentina",
+  "lastName": "Vallejos Pitton",
+  "birth": "1996-07-17",
+  "email": "valentinavallejos2022@gmail.com",
+  "user": "valentinavp",
+  "category": "user",
+  "img": "img-1666027349389.jpg",
+  "phoneNumber": "3492228651"
+ },
+ {
+  "id": 3,
+  "firstName": "Franco",
+  "lastName": "Ambort",
+  "birth": "1994-02-07",
+  "email": "ambortfranco94@gmail.com",
+  "user": "FrancoAmbort",
+  "password": "$2a$10$IIuTmE5gcOe87aJmPfwdy.gdbLvrwJem3jB3fa/3No1M8xsOTYvTe",
+  "category": "user",
+  "img": "1666032497647_img.jpg",
+  "phoneNumber": "3492691472"
+ },
+ {
+  "id": 4,
+  "firstName": "valentina",
+  "lastName": "vallejos podio",
+  "birth": "1996-07-17",
+  "email": "valentinavallejos2022@gmail.com",
+  "user": "ValentinaPodio",
+  "category": "admin",
+  "img": "img-1666024319770.jpg",
+  "phoneNumber": "3492228651"
+ },
+ {
+  "id": 5,
+  "firstName": "Pamela Daiana ",
+  "lastName": "Abeldaño",
+  "birth": "1993-02-17",
+  "email": "pbeldanio@gmail.com",
+  "user": "PameAbeldaño",
+  "password": "$2a$10$YDk0QmbvrIoI14dhiAh7tOtPZtIQ/zLP..yE1V4ttMtcfPWc4fVhW",
+  "category": "admin",
+  "img": "1666033144395_img.png",
+  "phoneNumber": "1166406539"
+ }
 ]
