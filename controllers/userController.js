@@ -154,7 +154,8 @@ const userController = {
         req.session.destroy();
         /* console.log(req.session); */
         res.redirect('/')
-    }
+    },
+    
 }
 
 module.exports = userController;

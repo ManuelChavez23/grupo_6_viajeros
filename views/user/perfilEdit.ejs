@@ -2,13 +2,14 @@
 <html lang="en">
 
 
-<%- include("../partials/head.ejs") %>
+    <%- include("../partials/head.ejs") %>
 
     <body>
-        <%- include("../partials/headerAdmi.ejs") %>
+        <%- include("../partials/header.ejs") %>
+
             <main>
                 <section class="formulario-editar">
-                    <form action="/userEdit/<%= userId %>/storage?_method=PUT" method="POST"
+                    <form action="/perfilEdit/<%= userId %>/storage?_method=PUT" method="POST"
                         enctype="multipart/form-data">
                         <% let userSelected=users.find(user=> user.id == userId) %>
                             <p>
@@ -60,7 +61,7 @@
                                     value="<%= userSelected.phoneNumber %>">
                             </p>
 
-                            <button type="submit" name="enviarformulario" id="enviar1">
+                           <button type="submit" name="enviarformulario" id="enviar1">
                                 <p class="enviar3">Subir</p>
                             </button>
 
@@ -69,5 +70,7 @@
                     </div>
 
             </main>
-
-    </body>
+            <%- include("../partials/footer.ejs")%>
+        </body>
+    
+    </html>
