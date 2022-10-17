@@ -1,5 +1,8 @@
 :bangbang:[**Link de Tablero de trabajo en Trello**](https://trello.com/b/GkkZlPUq/viajeros):bangbang:
 
+Para ingresar como admin: ManuChavez password: abc
+Para ingresar como user: ValentinaPitton password: blass123
+
 # **VIAJEROS** :airplane:
 
 Somos una empresa que opera en el mercado turístico hace más de 10 años.
@@ -51,5 +54,4 @@ Somos parte del Departamento de desarrollo web de la agencia, nuestras funciones
 
 [**Marcelo Gimenez**](https://marcelogimenez.tur.ar/)-->En términos de experiencia del usuario, tiene un diseño súper intuitivo que permite que el usuario interactúe fácilmente.
 
-admin: botDePrueba
-password: password
+
