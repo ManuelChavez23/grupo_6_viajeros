@@ -1,7 +1,9 @@
 :bangbang:[**Link de Tablero de trabajo en Trello**](https://trello.com/b/GkkZlPUq/viajeros):bangbang:
 
+
 Para ingresar como admin: ManuChavez password: abc
 Para ingresar como user: ValentinaPitton password: blass123
+
 
 # **VIAJEROS** :airplane:
 
