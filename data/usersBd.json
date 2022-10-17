@@ -13,17 +13,6 @@
  },
  {
   "id": 2,
-  "firstName": "Franco",
-  "lastName": "Ambort",
-  "birth": "1994-02-07",
-  "email": "ambortfranco94@gmail.com",
-  "user": "FrancoAmbort",
-  "category": "user",
-  "img": "img-1665773867234.jpg",
-  "phoneNumber": "3492691472"
- },
- {
-  "id": 3,
   "firstName": "Pamela",
   "lastName": "Abeldaño",
   "birth": "1993-02-17",
@@ -34,7 +23,7 @@
   "phoneNumber": "1166406539"
  },
  {
-  "id": 4,
+  "id": 3,
   "firstName": "valentina",
   "lastName": "vallejos podio",
   "birth": "1996-07-17",
@@ -45,7 +34,7 @@
   "phoneNumber": "3492228651"
  },
  {
-  "id": 5,
+  "id": 4,
   "firstName": "valentina",
   "lastName": "Vallejos Pitton",
   "birth": "1996-07-17",
@@ -54,5 +43,15 @@
   "category": "user",
   "img": "img-1666027349389.jpg",
   "phoneNumber": "3492228651"
+ },
+ {
+  "id": 5,
+  "firstName": "Franco",
+  "lastName": "Ambort",
+  "user": "FrancoAmbort",
+  "birth": "1994-02-07",
+  "email": "ambortfranco94@gmail.com",
+  "password": "$2a$10$QkONTu7TH6zea3RkyyxHgOBeDR9SHrdhXLgbHuwvjyTJLJjSYEVsi",
+  "phoneNumber": "3492691472"
  }
 ]
