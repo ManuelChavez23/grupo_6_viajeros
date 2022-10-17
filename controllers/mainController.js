@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const bcrypt = require('bcryptjs');
 const productsJson = fs.readFileSync(path.join(__dirname, '../data/productsBd.json'), 'utf-8');
 const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
 
@@ -35,7 +35,7 @@ const controller = {
         if(check.category == "user") {
             res.send('no sos admin');
         } else {
-            if(adminCheck.password == check.password) {
+            if(bcrypt.compareSync(req.body.adminPassword, check.password)) {
                 res.redirect('adminList');
             } else {
                 res.redirect('administrador');

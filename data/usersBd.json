@@ -1,17 +1,5 @@
 [
  {
-  "id": 1,
-  "firstName": "Manu",
-  "lastName": "Chavez",
-  "user": "ManuChavez",
-  "email": "manuchavez",
-  "password": "abc",
-  "category": "admin",
-  "img": "avatar1.jpg",
-  "phoneNumber": 3492555555,
-  "dni": 35456789
- },
- {
   "id": 2,
   "firstName": "valentina",
   "lastName": "Vallejos Pitton",
@@ -56,5 +44,17 @@
   "category": "admin",
   "img": "1666033144395_img.png",
   "phoneNumber": "1166406539"
+ },
+ {
+  "id": 6,
+  "firstName": "Manuel",
+  "lastName": "Chavez",
+  "birth": "1989-11-23",
+  "email": "test@mail.com",
+  "user": "ManuChavez",
+  "password": "$2a$10$xP/QjaNXQC1a1RXFiKTEBupkhuOLDEMH7D94mXreDe9WqvbUgMCZW",
+  "category": "admin",
+  "img": "1666045620225_img.jpg",
+  "phoneNumber": "1232131"
  }
 ]
