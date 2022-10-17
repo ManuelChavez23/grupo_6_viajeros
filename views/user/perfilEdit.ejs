@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-    <%- include("../partials/head.ejs") %>
+<%- include("../partials/head.ejs") %>git
 
     <body>
         <%- include("../partials/header.ejs") %>
@@ -38,9 +38,9 @@
                             </p>
                             <p>
                                 <label>Imagen actual</label>
-                                <img width="40%" src="/img/<%= userSelected.img %>" alt="foto"><br>
+                                <img width="40%" src="/imgUsers/<%=userSelected.img %>" alt="foto"><br>
                                 <label for="img">Nueva Imagen de Usuario</label>
-                                <input type="file" id="img"  name="img">
+                                <input type="file" id="img" name="img">
                             </p>
                             <p>
                                 <label for="birth">Nueva Fecha de Salida</label>
@@ -48,11 +48,11 @@
                                     value="<%= userSelected.birth ? userSelected.birth : ''; %>">
                             </p>
                             <p>
-                                <label for="category">Es administrador?</label>
+                                <label for="category">Es?</label>
                                 <select name="category" id="category">
                                     <option value="user" <%=userSelected.category=="user" ? 'selected' : '' ; %>>Usuario
                                     </option>
-                                    <option value="admin">Administrador</option>
+
                                 </select>
                             </p>
                             <p>
@@ -62,12 +62,12 @@
                             </p>
                             <p>
                                 <label for="newPrice">Contraseña</label>
-                                <input type="password" id="password" name="password" placeholder="Contraseña"
-                                    <!-- value="<%= userSelected.password %>"> -->
+                                <input type="password" id="password" name="password" placeholder="Contraseña" 
+                                    value="<%= userSelected.password %>">
                             </p>
-                            
 
-                           <button type="submit" name="enviarformulario" id="enviar1">
+
+                            <button type="submit" name="enviarformulario" id="enviar1">
                                 <p class="enviar3">Subir</p>
                             </button>
 
@@ -77,6 +77,6 @@
 
             </main>
             <%- include("../partials/footer.ejs")%>
-        </body>
-    
-    </html>
+    </body>
+
+</html>
