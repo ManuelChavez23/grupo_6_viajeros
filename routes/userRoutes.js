@@ -63,5 +63,6 @@ router.get('/perfil', authMiddleware, userController.perfil);
 router.get('/logout', authMiddleware, userController.logout)
 
 router.get('/perfilEdit/:userId', authMiddleware, userController.perfilEdit)
+/*router.put('/perfilEdit/:userId/storage', uploadFile.single('img'), userController.savePerfilEdit);*/
 
 module.exports = router;

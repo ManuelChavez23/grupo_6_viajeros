@@ -29,14 +29,20 @@
                     </h2>
 
                     <form action="/logout" method="GET">
-                        <button type="submit">Cerrar Sesion</button>
+                        <button id="edit3" type="submit">Cerrar Sesion</button>
                         
                     </form>
-                    <form action="/perfilEdit/<%= user.id %>" method="GET">
+                     <!--<form action="/perfilEdit/<%= user.id %>" method="GET">
                         <button id="edit3" type="submit">Editar
                             <i class="fas fa-edit"></i>
-                        </button>
-                    </form>
+                        </button> 
+                    </form> -->
+                    <div class="buttonIn">
+                    
+                        <a href="/perfilEdit/<%= user.id %>"><button>Editar <i
+                                    class="fas fa-edit"></i></button></a>
+
+                    </div>
 
                     <section class="main-perfil-section">
 
