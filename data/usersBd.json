@@ -13,23 +13,48 @@
  },
  {
   "id": 2,
-  "firstName": "Pamela",
+  "firstName": "valentina",
+  "lastName": "Vallejos Pitton",
+  "birth": "1996-07-17",
+  "email": "valentinavallejos2022@gmail.com",
+  "user": "valentinavp",
+  "category": "user",
+  "img": "img-1666027349389.jpg",
+  "phoneNumber": "3492228651"
+ },
+ {
+  "id": 3,
+  "firstName": "Franco",
+  "lastName": "Ambort",
+  "birth": "1994-02-07",
+  "email": "ambortfranco94@gmail.com",
+  "user": "FrancoAmbort",
+  "password": "$2a$10$IIuTmE5gcOe87aJmPfwdy.gdbLvrwJem3jB3fa/3No1M8xsOTYvTe",
+  "category": "user",
+  "img": "1666032497647_img.jpg",
+  "phoneNumber": "3492691472"
+ },
+ {
+  "id": 4,
+  "firstName": "valentina",
+  "lastName": "vallejos podio",
+  "birth": "1996-07-17",
+  "email": "valentinavallejos2022@gmail.com",
+  "user": "ValentinaPodio",
+  "category": "admin",
+  "img": "img-1666024319770.jpg",
+  "phoneNumber": "3492228651"
+ },
+ {
+  "id": 5,
+  "firstName": "Pamela Daiana ",
   "lastName": "Abeldaño",
   "birth": "1993-02-17",
   "email": "pbeldanio@gmail.com",
   "user": "PameAbeldaño",
-  "category": "user",
-  "img": "img-1665774555874.png",
+  "password": "$2a$10$YDk0QmbvrIoI14dhiAh7tOtPZtIQ/zLP..yE1V4ttMtcfPWc4fVhW",
+  "category": "admin",
+  "img": "1666033144395_img.png",
   "phoneNumber": "1166406539"
- },
- {
-  "id": 5,
-  "firstName": "Franco",
-  "lastName": "Ambort",
-  "user": "FrancoAmbort",
-  "birth": "1994-02-07",
-  "email": "ambortfranco94@gmail.com",
-  "password": "$2a$10$QkONTu7TH6zea3RkyyxHgOBeDR9SHrdhXLgbHuwvjyTJLJjSYEVsi",
-  "phoneNumber": "3492691472"
  }
 ]
