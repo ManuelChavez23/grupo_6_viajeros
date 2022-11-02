@@ -9,18 +9,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
-        bus: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
+        transport: {
+            type: dataTypes.STRING(20),
             allowNull: false
         },
-        plane: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false
-        },
-        boat: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false
-        }
     };
 
     let config = {
@@ -31,12 +23,12 @@ module.exports = (sequelize, dataTypes) => {
     const Transport_id = sequelize.define(alias, cols, config);
 
 
-    // TERMINAR ESTA PARTE
+    
     Transport_id.associate = (models) => {
         Transport_id.hasMany(models.Destiny, {
-            as: 'transport',
+            as: 'transporte',
             foreignKey: 'transport_id'
-        }) // hay que chequear esto
+        }) 
     }
 
     return Transport_id

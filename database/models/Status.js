@@ -9,14 +9,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
-        outstanding: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
+        status: {
+            type: dataTypes.STRING(23),
             allowNull: false
         },
-        offer: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false
-        }
+        
     };
 
     let config = {
@@ -27,10 +24,10 @@ module.exports = (sequelize, dataTypes) => {
     const Status = sequelize.define(alias, cols, config);
 
 
-    // TERMINAR ESTA PARTE
+    
     Status.associate = (models) => {
         Status.hasMany(models.Destiny, {
-            as: 'status',
+            as: 'estado',
             foreignKey: 'status_id'
         }) 
     }
