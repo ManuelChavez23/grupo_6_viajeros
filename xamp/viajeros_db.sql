@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-11-2022 a las 21:07:10
+-- Tiempo de generación: 02-11-2022 a las 21:21:57
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -89,9 +89,16 @@ CREATE TABLE `destiny_user` (
 
 CREATE TABLE `groups` (
   `ID` int(10) NOT NULL,
-  `grouping` int(10) NOT NULL,
-  `single` int(10) NOT NULL
+  `group` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `groups`
+--
+
+INSERT INTO `groups` (`ID`, `group`) VALUES
+(1, 'Single'),
+(2, 'Grouping');
 
 -- --------------------------------------------------------
 
@@ -101,11 +108,18 @@ CREATE TABLE `groups` (
 
 CREATE TABLE `meals_id` (
   `ID` int(10) NOT NULL,
-  `all_inclusive` int(10) NOT NULL,
-  `half board included` int(10) NOT NULL,
-  `full_board` int(10) NOT NULL,
-  `not_include_meals` int(10) NOT NULL
+  `meals` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `meals_id`
+--
+
+INSERT INTO `meals_id` (`ID`, `meals`) VALUES
+(1, 'all inclusive'),
+(2, 'half board included'),
+(3, 'full board'),
+(4, 'not include meals');
 
 -- --------------------------------------------------------
 
@@ -115,9 +129,16 @@ CREATE TABLE `meals_id` (
 
 CREATE TABLE `status_id` (
   `ID` int(10) NOT NULL,
-  `outstanding` int(10) NOT NULL,
-  `offer` int(10) NOT NULL
+  `status` varchar(23) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `status_id`
+--
+
+INSERT INTO `status_id` (`ID`, `status`) VALUES
+(1, 'outstanding'),
+(2, 'offer');
 
 -- --------------------------------------------------------
 
@@ -127,10 +148,17 @@ CREATE TABLE `status_id` (
 
 CREATE TABLE `transport_id` (
   `ID` int(10) NOT NULL,
-  `bus` int(10) NOT NULL,
-  `plane` int(10) NOT NULL,
-  `boat` int(10) NOT NULL
+  `transport` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `transport_id`
+--
+
+INSERT INTO `transport_id` (`ID`, `transport`) VALUES
+(1, 'plane'),
+(2, 'bus'),
+(3, 'boat');
 
 -- --------------------------------------------------------
 
@@ -158,9 +186,16 @@ CREATE TABLE `users` (
 
 CREATE TABLE `user_category` (
   `ID` int(10) NOT NULL,
-  `admin` int(10) NOT NULL,
-  `user` int(10) NOT NULL
+  `category` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `user_category`
+--
+
+INSERT INTO `user_category` (`ID`, `category`) VALUES
+(1, 'user'),
+(2, 'admin');
 
 --
 -- Índices para tablas volcadas
@@ -219,8 +254,7 @@ ALTER TABLE `transport_id`
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `users_user_category_id_foreign` (`user_category_id`);
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indices de la tabla `user_category`
@@ -254,25 +288,25 @@ ALTER TABLE `destiny_user`
 -- AUTO_INCREMENT de la tabla `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `meals_id`
 --
 ALTER TABLE `meals_id`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `status_id`
 --
 ALTER TABLE `status_id`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `transport_id`
 --
 ALTER TABLE `transport_id`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
@@ -284,7 +318,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `user_category`
 --
 ALTER TABLE `user_category`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
