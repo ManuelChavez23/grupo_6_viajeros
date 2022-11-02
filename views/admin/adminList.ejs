@@ -10,31 +10,31 @@
 
                 <h2 class=list>NACIONAL</h2>
                 <div class="contenedor">
-                    <% let nationalProducts=products.filter(product=> product.category == 'Nacional')%>
-                        <% nationalProducts.forEach(product=> {%>
-                            <div class="card">
-                                <div class="card-contenedor-img">
-                                    <img src="/img/<%= product.img %>" alt="Avatar">
-                                </div>
-                                <div class="container">
-                                    <div class="card-contendor-titulo">
-                                        <h2 class="lugar">
-                                            <%= product.name %>
-                                        </h2>
-                                    </div>
-                                    <div class="buttonIn">
-                                        <form method="post" action='/delete/<%= product.id%>?_method=delete'>
-                                            <button id="clear3" type="submit">Eliminar</button>
-                                        </form>
-                                        <a href="/edit/<%= product.id%>"><button id="edit3">Editar <i
-                                                    class="fas fa-edit"></i></button></a>
 
-                                    </div>
+                    <% products.forEach(product=> {%>
+                        <div class="card">
+                            <div class="card-contenedor-img">
+                                <img src="/img/<%= product.img %>" alt="Avatar">
+                            </div>
+                            <div class="container">
+                                <div class="card-contendor-titulo">
+                                    <h2 class="lugar">
+                                        <%= product.name %>
+                                    </h2>
+                                </div>
+                                <div class="buttonIn">
+                                    <form method="post" action='/delete/<%= product.id%>?_method=delete'>
+                                        <button id="clear3" type="submit">Eliminar</button>
+                                    </form>
+                                    <a href="/edit/<%= product.id%>"><button id="edit3">Editar <i
+                                                class="fas fa-edit"></i></button></a>
+
                                 </div>
                             </div>
-                            <% }) %>
+                        </div>
+                        <% }) %>
 
-                                <!-- <div class="card">
+                            <!-- <div class="card">
                                 <div class="card-contenedor-img">
                                     <img src="../img/termasFiambala.jpg" alt="Avatar">
                                 </div>

@@ -72,7 +72,28 @@ const controller = {
 
     saveEdit: (req, res) => {
         
-        let editProduct = {
+        let destinyId = req.params.id
+
+        db.Destiny.update({
+            id: parseInt(destinyId),
+            name: req.body.newName,
+            date: req.body.newDate,
+            price: req.body.newPrice,
+            detail: req.body.newDetail,
+            destiny_category_id: req.body.category,
+            img: req.file.filename,
+            status_id: req.body.status,
+            extras_id: req.body.newExtras,
+            transport_id: req.body.transport,
+            group_id: req.body.group,
+            meals_id: req.body.meals
+    }, {
+        where: {id: destinyId}
+    }).then(res.redirect('/adminList'))
+    .catch(e => {
+        res.send(e);
+    });
+        /* let editProduct = {
             id: parseInt(req.params.id),
             name: req.body.newName,
             date: req.body.newDate,
@@ -87,18 +108,18 @@ const controller = {
             group: req.body.group,
             meals: req.body.meals,
             transport: req.body.transport
-        }
+        } */
 
         
 
-        let searchProduct = products.find(product => product.id == editProduct.id)
+        /* let searchProduct = products.find(product => product.id == editProduct.id)
         let index = products.indexOf(searchProduct);
         console.log(index);
         products[index] = editProduct;
         //res.send(products);
         let productsJson = JSON.stringify(products, null, ' ');
         
-        fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson,);
+        fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson,); */
         /* searchProduct = editProduct
         console.log(editProduct);
         res.send(searchProduct);
@@ -106,11 +127,13 @@ const controller = {
         products.push(searchProduct) */
         
      
-        res.redirect('/adminList');
+        //res.redirect('/adminList');
 
     },
     adminList: (req, res) =>{
-        res.render("adminList", {products});
+        db.Destiny.findAll()
+        .then(products => res.render("adminList", {products}));
+        //res.render("adminList", {products});
     },
     add: (req, res) =>{
         res.render("productAdd");
@@ -119,7 +142,6 @@ const controller = {
         
 
         db.Destiny.create({
-            id: products.length + 1,
             name: req.body.name,
             date: req.body.date,
             price: req.body.insure,
@@ -149,7 +171,16 @@ const controller = {
     },
     productEdit: (req, res) =>{
         let idProduct = req.params.id;
-        res.render("edit", {products, idProduct});
+        db.Destiny.findOne({
+            where: {
+                id: idProduct,
+            }
+        }).then( product => {
+            res.render("edit", {product, idProduct});
+        }).catch(e => {
+            res.send(e);
+        })
+        
     },
     delete: (req, res) =>{
         //creamos un nuevo array de productos sin el producto a eliminar
