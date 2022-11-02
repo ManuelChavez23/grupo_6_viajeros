@@ -3,6 +3,8 @@ const path = require('path');
 const {validationResult} = require('express-validator');
 const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
 const bcrypt = require('bcryptjs');
+const db = require('../database/models');
+const sequelize = db.sequelize
 let users = JSON.parse(userJson);
 
 
@@ -16,7 +18,30 @@ const userController = {
     },
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
-        let newUser = {
+        
+        if(resultValidation.errors.length > 0 ) {
+            return res.render('register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        } 
+        db.User.create({
+            id: users.length + 1,
+            first_name: req.body.nombre,
+            last_name: req.body.apellido,
+            user: req.body.user,
+            birth: req.body.fechaNacimiento,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            phone_number: req.body.tel,
+            user_category_id: req.body.user_category_id
+        }).then(() => {
+                res.redirect('login');
+        }).catch((e) => {
+            res.send(e);
+        })
+        
+        /* let newUser = {
             id: users.length + 1,
             firstName: req.body.nombre,
             lastName: req.body.apellido,
@@ -25,9 +50,9 @@ const userController = {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
             phoneNumber: req.body.tel
-        }
+        } */
         
-        if(resultValidation.errors.length > 0 ) {
+       /*  if(resultValidation.errors.length > 0 ) {
             return res.render('register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
@@ -37,7 +62,7 @@ const userController = {
             let usersJSON = JSON.stringify(users, null, ' ');
             fs.writeFileSync(path.join(__dirname,'../data/usersBd.json'), usersJSON);
             res.redirect('login')
-        }
+        } */
     },
     processLogin: (req, res) => {
 

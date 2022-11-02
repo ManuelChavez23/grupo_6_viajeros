@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Destiny_category';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -10,11 +10,11 @@ module.exports = (sequelize, dataTypes) => {
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
         nationals: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         internationals: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         }
     };
@@ -29,7 +29,10 @@ module.exports = (sequelize, dataTypes) => {
 
     // TERMINAR ESTA PARTE
     Destiny_category.associate = (models) => {
-        Destiny_category.belongsTo // hay que chequear esto
+        Destiny_category.hasMany(models.Destiny, {
+            as: 'category',
+            foreignKey: 'destiny_category_id'
+        }) // hay que chequear esto
     }
 
     return Destiny_category

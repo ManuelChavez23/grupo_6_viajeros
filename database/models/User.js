@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'User';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -28,15 +28,15 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         user_category_id: {
-            type: dataTypes.INT(10),
-            allowNull: false
+            type: dataTypes.INTEGER(10),
+            /* allowNull: false */
         },
         img: {
             type: dataTypes.TEXT,
-            allowNull: false
+            /* allowNull: false */
         },
         phone_number: {
-            type: dataTypes.INT(50),
+            type: dataTypes.INTEGER(50),
             allowNull: false
         }
     };
@@ -50,7 +50,13 @@ module.exports = (sequelize, dataTypes) => {
 
     // TERMINAR ESTA PARTE
     User.associate = (models) => {
-        User.belongsTo
+        User.belongsToMany(models.Destiny, {
+            as: 'destiny',
+            through: 'Destiny_user',
+            foreignKey: 'user_id',
+            otherKey: 'destiny_id',
+            timestamps: false
+        })
     }
 
     return User

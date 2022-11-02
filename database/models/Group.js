@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Group';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -10,11 +10,11 @@ module.exports = (sequelize, dataTypes) => {
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
         grouping: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         single: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         }
     };
@@ -29,7 +29,10 @@ module.exports = (sequelize, dataTypes) => {
 
     // TERMINAR ESTA PARTE
     Group.associate = (models) => {
-        Group.belongsTo // hay que chequear esto
+        Group.hasMany(models.Destiny, {
+            as: 'group',
+            foreignKey: 'group_id'
+        }) // hay que chequear esto
     }
 
     return Group

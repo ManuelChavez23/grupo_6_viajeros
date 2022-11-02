@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Transport_id';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -10,15 +10,15 @@ module.exports = (sequelize, dataTypes) => {
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
         bus: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         plane: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         boat: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         }
     };
@@ -33,7 +33,10 @@ module.exports = (sequelize, dataTypes) => {
 
     // TERMINAR ESTA PARTE
     Transport_id.associate = (models) => {
-        Transport_id.belongsTo // hay que chequear esto
+        Transport_id.hasMany(models.Destiny, {
+            as: 'transport',
+            foreignKey: 'transport_id'
+        }) // hay que chequear esto
     }
 
     return Transport_id

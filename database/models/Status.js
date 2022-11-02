@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Status';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -10,11 +10,11 @@ module.exports = (sequelize, dataTypes) => {
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
         outstanding: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         offer: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         }
     };
@@ -29,7 +29,10 @@ module.exports = (sequelize, dataTypes) => {
 
     // TERMINAR ESTA PARTE
     Status.associate = (models) => {
-        Status.belongsTo // hay que chequear esto
+        Status.hasMany(models.Destiny, {
+            as: 'status',
+            foreignKey: 'status_id'
+        }) 
     }
 
     return Status

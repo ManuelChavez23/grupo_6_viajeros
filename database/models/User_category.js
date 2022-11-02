@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'User_category';
     let cols = {
         id: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -10,11 +10,11 @@ module.exports = (sequelize, dataTypes) => {
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
         admin: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         user: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         }
     };
@@ -29,7 +29,10 @@ module.exports = (sequelize, dataTypes) => {
 
     // TERMINAR ESTA PARTE
     User_category.associate = (models) => {
-        User_category.belongsTo // hay que chequear esto
+        User_category.hasMany(models.User, {
+            as: 'user_category',
+            foreignKey: 'user_category_id'
+        }) // hay que chequear esto
     }
 
     return User_category

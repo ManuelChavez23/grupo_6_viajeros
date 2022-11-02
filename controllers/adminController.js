@@ -7,6 +7,8 @@ const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
 let users = JSON.parse(userJson);
 let products = JSON.parse(productsJson);
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
 const controller = {
 
@@ -116,32 +118,31 @@ const controller = {
     create: (req, res) => {
         
 
-        let newProduct = {
+        db.Destiny.create({
             id: products.length + 1,
             name: req.body.name,
             date: req.body.date,
-            insure: req.body.insure,
+            price: req.body.insure,
             detail: req.body.detail,
-            price: req.body.price,
-            category: req.body.category,
+            destiny_category_id: req.body.category,
             img: req.file.filename,
-            status: req.body.status,
+            status_id: req.body.status,
             extras: req.body.extras,
-            guide: req.body.guide,
-            group: req.body.group,
-            meals: req.body.meals,
-            transport: req.body.transport
-        }
+            transport_id: req.body.transport,
+            group_id: req.body.group,
+            meals_id: req.body.meals
+        }).then(() => {
+            res.redirect('/adminList');
+        }).catch(e => {
+            res.send(e)
+        })
 
-        
-
-        products.push(newProduct);
+        /* products.push(newProduct);
 
         let productsJson = JSON.stringify(products, null, ' ');
 
-        fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson);
-     
-        res.redirect('/adminList');
+        fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson); */
+      
     },
     comments: (req, res) =>{
         res.render("comments");
