@@ -10,8 +10,8 @@ module.exports = (sequelize, dataTypes) => {
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
         group: {
-            type: dataTypes.STRING(20).UNSIGNED,
-            allowNull: false
+            type: dataTypes.STRING(20),
+            
         }};
 
     let config = {
@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
     // TERMINAR ESTA PARTE
     Group.associate = (models) => {
         Group.hasMany(models.Destiny, {
-            as: 'group',
+            as: 'grupos',
             foreignKey: 'group_id'
         }) // hay que chequear esto
     }
