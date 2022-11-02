@@ -9,15 +9,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
-        grouping: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
+        group: {
+            type: dataTypes.STRING(20).UNSIGNED,
             allowNull: false
-        },
-        single: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false
-        }
-    };
+        }};
 
     let config = {
         timestamps: false,
