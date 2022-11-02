@@ -9,14 +9,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         /* create_at: dataTypes.TIMESTAMP,
         updated_at: dataTypes.TIMESTAMP, */
-        nationals: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
+        categoria: {
+            type: dataTypes.STRING(200),
             allowNull: false
         },
-        internationals: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
-            allowNull: false
-        }
     };
 
     let config = {
@@ -27,12 +23,12 @@ module.exports = (sequelize, dataTypes) => {
     const Destiny_category = sequelize.define(alias, cols, config);
 
 
-    // TERMINAR ESTA PARTE
+    
     Destiny_category.associate = (models) => {
         Destiny_category.hasMany(models.Destiny, {
-            as: 'category',
+            as: 'categoriaDestino',
             foreignKey: 'destiny_category_id'
-        }) // hay que chequear esto
+        }) 
     }
 
     return Destiny_category
