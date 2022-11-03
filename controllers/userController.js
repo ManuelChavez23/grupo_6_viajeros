@@ -124,11 +124,41 @@ const userController = {
     },
     usersCheck: (req, res) => {
 
-        const resultValidation = validationResult(req);
+        /* const resultValidation = validationResult(req); */
 
-        const usersJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'), 'utf-8');
+        /* const usersJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'), 'utf-8');
 
-        const users = JSON.parse(usersJson);
+        const users = JSON.parse(usersJson);*/
+        db.User.findOne({
+            raw: true,
+            where: {
+                user: req.body.user,
+            }
+        }).then((check) => {
+            if(check) {
+                if(bcrypt.compareSync(req.body.password, check.password)) {
+                    req.session.usuariologueado = check;
+                    
+                    if(req.body.remember) {
+                        res.cookie('user', req.body.user, {max: (1000 * 60) * 2 })
+                    }
+                    
+                    return res.redirect('/perfil');
+    
+                    
+                } else {
+                    res.render('login', {
+                        errors: {password:
+                            { msg: 'Crendeciales invalidas' }
+                        }, //resultValidation.mapped(),
+                        oldData: req.body
+                    });
+                }
+            }
+        }).catch((e) => {
+            res.send(e)
+        })
+         /* else {
 
         let userCheck = {
             user: req.body.user,
@@ -137,42 +167,32 @@ const userController = {
         
         let check = users.find(elemento => elemento.user == userCheck.user);
         
-        if(check) {
-            if(bcrypt.compareSync(userCheck.password, check.password)) {
-                req.session.usuariologueado = check;
-                
-                if(req.body.remember) {
-                    res.cookie('user', req.body.user, {max: (1000 * 60) * 2 })
-                }
-
-                return res.redirect('/perfil');
-
-                
-            } else {
-                res.render('login', {
-                    errors: {password:
-                        { msg: 'Crendeciales invalidas' }
-                    }, //resultValidation.mapped(),
-                    oldData: req.body
-                });
-            }
-        } else {
             res.render('login', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
-            });
-        }
+            }); */
     },
-
     perfil: (req, res) => {
-        res.render('perfil', {
+        
+
+         res.render('perfil', {
             user: req.session.usuariologueado
-        });
+            
+        }); 
     },
     perfilEdit: (req, res) => {
         let userId = req.params.userId
         
-        res.render('perfilEdit', { users, userId })
+        db.User.findOne({
+            where: {
+                id: userId,
+            }
+        }).then( user => {
+            res.render('perfilEdit', { user, userId })
+        }).catch(e => {
+            res.send(e);
+        })
+
     },
     
     logout: (req, res) => {
@@ -182,8 +202,11 @@ const userController = {
         res.redirect('/')
     },
     savePerfilEdit: (req, res) => {
-        let userEdited = {
-            id: parseInt(req.params.userId),
+
+        let userEdited = req.params.userId
+
+        db.User.update({
+            id: parseInt(userEdited),
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             birth: req.body.birth,
@@ -193,20 +216,33 @@ const userController = {
             category: req.body.category,
             img: req.file.filename,
             phoneNumber: req.body.phoneNumber
-        }
+        }, {
+            where: {id: userEdited}
+        }).then(res.redirect('/perfil'))
+        .catch(e => {
+            res.send(e);
+        });
+
+
+
+
+
+        /* let userEdited = {
+            
+        } */
         
         //buscamos el usuario en la lista de usuarios por la ID
-        let searchUser = users.find(user => user.id == userEdited.id)
+        // let searchUser = users.find(user => user.id == userEdited.id)
         //buscamos el indice del usuario en la lista
-        let index = users.indexOf(searchUser);
+        // let index = users.indexOf(searchUser);
         //actualizamos la informacion del usuario
-        users[index] = userEdited;
+        // users[index] = userEdited;
         //convertimos el array de usuarios en JSON
-        let userJson = JSON.stringify(users, null, ' ');
+        // let userJson = JSON.stringify(users, null, ' ');
         //guardamos la informacion en formato JSON en la base de datos de usuarios - usersBd.json
-        fs.writeFileSync(path.join(__dirname,'../data/usersBd.json'),  userJson,);
+        // fs.writeFileSync(path.join(__dirname,'../data/usersBd.json'),  userJson,);
         //redirigimos el navegador a la lista de usuarios
-        res.redirect('/perfil')
+        
     }
 }
 

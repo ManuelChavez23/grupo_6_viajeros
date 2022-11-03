@@ -133,6 +133,8 @@ const controller = {
     adminList: (req, res) =>{
         db.Destiny.findAll()
         .then(products => res.render("adminList", {products}));
+
+
         //res.render("adminList", {products});
     },
     add: (req, res) =>{
@@ -183,8 +185,20 @@ const controller = {
         
     },
     delete: (req, res) =>{
+
+        let destiny = req.params.id
+
+        db.Destiny.destroy({
+            where: {
+                id: destiny,
+            }
+        }).then(() => {
+            return res.redirect('/adminList');
+        })
+
+
         //creamos un nuevo array de productos sin el producto a eliminar
-        const productDelete = products.filter(product => product.id != req.params.id );
+        /* const productDelete = products.filter(product => product.id != req.params.id );
         //redenominamos los id de cada elemento
         for(let i = 0; i < productDelete.length; i++){
             productDelete[i].id = i +1;
@@ -194,7 +208,7 @@ const controller = {
         //almacenamos la informacion en la base de datos
         fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson);
         //redireccionamos el navegador hacia adminLists
-        res.redirect('/adminList');
+        res.redirect('/adminList'); */
 
     }
 }
