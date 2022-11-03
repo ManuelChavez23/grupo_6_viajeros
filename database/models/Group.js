@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
         updated_at: dataTypes.TIMESTAMP, */
         group: {
             type: dataTypes.STRING(20),
-            
+
         }};
 
     let config = {
