@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2022 a las 22:18:06
+-- Tiempo de generación: 03-11-2022 a las 23:33:58
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -183,7 +183,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `first_name`, `last_name`, `email`, `user`, `password`, `user_category_id`, `img`, `phone_number`) VALUES
-(6, 'Franco', 'Ambort', 'ambortfranco94@gmail.com', 'FrancoAmbort', '$2a$10$E2Odm6ZcvMT3bXIPNV8Qf.BY3zjTX32MSqiWi/QCgwzJmxilPIHgW', 0, '1667485227398_img.jpg', 2147483647);
+(6, 'Franco', 'Ambort', 'ambortfranco94@gmail.com', 'FrancoAmbort', '$2a$10$E2Odm6ZcvMT3bXIPNV8Qf.BY3zjTX32MSqiWi/QCgwzJmxilPIHgW', 0, '1667485227398_img.jpg', 2147483647),
+(10, 'manu', 'chavez', 'manu@mail.com', 'manuChao', '$2a$10$4xcQxw4U7ByZijLvgMsmsOA5uY9Y0r8uihU3BVJULWGlXKPbgOp/y', 1, '1667512566126_img.jpg', 1231414123);
 
 -- --------------------------------------------------------
 
@@ -314,7 +315,7 @@ ALTER TABLE `transport_id`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `user_category`
