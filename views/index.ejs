@@ -21,7 +21,7 @@
                 <h1 class="main-home-titulo">Destacado</h1>
 
                 <section class="main-home-section">
-                    <% let destacados=products.filter( product=> product.status == 'destacado') %>
+                    <% let destacados = destinos.filter(product => product.status_id == '1') %>
                         <% destacados.forEach(product=> { %>
 
 
@@ -40,7 +40,7 @@
                                     </p>
                                     <div class="contenedor-btn">
                                         <a href="/product/detalle/<%=product.id %> "> <button
-                                                class="article-btn">Comprar</button> </a>
+                                                class="article-btn">Saber más</button> </a>
                                     </div>
                                 </div>
                             </article>
@@ -50,6 +50,36 @@
 
                 </section>
 
+                <h1 class="main-home-titulo">Oferta</h1>
+                <section class="main-home-section">
+                    <% let oferta = destinos.filter(product => product.status_id == '2') %>
+                        <% oferta.forEach(product=> { %>
+
+
+                            <article class="article">
+                                <div class="article-card-top">
+                                    <img class="article-img" src="/img/<%= product.img %>"  alt="">
+                                </div>
+                                <div class="article-card-body">
+                                    <h1 class="article-titulo">
+                                        <%= product.name %>
+                                    </h1>
+                                    <p class="article-parrafo">
+                                        <%= product.detail %>
+                                    </p>
+                                    <p class="article-precio">$<%=product.price %>
+                                    </p>
+                                    <div class="contenedor-btn">
+                                        <a href="/product/detalle/<%=product.id %> "> <button
+                                                class="article-btn">Saber más</button> </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <% }) %>
+
+
+                </section>
             </main>
 
             <section class="nosotros">

@@ -28,7 +28,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
-app.use(userLoggedMiddleware);
+
+app.use(userLoggedMiddleware); 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
