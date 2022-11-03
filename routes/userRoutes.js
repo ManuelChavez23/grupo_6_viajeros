@@ -14,7 +14,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, './public/imgUsers'); 
+        cb(null, './public/img'); 
     },
     filename: (req, file, cb) => {
         let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;

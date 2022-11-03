@@ -67,7 +67,11 @@ const controller = {
     },
 
     userList: (req, res) => {
-        res.render('userList', { users });
+
+        db.User.findAll()
+        .then(users => {
+            res.render('userList', { users });
+        })
     },
 
     saveEdit: (req, res) => {

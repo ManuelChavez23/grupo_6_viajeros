@@ -26,7 +26,6 @@ const userController = {
             });
         } 
         db.User.create({
-            id: users.length + 1,
             first_name: req.body.nombre,
             last_name: req.body.apellido,
             user: req.body.user,
@@ -173,11 +172,8 @@ const userController = {
             }); */
     },
     perfil: (req, res) => {
-        
-
          res.render('perfil', {
             user: req.session.usuariologueado
-            
         }); 
     },
     perfilEdit: (req, res) => {
