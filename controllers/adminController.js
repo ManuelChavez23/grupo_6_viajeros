@@ -132,7 +132,7 @@ const controller = {
     },
     adminList: (req, res) =>{
         db.Destiny.findAll()
-        .then(products => res.render("adminList", {products}));
+        .then(destinos => res.render("adminList", {destinos}));
 
         //res.render("adminList", {products});
     },

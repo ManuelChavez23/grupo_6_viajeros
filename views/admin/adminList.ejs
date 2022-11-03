@@ -10,8 +10,8 @@
 
                 <h2 class=list>NACIONAL</h2>
                 <div class="contenedor">
-
-                    <% products.forEach(product=> {%>
+                    <% let nationalProducts = destinos.filter(product => product.destiny_category_id == '1')%>
+                    <% nationalProducts.forEach(product=> {%>
                         <div class="card">
                             <div class="card-contenedor-img">
                                 <img src="/img/<%= product.img %>" alt="Avatar">
@@ -21,6 +21,11 @@
                                     <h2 class="lugar">
                                         <%= product.name %>
                                     </h2>
+                                </div>
+                                <div class="card-contendor-titulo">
+                                    <p class="lugar">
+                                        <%= product.detail %>
+                                    </p>
                                 </div>
                                 <div class="buttonIn">
                                     <form method="post" action='/delete/<%= product.id%>?_method=delete'>
@@ -34,87 +39,12 @@
                         </div>
                         <% }) %>
 
-                            <!-- <div class="card">
-                                <div class="card-contenedor-img">
-                                    <img src="../img/termasFiambala.jpg" alt="Avatar">
-                                </div>
-                                <div class="container">
-                                    <div class="card-contendor-titulo">
-                                        <h2 class="lugar">Termas de Fiambala</h2>
-                                    </div>
-                                    <div class="buttonIn">
-                                        <button id="clear3">Eliminar</button>
-                                        <button id="edit3" onClick="redirect()">Editar <i
-                                                class="fas fa-edit"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-contenedor-img">
-                                    <img src="../img/Posada del Qenti.jpg" alt="Avatar">
-                                </div>
-                                <div class="container">
-                                    <div class="card-contendor-titulo">
-                                        <h2 class="lugar">Posada del Qentis</h2>
-                                    </div>
-                                    <div class="buttonIn">
-                                        <button id="clear3">Eliminar</button>
-                                        <button id="edit3" onClick="redirect()">Editar <i
-                                                class="fas fa-edit"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-contenedor-img">
-                                    <img src="../img/El Bolsón.jpg" alt="Avatar">
-                                </div>
-                                <div class="container">
-                                    <div class="card-contendor-titulo">
-                                        <h2 class="lugar">El Bolsón</h2>
-                                    </div>
-                                    <div class="buttonIn">
-                                        <button id="clear3">Eliminar</button>
-                                        <button id="edit3" onClick="redirect()">Editar <i
-                                                class="fas fa-edit"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-contenedor-img">
-                                    <img src="../img/otrosdestinos1.jpg" alt="Avatar">
-                                </div>
-                                <div class="container">
-                                    <div class="card-contendor-titulo">
-                                        <h2 class="lugar">Cafayate</h2>
-                                    </div>
-                                    <div class="buttonIn">
-                                        <button id="clear3">Eliminar</button>
-                                        <button id="edit3" onClick="redirect()">Editar <i
-                                                class="fas fa-edit"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-contenedor-img">
-                                    <img src="../img/Las-gaviotas.webp" alt="Avatar">
-                                </div>
-                                <div class="container">
-                                    <div class="card-contendor-titulo">
-                                        <h2 class="lugar">Las Gaviotas</h2>
-                                    </div>
-                                    <div class="buttonIn">
-                                        <button id="clear3">Eliminar</button>
-                                        <button id="edit3" onClick="redirect()">Editar <i
-                                                class="fas fa-edit"></i></button>
-                                    </div>
-                                </div>
-                            </div> -->
+                            
                 </div>
                 <h2 class=list><b>INTERNACIONAL</b></h2>
                 <div class="contenedor">
-                    <% let internationalProducts=products.filter(product=> product.category == 'Internacional')%>
-                        <% internationalProducts.forEach(product=> {%>
+                    <% let internationalProducts = destinos.filter(product => product.destiny_category_id == '2')%>
+                        <% internationalProducts.forEach(product => {%>
                             <div class="card">
                                 <div class="card-contenedor-img">
                                     <img src="/img/<%= product.img %>" alt="Avatar">
@@ -138,49 +68,7 @@
 
                             </div>
                             <% }) %>
-                                <!-- <div class="card">
-                        <div class="card-contenedor-img">
-                            <img src="../img/PuertoVallarta.jpg" alt="Avatar">
-                        </div>
-                        <div class="container">
-                            <div class="card-contendor-titulo">
-                                <h2 class="lugar">Puerto Vallarta</h2>
-                            </div>
-                            <div class="buttonIn">
-                                <button id="clear3">Eliminar</button>
-                                <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-contenedor-img">
-                            <img src="../img/otrosdestinos2.jpg" alt="Avatar">
-                        </div>
-                        <div class="container">
-                            <div class="card-contendor-titulo">
-                                <h2 class="lugar">Brasil</h2>
-                            </div>
-                            <div class="buttonIn">
-                                <button id="clear3">Eliminar</button>
-                                <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-contenedor-img">
-                            <img src="../img/otrosdestinos3.jpg" alt="Avatar">
-                        </div>
-                        <div class="container">
-                            <div class="card-contendor-titulo">
-                                <h2 class="lugar">Machu Pichu</h2>
-                            </div>
-                            <div class="buttonIn">
-                                <button id="clear3">Eliminar</button>
-                                <button id="edit3" onClick="redirect()">Editar <i class="fas fa-edit"></i></button>
-                            </div>
-                        </div>
-                    </div> -->
+                               
                 </div>
             </main>
             <script> hamburger = document.querySelector(".hamburger");
