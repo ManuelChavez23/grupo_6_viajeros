@@ -134,14 +134,12 @@ const controller = {
         db.Destiny.findAll()
         .then(products => res.render("adminList", {products}));
 
-
         //res.render("adminList", {products});
     },
     add: (req, res) =>{
         res.render("productAdd");
     },
     create: (req, res) => {
-        
 
         db.Destiny.create({
             name: req.body.name,
