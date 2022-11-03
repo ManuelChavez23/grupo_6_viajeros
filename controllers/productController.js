@@ -1,10 +1,4 @@
 
-const fs = require('fs');
-const path = require('path');
-
-const productsJson = fs.readFileSync(path.join(__dirname, '../data/productsBd.json'), 'utf-8');
-
-const products = JSON.parse(productsJson);
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -28,7 +22,6 @@ const controller = {
         db.Destiny.findAll({raw: true, nest: true}).
             then((destinos) => {
                 res.render('products', {destinos});
-                console.log(destinos);
         })
 
     },

@@ -7,11 +7,17 @@ const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
 let users = JSON.parse(userJson);
 const products = JSON.parse(productsJson);
 
-
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
 const controller = {
     index: (req, res) =>{
-        res.render('index', {products});
+        
+
+        db.Destiny.findAll({raw: true, nest: true}).
+            then((destinos) => {
+                res.render('index', {destinos});
+        })
     },
     contact: (req, res) =>{
         res.render('contact');
