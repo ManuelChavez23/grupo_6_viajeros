@@ -62,8 +62,14 @@ const controller = {
 
     editUser: (req, res) => {
         let userId = req.params.userId
+
+        db.User.findByPk(userId)
+        .then(user => {
+            console.log(user)
+            res.render('userEdit', { user, userId });
         
-        res.render('userEdit', { users, userId })
+        })
+
     },
 
     userList: (req, res) => {

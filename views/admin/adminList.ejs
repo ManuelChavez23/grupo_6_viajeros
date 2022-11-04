@@ -22,11 +22,7 @@
                                         <%= product.name %>
                                     </h2>
                                 </div>
-                                <div class="card-contendor-titulo">
-                                    <p class="lugar">
-                                        <%= product.detail %>
-                                    </p>
-                                </div>
+                                
                                 <div class="buttonIn">
                                     <form method="post" action='/delete/<%= product.id%>?_method=delete'>
                                         <button id="clear3" type="submit">Eliminar</button>
