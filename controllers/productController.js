@@ -35,13 +35,14 @@ const controller = {
             where: {name:{[db.Sequelize.Op.like]: '%' + search + '%'}}
         })
             .then((destinos) => {
+                console.log(destinos)
             if  (destinos.length >0){
                 res.render('searchResult', {destinos, search})
             }else{
                 res.render('searchResult', {destinos, mensaje , search})
                     
             }
-            
+ 
         })
     }
 }

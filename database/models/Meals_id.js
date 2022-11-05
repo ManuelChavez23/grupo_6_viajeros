@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
 
     
     Meals_id.associate = (models) => {
-        Meals_id.hasMany(models.Destiny, {
+        Meals_id.belongTo(models.Destiny, {
             as: 'comidas',
             foreignKey: 'meals_id'
         }) 
