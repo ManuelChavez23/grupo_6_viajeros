@@ -184,13 +184,15 @@ a {
 
 .article-parrafo {
   margin-bottom: 1rem;
-  color: #8fc2d7;
+  color: var(--negro);
+  font-weight: bold;
   height: 100px;
 }
 
 .article-precio {
   margin-bottom: 1rem;
   color: #8fc2d7;
+  font-weight: bold;
 }
 
 .contenedor-btn {
@@ -2667,3 +2669,12 @@ ul {
   }
 }
 /* --------------------------------- FIN PAGE NOT FOUND - ERROR 404 -------------------------------------------*/
+
+
+
+/* limitado */
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowgrap;
+}
