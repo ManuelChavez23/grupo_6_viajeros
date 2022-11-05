@@ -10,6 +10,6 @@ router.get('/detalle/:id', productController.detail);
 
 
 router.get('/search', productController.search)
-router.post('/searchResult', productController.searchResult)
+//router.post('/searchResult', productController.searchResult)
 
 module.exports = router;

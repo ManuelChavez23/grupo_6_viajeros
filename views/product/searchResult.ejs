@@ -8,12 +8,12 @@
 
             <%- include("../partials/search.ejs") %>
                 <main class="main-home">
-                    <h2 class="Category">Resultado</h2>
+                    <h2 class="Category">Resultado de "<%= search %>"</h2>
 
                     <section class="main-home-section">
 
-                        <% let nacional=destinos.filter(product=> product.destiny_category_id == 1) %>
-                            <% nacional.forEach( product=> { %>
+                        
+                            <% destinos.forEach( product=> { %>
                                 <article class="article">
                                     <div class="article-card-top">
                                         <img class="article-img" src="/img/<%= product.img %>" alt="">

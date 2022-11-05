@@ -27,14 +27,17 @@ const controller = {
     },
 
     search: (req, res) => {
-        /* let search = req.query.searchBar; */
-        /* res.send(search); */
-
+        let search = req.query.searchBar;
+        console.log(req.query.searchBar)
         
-    },
-    searchResult: (req, res) => {
-        let search = req.body.searchBar
-        res.render(search);
+        db.Destiny.findAll({where: {name: search}}).then((destinos) => {
+            if (destinos.length > 0 ){
+                res.render('searchResult', {destinos, search})
+            }else{
+                res.render('searchResult', {destinos, search})
+            }
+            
+        })
     }
 }
 
