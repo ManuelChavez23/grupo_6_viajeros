@@ -79,6 +79,7 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: 'user_id',
             timestamps: false
         })
+        
     }
 
     return Destiny
