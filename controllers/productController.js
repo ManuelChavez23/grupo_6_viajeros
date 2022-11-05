@@ -25,6 +25,17 @@ const controller = {
         })
 
     },
+
+    search: (req, res) => {
+        /* let search = req.query.searchBar; */
+        /* res.send(search); */
+
+        
+    },
+    searchResult: (req, res) => {
+        let search = req.body.searchBar
+        res.render(search);
+    }
 }
 
 

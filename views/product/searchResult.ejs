@@ -8,7 +8,7 @@
             
         <%- include("../partials/search.ejs") %>
             <main class="main-home">
-                <h2 class="Category">NACIONALES</h2>
+                <h2 class="Category">Resultado</h2>
 
                 <section class="main-home-section">
 
@@ -37,35 +37,7 @@
                             <% }) %>
                 </section>
 
-                <h2 class="Category">INTERNACIONALES</h2>
-                <section class="main-home-section">
-                    <% let internacional = destinos.filter( product=> product.destiny_category_id == 2) %>
-                        <% internacional.forEach(product=> { %>
-
-                            <article class="article">
-                                <div class="article-card-top">
-                                    <img class="article-img" src="/img/<%= product.img %>" alt="">
-                                </div>
-                                <div class="article-card-body">
-                                    <h1 class="article-titulo">
-                                        <%= product.name %>
-                                    </h1>
-                                    <p class="article-parrafo">
-                                        <%= product.detail %>
-                                    </p>
-                                    <p class="article-precio">
-                                        <%=product.price %>
-                                    </p>
-                                    <div class="contenedor-btn">
-                                        <a href="/product/detalle/<%=product.id %>"> <button
-                                                class="article-btn">Comprar</button> </a>
-                                    </div>
-                                </div>
-                            </article>
-                            <% }) %>
-
-                </section>
-
+                
             </main>
             <%- include("../partials/footer.ejs")%>
     </body>

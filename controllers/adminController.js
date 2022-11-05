@@ -33,20 +33,27 @@ const controller = {
 
     saveUserEdit: (req, res) => {
         //creamos nuevamente el objeto para poder modificar el registro del usuario
-        let userEdited = {
-            id: parseInt(req.params.userId),
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            birth: req.body.birth,
+        let userEdited = req.params.userId
+
+
+        db.User.update ({
+            id: userEdited,
+            first_name: req.body.firstName,
+            last_name: req.body.lastName,
             email: req.body.email,
             user: req.body.user,
             password: bcrypt.hashSync(req.body.password, 10), //ver como guardar la contra
-            category: req.body.category,
+            user_category_id: req.body.category,
             img: req.file.filename,
-            phoneNumber: req.body.phoneNumber
-        }
+            phone_number: req.body.phoneNumber
+        },{
+            where: {id: userEdited}
+        }).then(res.redirect('/userList'))
+        .catch(e => {
+            res.send(e);
+        });
         
-        //buscamos el usuario en la lista de usuarios por la ID
+        /* //buscamos el usuario en la lista de usuarios por la ID
         let searchUser = users.find(user => user.id == userEdited.id)
         //buscamos el indice del usuario en la lista
         let index = users.indexOf(searchUser);
@@ -57,7 +64,7 @@ const controller = {
         //guardamos la informacion en formato JSON en la base de datos de usuarios - usersBd.json
         fs.writeFileSync(path.join(__dirname,'../data/usersBd.json'),  userJson,);
         //redirigimos el navegador a la lista de usuarios
-        res.redirect('/userList')
+        res.redirect('/userList') */
     },
 
     editUser: (req, res) => {
@@ -65,7 +72,6 @@ const controller = {
 
         db.User.findByPk(userId)
         .then(user => {
-            console.log(user)
             res.render('userEdit', { user, userId });
         
         })

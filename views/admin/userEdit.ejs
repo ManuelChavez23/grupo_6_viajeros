@@ -41,17 +41,18 @@
                                 <label for="img">Nueva Imagen de Usuario</label>
                                 <input type="file" id="img" accept="jpg" name="img">
                             </p>
+
+                            <button class="enviar3">Cambiar Contraseña</button>
                             <p>
-                                <label for="password">Nueva Contraseña</label>
+                                <label for="password">sContraseña</label>
                                 <input type="password" id="password" name="password"
-                                    value="<%= user.password ? user.password : ''; %>">
+                                    value="">
                             </p>
                             <p>
                                 <label for="category">Es administrador?</label>
                                 <select name="category" id="category">
-                                    <option  <%= user.user_category_id == "1" ? 'selected' : '' ; %>>Usuario
-                                    </option>
-                                    <option value="admin">Administrador</option>
+                                    <option value="1" <%= user.user_category_id == "1" ? 'selected' : '' ; %>>Usuario</option>
+                                    <option value="2" <%= user.user_category_id == "2" ? 'selected' : '' ; %>>Administrador</option>
                                 </select>
                             </p>
                             <p>
