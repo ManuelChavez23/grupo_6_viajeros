@@ -4,6 +4,7 @@ const Sequelize = require('sequelize');
 const fs = require('fs');
 const db = require('index.js'); */
 
+
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Destiny';
     let cols = {

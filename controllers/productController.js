@@ -2,6 +2,7 @@
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 const controller = {
     
@@ -27,14 +28,18 @@ const controller = {
     },
 
     search: (req, res) => {
-        let search = req.query.searchBar;
-        console.log(req.query.searchBar)
+        let search =  req.query.searchBar;
+        let mensaje = "No se encontro el resultado de " + search 
         
-        db.Destiny.findAll({where: {name: search}}).then((destinos) => {
-            if (destinos.length > 0 ){
+        db.Destiny.findAll({
+            where: {name:{[db.Sequelize.Op.like]: '%' + search + '%'}}
+        })
+            .then((destinos) => {
+            if  (destinos.length >0){
                 res.render('searchResult', {destinos, search})
             }else{
-                res.render('searchResult', {destinos, search})
+                res.render('searchResult', {destinos, mensaje , search})
+                    
             }
             
         })

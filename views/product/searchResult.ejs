@@ -8,7 +8,13 @@
 
             <%- include("../partials/search.ejs") %>
                 <main class="main-home">
-                    <h2 class="Category">Resultado de "<%= search %>"</h2>
+                    <h2 class="Category">Resultado de "<%= search %>" </h2>
+                    <% if (destinos.length < 1){ %>
+                        <p> 
+                            <%=  mensaje  %> 
+                        </p>
+                    <% } %> 
+                    
 
                     <section class="main-home-section">
 
