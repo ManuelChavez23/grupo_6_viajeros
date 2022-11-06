@@ -71,7 +71,7 @@ module.exports = (sequelize, dataTypes) => {
     const Destiny = sequelize.define(alias, cols, config);
 
 
-    // TERMINAR ESTA PARTE
+    
     Destiny.associate = (models) => {
         Destiny.belongsToMany(models.User, {
             as: 'users',
