@@ -11,10 +11,12 @@ const controller = {
 
         let idProduct = req.params.id;
         
-        db.Destiny.findByPk(idProduct)
+        db.Destiny.findByPk(idProduct, {
+            /* include: ['transporte', 'groups', 'comidas'] */
+            })
             .then((destino) => {
                 res.render('productDetail', {destino,idProduct }); 
-            })      
+            })     
         
     },
     products:  (req, res) =>{

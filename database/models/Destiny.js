@@ -79,8 +79,21 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: 'user_id',
             timestamps: false
         })
-        
+        Destiny.belongsTo(models.Transport_id,{
+            as: 'transporte',
+            foreignKey: 'transport_id'
+        }),
+        (models.Group_id,{
+            as: 'groups',
+            foreignKey: 'group_id'
+        }),
+        (models.Meals_id, {
+            as:'comidas',
+            foreignKey: 'meals_id'
+        })
     }
+
+    
 
     return Destiny
 };
