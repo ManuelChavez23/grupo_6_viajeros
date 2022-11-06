@@ -38,40 +38,44 @@
                             <p>
                                 <label for="category">Categoria</label>
                                 <select name="category" id="category">
-                                    <option value="Internacional">Internacional</option>
-                                    <option value="Nacional">Nacional</option>
+                                    <option value="1">Nacional</option>
+                                    <option value="2">Internacional</option>
                                 </select>
                             </p>
                             <p>
                                 <label for="status">Tipo de anuncio</label>
                                 <select name="status" id="status">
-                                    <option value="destacado">Destacado</option>
-                                    <option value="oferta">Oferta</option>
+                                    <option value="1">Destacado</option>
+                                    <option value="2">Oferta</option>
                                 </select>
                             </p>
                             <p>
-                                <label>Salida</label>
-                                <select>
+                                <label for="group">Grupo</label>
+                                <select name="group" id="group">
                                     <option value="1">Grupal</option>
                                     <option value="2">Individual</option>
                                 </select>
                             </p>
                             <p>
-                                <label>Regimen Comidas</label>
-                                <select id="comidas1">
+                                <label for="meals">Regimen Comidas</label>
+                                <select name="meals" id="meals">
                                     <option value="1">All inclusive</option>
                                     <option value="2">Media Pensión</option>
+                                    <option value="3">Pensión Completa</option>
+                                    <option value="4">No incluye comidas</option>
+
                                 </select>
                             </p>
                             
                             <p>
                                 <label for="transport">Traslado</label>
                                 <select name="transport" id="transport">
-                                    <option value="bus">Bus</option>
-                                    <option value="avion">Avión</option>
+                                    <option value="1">Avión</option>
+                                    <option value="2">Bus</option>
+                                    <option value="3">Barco</option>
                                 </select>
                             </p>
-
+                            
                             <p>
                                 <label for="detail" class=" colocarmensaje">Descripción
                                     <span class="obligatorio">*</span>
@@ -81,7 +85,7 @@
                             </p>
                             <p>
                                 <label for="price">Precio</label>
-                                <input type="text" id="price" name="price" value="" placeholder="$60.000">
+                                <input type="text" id="price" name="price" value="price" placeholder="$60.000">
                             </p>
 
 
