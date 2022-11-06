@@ -11,9 +11,9 @@ const controller = {
 
         let idProduct = req.params.id;
         
-        db.Destiny.findByPk(idProduct, {
-            /* include: ['transporte', 'groups', 'comidas'] */
-            })
+        db.Destiny.findByPk(idProduct/* , {
+            include: [{association: 'transports'}] 
+            } */)
             .then((destino) => {
                 res.render('productDetail', {destino,idProduct }); 
             })     
