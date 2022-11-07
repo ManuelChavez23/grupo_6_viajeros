@@ -1,8 +1,8 @@
 /* const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
-const fs = require('fs');
-const db = require('index.js'); */
+const fs = require('fs'); */
+/* const db = require('index.js');  */
 
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Destiny';
@@ -78,18 +78,6 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'destiny_id',
             otherKey: 'user_id',
             timestamps: false
-        })
-        Destiny.belongsTo(models.Transport_id,{
-            as: 'transporte',
-            foreignKey: 'transport_id'
-        }),
-        (models.Group_id,{
-            as: 'groups',
-            foreignKey: 'group_id'
-        }),
-        (models.Meals_id, {
-            as:'comidas',
-            foreignKey: 'meals_id'
         })
     }
 

@@ -1,5 +1,5 @@
 
-
+const path = require('path');   
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
@@ -12,7 +12,7 @@ const controller = {
         let idProduct = req.params.id;
         
         db.Destiny.findByPk(idProduct, {
-            /* include: ['transporte', 'groups', 'comidas'] */
+            include: ['transporte'] 
             })
             .then((destino) => {
                 res.render('productDetail', {destino,idProduct }); 
