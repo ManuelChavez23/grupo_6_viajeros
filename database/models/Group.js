@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
     // TERMINAR ESTA PARTE
     Group.associate = (models) => {
         Group.hasMany(models.Destiny, {
-            as: 'groups',
+            as: 'destiny_group',
             foreignKey: 'group_id'
         }) // hay que chequear esto
     }
