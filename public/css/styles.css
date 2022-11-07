@@ -93,7 +93,6 @@ a {
   padding: 0 1rem 1rem 1rem;
   color: var(--blanco);
   font-size: 17px;
-
 }
 
 /* SECTION HOME */
@@ -163,7 +162,7 @@ a {
 
 .article-card-top {
   height: 150px;
-} 
+}
 
 .article-img {
   width: 100%;
@@ -986,7 +985,6 @@ p.producto-descrip {
   background-position: center;
 }
 
-
 input {
   background-color: var(--blanco);
   width: 90%;
@@ -1174,16 +1172,19 @@ p {
 }
 
 .formulario-editar {
-    height: auto;
-    margin: auto;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: var(--gris-claro);
-    margin-bottom: 10px;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--gris-claro);
+  margin-bottom: 10px;
 }
 
-
-select#category, select#status, select#group, select#meals, select#transport {
+select#category,
+select#status,
+select#group,
+select#meals,
+select#transport {
   margin-bottom: 3%;
   margin-left: 5%;
 }
@@ -1195,7 +1196,6 @@ label {
 #newImg {
   width: 60%;
   height: 5%;
-
 }
 
 .imgproduct2 {
@@ -1507,7 +1507,6 @@ ul {
 }
  */
 @media (min-width: 469px) {
-
   /* MAIN HOME */
   .main-home-section {
     display: flex;
@@ -1631,8 +1630,10 @@ ul {
   .nosotros {
     display: flex;
     flex-wrap: nowrap;
-    background-image: linear-gradient(rgba(5, 7, 12, 0.75),
-        rgba(5, 7, 12, 0.75)),
+    background-image: linear-gradient(
+        rgba(5, 7, 12, 0.75),
+        rgba(5, 7, 12, 0.75)
+      ),
       url(https://static.vecteezy.com/system/resources/previews/007/383/159/non_2x/colorful-sunset-on-the-tropical-island-beautiful-ocean-beach-with-palms-illustration-cartoon-flat-panoramic-landscape-sunset-with-the-palms-on-colorful-background-free-vector.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -1954,7 +1955,6 @@ ul {
 
   /*editar--------------------------------------------------------------------------------------*/
 
-
   .imgproduct2 {
     width: 30%;
     margin-left: 300px;
@@ -2233,7 +2233,7 @@ ul {
   .main-product-contenedor .product-card-body {
     width: 50%;
   }
-/* FORMULARIO EDITAR */
+  /* FORMULARIO EDITAR */
   .formulario-editar {
     max-width: 50%;
     margin-left: 30%;
@@ -2247,19 +2247,21 @@ ul {
     padding-right: 30px;
     margin-bottom: 10px;
   }
-  
-  select#category, select#status, select#group, select#meals, select#transport {
+
+  select#category,
+  select#status,
+  select#group,
+  select#meals,
+  select#transport {
     margin-bottom: 3%;
     margin-left: 5%;
   }
-  
+
   label {
     font-weight: bold;
   }
-/* FIN FORMULARIO EDITAR */
-  
+  /* FIN FORMULARIO EDITAR */
 }
-
 
 /* MENSAJE DE ERROR */
 
@@ -2272,29 +2274,33 @@ ul {
 /* 
 ----------------------------------PAGE NOT FOUND - ERROR 404 -------------------------------------------------*/
 
-.pageNotFound1, 
+.pageNotFound1,
 .pageNotFound {
   height: 100%;
   width: 100%;
   margin: 0px;
-  background: linear-gradient(90deg, rgba(47,54,64,1) 23%, rgba(24,27,32,1) 100%);
-} 
+  background: linear-gradient(
+    90deg,
+    rgba(47, 54, 64, 1) 23%,
+    rgba(24, 27, 32, 1) 100%
+  );
+}
 
 .moon {
-  background: linear-gradient(90deg, rgba(206,240,253) 48%, #8dc2d9 100%);
+  background: linear-gradient(90deg, rgba(206, 240, 253) 48%, #8dc2d9 100%);
   position: absolute;
   top: -100px;
   left: -300px;
   width: 900px;
   height: 900px;
-  content: '';
+  content: "";
   border-radius: 100%;
-  box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.5);
 }
 
 .moon__crater {
   position: absolute;
-  content: '';
+  content: "";
   border-radius: 100%;
   background: linear-gradient(90deg, var(--violeta) 38%, var(--lila) 100%);
   opacity: 0.6;
@@ -2328,7 +2334,7 @@ ul {
   position: absolute;
   width: 5px;
   height: 5px;
-  content: '';
+  content: "";
   border-radius: 100%;
   transform: rotate(250deg);
   opacity: 0.4;
@@ -2339,8 +2345,12 @@ ul {
 }
 
 @keyframes shimmer {
-  from {opacity: 0;}
-  to {opacity: 0.7;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
 }
 
 .star1 {
@@ -2377,7 +2387,7 @@ ul {
   left: 100px;
   top: 400px;
   transform: translateY(-60%);
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   color: #363e49;
 }
 
@@ -2407,7 +2417,7 @@ ul {
   cursor: pointer;
   transition-duration: 0.2s;
   font-size: 0.75em;
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
 }
 
 .error__button:hover {
@@ -2421,7 +2431,7 @@ ul {
 }
 
 .error__button--active:hover {
-  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
   color: white;
 }
 
@@ -2441,7 +2451,7 @@ ul {
   left: 60px;
   width: 60px;
   height: 60px;
-  content: '';
+  content: "";
   border-radius: 2em;
 }
 
@@ -2452,7 +2462,7 @@ ul {
   left: 40px;
   width: 10px;
   height: 10px;
-  content: '';
+  content: "";
   border-radius: 2em;
   opacity: 0.5;
 }
@@ -2464,7 +2474,7 @@ ul {
   left: 38px;
   width: 5px;
   height: 5px;
-  content: '';
+  content: "";
   border-radius: 2em;
   opacity: 0.3;
 }
@@ -2476,7 +2486,7 @@ ul {
   left: 47px;
   width: 86px;
   height: 90px;
-  content: '';
+  content: "";
   border-radius: 8px;
 }
 
@@ -2487,7 +2497,7 @@ ul {
   left: 55px;
   width: 70px;
   height: 80px;
-  content: '';
+  content: "";
   border-radius: 8px;
 }
 
@@ -2498,7 +2508,7 @@ ul {
   left: 68px;
   width: 45px;
   height: 25px;
-  content: '';
+  content: "";
   border-radius: 6px;
 }
 
@@ -2509,7 +2519,7 @@ ul {
   left: 9px;
   width: 65px;
   height: 20px;
-  content: '';
+  content: "";
   border-radius: 8px;
   transform: rotate(-30deg);
 }
@@ -2521,7 +2531,7 @@ ul {
   left: 7px;
   width: 20px;
   height: 45px;
-  content: '';
+  content: "";
   border-radius: 8px;
   transform: rotate(-12deg);
   border-top-left-radius: 8em;
@@ -2535,7 +2545,7 @@ ul {
   left: 100px;
   width: 65px;
   height: 20px;
-  content: '';
+  content: "";
   border-radius: 8px;
   transform: rotate(-10deg);
 }
@@ -2547,7 +2557,7 @@ ul {
   left: 141px;
   width: 20px;
   height: 45px;
-  content: '';
+  content: "";
   border-radius: 8px;
   transform: rotate(-10deg);
   border-top-left-radius: 8em;
@@ -2561,7 +2571,7 @@ ul {
   left: 21px;
   width: 10px;
   height: 6px;
-  content: '';
+  content: "";
   border-radius: 8em;
   transform: rotate(-35deg);
 }
@@ -2573,7 +2583,7 @@ ul {
   left: 133px;
   width: 10px;
   height: 6px;
-  content: '';
+  content: "";
   border-radius: 8em;
   transform: rotate(20deg);
 }
@@ -2585,7 +2595,7 @@ ul {
   left: 6.5px;
   width: 21px;
   height: 4px;
-  content: '';
+  content: "";
   border-radius: 8em;
   transform: rotate(-15deg);
 }
@@ -2597,7 +2607,7 @@ ul {
   left: 141px;
   width: 21px;
   height: 4px;
-  content: '';
+  content: "";
   border-radius: 8em;
   transform: rotate(-10deg);
 }
@@ -2609,7 +2619,7 @@ ul {
   left: 50px;
   width: 23px;
   height: 75px;
-  content: '';
+  content: "";
   transform: rotate(10deg);
 }
 
@@ -2620,7 +2630,7 @@ ul {
   left: 108px;
   width: 23px;
   height: 75px;
-  content: '';
+  content: "";
   transform: rotate(-10deg);
 }
 
@@ -2631,7 +2641,7 @@ ul {
   left: 43px;
   width: 28px;
   height: 20px;
-  content: '';
+  content: "";
   transform: rotate(10deg);
   border-radius: 3px;
   border-top-left-radius: 8em;
@@ -2646,7 +2656,7 @@ ul {
   left: 111px;
   width: 28px;
   height: 20px;
-  content: '';
+  content: "";
   transform: rotate(-10deg);
   border-radius: 3px;
   border-top-left-radius: 8em;
@@ -2656,21 +2666,19 @@ ul {
 
 @media (max-width: 469px) {
   .astronaut {
-    position:absolute;
+    position: absolute;
     width: 0;
     height: 0;
     left: 70%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(20deg) scale(1.2);
   }
-  .pageNotFound1, 
-  .pageNotFound{
+  .pageNotFound1,
+  .pageNotFound {
     background: var(--negro);
   }
 }
 /* --------------------------------- FIN PAGE NOT FOUND - ERROR 404 -------------------------------------------*/
-
-
 
 /* limitado */
 .cut-text {
