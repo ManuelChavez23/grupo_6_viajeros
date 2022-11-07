@@ -4,7 +4,6 @@ const Sequelize = require('sequelize');
 const fs = require('fs');
 const db = require('index.js'); */
 
-
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Destiny';
     let cols = {
@@ -71,7 +70,7 @@ module.exports = (sequelize, dataTypes) => {
     const Destiny = sequelize.define(alias, cols, config);
 
 
-    // TERMINAR ESTA PARTE
+    
     Destiny.associate = (models) => {
         Destiny.belongsToMany(models.User, {
             as: 'users',
@@ -80,7 +79,21 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: 'user_id',
             timestamps: false
         })
+        Destiny.belongsTo(models.Transport_id, {
+            as: 'transports',
+            foreignKey: 'transport_id'
+        })
+        /* (models.Group_id,{
+            as: 'groups',
+            foreignKey: 'group_id'
+        }),
+        (models.Meals_id, {
+            as:'comidas',
+            foreignKey: 'meals_id'
+        }) */
     }
+
+    
 
     return Destiny
 };
