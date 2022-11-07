@@ -78,19 +78,33 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'destiny_id',
             otherKey: 'user_id',
             timestamps: false
-        })
+        });
+
         Destiny.belongsTo(models.Transport_id, {
             as: 'transports',
             foreignKey: 'transport_id'
-        })
-        /* (models.Group_id,{
-            as: 'groups',
+        });
+
+        Destiny.belongsTo(models.Destiny_category, {
+            as: 'categorys',
+            foreignKey: 'destiny_category_id'
+        });
+
+        Destiny.belongsTo(models.Group,{
+            as: 'salidas',
             foreignKey: 'group_id'
-        }),
-        (models.Meals_id, {
-            as:'comidas',
+        });
+
+        Destiny.belongsTo(models.Meals_id, {
+            as:'meals',
             foreignKey: 'meals_id'
-        }) */
+        });
+
+        Destiny.belongsTo(models.Status, {
+            as:'anuncios',
+            foreignKey: 'status_id'
+        })
+
     }
 
     

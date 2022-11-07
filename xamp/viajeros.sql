@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2022 a las 18:07:47
+-- Tiempo de generación: 07-11-2022 a las 20:15:20
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -63,7 +63,7 @@ INSERT INTO `destiny` (`ID`, `name`, `date`, `price`, `detail`, `destiny_categor
 (14, 'Philippines', '0000-00-00', '5078', 'mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in', 2, 'https://robohash.org/errorestrepudiandae.png?size=50x50&set=set1', 2, 3, 3, 1, 3),
 (15, 'China', '0000-00-00', '4809', 'rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio', 2, 'img-1663302398802.jpg', 2, 3, 1, 2, 3),
 (16, 'Indonesia', '0000-00-00', '7242', 'magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis', 1, '1663086816480_img_.png', 2, 4, 3, 2, 3),
-(17, 'Indonesia', '0000-00-00', '6372', 'nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in', 1, 'termasFiambala.jpg', 2, 3, 3, 1, 2),
+(17, 'Indonesia', '2022-11-18', '6372', 'nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in', 1, 'img-1667848417430.jpg', 3, 3, 3, 1, 2),
 (18, 'Mexico', '0000-00-00', '9326', 'cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae', 1, 'img-1666047428468.png', 2, 2, 2, 2, 3),
 (19, 'Indonesia', '0000-00-00', '6903', 'fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget', 2, '1663102648986_img_.jpg', 1, 1, 1, 1, 1),
 (20, 'China', '0000-00-00', '610', 'velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus', 1, 'img-1665771486652.jpg', 2, 2, 3, 1, 4),
@@ -102,25 +102,6 @@ INSERT INTO `destiny` (`ID`, `name`, `date`, `price`, `detail`, `destiny_categor
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `destiny_category`
---
-
-CREATE TABLE `destiny_category` (
-  `ID` int(10) NOT NULL,
-  `categoria` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `destiny_category`
---
-
-INSERT INTO `destiny_category` (`ID`, `categoria`) VALUES
-(1, 'Nacional'),
-(2, 'Internacional');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `destiny_user`
 --
 
@@ -148,66 +129,6 @@ CREATE TABLE `groups` (
 INSERT INTO `groups` (`ID`, `group`) VALUES
 (1, 'Single'),
 (2, 'Grouping');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `meals_id`
---
-
-CREATE TABLE `meals_id` (
-  `ID` int(10) NOT NULL,
-  `meals` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `meals_id`
---
-
-INSERT INTO `meals_id` (`ID`, `meals`) VALUES
-(1, 'all inclusive'),
-(2, 'half board included'),
-(3, 'full board'),
-(4, 'not include meals');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `status_id`
---
-
-CREATE TABLE `status_id` (
-  `ID` int(10) NOT NULL,
-  `status` varchar(23) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `status_id`
---
-
-INSERT INTO `status_id` (`ID`, `status`) VALUES
-(1, 'outstanding'),
-(2, 'offer');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `transport_id`
---
-
-CREATE TABLE `transport_id` (
-  `ID` int(10) NOT NULL,
-  `transport` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `transport_id`
---
-
-INSERT INTO `transport_id` (`ID`, `transport`) VALUES
-(1, 'plane'),
-(2, 'bus'),
-(3, 'boat');
 
 -- --------------------------------------------------------
 
@@ -246,31 +167,12 @@ INSERT INTO `users` (`ID`, `first_name`, `last_name`, `email`, `user`, `password
 (12, 'Lin', 'Kos', 'lkosb@facebook.com', 'lkosb', '74j9PMJI4cN2', 1, '', 792),
 (13, 'Geraldine', 'Tabbitt', 'gtabbittc@symantec.com', 'gtabbittc', 'e9RYGyLXXmE', 1, '', 191),
 (14, 'Karl', 'Ridd', 'kriddd@usda.gov', 'kriddd', 'ktoydnXs7K', 1, '', 374),
-(15, 'Isidor', 'Chalk', 'ichalke@netscape.com', 'ichalke', 'PkSj5AuoYkS', 2, '', 118),
+(15, 'Isidor', 'Chalk', 'ichalke@netscape.com', 'ichalke', 'PkSj5AuoYkS', 2, 'img-1663343061997.jpg', 118),
 (16, 'Doris', 'Beacon', 'dbeaconf@fema.gov', 'dbeaconf', '9h9ds3jjq', 1, '', 518),
 (17, 'Anallise', 'McParland', 'amcparlandg@i2i.jp', 'amcparlandg', 'CziuQ35', 1, '', 678),
 (18, 'Ardyce', 'Samuel', 'asamuelh@msu.edu', 'asamuelh', '4HsauEBCA', 1, '', 946),
 (19, 'Inesita', 'Bettison', 'ibettisoni@ezinearticles.com', 'ibettisoni', 'YSc1dzmdQUs', 2, '', 859),
 (20, 'Tani', 'Curnnok', 'tcurnnokj@macromedia.com', 'tcurnnokj', 'C3nGxaz0', 2, '', 626);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `user_category`
---
-
-CREATE TABLE `user_category` (
-  `ID` int(10) NOT NULL,
-  `category` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `user_category`
---
-
-INSERT INTO `user_category` (`ID`, `category`) VALUES
-(1, 'user'),
-(2, 'admin');
 
 --
 -- Índices para tablas volcadas
@@ -280,12 +182,6 @@ INSERT INTO `user_category` (`ID`, `category`) VALUES
 -- Indices de la tabla `destiny`
 --
 ALTER TABLE `destiny`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indices de la tabla `destiny_category`
---
-ALTER TABLE `destiny_category`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -303,33 +199,9 @@ ALTER TABLE `groups`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `meals_id`
---
-ALTER TABLE `meals_id`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indices de la tabla `status_id`
---
-ALTER TABLE `status_id`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indices de la tabla `transport_id`
---
-ALTER TABLE `transport_id`
-  ADD PRIMARY KEY (`ID`);
-
---
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indices de la tabla `user_category`
---
-ALTER TABLE `user_category`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -341,12 +213,6 @@ ALTER TABLE `user_category`
 --
 ALTER TABLE `destiny`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
-
---
--- AUTO_INCREMENT de la tabla `destiny_category`
---
-ALTER TABLE `destiny_category`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `destiny_user`
@@ -361,34 +227,10 @@ ALTER TABLE `groups`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `meals_id`
---
-ALTER TABLE `meals_id`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT de la tabla `status_id`
---
-ALTER TABLE `status_id`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de la tabla `transport_id`
---
-ALTER TABLE `transport_id`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT de la tabla `user_category`
---
-ALTER TABLE `user_category`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
