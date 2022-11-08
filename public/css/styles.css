@@ -681,6 +681,7 @@ main.carrito p {
 .imgpbanner {
   width: 100%;
   max-height: 200px;
+  object-fit: cover;
 }
 
 .destiny-other {
@@ -1591,6 +1592,7 @@ ul {
     padding: 2rem;
     display: flex;
     justify-content: space-between;
+    background-color: var(--gris-claro)
   }
 
   .article {
@@ -1599,6 +1601,7 @@ ul {
     width: 21%;
     transition: 0.5s;
     background-color: white;
+    
   }
 
   .article:hover {
