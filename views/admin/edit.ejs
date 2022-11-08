@@ -31,8 +31,10 @@
                         <p>
                             <label for="category">Categoria</label>
                             <select name="category" id="category">
-                                <option value="1" <%=product.destiny_category_id=="1" ? 'selected' : '' ; %>>Nacional</option> 
-                                <option value="2" <%=product.destiny_category_id=="2" ? 'selected' : '' ;%>>Internacional</option>
+                                <option value="1" <%=product.destiny_category_id=="1" ? 'selected' : '' ; %>>Nacional
+                                </option>
+                                <option value="2" <%=product.destiny_category_id=="2" ? 'selected' : '' ;%>
+                                    >Internacional</option>
                             </select>
                         </p>
                         <p>
@@ -40,6 +42,7 @@
                             <select name="status" id="status">
                                 <option value="1" <%=product.status_id=="1" ? 'selected' : '' ; %>>Destacado</option>
                                 <option value="2" <%=product.status_id=="2" ? 'selected' : '' ; %>>Oferta</option>
+                                <option value="3" <%=product.status_id=="3" ? 'selected' : '' ; %>>Simple</option>
                             </select>
                         </p>
                         <p>
@@ -54,8 +57,10 @@
                             <select id="meals" name="meals">
                                 <option value="1" <%=product.meals_id=="1" ? 'selected' : '' ; %>>All inclusive</option>
                                 <option value="2" <%=product.meals_id=="2" ? 'selected' : '' ; %>>Media Pensión</option>
-                                <option value="3" <%=product.meals_id=="3" ? 'selected' : '' ; %>>Pensión Completa</option>
-                                <option value="4" <%=product.meals_id=="4" ? 'selected' : '' ; %>> No incluye Comida</option>
+                                <option value="3" <%=product.meals_id=="3" ? 'selected' : '' ; %>>Pensión Completa
+                                </option>
+                                <option value="4" <%=product.meals_id=="4" ? 'selected' : '' ; %>> No incluye Comida
+                                </option>
                             </select>
                         </p>
                         <p>

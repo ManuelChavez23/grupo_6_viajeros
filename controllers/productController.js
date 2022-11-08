@@ -12,17 +12,19 @@ const controller = {
         let idProduct = req.params.id;
         
         db.Destiny.findByPk(idProduct, {
-            include: ['transporte'] 
+            include: [{association: 'transports'},{association: 'categorys'},{association: 'salidas'},{association: 'meals'},{association: 'anuncios'}] 
             })
             .then((destino) => {
                 res.render('productDetail', {destino,idProduct }); 
-            })     
+            })/* .catch(e => {
+                res.send(e);
+            })      */
         
     },
     products:  (req, res) =>{
         
 
-        db.Destiny.findAll({raw: true, nest: true}).
+        db.Destiny.findAll({include: [{association: 'transports'}], raw: true, nest: true}).
             then((destinos) => {
                 res.render('products', {destinos});
         })

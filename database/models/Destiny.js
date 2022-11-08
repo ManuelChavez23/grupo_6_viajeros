@@ -70,7 +70,7 @@ module.exports = (sequelize, dataTypes) => {
     const Destiny = sequelize.define(alias, cols, config);
 
 
-    // TERMINAR ESTA PARTE
+    
     Destiny.associate = (models) => {
         Destiny.belongsToMany(models.User, {
             as: 'users',
@@ -78,7 +78,33 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'destiny_id',
             otherKey: 'user_id',
             timestamps: false
+        });
+
+        Destiny.belongsTo(models.Transport_id, {
+            as: 'transports',
+            foreignKey: 'transport_id'
+        });
+
+        Destiny.belongsTo(models.Destiny_category, {
+            as: 'categorys',
+            foreignKey: 'destiny_category_id'
+        });
+
+        Destiny.belongsTo(models.Group,{
+            as: 'salidas',
+            foreignKey: 'group_id'
+        });
+
+        Destiny.belongsTo(models.Meals_id, {
+            as:'meals',
+            foreignKey: 'meals_id'
+        });
+
+        Destiny.belongsTo(models.Status, {
+            as:'anuncios',
+            foreignKey: 'status_id'
         })
+
     }
 
     
