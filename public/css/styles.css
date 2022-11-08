@@ -1614,9 +1614,9 @@ ul {
     cursor: pointer;
   }
 
-  .article-card-body {
+ /*  .article-card-body {
     /* background-color: #ffffff; */
-  }
+  
 
   .article-btn {
     text-transform: uppercase;
