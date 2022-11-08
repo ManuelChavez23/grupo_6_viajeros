@@ -134,6 +134,7 @@ const userController = {
                 user: req.body.user,
             }
         }).then((check) => {
+            console.log(check)
             if(check) {
                 if(bcrypt.compareSync(req.body.password, check.password)) {
                     req.session.usuariologueado = check;
@@ -153,6 +154,14 @@ const userController = {
                         oldData: req.body
                     });
                 }
+
+            } else {
+                res.render('login', {
+                    errors: {password:
+                        { msg: 'Usuario no encontrado' }
+                    }, //resultValidation.mapped(),
+                    oldData: req.body
+                })
             }
         }).catch((e) => {
             res.send(e)
