@@ -137,7 +137,7 @@ a {
 /* MAIN - DESTINOS */
 .main-home {
   padding: 1rem;
-  background-color: #d1c2d9;
+  background-color: #fcfcfc;
 }
 
 .main-home-titulo {
@@ -147,7 +147,7 @@ a {
   border-left: 3px solid #3b2e50;
   padding-left: 0.5rem;
   display: inline-block;
-  box-shadow: -6px 8px 10px 0px #877c95;
+  box-shadow: -8px 13px 10px 0px #877c95;
 }
 
 .main-home-section {
@@ -172,7 +172,8 @@ a {
 
 .article-card-body {
   padding: 1rem;
-  background-color: white;
+  background-color: #100b18;
+  border: 1px solid #100b18
 }
 
 .article-titulo {
@@ -183,7 +184,7 @@ a {
 
 .article-parrafo {
   margin-bottom: 1rem;
-  color: var(--negro);
+  color: var(--blanco);
   font-weight: bold;
   height: 100px;
 }
@@ -192,6 +193,7 @@ a {
   margin-bottom: 1rem;
   color: #8fc2d7;
   font-weight: bold;
+  display: none;
 }
 
 .contenedor-btn {
@@ -205,6 +207,7 @@ a {
   border-radius: 5px;
   border: 1px solid #3b2e50;
   font-family: "Dosis", sans-serif;
+  background-color: var(--blanco);
 }
 
 /* SECTION - NOSOTROS */
@@ -1584,7 +1587,7 @@ ul {
   /* MAIN */
 
   .main-home {
-    background-color: #dbdfe0;
+    /* background-color: #dbdfe0; */
     padding: 1rem 5rem;
   }
 
@@ -1592,7 +1595,7 @@ ul {
     padding: 2rem;
     display: flex;
     justify-content: space-between;
-    background-color: var(--gris-claro)
+    /* background-color: var(--gris-claro) */
   }
 
   .article {
@@ -1612,7 +1615,7 @@ ul {
   }
 
   .article-card-body {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
   }
 
   .article-btn {
@@ -1626,6 +1629,7 @@ ul {
     color: white;
     transition: 0.5s;
     cursor: pointer;
+    border: 1px solid
   }
 
   /* NOSOTROS */
