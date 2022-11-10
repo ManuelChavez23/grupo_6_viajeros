@@ -8,7 +8,9 @@
             
         <%- include("../partials/search.ejs") %>
             <main class="main-home">
-                <h2 class="Category">NACIONALES</h2>
+                <div class="main-home-contenedor-titulo">
+                    <h2 class="Category main-home-titulo">NACIONALES</h2>
+                </div>
 
                 <section class="main-home-section">
 
@@ -37,7 +39,10 @@
                             <% }) %>
                 </section>
 
-                <h2 class="Category">INTERNACIONALES</h2>
+                <div class="main-home-contenedor-titulo">
+                    <h2 class="Category main-home-titulo">INTERNACIONALES</h2>
+
+                </div>
                 <section class="main-home-section">
                     <% let internacional = destinos.filter( product=> product.destiny_category_id == 2) %>
                         <% internacional.forEach(product=> { %>
