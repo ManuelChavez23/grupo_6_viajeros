@@ -543,168 +543,133 @@ a {
 }
 
 /*CARRITO.HTML--------------------------------------------------------------*/
-#product-cart {
-  width: 80%;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  background-color: #dbdfe0;
-  border-radius: 0.8%;
+.carrito {
+  padding: 2rem;
 }
-
-#product-cart:hover {
-  box-shadow: 5px 5px 15px var(--negro);
-}
-
-.carrito-paquete {
-  background-color: #8dc2d9;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 5px;
-}
-
-main.carrito {
-  margin: auto;
-  width: 90%;
-}
-
-main.carrito p {
-  color: #000000;
-}
-
-.carrito-main {
+.carrito-contenedor {
   display: flex;
-  flex-direction: row;
-  margin-top: 5%;
-  font-size: x-large;
-  font-weight: 300;
-}
-
-.carrito-opcion-actual {
-  width: 80%;
-  margin-left: 5%;
-}
-
-.carrito-precio {
-  width: 10%;
-}
-
-.carrito-total {
-  width: 80%;
-  margin-left: 5%;
-}
-
-.carrito-tarjetas {
-  width: 80%;
-  text-align: center;
-  margin: 10%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-/* .fa-cc-mastercard {
-  color: #8dc2d9;
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 1%;
-}
-
-.fa-cc-visa {
-  color: #8dc2d9;
-  font-size: 3rem;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 1%;
-} */
-
-.carrito-boton {
-  background-color: #8dc2d9;
-  width: 70%;
-  border: none;
-  font-size: 3rem;
-  color: #ffffff;
-  padding: 8px 10px;
-  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.carrito-titulo {
   text-align: center;
-  margin-bottom: 10%;
-  margin-left: 15%;
+  margin-bottom: 1rem;
+}
+.carrito-subtitulo {
+  margin-right: 1rem;
+}
+.carrito-icono{
+  font-size: 1.5rem;
+  color: var(--violeta);
+}
+.carrito-section {
+  padding: 1rem;
+  border: 1px solid var(--violeta);
+  border-radius: 10px;
+}
+.carrito-titulo-seleccionados {
+  border-bottom: 1px solid var(--violeta);
+  margin-bottom: 0.5rem;
 }
 
-.carrito-derechos {
-  font-size: xx-large;
-  text-align: center;
-  text-decoration: underline;
-}
-
-.carrito-p {
-  font-size: large;
-}
-
-.carrito-botones {
-  margin-top: 5%;
+.carrito-contenedor-seleccionados {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.carrito-titulo-destino {
+  font-weight: bold;
 }
 
-.carrito-boton-seguir-comprando {
-  background-color: #8dc2d9;
-  border: none;
-  font-size: 1rem;
-  color: #ffffff;
-  padding: 8px 10px;
-  border-radius: 5px;
+
+
+.carrito-titulo-extras {
+  border-bottom: 1px solid var(--violeta);
+  margin-bottom: 0.5rem;
+}
+.carrito-contenedor-extras {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.carrito-subtitulo-extras {
+  font-weight: bold;
+}
+
+.carrito-titulo-total {
+  border-bottom: 1px solid var(--violeta);
+  margin-bottom: 0.5rem;
+}
+
+.carrito-contenedor-total {
+  display: flex;
+  justify-content: space-between;
+}
+.carrito-subtitulo-total {
+  font-weight: bold;
+}
+
+.carrito-contenedor-btn {
+  margin-top: 2rem;
   text-align: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
+}
+.carrito-boton-pagar {
+  padding: 0.5rem 2rem;
+  color: var(--blanco);
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid var(--violeta);
+  font-family: "Dosis", sans-serif;
+  background-color: var(--violeta);
+}
+.carrito-boton-pagar:hover{
+  background-color: #3b2e50;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.carrito-contenedor-botones {
+  text-align: center;
+  margin-top: 2rem;
+}
+.carrito-boton-seguir-comprando{
+  padding: 0.5rem;
+  color: var(--blanco);
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid var(--violeta);
+  font-family: "Dosis", sans-serif;
+  background-color: var(--violeta);
+}
+.carrito-boton-seguir-comprando:hover{
+  background-color: #3b2e50;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid;
 }
 
 .carrito-boton-cancelar {
-  background-color: #8dc2d9;
-  border: none;
-  font-size: 1rem;
-  color: #ffffff;
-  padding: 8px 10px;
+  padding: 0.5rem;
+  color: var(--blanco);
+  font-weight: bold;
   border-radius: 5px;
-  text-align: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  border: 1px solid var(--violeta);
+  font-family: "Dosis", sans-serif;
+  background-color: var(--violeta);
 }
-
-.carrito-destinos {
-  margin: 2%;
-}
-
-#carrito-buscados {
+.carrito-boton-cancelar:hover{
   background-color: #3b2e50;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0;
-  justify-content: center;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid;
 }
 
-.carrito-h2 {
-  text-align: center;
-}
 
-.img-carrito {
-  margin: 2%;
-  text-align: center;
-}
-
-.carrito-img {
-  width: 60%;
-}
-
-.img-carrito2,
-.img-carrito3 {
-  display: none;
-}
 
 /*product*/
 .imgpbanner {
@@ -1078,6 +1043,8 @@ span {
   color: var(--violeta);
   background: rgba(5, 7, 12, 0.4);
   padding: 2rem;
+  width: 40%;
+    margin: 0 auto;
 }
 
 .formulario-titulo {
@@ -1891,58 +1858,9 @@ ul {
 
   /* CARRITO */
 
-  .img-carrito,
-  .img-carrito2,
-  .img-carrito3 {
-    display: block;
-    width: 100%;
-  }
-
-  .carrito-destinos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-
-  #product-cart {
-    width: 50%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    background-color: var(--gris-claro);
-    border-radius: 0.8%;
-  }
-
-  .carrito-opcion-actual,
-  .carrito-total {
-    width: 70%;
-    margin-left: 15%;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .carrito-paquete:hover {
-    background-color: var(--lila);
-  }
-
-  .carrito-boton:hover {
-    background-color: var(--lila);
-  }
-
- /*  .fa-cc-mastercard:hover {
-    color: var(--lila);
-  }
-
-  .fa-cc-visa:hover {
-    color: var(--lila);
-  } */
-
-  .carrito-boton-seguir-comprando:hover {
-    background-color: var(--lila);
-  }
-
-  .carrito-boton-cancelar:hover {
-    background-color: var(--lila);
+  .carrito-section {
+    width: 40%;
+    margin: 0 auto;
   }
 
   /*agregar--------------------------------------------------------------------------------------*/
