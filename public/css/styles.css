@@ -1583,7 +1583,8 @@ ul {
     padding: 2rem;
     display: flex;
     justify-content: space-between;
-    margin: 0rem 5rem 5rem 5rem;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .article {
