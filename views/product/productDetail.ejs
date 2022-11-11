@@ -5,7 +5,7 @@
 
     <body>
         <%- include("../partials/header.ejs") %>
-
+        <script src="js//carrusel.js."></script>
         
 
             <section class="buscador">
@@ -71,11 +71,11 @@
                                         <p>Régimen de Comidas: <%= destino.meals.meals %>.</p>
                                     </li>
                                     <li>
-                                        <i class="fa fa-utensils"></i>
+                                        <i class="fas fa-calendar-check"></i>
                                         <p>Tipo anuncio: <%= destino.anuncios.status %>.</p>
                                     </li>
                                     <li>
-                                        <i class="fa fa-utensils"></i>
+                                        <i class="fas fa-globe"></i>
                                         <p>Destino: <%= destino.categorys.categoria %>.</p>
                                     </li>
 
@@ -97,24 +97,21 @@
                         </div>
 
                     </article>
+                </section>
 
             </main>
-            <div id="carrito-buscados">
+            <%- include("../partials/carrusel.ejs") %>
+           <!-- <div id="carrito-buscados">
                 <div class="carrito-destinos">
                     <h2 class="carrito-h2">Destinos más buscados</h2>
                     <p class="img-carrito"><img class="carrito-img" src="/img/otrosdestinos1.jpg" alt=""></p>
                     <p class="img-carrito2"><img class="carrito-img" src="/img/otrosdestinos2.jpg" alt=""></p>
                     <p class="img-carrito3"><img class="carrito-img" src="/img/otrosdestinos3.jpg" alt=""></p>
                     <p class="img-carrito2"><img class="carrito-img" src="/img/otrosdestinos2.jpg" alt=""></p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto incidunt, delectus
-                        voluptates, illo
-                        labore voluptatibus saepe odio iusto omnis</p>
+                    </p>
+                    
                 </div>
-            </div>
-
-            </div>
-
-            </section>
+            </div>-->
 
 
             </section>

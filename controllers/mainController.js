@@ -22,6 +22,9 @@ const controller = {
     contact: (req, res) =>{
         res.render('contact');
     },
+    nosotros:(req, res) =>{
+        res.render('nosotros');
+    },
     cart: (req, res) =>{
         res.render('productCart');
     },

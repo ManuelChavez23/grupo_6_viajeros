@@ -2199,15 +2199,22 @@ ul {
   select#status,
   select#group,
   select#meals,
-  select#transport {
+  select#transport{
     margin-bottom: 3%;
     margin-left: 5%;
+  }
+  select#user_category_id{
+    margin-bottom: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+
   }
 
   label {
     font-weight: bold;
   }
   /* FIN FORMULARIO EDITAR */
+  
 }
 
 /* MENSAJE DE ERROR */
@@ -2632,4 +2639,36 @@ ul {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowgrap;
+}
+/*-------CARRUSEL--------------------------------------------------------------------------*/
+
+#carrusel-caja {
+
+  animation: automatizacion 20s infinite linear;
+  width: 300%;
+  
+}
+#carrusel-contenido {
+  margin:5px;;
+  overflow: hidden;
+  text-align: left;
+}
+.carrito-img{
+  height: 300px;
+  width: 80%;
+}
+.carrusel-elemento {
+  float: left;
+  width: 20%;
+}
+@keyframes automatizacion {
+  0% {
+      margin-left:8;
+  }
+  30% {
+      margin-left:-50%;
+  }
+  35% {
+      margin-left: -80%;
+  }
 }
