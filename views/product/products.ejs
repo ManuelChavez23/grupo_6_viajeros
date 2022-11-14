@@ -5,23 +5,17 @@
 
     <body>
         <%- include("../partials/header.ejs") %>
-            <section class="buscador">
-                <div class="contenedor-buscador">
-                    <input class="input-buscador" type="text" value="Busca tu destino">
-                </div>
-                <div class="header-contenedor-bars">
-                    <i class="fas fa-bars header-bars"></i>
-                </div>
-                <img class="imgpbanner" src="../img/PANO_20190401_155549.jpg" alt="">
-            </section>
-
+            
+        <%- include("../partials/search.ejs") %>
             <main class="main-home">
-                <h2 class="Category">NACIONALES</h2>
+                <div class="main-home-contenedor-titulo">
+                    <h2 class="Category main-home-titulo">NACIONALES</h2>
+                </div>
 
                 <section class="main-home-section">
 
-                    <% let nacional=products.filter(product=> product.category == 'Nacional') %>
-                        <% nacional.forEach( product=> { %>
+                    <% let nacional = destinos.filter(product => product.destiny_category_id == 1) %>
+                        <% nacional.forEach( product => { %>
                             <article class="article">
                                 <div class="article-card-top">
                                     <img class="article-img" src="/img/<%= product.img %>" alt="">
@@ -30,24 +24,27 @@
                                     <h1 class="article-titulo">
                                         <%= product.name %>
                                     </h1>
-                                    <p class="article-parrafo">
+                                    <p class="article-parrafo cut-text">
                                         <%= product.detail %>
                                     </p>
                                     <p class="article-precio">
-                                        <%=product.price %>
+                                        $<%=product.price %>
                                     </p>
                                     <div class="contenedor-btn">
                                         <a href="/product/detalle/<%=product.id %> "> <button
-                                                class="article-btn">Comprar</button> </a>
+                                            class="article-btn">Saber más</button> </a>
                                     </div>
                                 </div>
                             </article>
                             <% }) %>
                 </section>
 
-                <h2 class="Category">INTERNACIONALES</h2>
+                <div class="main-home-contenedor-titulo">
+                    <h2 class="Category main-home-titulo">INTERNACIONALES</h2>
+
+                </div>
                 <section class="main-home-section">
-                    <% let internacional=products.filter(product=> product.category == 'Internacional') %>
+                    <% let internacional = destinos.filter( product=> product.destiny_category_id == 2) %>
                         <% internacional.forEach(product=> { %>
 
                             <article class="article">
@@ -58,16 +55,15 @@
                                     <h1 class="article-titulo">
                                         <%= product.name %>
                                     </h1>
-                                    <p class="article-parrafo">
+                                    <p class="article-parrafo cut-text">
                                         <%= product.detail %>
                                     </p>
                                     <p class="article-precio">
-                                        <%=product.price %>
+                                        $<%=product.price %>
                                     </p>
                                     <div class="contenedor-btn">
                                         <a href="/product/detalle/<%=product.id %>"> <button
-                                                class="article-btn">Comprar</button> </a>
-                                    </div>
+                                            class="article-btn">Saber más</button> </a>
                                 </div>
                             </article>
                             <% }) %>

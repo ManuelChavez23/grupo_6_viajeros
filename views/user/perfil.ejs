@@ -22,31 +22,31 @@
                     <h1 class="main-perfil-title">Bienvenido <%= user.user %>
                     </h1>
 
-                    <img src="/imgUsers/<%= user.img %> " alt="avatar">
+                    <img src="/img/<%= user.img %>" alt="avatar">
+                    <% console.log(user) %>
 
-                    <h2>
-                        <%= user.email %>
-                    </h2>
+                        <h2>
+                            <%= user.email %>
+                        </h2>
 
-                    <form action="/logout" method="GET">
-                        <button id="edit3" type="submit">Cerrar Sesion</button>
-                        
-                    </form>
-                     <!--<form action="/perfilEdit/<%= user.id %>" method="GET">
+                        <form action="/logout" method="GET">
+                            <button id="edit3" type="submit">Cerrar Sesion</button>
+
+                        </form>
+                        <!--<form action="/perfilEdit/<%= user.id %>" method="GET">
                         <button id="edit3" type="submit">Editar
                             <i class="fas fa-edit"></i>
                         </button> 
                     </form> -->
-                    <div class="buttonIn">
-                    
-                        <a href="/perfilEdit/<%= user.id %>"><button>Editar <i
-                                    class="fas fa-edit"></i></button></a>
+                        <div class="buttonIn">
 
-                    </div>
+                            <a href="/perfilEdit/<%= user.id %>"><button>Editar <i class="fas fa-edit"></i></button></a>
 
-                    <section class="main-perfil-section">
+                        </div>
 
-                    </section>
+                        <section class="main-perfil-section">
+
+                        </section>
                 </div>
 
 

@@ -1,14 +1,14 @@
 [
  {
   "id": 1,
-  "firstName": "Franco",
-  "lastName": "Ambort",
-  "email": "ambortfranco94@gmail.com",
-  "user": "FrancoAmbort",
-  "password": "$2a$10$kRi9UWB.detdW8h2UyazIukE4571/uCu1wnj8FqoJd6YabVm2iH9W",
-  "category": "admin",
-  "img": "img-1666049795942.jpg",
-  "phoneNumber": "3492691472"
+  "firstName": "Jaquenette",
+  "lastName": "Viollet",
+  "email": "jviollet0@time.com",
+  "user": "jviollet0",
+  "password": "$2a$10$ClHoDIH6yB8Zf8tVrxabruyVY17QZ2A34O/VH41RxiBNCYKpq8ozW",
+  "category": "Usuario",
+  "img": "img-1667588719704.jpg",
+  "phoneNumber": ""
  },
  {
   "id": 2,
