@@ -35,19 +35,19 @@ const validationsRegister = [
         .notEmpty().withMessage('Debes ingresar una fecha'),
     check('email')
         .notEmpty().withMessage('Debes ingresar un correo electrónico').bail()
-        .isEmail().withMessage('Debes ingresar un correo electrónico válido')
-        .custom((value, { req }) => {
+        .isEmail().withMessage('Debes ingresar un correo electrónico válido'),
+        /* .custom((value, { req }) => {
             
             return User.findOne({ email: value }).then(userDoc => {
               if (userDoc) {
                 return Promise.reject('E-Mail address already exists!');
               }
             });
-          }),
+          }), */
     /* check('re-email').notEmpty().withMessage('Debes ingresar nuevamente el correo'), */
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
-        .isLength({min:5, max:20}),
+        .isLength({min:8, max:20}).withMessage('La contraseña debe contener al menos 8 caracteres'),
     /* check('re-password').notEmpty().withMessage('Debes ingresar nuevamente la contraseña'), */
     check('tel')
         .notEmpty().withMessage('Debes ingresar un número telefónico'),
@@ -65,7 +65,7 @@ router.get('/login', guestMiddleware, userController.login);
 router.post('/login', validationsLogin, userController.usersCheck);
 
 router.get('/register', guestMiddleware, userController.register);
-router.post('/register', uploadFile.single('imgUser'), validationsRegister,userController.processRegister);
+router.post('/register', uploadFile.single('img'), validationsRegister,userController.processRegister);
 
 router.get('/perfil', authMiddleware, userController.perfil);
 router.get('/logout', authMiddleware, userController.logout)
