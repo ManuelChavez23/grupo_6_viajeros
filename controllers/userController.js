@@ -25,6 +25,7 @@ const userController = {
                 oldData: req.body
             });
         } 
+        
         db.User.create({
             first_name: req.body.nombre,
             last_name: req.body.apellido,

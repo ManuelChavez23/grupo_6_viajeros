@@ -8,7 +8,9 @@ const path = require('path');
 
 const multer = require('multer');
 
-const { check } = require('express-validator');
+const { check,
+        body
+} = require('express-validator');
 
 const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
@@ -40,6 +42,19 @@ const validationsRegister = [
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
         .isLength({min:5, max:20}),
+    body('email').custom(function (value) {
+            let contador = 0;
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email == value) {
+                    contador++;
+                }
+            }
+            if (contador > 0) {
+                return false;   // Si retorno falso no aparece el mensaje de error
+            } else {
+                return true;    //Si retorno true, aparece el mensaje de error
+            }
+          }).withMessage('Usuario ya se encuentra registrado'),
     /* check('re-password').notEmpty().withMessage('Debes ingresar nuevamente la contraseña'), */
     check('tel')
         .notEmpty().withMessage('Debes ingresar un número telefónico'),
