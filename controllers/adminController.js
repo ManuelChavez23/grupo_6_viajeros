@@ -42,7 +42,7 @@ const controller = {
             last_name: req.body.lastName,
             email: req.body.email,
             user: req.body.user,
-            password: bcrypt.hashSync(req.body.password, 10), //ver como guardar la contra
+            //password: bcrypt.hashSync(req.body.password, 10), //ver como guardar la contra
             user_category_id: req.body.category,
             img: req.file.filename,
             phone_number: req.body.phoneNumber

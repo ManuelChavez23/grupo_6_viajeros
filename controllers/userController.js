@@ -24,20 +24,39 @@ const userController = {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
-        } 
-        
-        db.User.create({
-            first_name: req.body.nombre,
-            last_name: req.body.apellido,
-            user: req.body.user,
-            birth: req.body.fechaNacimiento,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
-            phone_number: req.body.tel,
-            user_category_id: req.body.user_category_id
-        }).then(() => {
-                res.redirect('login');
-        }).catch((e) => {
+        }
+        db.User.findOne({
+            where: {
+                email: req.body.email
+            }})
+        .then((respuesta) => {
+            console.log(respuesta)
+            if (!respuesta) {
+                db.User.create({
+                    first_name: req.body.nombre,
+                    last_name: req.body.apellido,
+                    user: req.body.user,
+                    img: req.file.filename,
+                    birth: req.body.fechaNacimiento,
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    phone_number: req.body.tel,
+                    user_category_id: 1,
+                }).then(() => {
+                        res.redirect('login');
+                }).catch((e) => {
+                    res.send(e);
+                })        
+            } else {
+                res.render('register', {
+                    errors: {email:
+                        { msg: 'El email ya se encuentra registrado' }
+                    }, //resultValidation.mapped(),
+                    oldData: req.body
+                });
+            }
+        })
+        .catch((e) => {
             res.send(e);
         })
         
