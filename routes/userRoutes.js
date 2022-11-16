@@ -3,13 +3,11 @@ const express = require('express');
 const router = express.Router();
 
 const userController = require('../controllers/userController');
-
 const path = require('path');
 
 const multer = require('multer');
 
 const { check,
-        body
 } = require('express-validator');
 
 const authMiddleware = require('../middlewares/authMiddleware');
@@ -45,27 +43,16 @@ const validationsRegister = [
                 return Promise.reject('E-Mail address already exists!');
               }
             });
-          }),
+          }), 
     /* check('re-email').notEmpty().withMessage('Debes ingresar nuevamente el correo'), */
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
         .isLength({min:5, max:20}),
-    body('email').custom(function (value) {
-            let contador = 0;
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email == value) {
-                    contador++;
-                }
-            }
-            if (contador > 0) {
-                return false;   // Si retorno falso no aparece el mensaje de error
-            } else {
-                return true;    //Si retorno true, aparece el mensaje de error
-            }
-          }).withMessage('Usuario ya se encuentra registrado'),
+    
     /* check('re-password').notEmpty().withMessage('Debes ingresar nuevamente la contraseña'), */
     check('tel')
         .notEmpty().withMessage('Debes ingresar un número telefónico'),
+    
 ]
 
 const validationsLogin = [
@@ -80,7 +67,7 @@ router.get('/login', guestMiddleware, userController.login);
 router.post('/login', validationsLogin, userController.usersCheck);
 
 router.get('/register', guestMiddleware, userController.register);
-router.post('/register', uploadFile.single('imgUser'), validationsRegister,userController.processRegister);
+router.post('/register', uploadFile.single('imgUser'), validationsRegister,userController.processRegister); 
 
 router.get('/perfil', authMiddleware, userController.perfil);
 router.get('/logout', authMiddleware, userController.logout)
