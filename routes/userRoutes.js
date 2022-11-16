@@ -37,7 +37,15 @@ const validationsRegister = [
         .notEmpty().withMessage('Debes ingresar una fecha'),
     check('email')
         .notEmpty().withMessage('Debes ingresar un correo electrónico').bail()
-        .isEmail().withMessage('Debes ingresar un correo electrónico válido'),
+        .isEmail().withMessage('Debes ingresar un correo electrónico válido')
+        .custom((value, { req }) => {
+            
+            return User.findOne({ email: value }).then(userDoc => {
+              if (userDoc) {
+                return Promise.reject('E-Mail address already exists!');
+              }
+            });
+          }),
     /* check('re-email').notEmpty().withMessage('Debes ingresar nuevamente el correo'), */
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
