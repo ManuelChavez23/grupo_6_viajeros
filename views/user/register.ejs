@@ -51,7 +51,16 @@
 
                                                 <p>
                                                     <label for="img">Seleccione una imagen de perfil</label>
-                                                    <input type="file" id="img" name="img" accept="JPG, JPEG, PNG, GIF">
+                                                    <input type="file" id="img" name="img"
+                                                    class="form-control <%= locals.errors && errors.img ? 'is-invalid' : null %>"
+                                                    value="<%= locals.oldData ? oldData.user : null %>">
+                                                    <% if (locals.errors && errors.img) { %>
+                                                        <div class="text-danger">
+                                                            <p>
+                                                                <%= errors.img.msg %>
+                                                            </p>
+                                                        </div>
+                                                        <% } %>
                                                 </p>
 
 

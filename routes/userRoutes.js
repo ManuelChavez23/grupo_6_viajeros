@@ -36,21 +36,19 @@ const validationsRegister = [
     check('email')
         .notEmpty().withMessage('Debes ingresar un correo electrónico').bail()
         .isEmail().withMessage('Debes ingresar un correo electrónico válido'),
-        /* .custom((value, { req }) => {
-            
-            return User.findOne({ email: value }).then(userDoc => {
-              if (userDoc) {
-                return Promise.reject('E-Mail address already exists!');
-              }
-            });
-          }), */
-    /* check('re-email').notEmpty().withMessage('Debes ingresar nuevamente el correo'), */
+    check('img').custom((value, {req}) => {
+        const imgInfo = req.file.filename.split('.')
+        if(imgInfo[1] == 'png' || imgInfo[1] == 'jpg' || imgInfo[1] == 'jpeg' || imgInfo[1] == 'gif') {
+            return imgInfo[1];
+        } else {
+            return false
+        }
+    }).withMessage('La img debe de ser de formato png, jpg, jpeg, gif'),
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
         .isLength({min:8, max:20}).withMessage('La contraseña debe contener al menos 8 caracteres'),
-    /* check('re-password').notEmpty().withMessage('Debes ingresar nuevamente la contraseña'), */
     check('tel')
-        .notEmpty().withMessage('Debes ingresar un número telefónico'),
+        .notEmpty().withMessage('Debes ingresar un número telefónico')
 ]
 
 const validationsLogin = [

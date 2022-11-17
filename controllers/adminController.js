@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
+const {validationResult} = require('express-validator');
 const productsJson = fs.readFileSync(path.join(__dirname, '../data/productsBd.json'));
 const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
 
@@ -156,7 +157,14 @@ const controller = {
         res.render("productAdd");
     },
     create: (req, res) => {
-
+        const resultValidation = validationResult(req);
+        
+        if(resultValidation.errors.length > 0 ) {
+            return res.render('productAdd', { 
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
         db.Destiny.create({
             name: req.body.name,
             date: req.body.date,

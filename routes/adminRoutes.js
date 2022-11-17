@@ -7,6 +7,7 @@ const adminController = require('../controllers/adminController');
 const multer = require('multer');
 
 const path = require('path')
+const { check } = require('express-validator');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -18,11 +19,29 @@ const storage = multer.diskStorage({
     }
 })
 
-const uploadFile = multer({storage})
+const uploadFile = multer({storage});
+
+const validationsProducts = [
+    check('name')
+        .notEmpty().withMessage('Debes ingresar un nombre de destino').bail()
+        .isLength({min:5}).withMessage('El nombre de destino debe contener al menos 5 caracteres'),
+    check('img').custom((value, {req}) => {
+            const imgInfo = req.file.filename.split('.')
+            if(imgInfo[1] == 'png' || imgInfo[1] == 'jpg' || imgInfo[1] == 'jpeg' || imgInfo[1] == 'gif') {
+                return imgInfo[1];
+            } else {
+                return false
+            }
+        }).withMessage('La img debe de ser de formato png, jpg, jpeg, gif'),
+    check('detail')    
+        .notEmpty().withMessage('Debes ingresar un detalle del destino').bail()
+        .isLength({min:20}).withMessage('La descripción de destino debe contener al menos 20 caracteres'),
+    
+]
 
 router.get('/adminList', adminController.adminList);
 router.get('/create', adminController.add);
-router.post('/create', uploadFile.single('img') ,adminController.create);
+router.post('/create', uploadFile.single('img'), validationsProducts, adminController.create);
 router.get('/comentarios', adminController.comments);
 router.get('/edit/:id', adminController.productEdit);
 router.put('/edit/:id/storage', uploadFile.single('img'), adminController.saveEdit);
