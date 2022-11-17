@@ -2224,6 +2224,20 @@ ul {
   font-family: var(--fuente);
   font-weight: bold;
 }
+.text-danger1 {
+  color: rgb(202, 37, 37);
+  font-family: var(--fuente);
+  font-weight: bold;
+  background-color: var(--gris-claro);
+  padding: 1rem 1rem 0 1rem;
+  font-weight: bold;
+}
+.text-danger1 li {
+  margin-bottom: 0.5rem;
+}
+.fa-exclamation-circle {
+  margin-right: 0.5rem;
+}
 
 /* 
 ----------------------------------PAGE NOT FOUND - ERROR 404 -------------------------------------------------*/
