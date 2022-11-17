@@ -1165,29 +1165,66 @@ p {
 }
 
 .formulario-editar {
-  height: auto;
-  margin: auto;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: var(--gris-claro);
+  padding: 2rem;
+  
   margin-bottom: 10px;
 }
-
-select#category,
-select#status,
-select#group,
-select#meals,
-select#transport {
-  margin-bottom: 3%;
-  margin-left: 5%;
+.form-edit {
+  padding: 2rem;
+  border: 1px solid var(--violeta);
+  border-radius: 5px;
 }
+.form-edit label {
+  font-family: var(--fuente);
+}
+
+.form-edit input {
+  background-color: var(--blanco);
+  width: 40%;
+  padding: 1rem;
+  height: 0;
+  margin: 0;
+}
+.form-contenedor {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--violeta);
+}
+
+.form-contenedor select {
+  width: 50%;
+  text-align: center;
+  border: 1px solid var(--violeta);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.form-contenedor img {
+  width: 50%;
+}
+.form-edit-btn {
+  margin-top: 2rem;
+}
+
+.form-edit-btn button {
+  padding: 0.5rem 2rem;
+  background-color: var(--violeta);
+  color: var(--blanco);
+  border: 1px solid var(--violeta);
+  border-radius: 5px;
+  font-family: var(--fuente);
+  text-transform: uppercase;
+}
+
 
 label {
   font-weight: bold;
 }
 
 #newImg {
-  width: 60%;
   height: 5%;
 }
 
@@ -2184,34 +2221,26 @@ ul {
   .formulario-editar {
     max-width: 50%;
     margin-left: 30%;
-    width: 460px;
+    width: 50%;
     height: auto;
     border-radius: 10px;
     padding-top: 30px;
     padding-bottom: 20px;
-    background-color: var(--gris-claro);
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 10px;
   }
 
-  select#category,
-  select#status,
-  select#group,
-  select#meals,
-  select#transport{
-    margin-bottom: 3%;
-    margin-left: 5%;
-  }
-  select#user_category_id{
-    margin-bottom: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-  }
-
   label {
     font-weight: bold;
+  }
+
+  .form-contenedor select {
+    width: 46%;
+  }
+
+  .form-edit-btn button {
+    cursor: pointer;
   }
   /* FIN FORMULARIO EDITAR */
   
