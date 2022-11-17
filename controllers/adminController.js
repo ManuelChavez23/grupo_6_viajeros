@@ -35,8 +35,7 @@ const controller = {
     saveUserEdit: (req, res) => {
         //creamos nuevamente el objeto para poder modificar el registro del usuario
         let userEdited = req.params.userId
-
-
+       
         db.User.update ({
             id: userEdited,
             first_name: req.body.firstName,
@@ -88,8 +87,17 @@ const controller = {
     },
 
     saveEdit: (req, res) => {
-        
         let destinyId = req.params.id
+        const resultValidation = validationResult(req);
+        
+        if(resultValidation.errors.length > 0 ) { 
+            return res.render('edit', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                idProduct: destinyId
+            });
+        }
+
 
         db.Destiny.update({
             id: parseInt(destinyId),

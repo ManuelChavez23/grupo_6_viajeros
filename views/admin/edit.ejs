@@ -12,10 +12,21 @@
                         enctype="multipart/form-data">
 
                         <p>
-                            <label for="newName" class="colocar_nombre">Nombre Destino
+                            <label for="name" class="colocar_nombre">Nombre Destino
                             </label>
-                            <input type="text" name="newName" id="newName" required="obligatorio"
-                                value="<%= product.name %>" placeholder="">
+                            <input  type="text" 
+                                    name="name" id="newName" 
+                                    value="<%= product.name %>" 
+                                    placeholder=""
+                                    class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                                >
+                            <% if (locals.errors && errors.name) { %>
+                                <div class="text-danger">
+                                    <p>
+                                        <%= errors.name.msg %>
+                                    </p>
+                                </div>
+                                <% } %>
                         </p>
                         <p>
                             <label for="newDate">Nueva Fecha de Salida</label>
@@ -26,7 +37,7 @@
                             <label>Imagen actual</label>
                             <img width="30%" src="/img/<%= product.img %>" alt="foto"><br>
                             <label for="newImg">Nueva Imagen producto</label>
-                            <input type="file" id="newImg" accept="jpg" name="img" value="/img/<%=product.img %>">
+                            <input type="file" id="newImg" name="img" value="/img/<%=product.img %>">
                         </p>
                         <p>
                             <label for="category">Categoria</label>
@@ -75,8 +86,11 @@
                             <label for="newDetail" class="colocarmensaje">Descripción
                                 <span class="obligatorio">*</span>
                             </label>
-                            <textarea class="textomensaje" id="newDetail" required="obligatorio"
-                                name="newDetail"><%= product.detail ? product.detail : '' %></textarea>
+                            <input 
+                                type="text" 
+                                class="textomensaje" 
+                                id="newDetail"
+                                name="newDetail"<%= product.detail ? product.detail : '' %>>
                         </p>
                         <p>
                             <label for="newPrice">Precio</label>

@@ -13,10 +13,13 @@
                     <div class="formulario3">
                         <h1 class="formulario3">Agregar Destino</h1>
 
+                        <div class="errores">
+                            <ul>
+                                
+                            </ul>
+                        </div>
 
-                        <form action="/create" method="post" enctype="multipart/form-data">
-
-
+                        <form id="form" action="/create" method="post" enctype="multipart/form-data">
                             <p>
                                 <label for="name" class="colocar_nombre">Nombre Destino
                                 </label>
@@ -30,9 +33,7 @@
                                         </p>
                                     </div>
                                     <% } %>
-
-                            </p>
-
+                                </p>
                             <p>
                                 <label for="date">Fecha de Salida</label>
                                 <input type="date" id="date" name="date">
@@ -133,6 +134,7 @@
                 hamburger.addEventListener("click", function () {
                     document.querySelector("body").classList.toggle("active");
                 })</script>
+            <script src="/js/productCreate.js"> </script>
     </body>
 
 </html>
