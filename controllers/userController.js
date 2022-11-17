@@ -19,7 +19,7 @@ const userController = {
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
         
-        if(resultValidation.errors.length > 0 ) {
+        if(resultValidation.errors.length > 0 ) { 
             return res.render('register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
@@ -30,7 +30,6 @@ const userController = {
                 email: req.body.email
             }})
         .then((respuesta) => {
-            console.log(respuesta)
             if (!respuesta) {
                 db.User.create({
                     first_name: req.body.nombre,

@@ -20,7 +20,16 @@
                             <p>
                                 <label for="name" class="colocar_nombre">Nombre Destino
                                 </label>
-                                <input type="text" name="name" id="nombre1" required="obligatorio" placeholder="">
+                                <input type="text" name="name" id="nombre1" placeholder=""
+                                    class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.name : null %>">
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="text-danger">
+                                        <p>
+                                            <%= errors.name.msg %>
+                                        </p>
+                                    </div>
+                                    <% } %>
 
                             </p>
 
@@ -32,7 +41,16 @@
 
                             <p>
                                 <label for="img">Imagen producto</label>
-                                <input type="file" id="img" accept="jpg" name="img">
+                                <input type="file" id="img" name="img"
+                                    class="form-control <%= locals.errors && errors.img ? 'is-invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.img : null %>">
+                                <% if (locals.errors && errors.img) { %>
+                                    <div class="text-danger">
+                                        <p>
+                                            <%= errors.img.msg %>
+                                        </p>
+                                    </div>
+                                    <% } %>
 
                             </p>
                             <p>
@@ -81,7 +99,19 @@
                                 <label for="detail" class=" colocarmensaje">Descripción
                                     <span class="obligatorio">*</span>
                                 </label>
-                                <textarea class="textomensaje" name="detail" id="detail"></textarea>
+                                <input 
+                                    type="text"
+                                    name="detail" 
+                                    id="detail"
+                                    class=" textomensaje form-control <%= locals.errors && errors.detail ? 'is-invalid' : null %>">
+                                </input>
+                                <% if (locals.errors && errors.detail) { %>
+                                    <div class="text-danger">
+                                        <p>
+                                            <%= errors.detail.msg %>
+                                        </p>
+                                    </div>
+                                    <% } %>
                             </p>
                             <p>
                                 <label for="price">Precio</label>
