@@ -42,8 +42,8 @@ const validationsProducts = [
 const validationsProductsEdit = [
     check('name')
         .notEmpty().withMessage('Debes ingresar un nombre de destino').bail()
-        .isLength({min:5}).withMessage('El nombre de destino debe contener al menos 5 caracteres'),
-    check('img').custom((value, {req}) => {
+        .isLength({min:5}).withMessage('El nombre de destino debe contener al menos 5 caracteres')]
+    /*check('img').custom((value, {req}) => {
             const imgInfo = req.file.filename.split('.')
             if(imgInfo[1] == 'png' || imgInfo[1] == 'jpg' || imgInfo[1] == 'jpeg' || imgInfo[1] == 'gif') {
                 return imgInfo[1];
@@ -55,7 +55,7 @@ const validationsProductsEdit = [
         .notEmpty().withMessage('Debes ingresar un detalle del destino').bail()
         .isLength({min:20}).withMessage('La descripción de destino debe contener al menos 20 caracteres'),
     
-]
+]*/
 
 router.get('/adminList', adminController.adminList);
 router.get('/create', adminController.add);

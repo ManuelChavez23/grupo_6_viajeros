@@ -14,28 +14,28 @@
                         <div class="form-contenedor">
                             <label for="name" class="colocar_nombre">Nombre Destino
                             </label>
-                            <input  type="text" 
-                                    name="name" id="newName" 
-                                    value="<%= product.name %>" 
-                                    placeholder=""
-                                    class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
-                                >
-                            <% if (locals.errors && errors.name) { %>
-                                <div class="text-danger">
-                                    <p>
-                                        <%= errors.name.msg %>
-                                    </p>
-                                </div>
+                            <input type="text" name="name" id="newName" 
+                            value="<%= product.name %>" placeholder=""
+                             class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.name : null %>">
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="text-danger">
+                                <p>
+                                    <%= errors.name.msg %>
+                                </p>
+                            </div>
                             <% } %>
+        
                         </div>
-                            
-                        
+
+
                         <div class="form-contenedor">
                             <label for="newDate">Nueva Fecha de Salida</label>
                             <input type="date" id="newDate" name="newDate"
-                                value="<%= product.date ? product.date : ''; %>">
-                        </div>
+                                value="<%= product.date %>">
                             
+                        </div>
+
                         <div class="form-contenedor">
                             <label>Imagen actual</label>
                             <img src="/img/<%= product.img %>" alt="foto">
@@ -44,8 +44,8 @@
                             <label for="newImg">Nueva Imagen producto</label>
                             <input type="file" id="newImg" name="img" value="/img/<%=product.img %>">
                         </div>
-                    
-                            
+
+
                         <div class="form-contenedor">
                             <label for="category">Categoria</label>
                             <select name="category" id="category">
@@ -55,7 +55,7 @@
                                     >Internacional</option>
                             </select>
                         </div>
-                    
+
                         <div class="form-contenedor">
                             <label for="status">Tipo de anuncio</label>
                             <select name="status" id="status">
@@ -64,8 +64,8 @@
                                 <option value="3" <%=product.status_id=="3" ? 'selected' : '' ; %>>Simple</option>
                             </select>
                         </div>
-                        
-                    
+
+
                         <div class="form-contenedor">
                             <label for="group">Salida</label>
                             <select name="group" id="group">
@@ -73,8 +73,8 @@
                                 <option value="2" <%=product.group_id=="2" ? 'selected' : '' ; %>>Grupal</option>
                             </select>
                         </div>
-                            
-                        
+
+
                         <div class="form-contenedor">
                             <label for="meals">Regimen Comidas</label>
                             <select id="meals" name="meals">
@@ -86,8 +86,8 @@
                                 </option>
                             </select>
                         </div>
-                            
-                        
+
+
                         <div class="form-contenedor">
                             <label for="transport">Traslado</label>
                             <select name="transport" id="transport">
@@ -96,33 +96,30 @@
                                 <option value="3" <%=product.transport_id=="3" ? 'selected' : '' ; %>>Barco</option>
                             </select>
                         </div>
-                            
-                        
+
+
                         <div class="form-contenedor">
                             <label for="newDetail" class="colocarmensaje">Descripción
                                 <span class="obligatorio">*</span>
                             </label>
-                            <input 
-                                type="text" 
-                                class="textomensaje" 
-                                id="newDetail"
-                                name="newDetail"<%= product.detail ? product.detail : '' %>>
+                            <input type="text" class="textomensaje" id="newDetail" name="newDetail" <%=product.detail ?
+                                product.detail : '' %>>
                         </div>
-                            
+
                         <div class="form-contenedor">
                             <label for="newPrice">Precio</label>
                             <input type="text" id="newPrice" name="newPrice" value="<%= product.price %>"
                                 placeholder="$60.000">
                         </div>
-                    
-                            
-                        
+
+
+
                         <div class="form-edit-btn">
                             <button type="submit" name="enviarformulario" id="enviar1">
                                 Actualizar destino
                             </button>
                         </div>
-                        
+
 
                     </form>
                     </div>
