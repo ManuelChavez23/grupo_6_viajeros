@@ -8,7 +8,9 @@
         <%- include("../partials/headerAdmi.ejs") %>
             <main>
                 <section class="formulario-editar">
-                    <form class="form-edit" action="/edit/<%= idProduct %>/storage?_method=PUT" method="POST"
+
+
+                    <form id= 'form-edit' class="form-edit" action="/edit/<%= idProduct %>/storage?_method=PUT" method="POST"
                         enctype="multipart/form-data">
 
                         <div class="form-contenedor">
@@ -17,16 +19,7 @@
                             <input  type="text" 
                                     name="name" id="newName" 
                                     value="<%= product.name %>" 
-                                    placeholder=""
-                                    class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
-                                >
-                            <% if (locals.errors && errors.name) { %>
-                                <div class="text-danger">
-                                    <p>
-                                        <%= errors.name.msg %>
-                                    </p>
-                                </div>
-                            <% } %>
+                                    placeholder="">
                         </div>
                             
                         
@@ -118,16 +111,18 @@
                             
                         
                         <div class="form-edit-btn">
-                            <button type="submit" name="enviarformulario" id="enviar1">
+                            <button type="submit" name="enviarformulario" id="enviar2">
                                 Actualizar destino
                             </button>
                         </div>
                         
-
+                        <div class="errores">
+                            <ul></ul>
+                        </div>
                     </form>
                     </div>
                     </div>
 
             </main>
-
+            <script src="/js/productEdit.js"> </script>
     </body>

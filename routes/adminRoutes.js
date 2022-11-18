@@ -39,7 +39,8 @@ const validationsProducts = [
     
 ]
 
-const validationsProductsEdit = [
+/* ---------------------VALIDACION PENDIENTE BACKEND-------------------- */
+/* const validationsProductsEdit = [
     check('name')
         .notEmpty().withMessage('Debes ingresar un nombre de destino').bail()
         .isLength({min:5}).withMessage('El nombre de destino debe contener al menos 5 caracteres'),
@@ -55,14 +56,14 @@ const validationsProductsEdit = [
         .notEmpty().withMessage('Debes ingresar un detalle del destino').bail()
         .isLength({min:20}).withMessage('La descripción de destino debe contener al menos 20 caracteres'),
     
-]
+] */
 
 router.get('/adminList', adminController.adminList);
 router.get('/create', adminController.add);
 router.post('/create', uploadFile.single('img'), validationsProducts, adminController.create);
 router.get('/comentarios', adminController.comments);
 router.get('/edit/:id', adminController.productEdit);
-router.put('/edit/:id/storage', uploadFile.single('img'),validationsProductsEdit, adminController.saveEdit);
+router.put('/edit/:id/storage', uploadFile.single('img'), adminController.saveEdit);
 router.delete('/delete/:id', adminController.delete);
 router.get('/userList', adminController.userList);
 router.get('/userEdit/:userId', adminController.editUser);

@@ -88,7 +88,9 @@ const controller = {
 
     saveEdit: (req, res) => {
         let destinyId = req.params.id
-        const resultValidation = validationResult(req);
+
+        /* ---------------------VALIDACION PENDIENTE BACKEND-------------------- */
+        /* const resultValidation = validationResult(req);
         
         if(resultValidation.errors.length > 0 ) { 
             return res.render('edit', {
@@ -96,7 +98,7 @@ const controller = {
                 oldData: req.body,
                 idProduct: destinyId
             });
-        }
+        } */
 
 
         db.Destiny.update({
