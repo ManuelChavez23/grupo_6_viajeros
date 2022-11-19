@@ -1,4 +1,4 @@
-window.addEventListener ('load',function() {
+/*window.addEventListener ('load',function() {
 
     let form = document.getElementById('form-edit');
     let btn = document.getElementById('enviar2');
@@ -47,6 +47,6 @@ window.addEventListener ('load',function() {
     })
 
 
-})
+})*/
 
 

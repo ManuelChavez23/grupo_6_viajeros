@@ -10,36 +10,50 @@
                 <section class="formulario-editar">
 
 
-                    <form id= 'form-edit' class="form-edit" action="/edit/<%= idProduct %>/storage?_method=PUT" method="POST"
-                        enctype="multipart/form-data">
+                    <form id='form-edit' class="form-edit" action="/edit/<%= idProduct %>/storage?_method=PUT"
+                        method="POST" enctype="multipart/form-data">
 
                         <div class="form-contenedor">
                             <label for="name" class="colocar_nombre">Nombre Destino
                             </label>
-                            <input  type="text" 
-                                    name="name" id="newName" 
-                                    value="<%= product.name %>" 
-                                    placeholder="">
+                            <input type="text" name="name" id="newName" value="<%=product.name %>" 
+                                class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                                value="<%= locals.oldData ? oldData.name : null %>">
+                            <% if (locals.errors && errors.name) { %>
+                                <div class="text-danger">
+                                    <p>
+                                        <%= errors.name.msg %>
+                                    </p>
+                                </div>
+                              <% } %>
                         </div>
 
-
+                     
                         <div class="form-contenedor">
                             <label for="newDate">Nueva Fecha de Salida</label>
-                            <input type="date" id="newDate" name="newDate"
-                                value="<%= product.date %>">
-                            
+                            <input type="date" id="newDate" name="newDate" value="<%= product.date %>">
+
                         </div>
 
-                        <div class="form-contenedor">
+                     <div class="form-contenedor">
                             <label>Imagen actual</label>
                             <img src="/img/<%= product.img %>" alt="foto">
                         </div>
                         <div class="form-contenedor">
                             <label for="newImg">Nueva Imagen producto</label>
-                            <input type="file" id="newImg" name="img" value="/img/<%=product.img %>">
+                            <input type="file" id="newImg" name="img" value="/img/<%=product.img %>"
+                            class="form-control <%= locals.errors && errors.img ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.img : null %>">
+                        <% if (locals.errors && errors.img) { %>
+                            <div class="text-danger">
+                                <p>
+                                    <%= errors.img.msg %>
+                                </p>
+                            </div>
+                            <% } %>
                         </div>
 
-
+                       
                         <div class="form-contenedor">
                             <label for="category">Categoria</label>
                             <select name="category" id="category">
@@ -106,14 +120,12 @@
                                 placeholder="$60.000">
                         </div>
 
-
-
                         <div class="form-edit-btn">
                             <button type="submit" name="enviarformulario" id="enviar2">
                                 Actualizar destino
                             </button>
                         </div>
-                        
+
                         <div class="errores">
                             <ul></ul>
                         </div>
@@ -124,4 +136,5 @@
             </main>
             <script src="/js/productEdit.js"> </script>
     </body>
+
 </html>
