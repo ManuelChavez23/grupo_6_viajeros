@@ -90,16 +90,21 @@ const controller = {
         let destinyId = req.params.id
 
         /* ---------------------VALIDACION PENDIENTE BACKEND-------------------- */
-        const resultValidation = validationResult(req);
-
+       const resultValidation = validationResult(req);
+        db.Destiny.findOne({
+        where: {
+            id: destinyId,
+        }
+    }).then(product=>{
         if (resultValidation.errors.length > 0) {
             return res.render('edit', {
+                product,
                 errors: resultValidation.mapped(),
                 oldData: req.body,
                 idProduct: destinyId
             });
         }
-
+   
             db.Destiny.update({
                 id: parseInt(destinyId),
                 name: req.body.newName,
@@ -119,8 +124,8 @@ const controller = {
                 .catch(e => {
                     res.send(e);
                 })
-    
-
+          
+            })
         
         
     /* let editProduct = {

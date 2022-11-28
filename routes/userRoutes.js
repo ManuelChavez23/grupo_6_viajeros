@@ -58,7 +58,6 @@ const validationsLogin = [
     check('password')
         .notEmpty().withMessage('Debes ingresar una contraseña')
 ]
-
 router.get('/login', guestMiddleware, userController.login);
 router.post('/login', validationsLogin, userController.usersCheck);
 

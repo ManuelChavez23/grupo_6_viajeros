@@ -228,7 +228,14 @@ const userController = {
     savePerfilEdit: (req, res) => {
 
         let userEdited = req.params.userId
+      /*  const resultValidation = validationResult(req);
 
+        if (resultValidation.errors.length > 0) {
+            return res.render('perfilEdit', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }*/
         db.User.update({
             id: parseInt(userEdited),
             firstName: req.body.firstName,

@@ -1207,6 +1207,7 @@ p {
 }
 .form-edit-btn {
   margin-top: 2rem;
+  text-align: center;
 }
 
 .form-edit-btn button {

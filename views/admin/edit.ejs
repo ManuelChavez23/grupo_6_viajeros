@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<%- include("../partials/head.ejs") %>
+<%- include("../partials/headproduct.ejs") %>
 
     <body>
         <%- include("../partials/headerAdmi.ejs") %>
@@ -16,44 +16,45 @@
                         <div class="form-contenedor">
                             <label for="name" class="colocar_nombre">Nombre Destino
                             </label>
-                            <input type="text" name="name" id="newName" value="<%=product.name %>" 
+                            <input type="text" name="name" id="newName" placeholder=""
                                 class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
-                                value="<%= locals.oldData ? oldData.name : null %>">
+                                value="<%= locals.oldData ? oldData.name : product.name %>">
                             <% if (locals.errors && errors.name) { %>
                                 <div class="text-danger">
                                     <p>
                                         <%= errors.name.msg %>
                                     </p>
                                 </div>
-                              <% } %>
+                                <% } %>
                         </div>
 
-                     
+
                         <div class="form-contenedor">
                             <label for="newDate">Nueva Fecha de Salida</label>
-                            <input type="date" id="newDate" name="newDate" value="<%= product.date %>">
+                            <input type="date" id="newDate" name="newDate"
+                                value="<%= product.date ? product.date: "" ;%> ">
 
                         </div>
 
-                     <div class="form-contenedor">
+                        <div class="form-contenedor">
                             <label>Imagen actual</label>
                             <img src="/img/<%= product.img %>" alt="foto">
                         </div>
                         <div class="form-contenedor">
                             <label for="newImg">Nueva Imagen producto</label>
                             <input type="file" id="newImg" name="img" value="/img/<%=product.img %>"
-                            class="form-control <%= locals.errors && errors.img ? 'is-invalid' : null %>"
-                            value="<%= locals.oldData ? oldData.img : null %>">
-                        <% if (locals.errors && errors.img) { %>
-                            <div class="text-danger">
-                                <p>
-                                    <%= errors.img.msg %>
-                                </p>
-                            </div>
-                            <% } %>
+                                class="form-control <%= locals.errors && errors.img ? 'is-invalid' : null %>"
+                                value="<%= locals.oldData ? oldData.img : null %>">
+                            <% if (locals.errors && errors.img) { %>
+                                <div class="text-danger">
+                                    <p>
+                                        <%= errors.img.msg %>
+                                    </p>
+                                </div>
+                                <% } %>
                         </div>
 
-                       
+
                         <div class="form-contenedor">
                             <label for="category">Categoria</label>
                             <select name="category" id="category">
@@ -110,8 +111,18 @@
                             <label for="newDetail" class="colocarmensaje">Descripción
                                 <span class="obligatorio">*</span>
                             </label>
-                            <input type="text" class="textomensaje" id="newDetail" name="newDetail" <%=product.detail ?
-                                product.detail : '' %>>
+                            <input type="text" id="newDetail" name="newDetail"
+                                class="<%= locals.errors && errors.newDetail ? 'is-invalid' : null %>"
+                                value="<%= locals.oldData ? oldData.newDetail: product.detail %>"
+                                 <% if (locals.errors
+                                && errors.newDetail) { %>
+                            <div class="text-danger">
+                                <p>
+                                    <%= errors.newDetail.msg %>
+                                </p>
+                            </div>
+                            <% } %>
+                                </p>
                         </div>
 
                         <div class="form-contenedor">
@@ -134,7 +145,7 @@
                     </div>
 
             </main>
-            <script src="/js/productEdit.js"> </script>
+            <!-- <script src="/js/productEdit.js"> </script> -->
     </body>
 
 </html>

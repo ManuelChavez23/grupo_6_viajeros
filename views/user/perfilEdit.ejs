@@ -8,32 +8,34 @@
         <%- include("../partials/header.ejs") %>
 
             <main>
+                
                 <section class="formulario-editar">
-                    <form action="/perfilEdit/<%= userId %>/storage?_method=PUT" method="POST"
+                   
+                    <form  action="/perfilEdit/<%= userId %>/storage?_method=PUT" method="POST"
                         enctype="multipart/form-data">
 
                         <p>
                             <label for="firstName" class="colocar_nombre">Primer nombre
                             </label>
-                            <input type="text" name="firstName" id="firstName" required="obligatorio"
-                                value="<%= user.first_name %>" placeholder="">
+                            <input type="text" name="firstName" id="firstName"
+                                value="<%= user.first_name %>" placeholder="" required="obligatorio">
                         </p>
                         <p>
                             <label for="lastName" class="colocar_nombre">Apellido
                             </label>
-                            <input type="text" name="lastName" id="lastName" required="obligatorio"
+                            <input type="text" name="lastName" id="lastName"  required="obligatorio"
                                 value="<%= user.last_name ? user.last_name : '' %>">
                         </p>
                         <p>
                             <label for="email" class="colocar_nombre">Email
                             </label>
-                            <input type="email" name="email" id="email" required="obligatorio"
+                            <input type="email" name="email" id="email"  required="obligatorio"
                                 value="<%= user.email ? user.email : '' %>">
                         </p>
                         <p>
                             <label for="user" class="colocar_nombre">Usuario
                             </label>
-                            <input type="text" name="user" id="user" required="obligatorio"
+                            <input type="text" name="user" id="user"  required="obligatorio"
                                 value="<%= user.user ? user.user : '' %>">
                         </p>
                         <p>
@@ -63,7 +65,7 @@
                         <button type="submit" name="enviarformulario" id="enviar1">
                             <p class="enviar3">Subir</p>
                         </button>
-
+                      
                     </form>
                     </div>
                     </div>
