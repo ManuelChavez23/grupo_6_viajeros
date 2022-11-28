@@ -19,7 +19,7 @@ window.addEventListener ('load',function() {
             errores.push('Debe tener por lo menos cinco(5) caracteres.')
         }
         
-        if (campoImg.value.includes('.jpg' || '.jpeg' || '.png' || '.gif')) {
+        if (!campoImg.value.includes('.jpg' || '.jpeg' || '.png' || '.gif')) {
             errores.push('La imágen debe ser formato jpg, jpeg, png o gif.')
         } 
 

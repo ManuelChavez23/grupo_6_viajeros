@@ -20,7 +20,8 @@
                         </div>
 
                         <form id="form" action="/create" method="post" enctype="multipart/form-data">
-                            <p>
+                        
+                            <div class="form-contenedor">
                                 <label for="name" class="colocar_nombre">Nombre Destino
                                 </label>
                                 <input type="text" name="name" id="nombre1" placeholder=""
@@ -33,14 +34,15 @@
                                         </p>
                                     </div>
                                     <% } %>
-                                </p>
-                            <p>
+                            </div>    
+                        
+                            <div class="form-contenedor">        
                                 <label for="date">Fecha de Salida</label>
                                 <input type="date" id="date" name="date">
-                            </p>
-
-
-                            <p>
+                            </div> 
+                                
+                            <div class="form-contenedor">
+                                
                                 <label for="img">Imagen producto</label>
                                 <input type="file" id="img" name="img"
                                     class="form-control <%= locals.errors && errors.img ? 'is-invalid' : null %>"
@@ -52,31 +54,40 @@
                                         </p>
                                     </div>
                                     <% } %>
+                            </div> 
 
-                            </p>
-                            <p>
+                            <div class="form-contenedor">
+                                    
                                 <label for="category">Categoria</label>
                                 <select name="category" id="category">
                                     <option value="1">Nacional</option>
                                     <option value="2">Internacional</option>
                                 </select>
-                            </p>
-                            <p>
+                            </div> 
+                            
+                                
+                            <div class="form-contenedor">
+                                
                                 <label for="status">Tipo de anuncio</label>
                                 <select name="status" id="status">
                                     <option value="1">Destacado</option>
                                     <option value="2">Oferta</option>
                                     <option value="3">Simple</option>
                                 </select>
-                            </p>
-                            <p>
+                            </div> 
+                            
+                                
+                            <div class="form-contenedor">
+                                
                                 <label for="group">Grupo</label>
                                 <select name="group" id="group">
                                     <option value="1">Grupal</option>
                                     <option value="2">Individual</option>
                                 </select>
-                            </p>
-                            <p>
+                            </div> 
+                            
+                            <div class="form-contenedor">    
+                        
                                 <label for="meals">Regimen Comidas</label>
                                 <select name="meals" id="meals">
                                     <option value="1">All inclusive</option>
@@ -85,18 +96,21 @@
                                     <option value="4">No incluye comidas</option>
 
                                 </select>
-                            </p>
-
-                            <p>
+                            </div> 
+                            
+                            <div class="form-contenedor">
+                                
                                 <label for="transport">Traslado</label>
                                 <select name="transport" id="transport">
                                     <option value="1">Avión</option>
                                     <option value="2">Bus</option>
                                     <option value="3">Barco</option>
                                 </select>
-                            </p>
-
-                            <p>
+                            </div> 
+                            
+                                
+                            <div class="form-contenedor">
+                                
                                 <label for="detail" class=" colocarmensaje">Descripción
                                     <span class="obligatorio">*</span>
                                 </label>
@@ -113,16 +127,18 @@
                                         </p>
                                     </div>
                                     <% } %>
-                            </p>
-                            <p>
+                            </div> 
+                            
+                                    
+                            <div class="form-contenedor">
+                                    
                                 <label for="price">Precio</label>
-                                <input type="text" id="price" name="price" value="price" placeholder="$60.000">
-                            </p>
-
-
-
+                                <input type="text" id="price" name="price" placeholder="$">
+                            
+                            </div> 
+                        <div class="form-edit-btn">
                             <button type="submit" name="enviarformulario" id="enviar1">
-                                <p class="enviar3">Subir</p>
+                                Subir
                             </button>
 
 
