@@ -1,20 +1,29 @@
 const fs = require('fs');
 const path = require('path');
-
+const bcrypt = require('bcryptjs');
 const productsJson = fs.readFileSync(path.join(__dirname, '../data/productsBd.json'), 'utf-8');
 const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
 
 let users = JSON.parse(userJson);
 const products = JSON.parse(productsJson);
 
-
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
 const controller = {
     index: (req, res) =>{
-        res.render('index', {products});
+        
+
+        db.Destiny.findAll({raw: true, nest: true}).
+            then((destinos) => {
+                res.render('index', {destinos});
+        })
     },
     contact: (req, res) =>{
         res.render('contact');
+    },
+    nosotros:(req, res) =>{
+        res.render('nosotros');
     },
     cart: (req, res) =>{
         res.render('productCart');
@@ -35,7 +44,7 @@ const controller = {
         if(check.category == "user") {
             res.send('no sos admin');
         } else {
-            if(adminCheck.password == check.password) {
+            if(bcrypt.compareSync(req.body.adminPassword, check.password)) {
                 res.redirect('adminList');
             } else {
                 res.redirect('administrador');

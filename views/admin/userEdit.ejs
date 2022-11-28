@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<%- include("../partials/headProduct.ejs") %>
+<%- include("../partials/head.ejs") %>
 
     <body>
         <%- include("../partials/headerAdmi.ejs") %>
@@ -10,59 +10,55 @@
                 <section class="formulario-editar">
                     <form action="/userEdit/<%= userId %>/storage?_method=PUT" method="POST"
                         enctype="multipart/form-data">
-                        <% let userSelected=users.find(user=> user.id == userId) %>
-                            <p>
-                                <label for="firstName" class="colocar_nombre">Primer nombre
-                                </label>
-                                <input type="text" name="firstName" id="firstName" required="obligatorio"
-                                    value="<%= userSelected.firstName %>" placeholder="">
-                            </p>
-                            <p>
-                                <label for="lastName" class="colocar_nombre">Apellido
-                                </label>
-                                <input type="text" name="lastName" id="lastName" required="obligatorio"
-                                    value="<%= userSelected.lastName ? userSelected.lastName : '' %>">
-                            </p>
-                            <p>
-                                <label for="email" class="colocar_nombre">Email
-                                </label>
-                                <input type="email" name="email" id="email" required="obligatorio"
-                                    value="<%= userSelected.email ? userSelected.email : '' %>">
-                            </p>
-                            <p>
-                                <label for="user" class="colocar_nombre">Usuario
-                                </label>
-                                <input type="text" name="user" id="user" required="obligatorio"
-                                    value="<%= userSelected.user ? userSelected.user : '' %>">
-                            </p>
-                            <p>
-                                <label>Imagen actual</label>
-                                <img width="40%" src="/img/<%= userSelected.img %>" alt="foto"><br>
-                                <label for="img">Nueva Imagen de Usuario</label>
-                                <input type="file" id="img" accept="jpg" name="img">
-                            </p>
-                            <p>
-                                <label for="birth">Nueva Fecha de Salida</label>
-                                <input type="date" id="birth" name="birth"
-                                    value="<%= userSelected.birth ? userSelected.birth : ''; %>">
-                            </p>
-                            <p>
-                                <label for="category">Es administrador?</label>
-                                <select name="category" id="category">
-                                    <option value="user" <%=userSelected.category=="user" ? 'selected' : '' ; %>>Usuario
-                                    </option>
-                                    <option value="admin">Administrador</option>
-                                </select>
-                            </p>
-                            <p>
-                                <label for="newPrice">Numero de telefono</label>
-                                <input type="number" id="phoneNumber" name="phoneNumber"
-                                    value="<%= userSelected.phoneNumber %>">
-                            </p>
 
-                            <button type="submit" name="enviarformulario" id="enviar1">
-                                <p class="enviar3">Subir</p>
-                            </button>
+                        <p>
+                            <label for="firstName" class="colocar_nombre">Primer nombre
+                            </label>
+                            <input type="text" name="firstName" id="firstName" required="obligatorio"
+                                value="<%= user.first_name %>" placeholder="">
+                        </p>
+                        <p>
+                            <label for="lastName" class="colocar_nombre">Apellido
+                            </label>
+                            <input type="text" name="lastName" id="lastName" required="obligatorio"
+                                value="<%= user.last_name ? user.last_name : '' %>">
+                        </p>
+                        <p>
+                            <label for="email" class="colocar_nombre">Email
+                            </label>
+                            <input type="email" name="email" id="email" required="obligatorio"
+                                value="<%= user.email ? user.email : '' %>">
+                        </p>
+                        <p>
+                            <label for="user" class="colocar_nombre">Usuario
+                            </label>
+                            <input type="text" name="user" id="user" required="obligatorio"
+                                value="<%= user.user ? user.user : '' %>">
+                        </p>
+                        <p>
+                            <label>Imagen actual</label>
+                            <img width="40%" src="/img/<%= user.img %>" alt="foto"><br>
+                            <label for="img">Nueva Imagen de Usuario</label>
+                            <input type="file" id="img" accept="jpg" name="img">
+                        </p>
+
+                        
+                        <p>
+                            <label for="category">Es administrador?</label>
+                            <select name="category" id="category">
+                                <option value="1" <%=user.user_category_id=="1" ? 'selected' : '' ; %>>Usuario</option>
+                                <option value="2" <%=user.user_category_id=="2" ? 'selected' : '' ; %>>Administrador
+                                </option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="newPrice">Numero de telefono</label>
+                            <input type="number" id="phoneNumber" name="phoneNumber" value="<%= user.phone_number %>">
+                        </p>
+
+                        <button type="submit" name="enviarformulario" id="enviar1">
+                            <p class="enviar3">Subir</p>
+                        </button>
 
                     </form>
                     </div>
