@@ -1,6 +1,8 @@
 import React from 'react';
 import ChartRow from './ChartRow';
 
+
+
 let tableRowsData = [
     {
         Title: 'Billy Elliot ',
