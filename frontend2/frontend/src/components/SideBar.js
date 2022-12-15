@@ -37,6 +37,14 @@ function SideBar(){
                 {/*<!-- Heading -->*/}
                 <div className="sidebar-heading">Actions</div>
 
+                {/*<!-- Nav Item - Search -->*/}
+                <li className="nav-item">
+                <Link className="nav-link" to="/search">
+                        <i className="fas fa-fw fa-search"></i>
+                        <span>Search</span>
+                    </Link>
+                </li>
+
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
                 <Link className="nav-link" to="/GenresInDb">
