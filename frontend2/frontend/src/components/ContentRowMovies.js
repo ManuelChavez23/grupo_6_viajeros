@@ -5,32 +5,32 @@ import SmallCard from './SmallCard';
 
 /* <!-- Movies in DB --> */
 
-let moviesInDB = {
-    title: 'Movies in Data Base',
+let Productos = {
+    title: 'Total de productos',
     color: 'primary', 
-    cuantity: 21,
+    cuantity: 49,
     icon: 'fa-clipboard-list'
 }
 
 /* <!-- Total awards --> */
 
-let totalAwards = {
-    title:' Total awards', 
+let Usuarios = {
+    title:'Total de usuarios', 
     color:'success', 
-    cuantity: '79',
-    icon:'fa-award'
+    cuantity: '21',
+    icon:'fa-user-check',
 }
 
 /* <!-- Actors quantity --> */
 
-let actorsQuantity = {
-    title:'Actors quantity' ,
+let Categorias = {
+    title:'Total de categorias',
     color:'warning',
-    cuantity:'49',
-    icon:'fa-user-check'
+    cuantity:'2',
+    icon:'fa-award'
 }
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+let cartProps = [Productos, Usuarios, Categorias];
 
 function ContentRowMovies(){
     return (
