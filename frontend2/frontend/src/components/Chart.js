@@ -1,20 +1,22 @@
 import React from 'react';
 import ChartRow from './ChartRow';
 
+
+
 let tableRowsData = [
     {
-        Title: 'Billy Elliot ',
-        Length: '123',
-        Rating: '5',
-        Categories: ['Drama','Comedia'],
+        Title: 'Mirabel Lindwasser',
+        Length: 'Brasil, Albania',
+        Rating: '2',
+        Categories: ['Excursiones','Todo Incluido'],
         Awards: 2
     },
     {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
-        Rating: '4.8',
-        Categories: ['Drama','Acción','Comedia'],
-        Awards: 3
+        Title: 'Jennie Brownbill',
+        Length: 'Alemania, Italia, Japon',
+        Rating: '3',
+        Categories: ['Excursiones','Todo Incluido'],
+        Awards: 1
     },
     
 ]
@@ -29,22 +31,22 @@ function Chart (){
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Usuario</th>
+                                <th>Destinos elegidos</th>
+                                <th>Cantidad</th>
+                                <th>Extras incluidos</th>
+                                <th>Promos</th>
                             </tr>
                         </thead>
-                        <tfoot>
+                        {/* <tfoot>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Usuario</th>
+                                <th>Destinos elegidos</th>
+                                <th>Cantidad</th>
+                                <th>Extras incluidos</th>
+                                <th>Promos</th>
                             </tr>
-                        </tfoot>
+                        </tfoot> */}
                         <tbody>
                             {
                             tableRowsData.map( ( row , i) => {

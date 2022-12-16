@@ -4,6 +4,7 @@ import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
 import LastMovieInDb from './LastMovieInDb';
 import ContentRowMovies from './ContentRowMovies';
+import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -35,6 +36,14 @@ function SideBar(){
 
                 {/*<!-- Heading -->*/}
                 <div className="sidebar-heading">Actions</div>
+
+                {/*<!-- Nav Item - Search -->*/}
+                <li className="nav-item">
+                <Link className="nav-link" to="/search">
+                        <i className="fas fa-fw fa-search"></i>
+                        <span>Search</span>
+                    </Link>
+                </li>
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
@@ -82,6 +91,9 @@ function SideBar(){
             <Switch>
                 <Route exact path="/">
                     <ContentWrapper />
+                </Route>
+                <Route path="/Search">
+                    <SearchMovies />
                 </Route>
                 <Route path="/GenresInDb">
                     <GenresInDb />
