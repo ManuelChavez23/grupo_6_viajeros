@@ -7,7 +7,8 @@ const controller = {
         db.Destiny.findAll({
                 raw:true,
                 nest:true,
-                attributes: ['id', 'name', 'detail']
+                attributes: ['id', 'name', 'detail', 'img'],
+                include: 'categorys'
             }) 
         .then(destinys => {
             destinys = destinys.map(destiny => ({

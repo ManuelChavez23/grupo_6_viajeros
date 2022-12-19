@@ -7,6 +7,7 @@ function SearchMovies(){
 	const[destinys, setDesnitys] = useState([]);
 	const [keyword, setKeyword] = useState('');
 	const busqueda = useRef(null)
+	const [categorys, setCategorys] = useState({});
 
 	
 
@@ -17,7 +18,19 @@ function SearchMovies(){
 		fetch(`http://localhost:3001/api/products`)
 			.then(response => response.json())
 			.then(data => {
-				setDesnitys(data.data)
+				const destinys = data.data
+				setDesnitys(destinys)
+
+				destinys.forEach(destiny => {
+					let categorysState = categorys;
+
+					if(categorysState[destiny.categorys.categoria]) {
+						categorysState[destiny.categorys.categoria] += 1;
+					} else {
+						categorysState[destiny.categorys.categoria] = 1;
+					}
+					setCategorys(categorysState)
+				})
 			})
 	}, [keyword])
 
@@ -65,7 +78,8 @@ function SearchMovies(){
 												<div className="text-center">
 													<img 
 														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
-														src={destiny.img}
+														src={'http://localhost:3001/img/' + destiny.img}
+														
 														alt="" 
 														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
 													/>
