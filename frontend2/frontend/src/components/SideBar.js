@@ -92,7 +92,7 @@ function SideBar(){
                 <Route exact path="/">
                     <ContentWrapper />
                 </Route>
-                <Route path="/Search">
+                <Route path="/search">
                     <SearchMovies />
                 </Route>
                 <Route path="/GenresInDb">

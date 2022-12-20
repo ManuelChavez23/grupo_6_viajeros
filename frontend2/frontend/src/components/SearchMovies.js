@@ -1,23 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+const fetch = require(`node-fetch`);
 /* import noPoster from '../assets/images/404.jpg';
  */
-function SearchMovies(){
+function SearchMovies() {
 
-	const[destinys, setDesnitys] = useState([]);
-	const [keyword, setKeyword] = useState('');
+	const [destinys, setDesnitys] = useState([]);
+	const [keyword, setKeyword] = useState();
 	const busqueda = useRef(null)
 
-	
+
 
 	// Credenciales de API
-	/* const apiKey = 'c53f759'; */ // Intenta poner cualquier cosa antes para probar
+	/* const apiKey = 'c53f759'; ?s=${keyword}&apikey=${apikey} {
+				/method: 'GET',
+				headers: new Headers({ 'Content-type': 'application/json' }),
+				mode: 'no-cors'
+			}http://www.omdbapi.com/ http://localhost:3001/api/products/?i=tt3896198&=${apikey}// Intenta poner cualquier cosa antes para probar*/
+	/*const apikey ='ec314a36'``*/
 
 	useEffect(() => {
 		fetch(`http://localhost:3001/api/products`)
-			.then(response => response.json())
+		.then(response => response.json())
 			.then(data => {
-				setDesnitys(data.data)
+                  setDesnitys(data.data)
+
 			})
 	}, [keyword])
 
@@ -31,10 +37,10 @@ function SearchMovies(){
 
 
 
-	return(
+	return (
 		<div className="container-fluid">
 			{
-				/* apiKey !== '' ? */
+				/*apiKey !== '' ? */
 				<>
 					<div className="row my-4">
 						<div className="col-12 col-md-6">
@@ -63,11 +69,11 @@ function SearchMovies(){
 											</div>
 											<div className="card-body">
 												<div className="text-center">
-													<img 
-														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
+													<img
+														className="img-fluid px-3 px-sm-4 mt-3 mb-4"
 														src={destiny.img}
-														alt="" 
-														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
+														alt=""
+														style={{ width: '90%', height: '400px', objectFit: 'cover' }}
 													/>
 												</div>
 												<p>{destiny.price}</p>
@@ -78,7 +84,7 @@ function SearchMovies(){
 							})
 						}
 					</div>
-					{ destinys.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
+					{destinys.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
 				</>
 				/* :
 				<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿PUSISTE TU APIKEY?</div> */
