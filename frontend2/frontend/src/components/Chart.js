@@ -50,6 +50,7 @@ function Chart (){
                         <tbody>
                             {
                             tableRowsData.map( ( row , i) => {
+                                
                                 return <ChartRow { ...row} key={i}/>
                             })
                             }

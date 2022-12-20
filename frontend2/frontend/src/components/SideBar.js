@@ -30,7 +30,7 @@ function SideBar() {
                     setCategorys(categorysState)
                 })
             })
-    }, [])
+    },[])
 
     return (
         <React.Fragment>

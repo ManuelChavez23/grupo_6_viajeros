@@ -26,10 +26,11 @@ function ContentRowMovies(props){
     let Categorias = {
         title:'Total de categorias',
         color:'warning',
-        cuantity:'2',
+        cuantity:Object.values(props.categorys).length,
         icon:'fa-award'
     }
-    
+  
+   
     let cartProps = [Productos, Usuarios, Categorias];
     
     return (
