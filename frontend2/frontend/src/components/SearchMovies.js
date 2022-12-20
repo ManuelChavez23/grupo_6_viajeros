@@ -2,10 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 const fetch = require(`node-fetch`);
 /* import noPoster from '../assets/images/404.jpg';
  */
-function SearchMovies() {
+function SearchMovies(props){
 
-	const [destinys, setDesnitys] = useState([]);
-	const [keyword, setKeyword] = useState();
+	const [keyword, setKeyword] = useState('');
 	const busqueda = useRef(null)
 
 
@@ -18,14 +17,7 @@ function SearchMovies() {
 			}http://www.omdbapi.com/ http://localhost:3001/api/products/?i=tt3896198&=${apikey}// Intenta poner cualquier cosa antes para probar*/
 	/*const apikey ='ec314a36'``*/
 
-	useEffect(() => {
-		fetch(`http://localhost:3001/api/products`)
-		.then(response => response.json())
-			.then(data => {
-                  setDesnitys(data.data)
-
-			})
-	}, [keyword])
+	
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
@@ -60,7 +52,7 @@ function SearchMovies() {
 						</div>
 						{/* Listado de películas */}
 						{
-							destinys.length > 0 && destinys.map((destiny, i) => {
+							props.destinys.length > 0 && props.destinys.map((destiny, i) => {
 								return (
 									<div className="col-sm-6 col-md-3 my-4" key={i}>
 										<div className="card shadow mb-4">
@@ -69,11 +61,12 @@ function SearchMovies() {
 											</div>
 											<div className="card-body">
 												<div className="text-center">
-													<img
-														className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-														src={destiny.img}
-														alt=""
-														style={{ width: '90%', height: '400px', objectFit: 'cover' }}
+													<img 
+														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
+														src={'http://localhost:3001/img/' + destiny.img}
+														
+														alt="" 
+														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
 													/>
 												</div>
 												<p>{destiny.price}</p>
@@ -84,7 +77,7 @@ function SearchMovies() {
 							})
 						}
 					</div>
-					{destinys.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
+					{ props.destinys.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
 				</>
 				/* :
 				<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿PUSISTE TU APIKEY?</div> */
