@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-const fetch = require(`node-fetch`);
+
 /* import noPoster from '../assets/images/404.jpg';
  */
 function SearchMovies(props){
