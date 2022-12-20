@@ -1,9 +1,26 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import ContentRowCenter from './ContentRowCenter';
 import ContentRowMovies from './ContentRowMovies';
 import Chart from './Chart';
 
 function ContentRowTop(props){
+
+	const [users, setUsers] = useState({});
+
+    useEffect(() => {
+        fetch(`http://localhost:3001/api/users`)
+            .then(response => response.json())
+            .then(data => {
+                const users = data.data
+                setUsers(users)
+
+				users.map(user => ({
+					...user,
+				})
+				)})
+    }, [])
+
+
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -16,12 +33,15 @@ function ContentRowTop(props){
 					<ContentRowMovies 
 						destinys={props.destinys}
                         categorys={props.categorys}
+						users = {users}
 					/>
 					<ContentRowCenter 
 						destinys={props.destinys}
                         categorys={props.categorys}
 					/>
-					<Chart />
+					<Chart 
+						users = {users}
+						/>
 	
 				</div>
 				{/*<!--End Content Row Top-->*/}

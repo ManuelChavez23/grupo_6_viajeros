@@ -3,7 +3,6 @@ import image from '../assets/images/logoViajeros.png';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
 import LastMovieInDb from './LastMovieInDb';
-import ContentRowMovies from './ContentRowMovies';
 import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import { Link, Route, Switch } from 'react-router-dom';
@@ -19,8 +18,6 @@ function SideBar() {
             .then(data => {
                 const destinys = data.data
                 setDesnitys(destinys)
-
-
 
                 destinys.forEach(destiny => {
                     let categorysState = categorys;
@@ -86,34 +83,12 @@ function SideBar() {
                         <span>Charts</span></Link>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item nav-link">
-                    <Link className="nav-link" to="/ContentRowMovies">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
-                </li>
-
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block" />
             </ul>
             {/*<!-- End of Sidebar -->*/}
 
-            {/*<!-- Microdesafio 1 -->*/}
-            {/*<!--<Route exact path="/">
-                <ContentWrapper />
-            </Route>
-            <Route path="/GenresInDb">
-                <GenresInDb />
-            </Route>
-            <Route path="/LastMovieInDb">
-                <LastMovieInDb />
-            </Route>
-            <Route path="/ContentRowMovies">
-                <ContentRowMovies />
-            </Route>*/}
-            {/*<!-- End Microdesafio 1 -->*/}
-
-            {/*<!-- End Microdesafio 2 -->*/}
+            
 
             <Switch>
                 <Route exact path="/">
@@ -134,15 +109,9 @@ function SideBar() {
                 <Route path="/LastMovieInDb">
                     <LastMovieInDb />
                 </Route>
-                <Route path="/ContentRowMovies">
-                    <ContentRowMovies
-                        destinys={destinys}
-                        categorys={categorys}
-                    />
-                </Route>
                 <Route component={NotFound} />
             </Switch>
-            {/*<!-- End Microdesafio 2 -->*/}
+            
         </React.Fragment>
     )
 }

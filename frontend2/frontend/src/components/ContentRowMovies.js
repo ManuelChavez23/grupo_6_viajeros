@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import SmallCard from './SmallCard';
 /*  Cada set de datos es un objeto literal */
 
 /* <!-- Movies in DB --> */
-
-
 
 function ContentRowMovies(props){
     let Productos = {
@@ -19,7 +17,7 @@ function ContentRowMovies(props){
     let Usuarios = {
         title:'Total de usuarios', 
         color:'success', 
-        cuantity: '21',
+        cuantity: props.users.length ? props.users.length : 0,
         icon:'fa-user-check',
     }
     
@@ -33,7 +31,7 @@ function ContentRowMovies(props){
     }
     
     let cartProps = [Productos, Usuarios, Categorias];
-console.log(props.destinys);
+    
     return (
         <div className="row">
             
