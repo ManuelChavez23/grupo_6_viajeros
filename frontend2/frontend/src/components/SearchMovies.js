@@ -2,37 +2,17 @@ import React, { useState, useEffect, useRef } from 'react';
 
 /* import noPoster from '../assets/images/404.jpg';
  */
-function SearchMovies(){
+function SearchMovies(props){
 
-	const[destinys, setDesnitys] = useState([]);
 	const [keyword, setKeyword] = useState('');
 	const busqueda = useRef(null)
-	const [categorys, setCategorys] = useState({});
 
 	
 
 	// Credenciales de API
 	/* const apiKey = 'c53f759'; */ // Intenta poner cualquier cosa antes para probar
 
-	useEffect(() => {
-		fetch(`http://localhost:3001/api/products`)
-			.then(response => response.json())
-			.then(data => {
-				const destinys = data.data
-				setDesnitys(destinys)
-
-				destinys.forEach(destiny => {
-					let categorysState = categorys;
-
-					if(categorysState[destiny.categorys.categoria]) {
-						categorysState[destiny.categorys.categoria] += 1;
-					} else {
-						categorysState[destiny.categorys.categoria] = 1;
-					}
-					setCategorys(categorysState)
-				})
-			})
-	}, [keyword])
+	
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
@@ -67,7 +47,7 @@ function SearchMovies(){
 						</div>
 						{/* Listado de películas */}
 						{
-							destinys.length > 0 && destinys.map((destiny, i) => {
+							props.destinys.length > 0 && props.destinys.map((destiny, i) => {
 								return (
 									<div className="col-sm-6 col-md-3 my-4" key={i}>
 										<div className="card shadow mb-4">
@@ -92,7 +72,7 @@ function SearchMovies(){
 							})
 						}
 					</div>
-					{ destinys.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
+					{ props.destinys.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
 				</>
 				/* :
 				<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿PUSISTE TU APIKEY?</div> */
