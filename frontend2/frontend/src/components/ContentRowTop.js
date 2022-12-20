@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import ContentRowCenter from './ContentRowCenter';
 import ContentRowMovies from './ContentRowMovies';
 import Chart from './Chart';
 
 function ContentRowTop(props){
 
-	/* const [users, setUsers] = useState({});
+	const [users, setUsers] = useState({});
 
     useEffect(() => {
         fetch(`http://localhost:3001/api/users`)
@@ -18,7 +18,7 @@ function ContentRowTop(props){
 					...user,
 				})
 				)})
-    }, []) */
+    }, [])
 
 
     return(
@@ -33,14 +33,14 @@ function ContentRowTop(props){
 					<ContentRowMovies 
 						destinys={props.destinys}
                         categorys={props.categorys}
-						/* users = {props.users} */
+						users = {users}
 					/>
 					<ContentRowCenter 
 						destinys={props.destinys}
                         categorys={props.categorys}
 					/>
 					<Chart 
-						/* users = {props.users} */
+						users = {users}
 						/>
 	
 				</div>

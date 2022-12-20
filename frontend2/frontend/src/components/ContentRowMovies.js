@@ -17,7 +17,7 @@ function ContentRowMovies(props){
     let Usuarios = {
         title:'Total de usuarios', 
         color:'success', 
-        cuantity:/*  props.users.length ? props.users.length : 0 */'',
+        cuantity: props.users.length ? props.users.length : 0,
         icon:'fa-user-check',
     }
     
