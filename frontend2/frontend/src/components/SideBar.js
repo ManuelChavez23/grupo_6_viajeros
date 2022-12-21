@@ -7,10 +7,12 @@ import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import { Link, Route, Switch } from 'react-router-dom';
 
-function SideBar() {
+function SideBar(props) {
     const [destinys, setDesnitys] = useState([]);
     const [categorys, setCategorys] = useState({});
 
+    
+    
 
     useEffect(() => {
         fetch(`http://localhost:3001/api/products`)
@@ -107,7 +109,9 @@ function SideBar() {
                     <GenresInDb />
                 </Route>
                 <Route path="/LastMovieInDb">
-                    <LastMovieInDb />
+                    <LastMovieInDb
+                        destinys={destinys}
+                    />
                 </Route>
                 <Route component={NotFound} />
             </Switch>
