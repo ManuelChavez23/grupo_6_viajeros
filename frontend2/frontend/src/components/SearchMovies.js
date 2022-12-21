@@ -54,19 +54,19 @@ function SearchMovies(props){
 						{
 							props.destinys.length > 0 && props.destinys.map((destiny, i) => {
 								return (
-									<div className="col-sm-6 col-md-3 my-4" key={i}>
-										<div className="card shadow mb-4">
-											<div className="card-header py-3">
+									<div className="col-sm-6 col-md-4 mb-4 " key={i}>
+										<div className="card shadow h-100">
+											<div className="card-header">
 												<h5 className="m-0 font-weight-bold text-gray-800">{destiny.name}</h5>
 											</div>
-											<div className="card-body">
+											<div className="card-body ">
 												<div className="text-center">
 													<img 
-														className="img-overlay px-3 px-sm-4 mt-3 mb-4" 
+														className="img-overlay w-100" 
 														src={'http://localhost:3001/img/' + destiny.img}
 														
 														alt="" 
-														style={{  objectFit: 'contain' }} 
+														/* style={{  objectFit: 'contain' }}  */
 													/>
 												</div>
 												<p>{destiny.price}</p>

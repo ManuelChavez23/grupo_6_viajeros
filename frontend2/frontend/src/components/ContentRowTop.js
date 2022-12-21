@@ -6,6 +6,8 @@ import Chart from './Chart';
 
 function ContentRowTop(props){
 
+	console.log(props.destinys);
+
 	const [users, setUsers] = useState({});
 
     useEffect(() => {

@@ -1,8 +1,9 @@
 import React from 'react';
 
 function LastMovieInDb(props){
-      let lastDestiny = props.destinys[props.destinys.length - 1] 
-
+    let lastDestiny = props.destinys.length > 0 ? props.destinys[props.destinys.length - 1] : {name: "", detail: "", img: ""}
+    
+    console.log(lastDestiny);
 
 
     return(
