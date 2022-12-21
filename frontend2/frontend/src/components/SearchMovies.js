@@ -38,17 +38,17 @@ function SearchMovies(props){
 						<div className="col-12 col-md-6">
 							{/* Buscador */}
 							<form method="GET" onSubmit={handleSubmit}>
-								<div className="form-group">
+								{/*  <div className="form-group">
 									<label htmlFor="">Buscar por título:</label>
 									<input ref={busqueda} type="text" className="form-control" />
 								</div>
-								<button className="btn btn-info" type="submit">Search</button>
+								<button className="btn btn-info" type="submit">Search</button>*/}
 							</form>
 						</div>
 					</div>
 					<div className="row">
 						<div className="col-12">
-							<h2>Destinos para la palabra: {keyword}</h2>
+							<h2>Destinos {keyword}</h2>
 						</div>
 						{/* Listado de películas */}
 						{
@@ -62,11 +62,11 @@ function SearchMovies(props){
 											<div className="card-body">
 												<div className="text-center">
 													<img 
-														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
+														className="img-overlay px-3 px-sm-4 mt-3 mb-4" 
 														src={'http://localhost:3001/img/' + destiny.img}
 														
 														alt="" 
-														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
+														style={{  objectFit: 'contain' }} 
 													/>
 												</div>
 												<p>{destiny.price}</p>

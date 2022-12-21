@@ -3,6 +3,7 @@ import ContentRowCenter from './ContentRowCenter';
 import ContentRowMovies from './ContentRowMovies';
 import Chart from './Chart';
 
+
 function ContentRowTop(props){
 
 	const [users, setUsers] = useState({});
@@ -42,10 +43,10 @@ function ContentRowTop(props){
 					<Chart 
 						users = {users}
 						/>
-	
+	                  
 				</div>
 				{/*<!--End Content Row Top-->*/}
-
+              
         </React.Fragment>
     )
 
