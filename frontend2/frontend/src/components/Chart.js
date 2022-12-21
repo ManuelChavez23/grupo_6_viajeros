@@ -1,8 +1,6 @@
 import React from 'react';
 import ChartRow from './ChartRow';
 
-
-
 let tableRowsData = [
     {
         Title: 'Mirabel Lindwasser',
@@ -22,7 +20,14 @@ let tableRowsData = [
 ]
 
 
+
+
 function Chart (){
+   /* let lastUsers1= props.users[props.users.length - 1]
+    let lastUsers2= props.users[props.users.length - 2]*/
+   
+
+  
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">

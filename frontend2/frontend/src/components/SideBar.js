@@ -6,6 +6,7 @@ import LastMovieInDb from './LastMovieInDb';
 import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import { Link, Route, Switch } from 'react-router-dom';
+import Chart from './Chart';
 
 function SideBar() {
     const [destinys, setDesnitys] = useState([]);
@@ -62,9 +63,9 @@ function SideBar() {
 
                 {/*<!-- Nav Item - Search -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/search">
+                    <Link className="nav-link" to="/destinys">
                         <i className="fas fa-fw fa-search"></i>
-                        <span>Search</span>
+                        <span>Lista de Destinos</span>
                     </Link>
                 </li>
 
@@ -97,7 +98,7 @@ function SideBar() {
                         categorys={categorys}
                     />
                 </Route>
-                <Route path="/Search">
+                <Route path="/destinys">
                     <SearchMovies
                         destinys={destinys}
                         categorys={categorys}
@@ -108,6 +109,9 @@ function SideBar() {
                 </Route>
                 <Route path="/LastMovieInDb">
                     <LastMovieInDb />
+                </Route>
+                <Route path="/chart">
+                    <Chart />
                 </Route>
                 <Route component={NotFound} />
             </Switch>
