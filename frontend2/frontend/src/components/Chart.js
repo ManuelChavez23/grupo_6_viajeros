@@ -21,8 +21,7 @@ function Chart (props){
         },
         
     ]
-    console.log(lastUsers1)
-
+  
   
     return (
         /* <!-- DataTales Example --> */
