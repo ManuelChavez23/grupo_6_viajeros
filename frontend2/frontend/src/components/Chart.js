@@ -1,31 +1,27 @@
 import React from 'react';
 import ChartRow from './ChartRow';
 
-let tableRowsData = [
-    {
-        Title: 'Mirabel Lindwasser',
-        Length: 'Brasil, Albania',
-        Rating: '2',
-        Categories: ['Excursiones','Todo Incluido'],
-        Awards: 2
-    },
-    {
-        Title: 'Jennie Brownbill',
-        Length: 'Alemania, Italia, Japon',
-        Rating: '3',
-        Categories: ['Excursiones','Todo Incluido'],
-        Awards: 1
-    },
+
+function Chart (props){
+    let lastUsers1= props.users.length > 0 ? props.users[props.users.length - 1] : {first_name: '', last_name: '', email: '', user: ''}
+    let lastUsers2= props.users.length > 0 ? props.users[props.users.length - 2] : {first_name: '', last_name: '', email: '', user: ''}
     
-]
-
-
-
-
-function Chart (){
-   /* let lastUsers1= props.users[props.users.length - 1]
-    let lastUsers2= props.users[props.users.length - 2]*/
-   
+    let tableRowsData = [
+        {
+            Name: lastUsers1.first_name,
+            LastName: lastUsers1.last_name,
+            Email: lastUsers1.email,
+            User: lastUsers1.user,
+        },
+        {
+            Name: lastUsers2.first_name,
+            LastName: lastUsers2.last_name,
+            Email: lastUsers2.email,
+            User: lastUsers2.user,
+        },
+        
+    ]
+    console.log(lastUsers1)
 
   
     return (
@@ -36,22 +32,14 @@ function Chart (){
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Usuario</th>
-                                <th>Destinos elegidos</th>
-                                <th>Cantidad</th>
-                                <th>Extras incluidos</th>
-                                <th>Promos</th>
+                                <th>Name</th>
+                                <th>LastName</th>
+                                <th>Email</th>
+                                <th>User</th>
+                                
                             </tr>
                         </thead>
-                        {/* <tfoot>
-                            <tr>
-                                <th>Usuario</th>
-                                <th>Destinos elegidos</th>
-                                <th>Cantidad</th>
-                                <th>Extras incluidos</th>
-                                <th>Promos</th>
-                            </tr>
-                        </tfoot> */}
+                        
                         <tbody>
                             {
                             tableRowsData.map( ( row , i) => {

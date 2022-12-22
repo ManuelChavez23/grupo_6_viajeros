@@ -65,27 +65,34 @@ function GenresInDb() {
               </div>
             </div>
             </div>
-            {/*
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
+          </div> 
+        </div>
+      </div>
+
+
+      <div className="card shadow mb-4">
+        <div className="card-header py-3">
+          <h5 className="m-0 font-weight-bold text-gray-800">
+            Categorias
+          </h5>
+        </div>
+        <div className="card-body">
+          <div className="row">
+
+          <div className="col-lg-6 mb-4">
+              <div className="card bg-info text-white shadow">
                 <div className="card-body">Portugal</div>
               </div>
             </div>
+            
             <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Canada</div>
+              <div className="card bg-info text-white shadow">
+                <div className="card-body">Portugal</div>
               </div>
             </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Filipinas</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Haiti</div>
-              </div>
-            </div>*/}
+            
+    
+      
           </div> 
         </div>
       </div>

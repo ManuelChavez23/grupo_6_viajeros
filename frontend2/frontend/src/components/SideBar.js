@@ -12,9 +12,6 @@ function SideBar(props) {
     const [destinys, setDesnitys] = useState([]);
     const [categorys, setCategorys] = useState({});
 
-    
-    
-
     useEffect(() => {
         fetch(`http://localhost:3001/api/products`)
             .then(response => response.json())
@@ -31,10 +28,11 @@ function SideBar(props) {
                         categorysState[destiny.categorys.categoria] = 1;
                     }
                     setCategorys(categorysState)
+                    
                 })
             })
     },[])
-
+    
     return (
         <React.Fragment>
             {/*<!-- Sidebar -->*/}

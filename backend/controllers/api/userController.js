@@ -4,7 +4,7 @@ const sequelize = db.sequelize;
 
 const controller = {
     users: (req,res) => {
-        db.User.findAll({raw:true, attributes: ['id', 'first_name', 'email']}) 
+        db.User.findAll({raw:true, attributes: ['id', 'first_name', 'last_name', 'email', 'user']}) 
         .then(users => {
             users = users.map(user => ({
                 ...user,
