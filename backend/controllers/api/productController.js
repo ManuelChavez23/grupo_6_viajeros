@@ -25,7 +25,7 @@ const controller = {
                     cantidad: nacional
                 },
                 {
-                    nombre: "internacional",
+                    nombre: "Internacional",
                     cantidad: internacional
 
                 }]

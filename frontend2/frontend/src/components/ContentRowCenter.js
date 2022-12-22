@@ -4,7 +4,7 @@ import GenresInDb from './GenresInDb';
 
 function ContentRowCenter(props){
 
-    console.log(props.destinys);
+    
     return (
         <div className="row">
             
@@ -15,7 +15,10 @@ function ContentRowCenter(props){
             {/*<!-- End content row last movie in Data Base -->*/}
 
             {/*<!-- Genres in DB -->*/}
-            <GenresInDb />
+            <GenresInDb 
+            destinys={props.destinys}
+            categorys={props.categorys}
+            total={props.total}/>
             {/* props.destinys > 0 && props.destinys.map() */}
 
         </div>
