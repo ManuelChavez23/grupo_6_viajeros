@@ -3,10 +3,7 @@ import ContentRowCenter from './ContentRowCenter';
 import ContentRowMovies from './ContentRowMovies';
 import Chart from './Chart';
 
-
 function ContentRowTop(props){
-
-
 	const [users, setUsers] = useState({});
 
     useEffect(() => {
@@ -21,7 +18,6 @@ function ContentRowTop(props){
 				})
 				)})
     }, [])
-
 
     return(
         <React.Fragment>
@@ -40,6 +36,7 @@ function ContentRowTop(props){
 					<ContentRowCenter 
 						destinys={props.destinys}
                         categorys={props.categorys}
+						
 					/>
 					<Chart 
 						users = {users}
@@ -50,6 +47,5 @@ function ContentRowTop(props){
               
         </React.Fragment>
     )
-
 }
 export default ContentRowTop;

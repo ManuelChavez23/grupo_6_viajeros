@@ -1,23 +1,9 @@
 import React, { useState, useRef } from 'react';
 
-/* import noPoster from '../assets/images/404.jpg';
- */
 function SearchMovies(props){
 
 	const [keyword, setKeyword] = useState('');
 	const busqueda = useRef(null)
-
-
-
-	// Credenciales de API
-	/* const apiKey = 'c53f759'; ?s=${keyword}&apikey=${apikey} {
-				/method: 'GET',
-				headers: new Headers({ 'Content-type': 'application/json' }),
-				mode: 'no-cors'
-			}http://www.omdbapi.com/ http://localhost:3001/api/products/?i=tt3896198&=${apikey}// Intenta poner cualquier cosa antes para probar*/
-	/*const apikey ='ec314a36'``*/
-
-	
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
@@ -27,22 +13,14 @@ function SearchMovies(props){
 		setKeyword(inputValue);
 	}
 
-
-
 	return (
 		<div className="container-fluid">
 			{
-				/*apiKey !== '' ? */
 				<>
 					<div className="row my-4">
 						<div className="col-12 col-md-6">
 							{/* Buscador */}
 							<form method="GET" onSubmit={handleSubmit}>
-								{/*  <div className="form-group">
-									<label htmlFor="">Buscar por título:</label>
-									<input ref={busqueda} type="text" className="form-control" />
-								</div>
-								<button className="btn btn-info" type="submit">Search</button>*/}
 							</form>
 						</div>
 					</div>
@@ -50,7 +28,7 @@ function SearchMovies(props){
 						<div className="col-12">
 							<h2>Destinos {keyword}</h2>
 						</div>
-						{/* Listado de películas */}
+						{/* Listado de destinos */}
 						{
 							props.destinys.length > 0 && props.destinys.map((destiny, i) => {
 								return (
@@ -63,10 +41,7 @@ function SearchMovies(props){
 												<div className="text-center">
 													<img 
 														className="img-overlay w-100" 
-														src={'http://localhost:3001/img/' + destiny.img}
-														
-														alt="" 
-														/* style={{  objectFit: 'contain' }}  */
+														src={'http://localhost:3001/img/' + destiny.img} alt="" 
 													/>
 												</div>
 												<p>{destiny.price}</p>
@@ -77,10 +52,8 @@ function SearchMovies(props){
 							})
 						}
 					</div>
-					{ props.destinys.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
+					{ props.destinys.length === 0 && <div className="alert alert-warning text-center">No se encontraron destinos</div>}
 				</>
-				/* :
-				<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿PUSISTE TU APIKEY?</div> */
 			}
 		</div>
 	)

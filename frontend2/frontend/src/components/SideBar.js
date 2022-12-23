@@ -17,11 +17,13 @@ function SideBar(props) {
         fetch(`http://localhost:3001/api/products`)
             .then(response => response.json())
             .then(data => {
+
+                const total = data.countByCategory
+                setTotal(total)
+                console.log(total)
+
                 const destinys = data.data
                 setDesnitys(destinys)
-                const total = data.countByCategory
-               setTotal(total)
-               
 
                 destinys.forEach(destiny => {
                     let categorysState = categorys;
@@ -32,7 +34,8 @@ function SideBar(props) {
                         categorysState[destiny.categorys.categoria] = 1;
                     }
                     setCategorys(categorysState)
-                    
+
+                
                 })
             })
     },[])
@@ -92,8 +95,6 @@ function SideBar(props) {
                 <hr className="sidebar-divider d-none d-md-block" />
             </ul>
             {/*<!-- End of Sidebar -->*/}
-
-            
 
             <Switch>
                 <Route exact path="/">

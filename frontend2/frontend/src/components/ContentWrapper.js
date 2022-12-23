@@ -14,6 +14,7 @@ function ContentWrapper(props){
                     <ContentRowTop 
                         destinys={props.destinys}
                         categorys={props.categorys}
+                        
                     />
                     <Footer />
                 </div>

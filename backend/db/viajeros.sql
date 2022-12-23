@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-12-2022 a las 23:13:35
+-- Tiempo de generación: 23-12-2022 a las 02:43:59
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -100,6 +100,25 @@ INSERT INTO `destiny` (`ID`, `name`, `date`, `price`, `detail`, `destiny_categor
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `destiny_categories`
+--
+
+CREATE TABLE `destiny_categories` (
+  `ID` int(10) NOT NULL,
+  `categoria` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `destiny_categories`
+--
+
+INSERT INTO `destiny_categories` (`ID`, `categoria`) VALUES
+(1, 'Nacional'),
+(2, 'Internacional');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `destiny_user`
 --
 
@@ -127,6 +146,67 @@ CREATE TABLE `groups` (
 INSERT INTO `groups` (`ID`, `group`) VALUES
 (1, 'Individual'),
 (2, 'Grupal');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `meals_ids`
+--
+
+CREATE TABLE `meals_ids` (
+  `ID` int(10) NOT NULL,
+  `meals` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `meals_ids`
+--
+
+INSERT INTO `meals_ids` (`ID`, `meals`) VALUES
+(1, 'Todo incluido'),
+(2, 'Media pensión '),
+(3, 'Pensión completa'),
+(4, 'No incluye comidas');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `statuses`
+--
+
+CREATE TABLE `statuses` (
+  `ID` int(10) NOT NULL,
+  `status` varchar(23) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `statuses`
+--
+
+INSERT INTO `statuses` (`ID`, `status`) VALUES
+(1, 'Destacado'),
+(2, 'Oferta'),
+(3, 'Simple');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `transport_ids`
+--
+
+CREATE TABLE `transport_ids` (
+  `ID` int(10) NOT NULL,
+  `transport` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `transport_ids`
+--
+
+INSERT INTO `transport_ids` (`ID`, `transport`) VALUES
+(1, 'Avion'),
+(2, 'Colectivo'),
+(3, 'Barco');
 
 -- --------------------------------------------------------
 
@@ -172,6 +252,25 @@ INSERT INTO `users` (`ID`, `first_name`, `last_name`, `email`, `user`, `password
 (19, 'Inesita', 'Bettison', 'ibettisoni@ezinearticles.com', 'ibettisoni', 'YSc1dzmdQUs', 2, 'usuario4.jpeg', 859),
 (20, 'Tani', 'Curnnok', 'tcurnnokj@macromedia.com', 'tcurnnokj', 'C3nGxaz0', 2, 'usuario8.jpeg', 626);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `user_categorys`
+--
+
+CREATE TABLE `user_categorys` (
+  `ID` int(10) NOT NULL,
+  `category` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `user_categorys`
+--
+
+INSERT INTO `user_categorys` (`ID`, `category`) VALUES
+(1, 'user'),
+(2, 'admin');
+
 --
 -- Índices para tablas volcadas
 --
@@ -180,6 +279,12 @@ INSERT INTO `users` (`ID`, `first_name`, `last_name`, `email`, `user`, `password
 -- Indices de la tabla `destiny`
 --
 ALTER TABLE `destiny`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indices de la tabla `destiny_categories`
+--
+ALTER TABLE `destiny_categories`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -197,11 +302,35 @@ ALTER TABLE `groups`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indices de la tabla `meals_ids`
+--
+ALTER TABLE `meals_ids`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indices de la tabla `statuses`
+--
+ALTER TABLE `statuses`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indices de la tabla `transport_ids`
+--
+ALTER TABLE `transport_ids`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indices de la tabla `user_categorys`
+--
+ALTER TABLE `user_categorys`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -212,6 +341,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `destiny`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT de la tabla `destiny_categories`
+--
+ALTER TABLE `destiny_categories`
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `destiny_user`
@@ -226,10 +361,34 @@ ALTER TABLE `groups`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT de la tabla `meals_ids`
+--
+ALTER TABLE `meals_ids`
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `statuses`
+--
+ALTER TABLE `statuses`
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `transport_ids`
+--
+ALTER TABLE `transport_ids`
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT de la tabla `user_categorys`
+--
+ALTER TABLE `user_categorys`
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

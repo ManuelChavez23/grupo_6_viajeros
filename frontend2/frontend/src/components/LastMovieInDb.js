@@ -3,9 +3,6 @@ import React from 'react';
 function LastMovieInDb(props){
     let lastDestiny = props.destinys.length > 0 ? props.destinys[props.destinys.length - 1] : {name: "", detail: "", img: ""}
     
-  
-
-
     return(
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
