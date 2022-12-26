@@ -36,7 +36,7 @@ function ContentRowTop(props){
 					<ContentRowCenter 
 						destinys={props.destinys}
                         categorys={props.categorys}
-						
+						total={props.total}
 					/>
 					<Chart 
 						users = {users}

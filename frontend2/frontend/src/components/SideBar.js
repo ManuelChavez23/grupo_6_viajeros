@@ -8,7 +8,7 @@ import NotFound from './NotFound';
 import { Link, Route, Switch } from 'react-router-dom';
 import Chart from './Chart';
 
-function SideBar(props) {
+function SideBar() {
     const [destinys, setDesnitys] = useState([]);
     const [categorys, setCategorys] = useState({});
     const [total, setTotal]=useState([]); 
