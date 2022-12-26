@@ -11,7 +11,7 @@ import Chart from './Chart';
 function SideBar(props) {
     const [destinys, setDesnitys] = useState([]);
     const [categorys, setCategorys] = useState({});
-    const [total, setTotal]=useState([]);
+    const [total, setTotal]=useState([]); 
 
     useEffect(() => {
         fetch(`http://localhost:3001/api/products`)
@@ -20,7 +20,7 @@ function SideBar(props) {
 
                 const total = data.countByCategory
                 setTotal(total)
-                console.log(total)
+                
 
                 const destinys = data.data
                 setDesnitys(destinys)
@@ -101,6 +101,7 @@ function SideBar(props) {
                     <ContentWrapper
                         destinys={destinys}
                         categorys={categorys}
+                        
                     />
                 </Route>
                 <Route path="/destinys">

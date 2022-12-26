@@ -15,6 +15,7 @@ function ContentWrapper(props){
                         destinys={props.destinys}
                         categorys={props.categorys}
                         
+                        
                     />
                     <Footer />
                 </div>
