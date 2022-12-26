@@ -2,8 +2,8 @@ import React from "react";
 
 function GenresInDb(props) {
   
-  let nacional = props.total.length > 0 ? props.total[0] : {nombre: '', cantidad: ''} 
-  let internacional = props.total.length > 0 ? props.total[1] : {nombre: '', cantidad: ''}
+  let nacional = props.total ? props.total[0] : {nombre: '', cantidad: ''} 
+  let internacional = props.total ? props.total[1] : {nombre: '', cantidad: ''}
   let portugal= props.destinys.length > 0 ? props.destinys[23] : {name: '', img: ''}
   let tailandia= props.destinys.length > 0 ? props.destinys[45] : {name: '', img: ''}
   let indonesia= props.destinys.length > 0 ? props.destinys[14] : {name: '', img: ''}
