@@ -153,7 +153,7 @@ const userController = {
                 user: req.body.user,
             }
         }).then((check) => {
-            console.log(check)
+            
             if(check) {
                 if(bcrypt.compareSync(req.body.password, check.password)) {
                     req.session.usuariologueado = check;

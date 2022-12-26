@@ -3,11 +3,13 @@ const express = require('express');
 const router = express.Router();
 
 const adminController = require('../controllers/adminController'); 
-
+const adminMiddleware = require('../middlewares/adminMiddleware');
 const multer = require('multer');
 
 const path = require('path')
 const { check } = require('express-validator');
+
+router.use(adminMiddleware);
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
