@@ -101,7 +101,7 @@ function SideBar() {
                     <ContentWrapper
                         destinys={destinys}
                         categorys={categorys}
-                        
+                        total={total}
                     />
                 </Route>
                 <Route path="/destinys">

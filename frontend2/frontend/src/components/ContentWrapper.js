@@ -14,7 +14,7 @@ function ContentWrapper(props){
                     <ContentRowTop 
                         destinys={props.destinys}
                         categorys={props.categorys}
-                        
+                        total={props.total}
                         
                     />
                     <Footer />
