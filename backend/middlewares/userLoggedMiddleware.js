@@ -7,25 +7,27 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 
 function userLoggedMiddleware (req, res, next) {
-    /* res.locals.isLogged = false;
-    res.locals.isAdmin = false; */
-
-    console.log(req.cookies)
+    /* res.locals.isLogged = false; */
+    /* res.locals.isAdmin = false;  */
+    
+    
     let userInCookie = req.cookies.user;
     
-    let userFromCookie = 
-    db.User.findAll()
-        .then((usuarios) => {
-            if(usuarios) {
-            req.session.usuariologueado = userInCookie
+/*     let userFromCookie =  */
+    db.User.findAll({
+        raw: true,
+    })
+        .then((usuarios) => { 
+            if(usuarios) { 
+            /* req.session.usuariologueado = usuarios
+            console.log( req.session.usuariologueado) */
+            let usuarioEncontrado = usuarios.filter( e => e.user == userInCookie)
+           console.log(usuarioEncontrado);
         }
     
         if (req.session && req.session.usuariologueado) {
             res.locals.isLogged = true;
             res.locals.usuariologueado = req.session.usuariologueado;
-            if ( req.session.usuariologueado.user_category_id === 2){
-                res.locals.isAdmin = true;
-            }
         }
         
         next()});

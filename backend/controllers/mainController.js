@@ -39,17 +39,24 @@ const controller = {
             password: req.body.adminPassword
         }
 
-        /* let check = users.find(elemento => elemento.user == adminCheck.user); */
-
-        if(check.user_category == 1) {
-            res.send('no sos admin');
-        } else {
-            if(bcrypt.compareSync(req.body.adminPassword, check.password)) {
-                res.redirect('adminList');
-            } else {
-                res.redirect('administrador');
+        db.User.findOne({
+            raw: true,
+            where: {
+                user: adminCheck.user
             }
-        }
+        })
+        .then((e) => {
+            if(e.user_category_id == 1) {
+                res.send('no sos admin');
+            } else {
+                if(bcrypt.compareSync(req.body.adminPassword, e.password)) {
+                    res.redirect('adminList');
+                } else {
+                    res.redirect('administrador');
+                }
+            }
+        })
+        
     }
 }
 
