@@ -7,8 +7,8 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 
 function userLoggedMiddleware (req, res, next) {
-    res.locals.isLogged = false;
-    res.locals.isAdmin = false;
+    /* res.locals.isLogged = false;
+    res.locals.isAdmin = false; */
 
     console.log(req.cookies)
     let userInCookie = req.cookies.user;
