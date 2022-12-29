@@ -19,7 +19,7 @@ window.addEventListener ('load', () => {
         
         if(campoPassword.value == '') {
             errores.push('El campo de la Constraseña es obligatorio.')
-        } else if (campoPassword.value.length <= 8) {
+        } else if (campoPassword.value.length < 8) {
             errores.push('Debe tener por lo menos ocho(8) caracteres.')
         } 
 
