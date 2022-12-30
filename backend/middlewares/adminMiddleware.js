@@ -1,5 +1,5 @@
 function adminMiddleware (req, res, next) {
-    if (res.locals.isAdmin) {
+    if(req.session.usuariologueado.user_category_id !== 2) {
         res.redirect('/')
     }
 

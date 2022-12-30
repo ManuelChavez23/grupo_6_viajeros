@@ -39,16 +39,20 @@
                                                 <%= errors.password.msg %>
                                             </p>
                                         </div>
-                                        <% } %>
+                                        <% } %>                                  
                                             <div class="remember-div">
                                                 <label class="remember-label" for="remember">
-                                                    <input class="check-remember" type="checkbox" name="remember"
-                                                     id="remember"> Recordarme
+                                                    <input class="check-remember" type="checkbox" name="remember" id="remember"> Recordarme
                                                 </label>
                                             </div>
-                                            <button id="btn">Ingresar</button>
-                                            <a class="forgot" href="#">olvido su password?</a>
-                                            <button>Crear nueva cuenta</button>
+                                            <div class="login-btn-contenedor">
+                                                <button id="btn">Ingresar</button>
+                                                <button> 
+                                                    <a href="/register/">Crear nueva cuenta</a>
+                                                </button>
+                                                
+                                            </div>
+                                        </div>
                         </form>
                         <!-- <div class="add">
            <h2>Te puede interesar</h2>

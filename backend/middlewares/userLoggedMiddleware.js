@@ -6,46 +6,31 @@ let users = JSON.parse(userJson); */
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
-function userLoggedMiddleware(req, res, next) {
-    res.locals.isLogged = false;
-    /*  res.locals.isAdmin = false;  */
-    /* 
-        console.log(req.cookies) */
+function userLoggedMiddleware (req, res, next) {
+    /* res.locals.isLogged = false; */
+    /* res.locals.isAdmin = false;  */
+    
+    
     let userInCookie = req.cookies.user;
-    /*  let userFromCookie=users.find(elemento=>elemento.user==userInCookie);
-     if (userFromCookie) {
-         req.session.usuariologueado = userInCookie
-     }
-     if (req.session && req.session.usuariologueado) {
-         res.locals.isLogged = true;
-         res.locals.usuariologueado = req.session.usuariologueado;
-     }
-         
-     next() */
-    if (userInCookie) {
-       /*  let userFromCookie = */
-            db.User.findOne(
-                {
-                    where: {
-                        user: userInCookie
-                    }
-                }
-            )
-                .then((usuario) => {
-                    if (usuario) {
-                        req.session.usuariologueado = usuario
-                        
-                    }
-
-                    if (req.session && req.session.usuariologueado) {
-                        res.locals.isLogged = true;
-                        res.locals.usuariologueado = req.session.usuariologueado;
-
-                    }
-                })
-    }
-    next();
-
+    
+/*     let userFromCookie =  */
+    db.User.findAll({
+        raw: true,
+    })
+        .then((usuarios) => { 
+            if(usuarios) { 
+            /* req.session.usuariologueado = usuarios
+            console.log( req.session.usuariologueado) */
+            let usuarioEncontrado = usuarios.filter( e => e.user == userInCookie)
+           console.log(usuarioEncontrado);
+        }
+    
+        if (req.session && req.session.usuariologueado) {
+            res.locals.isLogged = true;
+            res.locals.usuariologueado = req.session.usuariologueado;
+        }
+        
+        next()});
 
 }
 
