@@ -39,9 +39,9 @@ const controller = {
             password: req.body.adminPassword
         }
 
-        /* let check = users.find(elemento => elemento.user == adminCheck.user); */
+         let check = users.find(elemento => elemento.user == adminCheck.user); 
 
-        if(check.user_category == 1) {
+        if(check.category == "user") {
             res.send('no sos admin');
         } else {
             if(bcrypt.compareSync(req.body.adminPassword, check.password)) {
