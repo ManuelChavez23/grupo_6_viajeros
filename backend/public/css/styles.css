@@ -1316,9 +1316,11 @@ label {
 }
 
 .buttonIn {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .buttonIn button {
@@ -1328,6 +1330,8 @@ label {
   border: 1px solid var(--violeta);
   border-radius: 5px;
   padding: 0.3rem 0.3rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .wrapper .sidebar {
@@ -2776,4 +2780,52 @@ ul {
 
 .header-nav-cart {
   display: none;
+}
+
+
+/* ----------- PERFIL EDIT --------------------*/
+.main-perfil {
+  display: flex;
+  align-items: center;
+}
+.main-perfil-contenedor {
+margin: 2rem 2rem 0 2rem;
+padding: 2rem 2rem 0 2rem;
+text-align: center;
+width: 95%;
+height: 250px;
+background: linear-gradient(177deg, #644076 20%, white 70%);
+position: relative;
+}
+
+.main-perfil-img{
+  width: 180px;
+  border-radius: 50%;
+  height: 180px;
+}
+
+.datos-usuario{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.datos-usuario h2{
+  margin-right: 2rem;
+}
+
+div.datos-usuario .fa-at, .fa-facebook-messenger, .fa-twitter {
+  color: var(--violeta);
+}
+.formulario-editar-2{
+  max-width: 50%;
+  margin-left: 25%; ;
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 10px;
 }

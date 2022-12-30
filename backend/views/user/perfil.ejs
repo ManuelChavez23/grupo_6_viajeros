@@ -13,62 +13,39 @@
                     </div>
             </section>
 
+            
             <main class="main-perfil">
                 <div class="main-perfil-contenedor">
-
-                    <h1 class="main-perfil-title">Bienvenido <%= user.user %>
-                    </h1>
-
-                    <img src="/img/<%= user.img %>" alt="avatar">
-                    <% console.log(user) %>
-
+                    
+                    <img class='main-perfil-img' src="/img/<%= user.img %>" alt="avatar">
+                        <h1 class="main-perfil-title">Hola <%= user.user %>!</h1>
+                    </div>
+                    </main>
+                    <div class="datos-usuario">
                         <h2>
+                            <i class="fas fa-at"></i>
                             <%= user.email %>
                         </h2>
-
+                        <h2>
+                            <i class="fab fa-facebook-messenger"></i>
+                            <%= user.user %>
+                        </h2>
+                        <h2>
+                            <i class="fab fa-twitter"></i>
+                            <%= user.user %>
+                        </h2>
+                    </div>
+                    
+                       
+                    <div class="buttonIn">
                         <form action="/logout" method="GET">
-                            <button id="edit3" type="submit">Cerrar Sesion</button>
-
+                            <button id="btn" type="submit">Cerrar Sesion</button>
                         </form>
-                        <!--<form action="/perfilEdit/<%= user.id %>" method="GET">
-                        <button id="edit3" type="submit">Editar
-                            <i class="fas fa-edit"></i>
-                        </button> 
-                    </form> -->
-                        <div class="buttonIn">
-
-                            <a href="/perfilEdit/<%= user.id %>"><button>Editar <i class="fas fa-edit"></i></button></a>
-
-                        </div>
-
-                        <section class="main-perfil-section">
-
-                        </section>
+                            <a href="/perfilEdit/<%= user.id %>"><button id="btn">Editar <i class="fas fa-edit"></i></button></a>
+                    </div>
                 </div>
-
-
-            </main>
-
-            <!-- <section class="nosotros">
-        <div>
-            <h1 class="nosotros-titulo">Titulo</h1>
-            <p class="nosotros-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cumque corporis qui, rem officia quo dolore nulla quae, doloremque explicabo eius deserunt
-                autem eligendi fugit officiis. Unde doloribus alias sed repellendus!</p>
-            <div class="nosotros-contenedor-btn">
-                <button class="nosotros-btn">Conocer más</button>
-            </div>
-        </div>
-
-        <div class="nosotros-contenedor-img">
-            <img class="nosotros-img"
-                src="https://www.xplora.eu/wp-content/uploads/como-escribir-web-sobre-nosotros.jpg" alt="">
-        </div>
-    </section>
- -->
-
+            
 
             <%- include("../partials/footer.ejs")%>
     </body>
-
 </html>
