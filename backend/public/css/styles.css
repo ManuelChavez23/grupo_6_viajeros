@@ -2747,6 +2747,9 @@ ul {
   35% {
       margin-left: -80%;
   }
+  100%{
+    transform: translateX(calc(-155% + 3120px)); 
+}
 }
 
 
