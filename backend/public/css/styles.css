@@ -2720,7 +2720,7 @@ ul {
 
 #carrusel-caja {
 
-  animation: automatizacion 20s infinite linear;
+  animation: automatizacion 20s linear infinite;
   width: 300%;
   
 }
@@ -2738,7 +2738,7 @@ ul {
   width: 20%;
 }
 @keyframes automatizacion {
-  0% {
+ /*  0% {
       margin-left:8;
   }
   30% {
@@ -2746,7 +2746,10 @@ ul {
   }
   35% {
       margin-left: -80%;
-  }
+  } */
+  100%{
+    transform: translateX(calc(-155% + 3120px)); 
+}
 }
 
 
