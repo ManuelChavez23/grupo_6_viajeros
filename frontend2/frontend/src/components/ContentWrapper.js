@@ -3,7 +3,7 @@ import TopBar from './TopBar';
 import ContentRowTop from './ContentRowTop';
 import Footer from './Footer';
 
-function ContentWrapper(props){
+function ContentWrapper(props) {
     return (
         <React.Fragment>
             {/*<!-- Content Wrapper -->*/}
@@ -11,15 +11,15 @@ function ContentWrapper(props){
                 {/*<!-- Main Content -->*/}
                 <div id="content">
                     <TopBar />
-                    <ContentRowTop 
+                    <ContentRowTop
                         destinys={props.destinys}
                         categorys={props.categorys}
                         total={props.total}
-                        
+
                     />
                     <Footer />
                 </div>
-            </div>    
+            </div>
         </React.Fragment>
     )
 }

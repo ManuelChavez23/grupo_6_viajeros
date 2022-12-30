@@ -1,7 +1,7 @@
-const path = require('path');
+/* const path = require('path');
 const fs = require('fs');
 const userJson = fs.readFileSync(path.join(__dirname, '../data/usersBd.json'));
-let users = JSON.parse(userJson);
+let users = JSON.parse(userJson); */
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -32,7 +32,6 @@ function userLoggedMiddleware (req, res, next) {
         
         next()});
 
-    
 }
 
-module.exports = userLoggedMiddleware;
+ module.exports = userLoggedMiddleware; 

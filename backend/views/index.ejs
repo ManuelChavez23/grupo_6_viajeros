@@ -13,40 +13,6 @@
                     </div>
                     <img class="imgpbanner" src="img/bannerhome.jpg" alt="">
             </section>
-
-            <!--<section class="nosotros">
-                <div>
-                    <h1 class="nosotros-titulo">Sobre Nosotros</h1>
-
-                    <div class="nosotros-contenedor">
-                        <i class="far fa-check-square"></i>
-                        <p class="nosotros-parrafo"> Ofrecemos en nuestros paquetes turísticos el alojamiento para los
-                            viajeros. Dentro de este servicio podemos encontrar hoteles, posadas, albergues y casas
-                            compartidas.</p>
-                    </div>
-                    <div class="nosotros-contenedor">
-                        <i class="far fa-check-square"></i>
-                        <p class="nosotros-parrafo">Solemos programar los traslados hacia el aeropuerto o desde las
-                            terminales hacia el hotel. Además del pasaje aéreo las agencias de viajes estamos
-                            capacitados para conseguir otros medios de transporte ya sea marítimo, ferroviario o
-                            terrestre.</p>
-                    </div>
-                    <div class="nosotros-contenedor">
-                        <i class="far fa-check-square nosotros-contenedor-icono"></i>
-                        <p class="nosotros-parrafo">Muchas veces el turista no está del todo familiarizado con el
-                            destino que visita, por lo tanto se vuelve imprescindible contar con información referente a
-                            los traslados dentro de él. Es por esto que incluimos los traslados dentro de la ciudad como
-                            por ejemplo entre el hotel y el aeropuerto.</p>
-                    </div>
-
-                    <div class="nosotros-contenedor-btn">
-                        <button class="nosotros-btn">Conocer más</button>
-                    </div>
-                </div>-->
-
-                <!--   <div class="nosotros-contenedor-img">
-            <img class="nosotros-img" src="https://static.vecteezy.com/system/resources/previews/007/383/159/non_2x/colorful-sunset-on-the-tropical-island-beautiful-ocean-beach-with-palms-illustration-cartoon-flat-panoramic-landscape-sunset-with-the-palms-on-colorful-background-free-vector.jpg" alt="">
-        </div> -->
             </section>
 
             <main class="main-home">
@@ -54,40 +20,53 @@
                     <h1 class="main-home-titulo">Nuestros viajes destacados</h1>
                 </div>
                 <h2 class="main-home-subtitulo">¡No pierdas tiempo y miralos tu mismo!</h2>
-                <div class="main-home-contendor-icono"> 
+                <div class="main-home-contendor-icono">
                     <i class="fas fa-angle-down main-home-icono"></i>
                 </div>
 
 
-                <section class="main-home-section">
-                    <% let destacados=destinos.filter(product=> product.status_id == '1') %>
-                        <% destacados.forEach(product=> { %>
 
 
-                            <article class="article">
-                                <div class="article-card-top">
-                                    <img class="article-img" src="/img/<%= product.img %>" alt="">
-                                </div>
-                                <div class="article-card-body">
-                                    <h1 class="article-titulo">
-                                        <%= product.name %>
-                                    </h1>
-                                    <p class="article-parrafo cut-text">
-                                        <%= product.detail %>
-                                    </p>
-                                    <p class="article-precio">$<%=product.price %>
-                                    </p>
-                                    <div class="contenedor-btn">
-                                        <a href="/product/detalle/<%=product.id %> "> <button class="article-btn">Saber
-                                                más</button> </a>
-                                    </div>
-                                </div>
-                            </article>
 
-                            <% }) %>
-
-
+                <section class="main-home-section ">
+                    <div class="carrito-destinos">
+                        <div class=main-home-contenedor-titulo>
+                            <h1 class="main-home-titulo">Destinos más buscados</h1>
+                        </div>
+                        <div id="carrusel-contenido">
+                            <div id="carrusel-caja">
+                                <% let destacados=destinos.filter(product=> product.status_id == '1') %>
+                                    <% destacados.forEach(product=> { %>
+                                        <div class="carrusel-elemento">
+                                            <article class="article">
+                                                <div class="article-card-top">
+                                                    <img class="article-img" src="/img/<%= product.img %>" alt="">
+                                                </div>
+                                                <div class="article-card-body">
+                                                    <h1 class="article-titulo">
+                                                        <%= product.name %>
+                                                    </h1>
+                                                    <p class="article-parrafo cut-text">
+                                                        <%= product.detail %>
+                                                    </p>
+                                                    <p class="article-precio">$<%=product.price %>
+                                                    </p>
+                                                    <div class="contenedor-btn">
+                                                        <a href="/product/detalle/<%=product.id %> "> <button
+                                                                class="article-btn">Saber
+                                                                más</button> </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <% }) %>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+
+
+
 
                 <section class="marcas">
                     <h2 class="marcaswork">Marcas con las que trabajamos</h2>
@@ -99,7 +78,7 @@
                         </div>
                     </div>
                 </section>
-               
+
 
 
                 <div class="main-home-contenedor-titulo">
@@ -110,71 +89,57 @@
                     <i class="fab fa-cc-mastercard main-home-icono"></i>
                     <i class="fab fa-cc-visa main-home-icono"></i>
                 </div>
-                <div class="main-home-contendor-icono"> 
+                <div class="main-home-contendor-icono">
                     <i class="fas fa-angle-down main-home-icono"></i>
-                    
+
                 </div>
-                <section class="main-home-section">
-                    <% let oferta=destinos.filter(product=> product.status_id == '2') %>
-                        <% oferta.forEach(product=> { %>
 
 
-                            <article class="article">
-                                <div class="article-card-top">
-                                    <img class="article-img" src="/img/<%= product.img %>" alt="">
-                                </div>
-                                <div class="article-card-body">
-                                    <h1 class="article-titulo">
-                                        <%= product.name %>
-                                    </h1>
-                                    <p class="article-parrafo cut-text">
-                                        <%= product.detail %>
-                                    </p>
-                                    <p class="article-precio">$<%=product.price %>
-                                    </p>
-                                    <div class="contenedor-btn">
-                                        <a href="/product/detalle/<%=product.id %> "> <button class="article-btn">Saber
-                                                más</button> </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <% }) %>
 
 
+
+                <section class="main-home-section ">
+                    <div class="carrito-destinos">
+                        <div class=main-home-contenedor-titulo>
+                        </div>
+                        <div id="carrusel-contenido">
+                            <div id="carrusel-caja">
+                                <% let oferta=destinos.filter(product=> product.status_id == '2') %>
+                                    <% oferta.forEach(product=> { %>
+                                        <div class="carrusel-elemento">
+                                            <article class="article">
+                                                <div class="article-card-top">
+                                                    <img class="article-img" src="/img/<%= product.img %>" alt="">
+                                                </div>
+                                                <div class="article-card-body">
+                                                    <h1 class="article-titulo">
+                                                        <%= product.name %>
+                                                    </h1>
+                                                    <p class="article-parrafo cut-text">
+                                                        <%= product.detail %>
+                                                    </p>
+                                                    <p class="article-precio">$<%=product.price %>
+                                                    </p>
+                                                    <div class="contenedor-btn">
+                                                        <a href="/product/detalle/<%=product.id %> "> <button
+                                                                class="article-btn">Saber
+                                                                más</button> </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <% }) %>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                 <!--<section class="nosotros">
-                    <div>
-                        <h1 class="nosotros-titulo">Sobre Nosotros</h1>
-    
-                        <div class="nosotros-contenedor">
-                            <i class="far fa-check-square"></i>
-                            <p class="nosotros-parrafo"> Ofrecemos en nuestros paquetes turísticos el alojamiento para los
-                                viajeros. Dentro de este servicio podemos encontrar hoteles, posadas, albergues y casas
-                                compartidas.</p>
-                        </div>
-                        <div class="nosotros-contenedor">
-                            <i class="far fa-check-square"></i>
-                            <p class="nosotros-parrafo">Solemos programar los traslados hacia el aeropuerto o desde las
-                                terminales hacia el hotel. Además del pasaje aéreo las agencias de viajes estamos
-                                capacitados para conseguir otros medios de transporte ya sea marítimo, ferroviario o
-                                terrestre.</p>
-                        </div>
-                        <div class="nosotros-contenedor">
-                            <i class="far fa-check-square nosotros-contenedor-icono"></i>
-                            <p class="nosotros-parrafo">Muchas veces el turista no está del todo familiarizado con el
-                                destino que visita, por lo tanto se vuelve imprescindible contar con información referente a
-                                los traslados dentro de él. Es por esto que incluimos los traslados dentro de la ciudad como
-                                por ejemplo entre el hotel y el aeropuerto.</p>
-                        </div>
-    
-                        <div class="nosotros-contenedor-btn">
-                            <a href="/nosotros"><button class="nosotros-btn">Conocer más</button></a>
-                        </div>-->
+
+
+
             </main>
 
-           
-            
+
+
 
             <div class="contenedor-whatsapp">
                 <a href="/contact"><i class="fab fa-whatsapp whatsapp"></i></a></i>
@@ -190,5 +155,9 @@
                     }
                 </script>
     </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 </html>
