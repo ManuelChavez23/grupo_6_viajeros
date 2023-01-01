@@ -1236,6 +1236,13 @@ h1.formulario3 {
   text-transform: uppercase;
 }
 
+.form-edit-btn button:hover {
+  background-color: #3b2e50;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid;
+}
 
 label {
   font-weight: bold;
@@ -1324,16 +1331,25 @@ label {
 }
 
 .buttonIn button {
-  font-family: var(--fuente);
-  color: var(--negro);
-  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background-color: var(--violeta);
+  color: var(--blanco);
   border: 1px solid var(--violeta);
   border-radius: 5px;
-  padding: 0.3rem 0.3rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
+  font-family: var(--fuente);
+  text-transform: uppercase;
 }
 
+.buttonIn button:hover {
+  background-color: #3b2e50;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid;
+}
+.buttonIn--logout {
+  margin-right: 1rem;
+}
 .wrapper .sidebar {
   background: var(--gris);
   /* position: fixed; */
