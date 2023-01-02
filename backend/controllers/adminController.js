@@ -14,22 +14,16 @@ const sequelize = db.sequelize;
 const controller = {
 
     deleteUser: (req, res) => {
-        //creamos un nuevo array de productos sin el producto a eliminar
-        const userToDelete = users.filter(user => user.id != req.params.userId);
-        //redenominamos los id de cada elemento
-        for (let i = 0; i < userToDelete.length; i++) {
-            userToDelete[i].id = i + 1;
-        }
-        //convertimos el array de productos a formato JSON
-        let userJson = JSON.stringify(userToDelete, null, ' ');
-        //almacenamos la informacion en la base de datos
-        fs.writeFileSync(path.join(__dirname, '../data/usersBd.json'), userJson);
-        //redireccionamos el navegador hacia adminLists
-        res.redirect('/userList');
-        /* res.redirect('back');
-        setTimeout(() => {
-    window.location.reload(true);
-  }, 100); */
+            let user = req.params.userId
+
+            db.User.destroy({
+                where: {
+                    id: user,
+                }
+            }).then(() => {
+                return res.redirect('/userList');
+            })
+
     },
 
     saveUserEdit: (req, res) => {
@@ -52,19 +46,6 @@ const controller = {
             .catch(e => {
                 res.send(e);
             });
-
-        /* //buscamos el usuario en la lista de usuarios por la ID
-        let searchUser = users.find(user => user.id == userEdited.id)
-        //buscamos el indice del usuario en la lista
-        let index = users.indexOf(searchUser);
-        //actualizamos la informacion del usuario
-        users[index] = userEdited;
-        //convertimos el array de usuarios en JSON
-        let userJson = JSON.stringify(users, null, ' ');
-        //guardamos la informacion en formato JSON en la base de datos de usuarios - usersBd.json
-        fs.writeFileSync(path.join(__dirname,'../data/usersBd.json'),  userJson,);
-        //redirigimos el navegador a la lista de usuarios
-        res.redirect('/userList') */
     },
 
     editUser: (req, res) => {
@@ -127,42 +108,6 @@ const controller = {
           
             })
         
-        
-    /* let editProduct = {
-        id: parseInt(req.params.id),
-        name: req.body.newName,
-        date: req.body.newDate,
-        insure: req.body.insure,
-        price: req.body.newPrice,
-        category: req.body.category,
-        img: req.file.filename,
-        status: req.body.status,
-        detail: req.body.newDetail,
-        extras: req.body.newExtras,
-        guide: req.body.guide,
-        group: req.body.group,
-        meals: req.body.meals,
-        transport: req.body.transport
-    } */
-
-
-
-    /* let searchProduct = products.find(product => product.id == editProduct.id)
-    let index = products.indexOf(searchProduct);
-    console.log(index);
-    products[index] = editProduct;
-    //res.send(products);
-    let productsJson = JSON.stringify(products, null, ' ');
-    
-    fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson,); */
-    /* searchProduct = editProduct
-    console.log(editProduct);
-    res.send(searchProduct);
-    console.log(searchProduct);
-    products.push(searchProduct) */
-
-
-    //res.redirect('/adminList');
 
 },
     adminList: (req, res) => {
@@ -201,11 +146,6 @@ add: (req, res) => {
             res.send(e)
         })
 
-        /* products.push(newProduct);
- 
-        let productsJson = JSON.stringify(products, null, ' ');
- 
-        fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson); */
 
     },
         comments: (req, res) => {
@@ -236,20 +176,6 @@ add: (req, res) => {
                     }).then(() => {
                         return res.redirect('/adminList');
                     })
-
-
-                    //creamos un nuevo array de productos sin el producto a eliminar
-                    /* const productDelete = products.filter(product => product.id != req.params.id );
-                    //redenominamos los id de cada elemento
-                    for(let i = 0; i < productDelete.length; i++){
-                        productDelete[i].id = i +1;
-                    }
-                    //convertimos el array de productos a formato JSON
-                    let productsJson = JSON.stringify(productDelete, null, ' ');
-                    //almacenamos la informacion en la base de datos
-                    fs.writeFileSync(path.join(__dirname,'../data/productsBd.json'),  productsJson);
-                    //redireccionamos el navegador hacia adminLists
-                    res.redirect('/adminList'); */
 
                 }
 }
