@@ -55,16 +55,3 @@ Somos parte del Departamento de desarrollo web de la agencia, nuestras funciones
 [**Pangea**](https://www.pangea.tur.ar/)-->En el encabezado están visibles los iconos de sus redes sociales y los medios de contacto. Tienen un buscador para ayudarte a encontrar el destino que deseas fácilmente, teniendo en cuenta la fecha y la cantidad de pasajeros.
 
 [**Marcelo Gimenez**](https://marcelogimenez.tur.ar/)-->En términos de experiencia del usuario, tiene un diseño súper intuitivo que permite que el usuario interactúe fácilmente.
-
-
-<!-- VISTA EDIT.EJS -->
-<!-- ADMINCONTROLLER Y ADMINROUTES CODIGOS COMENTADOS -->
-<!-- class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
-                                >
-                            <% if (locals.errors && errors.name) { %>
-                                <div class="text-danger">
-                                    <p>
-                                        <%= errors.name.msg %>
-                                    </p>
-                                </div>
-                            <% } %> -->
