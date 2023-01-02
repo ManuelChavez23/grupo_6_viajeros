@@ -43,7 +43,7 @@ const validationsProducts = [
 
 /* ---------------------VALIDACION PENDIENTE BACKEND-------------------- */
 const validationsProductsEdit = [
-    check('name')
+    check('newName')
         .notEmpty().withMessage('Debes ingresar un nombre de destino').bail()
         .isLength({min:5}).withMessage('El nombre de destino debe contener al menos 5 caracteres'),
     check('img').custom((value, {req}) => {

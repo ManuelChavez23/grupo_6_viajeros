@@ -21,6 +21,9 @@
                                     <h2 class="lugar">
                                         <%= product.name %>
                                     </h2>
+                                    <p class="article-parrafo cut-text">
+                                        <%= product.detail %>
+                                    </p>
                                 </div>
                                 
                                 <div class="buttonIn">
@@ -49,14 +52,16 @@
                                         <h2 class="lugar">
                                             <%= product.name %>
                                         </h2>
+                                        <p class="article-parrafo cut-text">
+                                            <%= product.detail %>
+                                        </p>
                                     </div>
 
                                     <div class="buttonIn">
-                                        <form method="post" action='/delete/<%= product.id%>?_method=delete'>
+                                        <form class="buttonIn--logout" method="post" action='/delete/<%= product.id%>?_method=delete'>
                                             <button id="clear3" type="submit">Eliminar</button>
                                         </form>
-                                        <a href="/edit/<%= product.id%>"><button id="edit3">Editar <i
-                                                    class="fas fa-edit"></i></button></a>
+                                        <a href="/edit/<%= product.id%>"><button id="edit3">Editar</button></a>
 
                                     </div>
                                 </div>

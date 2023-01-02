@@ -20,16 +20,16 @@
                                     <h2 class="lugar">
                                         <%= user.user==undefined ? user.email : user.user %>
                                     </h2>
-                                    <h4 class="lugar">
-                                        <%= user.category %>
-                                    </h4>
+                                    <p class="lugar">
+                                        <%= user.category==undefined ? user.email : user.user_category_id %>
+                                        <% console.log(user.category) %> 
+                                    </p>
                                 </div>
                                 <div class="buttonIn">
-                                    <form method="post" action='/userDelete/<%= user.id%>?_method=delete'>
+                                    <form class="buttonIn--logout"  method="post" action='/userDelete/<%= user.id%>?_method=delete'>
                                         <button id="clear3" type="submit">Eliminar</button>
                                     </form>
-                                    <a href="/userEdit/<%= user.id %>"><button id="edit3">Editar <i
-                                                class="fas fa-edit"></i></button></a>
+                                    <a href="/userEdit/<%= user.id %>"><button id="edit3">Editar</button></a>
 
                                 </div>
                             </div>

@@ -16,13 +16,13 @@
                         <div class="form-contenedor">
                             <label for="name" class="colocar_nombre">Nombre Destino
                             </label>
-                            <input type="text" name="name" id="newName" placeholder=""
-                                class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
-                                value="<%= locals.oldData ? oldData.name : product.name %>">
-                            <% if (locals.errors && errors.name) { %>
+                            <input type="text" name="newName" id="newName" placeholder=""
+                                class="form-control <%= locals.errors && errors.newName ? 'is-invalid' : null %>"
+                                value="<%= locals.oldData ? oldData.newName : product.name %>">
+                            <% if (locals.errors && errors.newName) { %>
                                 <div class="text-danger">
                                     <p>
-                                        <%= errors.name.msg %>
+                                        <%= errors.newName.msg %>
                                     </p>
                                 </div>
                                 <% } %>

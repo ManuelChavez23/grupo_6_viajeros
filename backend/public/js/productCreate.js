@@ -16,7 +16,7 @@ window.addEventListener ('load',function() {
         if(campoNombre.value == '') {
             errores.push('El campo de Nombre de Destino es obligatorio.')
         } else if (campoNombre.value.length <= 5) {
-            errores.push('Debe tener por lo menos cinco(5) caracteres.')
+            errores.push('El nombre debe tener por lo menos cinco(5) caracteres.')
         }
         
         if (!campoImg.value.includes('.jpg' || '.jpeg' || '.png' || '.gif')) {
@@ -26,7 +26,7 @@ window.addEventListener ('load',function() {
         if(campoDetail.value == '') {
             errores.push('El campo del detalle es obligatorio.')
         } else if (campoDetail.value.length <= 20) {
-            errores.push('Debe tener por lo menos veinte(20) caracteres.')
+            errores.push('El detalle debe tener por lo menos veinte(20) caracteres.')
         } 
 
         
