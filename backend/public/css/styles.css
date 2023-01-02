@@ -1585,6 +1585,11 @@ ul {
  .datos-usuario {
   flex-wrap: wrap
 }
+
+.nosotros-text{
+ width: 80%;
+}
+
 @media (min-width: 469px) {
   /* MAIN HOME */
   .main-home-section {
